@@ -21,6 +21,8 @@
 %**************************************************************
 \section{L'idea}
 
+Internet Of Things è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
+di varia natura e utilizzo, che interagiscono tra loro e che permettono all'utente di interagire con essi.
 L'idea che mi ha spinto allo sviluppo e alla realizzazione del progetto di stage è stata quella unificare in un unico centro di controllo
 tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo 
 tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun dispositivo.
@@ -31,6 +33,39 @@ Per assicurare prestazioni, affidabilità (\textit{availability}) e scalabilità
 ho scelto di progettare il prodotto secondo l'architettura a microservizi.
 
 \subsection{IoT}
+
+L'idea di una rete di dispositivi smart fu presa in considerazione fin dal 1982, quando un distributore automatico di bibite dell'Università di Carnegie Mellon venne opportunamente modificato per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
+% \footcite{fonte: https://www.cs.cmu.edu/~coke/history_long.txt}
+
+Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo. 
+% \footcite{fonte: https://web.archive.org/web/20150311220327/http://web.media.mit.edu/~anjchang/ti01/weiser-sciam91-ubicomp.pdf}
+
+Il termine \textit{"Internet of Things"} fu coniato da Kevin Ashton nel 1999.
+% \footcite{fonte: http://www.rfidjournal.com/articles/view?4986}
+L'origine dell'espressione, riassumendo le parole dell'autore, deriva dal fatto che la maggior parte delle informazioni presenti su Internet sono state e sono inserite da utenti "umani", soggetti quindi a concentrazione, precisione e tempo limitate;
+se queste informazioni fossero invece inserite da macchine senza l'aiuto di un utente umano, la maggior qualità delle stesse garantirebbe
+\begin{itemize}
+  \item maggiore capacità di tracciamento delle risorse;
+  \item minor spreco di risorse;
+  \item minor costo per la gestione delle risorse.
+\end{itemize}
+
+Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti alla crescita dei mercati del consumo di massa, e allo sviluppo di un numero sempre maggiore di tecnologie volte a migliorare l'efficienza e l'affidabilità dei circuiti integrati, dai primi anni 2000 il concetto alla base dell'IoT è stato sviluppato da numerose aziende negli ambiti più disparati (\textit{home automation}, \textit{manufacturing}, \textit{smart agriculture}, etc.). 
+
+% \footcite{fonte: http://www.vs.inf.ethz.ch/publ/papers/Internet-of-things.pdf}
+
+Con Internet of Things si intende una rete di dispositivi interconnessi, individuabili in modo univoco e che possono comunicare informazioni.
+I dispositivi presenti in una rete possono comunicare con due tipologie di attori diverse:
+\begin{itemize}
+  \item se la comunicazione avviene con altri dispositivi si parla di comunicazione M2M (\textit{Machine to Machine}, ovvero comunicazione tra macchine);
+  \item se la comunicazione avviene interagendo con il mondo reale si parla di comunicazione M2H (\textit{Machine to Human}, ovvero comunicazione tra macchina e utente).
+\end{itemize}
+
+Il termine "Things" nel contesto IoT si riferisce a una varietà di dispositivi come ad esempio: videocamere di sorveglianza, automobili a guida autonoma e assistita oppure piccoli e grandi elettrodomestici casalinghi. Questi dispositivi, soprannominati anche \textit{smart object}, raccolgono informazioni utili in base agli attori con cui comunicano:
+\begin{itemize}
+  \item se i dispositivi comunicano in modo M2M, le informazioni vengono impiegate al supporto di tecnologie esistenti, integrandosi nel flusso di informazioni esistente; 
+  \item se i dispositivi comunicano in modo M2H, le informazioni vengono in aiuto delle persone che interagiscono con essi.
+\end{itemize}
 
 Illustrare cosa si intende per IoT (fornendo un background informativo) e perchè è stato scelto questo tema
 
