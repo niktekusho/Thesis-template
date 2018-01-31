@@ -14,15 +14,15 @@ echo --------------------
 
 pdflatex -output-directory=$DIR $NAME
 biber $DIR/$NAME
-makeindex -s ./$NAME.ist -t ./$NAME.glg -o ./$NAME.gls ./$NAME.glo
-makeindex -s ./$NAME.ist -t ./$NAME.alg -o ./$NAME.acr ./$NAME.acn
+makeindex -s ./$DIR/$NAME.ist -t ./$DIR/$NAME.glg -o $DIR/$NAME.gls ./$DIR/$NAME.glo
+makeindex -s ./$DIR/$NAME.ist -t ./$DIR/$NAME.alg -o ./$DIR/$NAME.acr ./$DIR/$NAME.acn
 
 # Due volte because Latex
 
 pdflatex -output-directory=$DIR $NAME
 biber $DIR/$NAME
-makeindex -s ./$NAME.ist -t ./$NAME.glg -o ./$NAME.gls ./$NAME.glo
-makeindex -s ./$NAME.ist -t ./$NAME.alg -o ./$NAME.acr ./$NAME.acn
+makeindex -s ./$DIR/$NAME.ist -t ./$DIR/$NAME.glg -o $DIR/$NAME.gls ./$DIR/$NAME.glo
+makeindex -s ./$DIR/$NAME.ist -t ./$DIR/$NAME.alg -o ./$DIR/$NAME.acr ./$DIR/$NAME.acn
 
 echo -------------------------
 echo - Generazione Documento -
