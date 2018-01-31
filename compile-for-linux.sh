@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR="./output"	# modificare per scegliere il nome della cartella di destinazione
-NAME="relazione-finale"		# modificiare per scegliere il nome del file di origine (.tex)
+NAME="relazione-finale"		# modificare per scegliere il nome del file di origine (.tex)
 
 if [ ! -d $DIR ];
   then
@@ -30,15 +30,15 @@ echo -------------------------
 
 pdflatex -output-directory=$DIR $NAME
 pdflatex -output-directory=$DIR $NAME
-
-echo ---------------------------------
-echo - Pulisco e poi apro il file... -
-echo ---------------------------------
-
-rm $DIR/*.acn $DIR/*.aux $DIR/*.bbl $DIR/*.bcf $DIR/*.glo
-rm $DIR/*.ist $DIR/*.lof $DIR/*.lot $DIR/*.run.xml $DIR/*.toc
+# 
+# echo ---------------------------------
+# echo - Pulisco e poi apro il file... -
+# echo ---------------------------------
+# 
+# rm $DIR/*.acn $DIR/*.aux $DIR/*.bbl $DIR/*.bcf $DIR/*.glo
+# rm $DIR/*.ist $DIR/*.lof $DIR/*.lot $DIR/*.run.xml $DIR/*.toc
 # Per mantenere i log commentare la linea seguente
-rm $DIR/*.blg  $DIR/*.log
+# rm $DIR/*.blg  $DIR/*.log
 
 # open $DIR/$NAME.pdf
 
