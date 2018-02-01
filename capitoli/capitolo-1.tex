@@ -157,7 +157,7 @@ Il difetto che si annovera all'uso di servizi come componenti risiede nell'utili
 esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e quindi è necessario progettare le API di ciascun servizio rivolgendo maggiore attenzione all'aspetto prestazionale delle stesse.
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
-Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate, illustrata graficamente in figura:
+Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate, illustrata graficamente in figura ~\ref{fig:business-organization}:
 \begin{itemize}
   \item team esperto in UI;
   \item team specializzato in DB Management;
@@ -165,23 +165,23 @@ Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica
 \end{itemize}
 
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.9\columnwidth]{intro/business-organization}
-    \caption{Illustrazione che mostra la differente organizzazione aziendale in un ambiente di sviluppo monolitico e in un ambiente di sviluppo a microservizi.}
-    \label{fig:business-organization}
+Quando le persone sono così fortemente isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{intro/business-organization}
+  \caption{Illustrazione che mostra la differente organizzazione aziendale in un ambiente di sviluppo monolitico e in un ambiente di sviluppo a microservizi.}
+  \label{fig:business-organization}
 \end{figure}
 
-Quando le persone sono così fortemente isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
 L'approccio microservices-oriented alla suddivisione dell'applicazione invece pone l'accento sulle capacità di business: ogni team inerente un particolare settore di business si occupa dell'intero prodotto per quel settore (sviluppando interamente UI, DB, ecc.).
 I team in questo approccio sono multidisciplinari e gli scambi con altri settori riflettono le effettive dipendenze tra un settore e un altro all'interno dell'azienda.
 
 Un esempio di quest'approccio alla suddivisione lo si ritrova in Amazon, dove vige il motto "you build, you run it" ("tu lo costruisci, tu lo esegui").
 In Amazon ogni team ha completa responsabilità del prodotto anche in ambiente di produzione, mettendo in comunicazione diretta sviluppatori e utenti del prodotto per le attività di supporto e manutenzione.
 
-
-
 Applicazioni assemblate con microservizi mirano ad essere più disaccoppiate e più coese possibile: ricevendo una richiesta, applicando la propria logica e producendo una risposta.
+Un diagramma esemplificativo di questo concetto lo si trova in figura ~\ref{fig:services-comms}.
 
 \begin{figure}[!ht]
     \centering
