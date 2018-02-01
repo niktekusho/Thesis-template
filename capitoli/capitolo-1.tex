@@ -11,10 +11,10 @@
 
 % \noindent Esempio di utilizzo di un termine nel glossario \\
 % \gls{api}. \\
-% 
+%
 % \noindent Esempio di citazione in linea \\
 % \cite{site:agile-manifesto}. \\
-% 
+%
 % \noindent Esempio di citazione nel pie' di pagina \\
 % citazione\footcite{womak:lean-thinking} \\
 
@@ -24,20 +24,20 @@
 Internet Of Things è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
 di varia natura e utilizzo, che interagiscono tra loro e che permettono all'utente di interagire con essi.
 L'idea che mi ha spinto allo sviluppo e alla realizzazione del progetto di stage è stata quella unificare in un unico centro di controllo
-tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo 
+tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo
 tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun dispositivo.
-L'obiettivo di una tale dashboard non è quindi \textit{intrappolare} l'utente in un unico ecosistema domotico, 
+L'obiettivo di una tale dashboard non è quindi \textit{intrappolare} l'utente in un unico ecosistema domotico,
 bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti.
 
 Per assicurare prestazioni, affidabilità (\textit{availability}) e scalabilità del prodotto sviluppato e per aggiungere una natura formativa al progetto di stage,
 ho scelto di progettare il prodotto secondo l'architettura a microservizi.
 
 \subsection{IoT}
-
+\label{intro-iot}
 L'idea di una rete di dispositivi smart fu presa in considerazione fin dal 1982, quando un distributore automatico di bibite dell'Università di Carnegie Mellon venne opportunamente modificato per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
 \footcite{site:mellon-uni}
 
-Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo. 
+Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo.
 \footcite{site:mit-weiser}
 
 Il termine \textit{"Internet of Things"} fu coniato da Kevin Ashton nel 1999.
@@ -51,7 +51,7 @@ se queste informazioni fossero invece inserite da macchine senza l'aiuto di un u
 \end{itemize} % mantenere almeno 2 righe sotto
 
 
-Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti alla crescita dei mercati del consumo di massa, allo sviluppo di un numero sempre maggiore di tecnologie volte a migliorare l'efficienza e l'affidabilità dei circuiti integrati e alla sempre maggior diffusione di tecnologie per la trasmissione di informazioni senza fili, dai primi anni 2000 il concetto alla base dell'IoT è stato sviluppato da un numero sempre maggiore di aziende negli ambiti più disparati (\textit{home automation}, \textit{manufacturing}, \textit{smart agriculture}, etc.). 
+Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti alla crescita dei mercati del consumo di massa, allo sviluppo di un numero sempre maggiore di tecnologie volte a migliorare l'efficienza e l'affidabilità dei circuiti integrati e alla sempre maggior diffusione di tecnologie per la trasmissione di informazioni senza fili, dai primi anni 2000 il concetto alla base dell'IoT è stato sviluppato da un numero sempre maggiore di aziende negli ambiti più disparati (\textit{home automation}, \textit{manufacturing}, \textit{smart agriculture}, etc.).
 \footcite{site:pc-to-things}
 
 Con Internet of Things si intende una rete di dispositivi interconnessi, individuabili in modo univoco e che possono comunicare informazioni.
@@ -64,14 +64,14 @@ I dispositivi presenti in una rete possono comunicare con due tipologie di attor
 
 Il termine "Things" nel contesto IoT si riferisce a una varietà di dispositivi come ad esempio: videocamere di sorveglianza, automobili a guida autonoma e assistita oppure piccoli e grandi elettrodomestici casalinghi. Questi dispositivi, soprannominati anche \textit{smart object}, raccolgono informazioni utili in base agli attori con cui comunicano:
 \begin{itemize}
-  \item se i dispositivi comunicano in modo M2M, le informazioni vengono impiegate al supporto di tecnologie esistenti, integrandosi nel flusso di informazioni esistente; 
+  \item se i dispositivi comunicano in modo M2M, le informazioni vengono impiegate al supporto di tecnologie esistenti, integrandosi nel flusso di informazioni esistente;
   \item se i dispositivi comunicano in modo M2H, le informazioni vengono in aiuto delle persone che interagiscono con essi.
 \end{itemize}
 
 
 L'interesse verso il tema IoT è cresciuto esponenzialmente sia nel mercato consumer che in quello enterprise e secondo Forbes (\footcite{site:forbes-iot}) diventerà nel prossimo quinquennio uno dei settori dell'ITC più redditizi.
 É interessante osservare anche la popolarità dei termini di ricerca correlati all'IoT: i dati sono stati ottenuti interrogando il servizio \url{https://trends.google.com/trends}, il quale consente di effettuare analisi sulla popolarità delle stringhe di ricerca immesse nel motore di ricerca di Google.
-Ciascun grafico a linea (\textit{line chart} in inglese) presenta nelle ordinate il grado di popolarità della \textit{query} di ricerca, valutato da 0 (popolarità minima) a 100 (popolarità massima), e nelle ascisse l'arco temporale in analisi. 
+Ciascun grafico a linea (\textit{line chart} in inglese) presenta nelle ordinate il grado di popolarità della \textit{query} di ricerca, valutato da 0 (popolarità minima) a 100 (popolarità massima), e nelle ascisse l'arco temporale in analisi.
 
 \begin{figure}[!ht]
     \centering
@@ -153,7 +153,7 @@ L'uso di servizi come componenti consente inoltre di rendere esplicita l'interfa
 Spesso solamente la documentazione e la disciplina prevengono usi impropri di una componente da parte di uno sviluppatore esterno, rischiando di causare un alto accoppiamento tra componenti.
 I servizi facilitano il rispetto delle interfacce pubblicate attraverso l'uso di meccanismi di chiamate remote esplicite.
 
-Il difetto che si annovera all'uso di servizi come componenti risiede nell'utilizzo di chiamate remote per la comunicazione tra servizi: 
+Il difetto che si annovera all'uso di servizi come componenti risiede nell'utilizzo di chiamate remote per la comunicazione tra servizi:
 esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e quindi è necessario progettare le API di ciascun servizio rivolgendo maggiore attenzione all'aspetto prestazionale delle stesse.
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
@@ -212,7 +212,7 @@ Questo approccio alla gestione della persistenza è chiamato Polyglot Persistenc
     \label{fig:data-storage}
 \end{figure}
 
-La decentralizzazione delle decisioni di storage implica una maggior attenzione verso gli aggiornamenti dei dati.
+La decentralizzazione delle decisioni di \emph{storage} implica una maggior attenzione verso gli aggiornamenti dei dati.
 L'approccio comune agli aggiornamenti in un'architettura monolitica è quello di usare le transazioni per garantire la consistenza dei dati prima e dopo ciascun aggiornamento.
 L'utilizzo di transazioni è un grave limite per l'architettura a microservizi, in quanto le transazioni impongono un ordine temporale che potrebbe non essere rispettato, causando inconsistenze dei dati salvati.
 É per questo che le architetture a microservizi enfatizzano l'utilizzo di comunicazioni non vincolanti (transactionless): eventuali inconsistenze vengono segnalate e risolte grazie a operazioni correttive.
@@ -231,24 +231,91 @@ Se 2 o più servizi vengono aggiornati spesso insieme probabilmente essi dovrebb
 %**************************************************************
 \section{Rischi}
 
+I rischi collegati allo svolgimento di questo stage possono essere suddivisi in tre categorie:
+\begin{itemize}
+  \item rischi collegati alla scelta dello stage nella sua forma interna;
+  \item rischi collegati alla scelta del tema IoT;
+  \item rischi collegati alla scelta dell'architettura a microservizi.
+\end{itemize}
+
+
+\subsection{Rischi: Stage interno}
+
+Lo stage formativo viene previsto dal CdL triennale di Informatica in due modalità:
+\begin{itemize}
+  \item stage aziendali, riferiti anche come stage esterni, per i quali il proponente del progetto di stage è un'azienda;
+  \item stage non aziendali, riferiti anche come stage interni, per i quali il proponente del progetto di stage è un docente dell'Ateneo di Padova.
+\end{itemize}
+
+
+Sebbene lo stage aziendale sia la modalità preferita per svolgere l'attività, mi sono imbattuto in un ostacolo che mi ha portato ad avviare uno stage interno.
+Dato il periodo di inizio dello stage (ottobre/novembre 2017), molti degli stage aziendali proposti sono stati soddisfatti da altri studenti del corso.
+Le aziende contattate non avevano pianificate attività di stage nell'ambito dell'IoT per il \emph{timeframe} richiesto: pensando alle premesse esposte in \hyperref{intro-iot}, ho scelto di iniziare a valutare il percorso di stage non aziendale.
+
+In uno stage non aziendale i rischi considerati sono elencati nella tabella ~\ref{tab:rischi-stage-interno}.
+
+\begin{table}
+\caption{Tabella di analisi dei rischi correlati allo svolgimento di uno stage interno}
+\label{tab:rischi-stage-interno}
+\begin{tabularx}{\linewidth}{|p{7.5cm}|X|X|}
+\hline
+\textbf{Rischio} & \textbf{Probabilità di accadimento} & \textbf{Gravità del danno potenziale}\\
+\hline
+Il lavoro svolto individualmente, senza possibilità di essere guidato da esperti nel settore, potrebbe risultare ininfluente. La presenza di una persona con più esperienza in un determinato tema è utile in quanto può focalizzare l'attenzione su problematiche reali, le quali potrebbero non essere correttamente valutate nel momento in cui si dispone di scarsa esperienza in materia. & Molto probabile & Grave \\
+\hline
+Il lavoro svolto individualmente, senza possibilità di essere guidato da esperti nel settore, potrebbe procedere più lentamente, causando il non raggiungimento degli obiettivi preposti. & Molto probabile & Media \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\subsection{Rischi: IoT}
+
+https://medium.com/@Imaginovation/iot-security-risks-and-benefits-18428819e735
+
+A causa della relativa novità dell'argomento, il settore IoT si pone a numerose osservazioni relative ai rischi collegati allo sviluppo di prodotti software e hardware. I rischi considerati sono elencati nella tabella ~\ref{tab:rischi-iot}.
+\begin{table}
+\caption{Tabella di analisi dei rischi correlati al tema IoT}
+\label{tab:rischi-iot}
+\begin{tabularx}{\linewidth}{|p{7.5cm}|X|X|}
+\hline
+\textbf{Rischio} & \textbf{Probabilità di accadimento} & \textbf{Gravità del danno potenziale}\\
+\hline
+Lo sviluppo di prodotti legati all'IoT espone l'utente degli stessi a possibili rischi di cybersicurezza: il furto di dati ma soprattutto la perdita di controllo dell'utente sui propri dispositivi sono scenari possibili e con conseguenze disastrose per lo sviluppatore di tale prodotto. & Probabile & Molto grave \\
+\hline
+La mole di dati raccolta dai dispositivi inseriti in un contesto IoT potrebbe essere tale da richiedere investimenti consistenti per la loro elaborazione e per mantenere elevata la loro confidenzialità. Inoltre la diversità dei dispositivi presenti in una rete aumenta la complessità del trattamento delle informazioni. & Probabile & Media \\
+\hline
+Dal momento che l'IoT è un ambito emergente nel contesto ITC è possibile osservare la nascita di una multitudine di protocolli per la raccolta e la trasmissione delle informazioni, nessuno dei quali è stato indicato come standard globale. & Molto probabile & Media \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\subsection{Rischi: Architettura a microservizi}
+
+
+
 Illustrare i rischi derivati dalle scelte effettuate.
 
 %**************************************************************
-\section{Organizzazione del testo}
+\section{Struttura del documento}
 
+Il presente documento prosegue nei seguenti 3 capitoli
 \begin{description}
-    \item[{\hyperref[cap:processi-metodologie]{Il secondo capitolo}}] descrive ...
+    \item[{\hyperref[cap:processi-metodologie]{Il secondo capitolo}}] descrive con maggior precisione il progetto di stage, elencandone gli obiettivi curricolari, formativi, tecnici e di prodotto.
 
-    \item[{\hyperref[cap:descrizione-stage]{Il terzo capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:descrizione-stage]{Il terzo capitolo}}] approfondisce il lavoro svolto durante lo svolgimento dello stage, esaminando le attività di analisi, progettazione, codifica e test.
 
-    \item[{\hyperref[cap:analisi-requisiti]{Il quarto capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:analisi-requisiti]{Il quarto capitolo}}] fornisce una valutazione degli obiettivi raggiunti, motivando la presenza di eventuali obiettivi non raggiunti; inoltre vengono esaminate le conoscenze acquisite e i rischi descritti nel presente capitolo.
 
-    \item[{\hyperref[cap:progettazione-codifica]{Il quinto capitolo}}] approfondisce ...
-
-    \item[{\hyperref[cap:verifica-validazione]{Il sesto capitolo}}] approfondisce ...
-
-    \item[{\hyperref[cap:conclusioni]{Nel settimo capitolo}}] descrive ...
+    % \item[{\hyperref[cap:progettazione-codifica]{Il quinto capitolo}}] approfondisce ...
+    %
+    % \item[{\hyperref[cap:verifica-validazione]{Il sesto capitolo}}] approfondisce ...
+    %
+    % \item[{\hyperref[cap:conclusioni]{Nel settimo capitolo}}] descrive ...
 \end{description}
+
+\section{Convenzioni tipografiche}
 
 Riguardo la stesura del testo, relativamente al documento sono state adottate le seguenti convenzioni tipografiche:
 \begin{itemize}
