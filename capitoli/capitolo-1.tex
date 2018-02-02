@@ -271,9 +271,22 @@ Il lavoro svolto individualmente, senza possibilità di essere guidato da espert
 
 \subsection{Rischi: IoT}
 
-https://medium.com/@Imaginovation/iot-security-risks-and-benefits-18428819e735
+Nuove tecnologie contengono sempre una determinata quantità di rischi: mentre la maggior parte degli sviluppatori trovano utilizzi per questi dispositivi,
+altri cercano modi per usare questi dispositivi per scopi meno nobili.
+I dispositivi IoT stanno sempre più diffondendosi in molti aspetti su cui basiamo la società moderna:
+\begin{itemize}
+  \item trasporti;
+  \item comunicazione;
+  \item settore energetico.
+\end{itemize}
 
-A causa della relativa novità dell'argomento, il settore IoT si pone a numerose osservazioni relative ai rischi collegati allo sviluppo di prodotti software e hardware. I rischi considerati sono elencati nella tabella ~\ref{tab:rischi-iot}.
+
+Attacchi informatici contro questi dispositivi possono portare al caos: dalla distruzione di proprietà alla messa in discussione della propria sicurezza, con l'accezione che il termine \emph{safety} possiede nella lingua inglese.
+A peggiorare la situazione, gli acquirenti di questi dispositivi si aspetta che essi continuino a funzionare per una quantità di tempo superiore a quella che il consumismo tecnologico ha abituato.
+La quantità di protocolli per l'IoT porta ad aumentare la complessità insita in questi dispositivi.
+Una complessità maggiore implica un maggior costo per le società per aggiornare i prodotti rilasciati, portando quindi i produttori a ignorare l'insorgere di nuove vulnerabilità.
+
+Date le suddette premesse, il settore IoT si pone a numerose osservazioni relative ai rischi collegati allo sviluppo di prodotti software e hardware. I rischi considerati sono elencati nella tabella ~\ref{tab:rischi-iot}.
 \begin{table}
 \caption{Tabella di analisi dei rischi correlati al tema IoT}
 \label{tab:rischi-iot}
@@ -293,9 +306,29 @@ Dal momento che l'IoT è un ambito emergente nel contesto ITC è possibile osser
 
 \subsection{Rischi: Architettura a microservizi}
 
+L'architettura a microservizi permette di sviluppare un'applicazione complessa partendo da piccole e relativamente isolate componenti;
+in questo modo i cambiamenti effettuati sono facilmente verificabili.
+La frammentazione dell'architettura del prodotto rende tuttavia più complesse le attività di test funzionali, perchè per eseguire un tipico caso d'uso di una funzionalità completa sono richiesti molteplici servizi, correttamente configurati per comunicare tra loro ed eseguire simultaneamente.
+Lo sviluppo di servizi indipendenti rende inoltre difficoltosa l'attività di integrazione delle modifiche: nel momento in cui molti team di sviluppo lavorano ciascuno nel proprio servizio non è possibile integrare queste modifiche senza una attenta pianificazione, che coinvolga la comunicazione dei cambiamenti effettuati.
+Anche in questo caso, la relativa novità dell'argomento porta a una generale mancanza di documentazione pratica, lasciando lo spazio ad esempi semplici, che non riflettono applicazioni d'uso reale, oppure documentazione teorica, che non si spinge ad analizzare problematiche reali. 
+La tabella ~\ref{tab:rischi-arch-microservizi} riassume e sintetizza i rischi analizzati in precedenza. 
 
 
-Illustrare i rischi derivati dalle scelte effettuate.
+\begin{table}
+\caption{Tabella di analisi dei rischi correlati all'utilizzo dell'architettura a microservizi}
+\label{tab:rischi-arch-microservizi}
+\begin{tabularx}{\linewidth}{|p{7.5cm}|X|X|}
+\hline
+\textbf{Rischio} & \textbf{Probabilità di accadimento} & \textbf{Gravità del danno potenziale}\\
+\hline
+Spostamento di alcune problematiche di progettazione da un livello di modulo a un livello di architettura del sistema. & Probabile & Media \\
+\hline
+Le performance dell'applicazione sviluppata potrebbero non essere sufficienti passando da un'architettura monolitica a una a microservizi. & Scarsamente probabile & Grave \\
+\hline
+Difficoltà nel reperimento delle informazioni, data la relativa novità dell'argomento. Assume maggior significato nel momento in cui l'esperienza con un tale paradigma risulti scarsa o nulla. & Molto probabile & Grave \\
+\hline
+\end{tabularx}
+\end{table}
 
 %**************************************************************
 \section{Struttura del documento}
