@@ -1,0 +1,37 @@
+05/02/2018
+
+- §1.1
+Quando strutturi gerarchicamente un ambiente "padre" (p.es. sezione), ogni suo contenuto deve appartenere a un ambiente "figlio".
+In altre parole, non può esistere testo di §1.1 precedente a §!.1.1. Naturalmente, questa avvertenza vale globalmente. -> test
+Non si capisce perché tu menzioni la versione inglese per il termine "affidabilità" e non per gli altri che usi nella stessa frase. -> test
+La mera menzione dell'architettura a microservizi, senza giustificazione, contestualizzazione, approfondimento è prematura e inopportuna. -> wip (spostare nella sezione corretta)
+- §1.1.1
+Dovrai spiegare il significato del termine "smart" e poi, per convenzione tipografica, porlo in corsivo. -> test
+A pagina 2 è opportuna una immagini che esemplifichi graficamente i concetti architetturali cui accenni nel testo. -> wip
+- §1.1.2
+Caratterizzare un [micro]servizio come residente in un processo indipendente non è accurato, e risponde piuttosto alla visione "antica" dell'architettura orientata ai servizi. -> wip
+Nella caratterizzazione dell'architettura "monolitica" che offri hai fatto, ma non spiegato e giustificato, numerose assunzioni (cliente realizzazione come SPA, interazione a livello HTTP), che valgono per una fascia (ancora) limitata di sistemi reali.
+Molti non sono SPA nel lato cliente e non usano HTTP ma derivati di TCP per l'interazione con il servente. 
+Questa descrizione ha bisogno di una immagine esplicativa, che non è Fig. 1.5, che è del tutto inefficace. -> todo
+[Per inciso: per tutte le immagini che trai da terzi, ne indicherai la fonte esplicitamente nella corrispondente didascalia.] -> wip
+Quando a pagina 5 riporti una definizione "comunemente accettata" di architettura a microservizi, devi citarne la fonte. -> test
+Il verbo "annoverare" significa "includere in un elenco/elencare"; di conseguenza, la frase "Il difetto che si annovera all’uso" non è corretta. Il verbo che intendi è "attribuisce". -> test
+L'elenco a fini di pagina 5 ha una spaziatura verticale eccessiva, e declina al femminile il sostantivo "team". -> test
+Quanto affermi nell'intorno di quell'elenco è arbitrario e discutibile, tanto più se non citi la fonte (facendo tua l'affermazione). -> todo
+L'avverbio "fortemente" è gratuito e non giustificato dallo stato delle cose. Non è questo il principale punto debole delle architetture tradizionali. -> test
+A pagina 6 menzioni REST, senza averlo prima spiegato. Non puoi assumere che chi ti leggerà in sede d'esame dia per scontato che tu abbia chiara cognizione di cosa sia REST. -> todo
+L'affermazione "Ogni servizio gestisce il proprio database" non è corretta. Stai facendo una ipotesi e neanche tanto conforme con la natura stateless dei servizi. -> todo
+In cima a pagina 8 scrivi "La decentralizzazione delle decisioni di storage", dove il sostantivi decisioni è completamente fuori posto. -> todo
+Nel penultimo paragrafo prima di §1.2 sembri volere fare un elenco, ma non lo realizzi tipograficamente. -> todo
+- §1.2
+L'argomento di questa sezione non porta alcuna correlazione con quanto ha -- lungamente -- riportato in §1.1.
+La trattazione deve invece essere fluida e non discontinua. -> todo
+- §1.2.1
+La frase "sono stati soddisfatti" riferita agli stage usa un verbo inappropriato. -> test
+Quel che intendi è "svolti", ma anche così la frase non funziona perché sembreresti asserire che tutti gli stage presentati all'edizione di STAGE-IT cui hai partecipato siano stati assegnati ad altri studenti (cioè, più studenti che proposte di stage), il che è lontano dal vero.
+Non si capisce poi perché tu usi il termine timeframe. -> test
+Infine, la frase finale di quel periodo ha errori di sintassi e di tipografia.
+Quello che poi discuti non è uno "stage non aziendale", ma uno "stage interno individuale".
+Cura con più attenzione l'impaginazione, affinché figure e tabelle stiano vicine al testo che le riferisce.
+- §1.4
+Le convenzioni tipografiche, insieme alla breve presentazione della struttura della relazione vanno collocate prima dell'indice, in una pagina apposita, posta fuori indice. -> todo

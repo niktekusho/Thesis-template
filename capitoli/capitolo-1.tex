@@ -21,6 +21,9 @@
 %**************************************************************
 \section{L'idea}
 
+\subsection{IoT}
+\label{intro-iot}
+
 Internet Of Things è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
 di varia natura e utilizzo, che interagiscono tra loro e che permettono all'utente di interagire con essi.
 L'idea che mi ha spinto allo sviluppo e alla realizzazione del progetto di stage è stata quella unificare in un unico centro di controllo
@@ -29,12 +32,11 @@ tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun disposi
 L'obiettivo di una tale dashboard non è quindi \textit{intrappolare} l'utente in un unico ecosistema domotico,
 bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti.
 
-Per assicurare prestazioni, affidabilità (\textit{availability}) e scalabilità del prodotto sviluppato e per aggiungere una natura formativa al progetto di stage,
-ho scelto di progettare il prodotto secondo l'architettura a microservizi.
+Un dispositivo \emph{smart} è un dispositivo elettronico, generalmente connesso ad altri dispositivi, che può svolgere le proprie funzioni in maniera autonoma.
+Un esempio lampante di dispositivi \emph{smart} sono gli smartphone, prodotti che hanno arricchito di funzionalità cosìdette "intelligenti" i predecessori telefoni (\emph{phone}).
+\footcite{site:smart-device}
 
-\subsection{IoT}
-\label{intro-iot}
-L'idea di una rete di dispositivi smart fu presa in considerazione fin dal 1982, quando un distributore automatico di bibite dell'Università di Carnegie Mellon venne opportunamente modificato per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
+L'idea di una rete di dispositivi \emph{smart} fu presa in considerazione fin dal 1982, quando un distributore automatico di bibite dell'Università di Carnegie Mellon venne opportunamente modificato per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
 \footcite{site:mellon-uni}
 
 Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo.
@@ -98,47 +100,36 @@ Sintetizzando le previsioni di Forbes con l'andamento dei termini di ricerca leg
 
 \subsection{Architettura a microservizi}
 
-L'espressione \textbf{Architettura a microservizi} è sempre più comune tra gli sviluppatori di applicazioni \textit{enterprise} per descrivere un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente (ogni servizio esegue su un processo indipendente), che comunicano tra loro grazie a meccanismi di comunicazione "leggeri" (solitamente attraverso \gls{api} HTTP).
+L'espressione \textbf{Architettura a microservizi} è sempre più comune tra gli sviluppatori di applicazioni \textit{enterprise} per descrivere un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione "leggeri" (solitamente attraverso \gls{api} HTTP).
+Nella concezione originale in cui l'architettura a microservizi è nata, ogni servizio doveva essere progettato per eseguire in un processo indipendente dagli altri; con la nascita e la diffusione dei \emph{container} questo paradigma sta cambiando, associando sempre più l'esecuzione dei microservizi in altrettanti \emph{container}.
+La \emph{containerization} è un metodo di virtualizzazione posto al livello del sistema operativo per la distribuzione ed esecuzione di applicazioni. Ogni container è un'istanza di 
 
 \paragraph{Caratteristiche delle architetture monolitiche}
 
-Un'applicazione monolitica è progettata e costruita per essere una singola unità in esecuzione. Solitamente un'applicazione web monolitica è divisa in 3 parti:
-\begin{itemize}
-  \item interfaccia utente (pagine web);
-  \item database;
-  \item applicazione server.
-\end{itemize}
+Un'applicazione monolitica è progettata e costruita per essere una singola unità in esecuzione. 
+L'applicazione sviluppata con architettura monolitica è responsabile della visualizzazione delle informazioni in un'interfaccia utente (pagine web o \emph{software} nativi), del reperimento delle informazioni da una sorgente di dati (solitamente un \emph{database}) e dell'esecuzione delle logiche di business della stessa.
+\footcite{book:beginning-sw-eng}
 
-
-A sua volta, l'applicazione server:
-\begin{itemize}
-  \item gestisce le richieste HTTP;
-  \item esegue la business logic dell'applicazione;
-  \item carica e aggiorna dati dal/nel database;
-  \item seleziona e popola le pagine web inviate al browser dell'utente.
-\end{itemize}
-
-
-Nelle applicazioni monolitiche la modularità del sistema si ottiene sfruttando i costrutti fondamentali dei linguaggi di programmazione:
+Nelle applicazioni monolitiche la modularità del sistema si ottiene sfruttando i costrutti fondamentali dell'orientamento ad oggetti presente nei linguaggi di programmazione:
 \begin{itemize}
   \item funzioni;
   \item classi;
   \item namespace o package.
 \end{itemize}
 
-
 Per aumentare la disponibilità delle applicazioni monolitiche si usa replicare istanze dell'applicazione in molteplici server, bilanciando il traffico verso le applicazioni per mezzo di un \gls{load balancerg}.
 Tra i difetti delle applicazioni monolitiche si possono evidenziare:
 \begin{itemize}
   \item modifiche a una piccola parte all'applicazione richiedono la ricompilazione e la ridistribuzione dell'applicazione;
   \item all'accrescere della complessità dell'applicazione aumenta anche la difficoltà nel mantenere le modifiche isolate ai moduli di competenza;
-  \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di throughput).
+  \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di \emph{throughputg}).
 \end{itemize}
 
 \paragraph{Caratteristiche delle architetture a microservizi}
 
 Per lo stile architetturale a microservizi non esistono definizioni formali, tuttavia è possibile dedurre le caratteristiche che hanno accomunato i progetti diventati nel tempo esempi di best-practice.
 Non tutte le architetture a microservizi hanno tutte le caratteristiche elencate in seguito, ma ci si aspetta che la maggior parte delle architetture esibisca quante più caratteristiche possibili.
+\footcite{site:fowler-microservices}
 
 L'aspetto cruciale delle architetture a microservizi verte sulla definizione di componente: la definizione comunemente accettata è quella di "unità di software che è indipendentemente aggiornabile e sostituibile in un sistema".
 Le architetture a microservizi usano i servizi per realizzare tale definizione di componente. A titolo di confronto con gli approcci di sviluppo tradizionali è possibile introdurre la nozione di libreria.
@@ -153,7 +144,7 @@ L'uso di servizi come componenti consente inoltre di rendere esplicita l'interfa
 Spesso solamente la documentazione e la disciplina prevengono usi impropri di una componente da parte di uno sviluppatore esterno, rischiando di causare un alto accoppiamento tra componenti.
 I servizi facilitano il rispetto delle interfacce pubblicate attraverso l'uso di meccanismi di chiamate remote esplicite.
 
-Il difetto che si annovera all'uso di servizi come componenti risiede nell'utilizzo di chiamate remote per la comunicazione tra servizi:
+Il difetto che si attribuisce all'uso di servizi come componenti risiede nell'utilizzo di chiamate remote per la comunicazione tra servizi:
 esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e quindi è necessario progettare le API di ciascun servizio rivolgendo maggiore attenzione all'aspetto prestazionale delle stesse.
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
@@ -161,11 +152,11 @@ Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica
 \begin{itemize}
   \item team esperto in UI;
   \item team specializzato in DB Management;
-  \item uno o più team specializzate a realizzare la logica di business.
+  \item uno o più team specializzati a realizzare la logica di business.
 \end{itemize}
 
 
-Quando le persone sono così fortemente isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
+Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
 
 \begin{figure}[H]
   \centering
@@ -217,7 +208,7 @@ L'approccio comune agli aggiornamenti in un'architettura monolitica è quello di
 L'utilizzo di transazioni è un grave limite per l'architettura a microservizi, in quanto le transazioni impongono un ordine temporale che potrebbe non essere rispettato, causando inconsistenze dei dati salvati.
 É per questo che le architetture a microservizi enfatizzano l'utilizzo di comunicazioni non vincolanti (transactionless): eventuali inconsistenze vengono segnalate e risolte grazie a operazioni correttive.
 
-Una conseguenza nell'utilizzo dei servizi come componenti è che le applicazioni devono prevedere e tollerare malfunzionamenti nei servizi. L'utilizzatore dei servizi deve quindi rispondere ai malfunzionamenti nel modo più elegante possibile. Dato l'aumento di complessità, questo è da annoverare tra i difetti delle architetture a microservizi. Dal momento che i servizi possono malfungere in ogni momento, è fondamentale riuscire a:
+Una conseguenza nell'utilizzo dei servizi come componenti è che le applicazioni devono prevedere e tollerare malfunzionamenti nei servizi. L'utilizzatore dei servizi deve quindi rispondere ai malfunzionamenti nel modo più elegante possibile. Dato l'aumento di complessità, questo è da attribuire tra i difetti delle architetture a microservizi. Dal momento che i servizi possono malfungere in ogni momento, è fondamentale riuscire a:
 
 monitorare il servizio,
 segnalare il malfunzionamento e
@@ -244,15 +235,33 @@ I rischi collegati allo svolgimento di questo stage possono essere suddivisi in 
 Lo stage formativo viene previsto dal CdL triennale di Informatica in due modalità:
 \begin{itemize}
   \item stage aziendali, riferiti anche come stage esterni, per i quali il proponente del progetto di stage è un'azienda;
-  \item stage non aziendali, riferiti anche come stage interni, per i quali il proponente del progetto di stage è un docente dell'Ateneo di Padova.
+  \item stage non aziendali, riferiti anche come stage interni individuali, per i quali il proponente del progetto di stage è un docente dell'Ateneo di Padova.
 \end{itemize}
 
 
-Sebbene lo stage aziendale sia la modalità preferita per svolgere l'attività, mi sono imbattuto in un ostacolo che mi ha portato ad avviare uno stage interno.
-Dato il periodo di inizio dello stage (ottobre/novembre 2017), molti degli stage aziendali proposti sono stati soddisfatti da altri studenti del corso.
-Le aziende contattate non avevano pianificate attività di stage nell'ambito dell'IoT per il \emph{timeframe} richiesto: pensando alle premesse esposte in \hyperref{intro-iot}, ho scelto di iniziare a valutare il percorso di stage non aziendale.
+Sebbene lo stage aziendale sia la modalità preferita per svolgere l'attività, mi sono imbattuto in due ostacoli che mi hanno portato ad avviare uno stage interno.
+Il primo ostacolo è causato dal mio stato di studente lavoratore: l'azienda per cui sono assunto non poteva offrire stage riguardanti il settore IoT. 
+Nel momento in cui ho iniziato a cercare proposte di stage e mi sono quindi informato sulle modalità con cui avrei potuto assentarmi da lavoro,
+l'ufficio per le risorse umane dell'azienda per cui sono assunto mi ha comunicato che avrei avuto opzioni limitate, dipendenti dal motivo dell'assenza.
+Se l'assenza avesse comportato l'inizio di attività lavorative per altre aziende (concorrenti oppure non concorrenti) sarei stato costretto a scegliere tra due opzioni:
+\begin{itemize}
+  \item il licenziamento dall'azienda per cui sono assunto;
+  \item l'avvio della procedura di \gls{aspettativag} del lavoro come prevista dalla legge 53 recante data 8 marzo 2000. \footcite{site:aspettativa}.
+\end{itemize}
+Quindi fin dall'inizio la ricerca di un progetto di stage aziendale è stata fortemente messa in discussione dalle menzionate opzioni. 
+Malgrado il primo ostacolo, ho proseguito la ricerca dello stage aziendale al fine di ponderare se gli aspetti negativi legati al congedo lavorativo potessero essere in qualche modo bilanciati da eventuali esperienze formative. 
 
-In uno stage non aziendale i rischi considerati sono elencati nella tabella ~\ref{tab:rischi-stage-interno}.
+Dato il periodo di inizio dello stage (ottobre/novembre 2017), molti degli stage aziendali riguardanti il settore IoT proposti erano già stati svolti da altri studenti del corso.
+Le poche proposte di stage aziendale legate al settore IoT rimanenti erano interessate alla integrazione con prodotti già esistenti:
+malgrado l'opportunità offerta da queste aziende fosse interessante, ho riflettuto a lungo sul fatto che l'attività formativa non fosse adeguatamente supportata.
+Nei progetti proposti infatti le aziende proponenti hanno enfatizzato l'utilizzo degli strumenti interni da loro sviluppati, da una parte per motivarmi ad essere assunto al termine dello stage,
+dall'altra per effettivamente semplificarmi il lavoro nel processo di sviluppo.
+L'aspetto formativo è stato l'ambito più discusso per effettuare la scelta: malgrado la presenza di esperti nel settore mi interessasse, 
+per l'opportunità di approfondire l'ambito d'uso reale dei dispositivi \emph{smart}, la scelta di legarmi a un singolo prodotto, non particolarmente diffuso e utilizzato, 
+mi ha spinto ad iniziare a valutare il percorso di stage interno.
+
+
+Ho riassunto i rischi considerati per lo svolgimento di uno stage interno individuale nella tabella ~\ref{tab:rischi-stage-interno}.
 
 \begin{table}
 \caption{Tabella di analisi dei rischi correlati allo svolgimento di uno stage interno}
@@ -271,8 +280,8 @@ Il lavoro svolto individualmente, senza possibilità di essere guidato da espert
 
 \subsection{Rischi: IoT}
 
-Nuove tecnologie contengono sempre una determinata quantità di rischi: mentre la maggior parte degli sviluppatori trovano utilizzi per questi dispositivi,
-altri cercano modi per usare questi dispositivi per scopi meno nobili.
+Nuove tecnologie contengono sempre una determinata quantità di rischi: mentre la maggior parte degli sviluppatori trovano utilizzi per i dispositivi IoT,
+altri cercano modi per usarli per scopi meno nobili.
 I dispositivi IoT stanno sempre più diffondendosi in molti aspetti su cui basiamo la società moderna:
 \begin{itemize}
   \item trasporti;
@@ -282,11 +291,11 @@ I dispositivi IoT stanno sempre più diffondendosi in molti aspetti su cui basia
 
 
 Attacchi informatici contro questi dispositivi possono portare al caos: dalla distruzione di proprietà alla messa in discussione della propria sicurezza, con l'accezione che il termine \emph{safety} possiede nella lingua inglese.
-A peggiorare la situazione, gli acquirenti di questi dispositivi si aspetta che essi continuino a funzionare per una quantità di tempo superiore a quella che il consumismo tecnologico ha abituato.
-La quantità di protocolli per l'IoT porta ad aumentare la complessità insita in questi dispositivi.
-Una complessità maggiore implica un maggior costo per le società per aggiornare i prodotti rilasciati, portando quindi i produttori a ignorare l'insorgere di nuove vulnerabilità.
+A peggiorare la situazione, gli acquirenti di questi dispositivi pretendono che essi continuino a funzionare per una quantità di tempo superiore a quella che il consumismo tecnologico ha abituato.
+La quantità di protocolli sviluppati per l'IoT porta ad aumentare la complessità insita in questi dispositivi.
+Una complessità maggiore implica un maggior costo per le società per aggiornare i prodotti rilasciati, portando quindi i produttori ad abbandonare i dispositivi rilasciati da più tempo, ignorando l'insorgere di nuove vulnerabilità.
 
-Date le suddette premesse, il settore IoT si pone a numerose osservazioni relative ai rischi collegati allo sviluppo di prodotti software e hardware. I rischi considerati sono elencati nella tabella ~\ref{tab:rischi-iot}.
+Date le suddette premesse, il settore IoT si pone a numerose osservazioni relative ai rischi collegati allo sviluppo di prodotti software e hardware. I rischi considerati sono riassunti nella tabella ~\ref{tab:rischi-iot}.
 \begin{table}
 \caption{Tabella di analisi dei rischi correlati al tema IoT}
 \label{tab:rischi-iot}
