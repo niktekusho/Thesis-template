@@ -4,15 +4,15 @@
 Quando strutturi gerarchicamente un ambiente "padre" (p.es. sezione), ogni suo contenuto deve appartenere a un ambiente "figlio".
 In altre parole, non può esistere testo di §1.1 precedente a §!.1.1. Naturalmente, questa avvertenza vale globalmente. -> test
 Non si capisce perché tu menzioni la versione inglese per il termine "affidabilità" e non per gli altri che usi nella stessa frase. -> test
-La mera menzione dell'architettura a microservizi, senza giustificazione, contestualizzazione, approfondimento è prematura e inopportuna. -> wip (spostare nella sezione corretta)
+La mera menzione dell'architettura a microservizi, senza giustificazione, contestualizzazione, approfondimento è prematura e inopportuna. -> test
 - §1.1.1
 Dovrai spiegare il significato del termine "smart" e poi, per convenzione tipografica, porlo in corsivo. -> test
-A pagina 2 è opportuna una immagini che esemplifichi graficamente i concetti architetturali cui accenni nel testo. -> wip
+A pagina 2 è opportuna una immagini che esemplifichi graficamente i concetti architetturali cui accenni nel testo. -> test
 - §1.1.2
-Caratterizzare un [micro]servizio come residente in un processo indipendente non è accurato, e risponde piuttosto alla visione "antica" dell'architettura orientata ai servizi. -> wip
+Caratterizzare un [micro]servizio come residente in un processo indipendente non è accurato, e risponde piuttosto alla visione "antica" dell'architettura orientata ai servizi. -> test
 Nella caratterizzazione dell'architettura "monolitica" che offri hai fatto, ma non spiegato e giustificato, numerose assunzioni (cliente realizzazione come SPA, interazione a livello HTTP), che valgono per una fascia (ancora) limitata di sistemi reali.
-Molti non sono SPA nel lato cliente e non usano HTTP ma derivati di TCP per l'interazione con il servente. 
-Questa descrizione ha bisogno di una immagine esplicativa, che non è Fig. 1.5, che è del tutto inefficace. -> todo
+Molti non sono SPA nel lato cliente e non usano HTTP ma derivati di TCP per l'interazione con il servente.
+Questa descrizione ha bisogno di una immagine esplicativa, che non è Fig. 1.5, che è del tutto inefficace. -> testo
 [Per inciso: per tutte le immagini che trai da terzi, ne indicherai la fonte esplicitamente nella corrispondente didascalia.] -> wip
 Quando a pagina 5 riporti una definizione "comunemente accettata" di architettura a microservizi, devi citarne la fonte. -> test
 Il verbo "annoverare" significa "includere in un elenco/elencare"; di conseguenza, la frase "Il difetto che si annovera all’uso" non è corretta. Il verbo che intendi è "attribuisce". -> test

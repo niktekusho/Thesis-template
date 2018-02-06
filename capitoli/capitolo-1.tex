@@ -24,12 +24,12 @@
 \subsection{IoT}
 \label{intro-iot}
 
-Internet Of Things è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
+\emph{Internet Of Things} è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
 di varia natura e utilizzo, che interagiscono tra loro e che permettono all'utente di interagire con essi.
 L'idea che mi ha spinto allo sviluppo e alla realizzazione del progetto di stage è stata quella unificare in un unico centro di controllo
 tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo
 tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun dispositivo.
-L'obiettivo di una tale dashboard non è quindi \textit{intrappolare} l'utente in un unico ecosistema domotico,
+L'obiettivo di una tale \emph{dashboard} non è quindi confinare l'utente in un unico ecosistema domotico,
 bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti.
 
 Un dispositivo \emph{smart} è un dispositivo elettronico, generalmente connesso ad altri dispositivi, che può svolgere le proprie funzioni in maniera autonoma.
@@ -54,6 +54,13 @@ se queste informazioni fossero invece inserite da macchine senza l'aiuto di un u
 
 Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti alla crescita dei mercati del consumo di massa, allo sviluppo di un numero sempre maggiore di tecnologie volte a migliorare l'efficienza e l'affidabilità dei circuiti integrati e alla sempre maggior diffusione di tecnologie per la trasmissione di informazioni senza fili, dai primi anni 2000 il concetto alla base dell'IoT è stato sviluppato da un numero sempre maggiore di aziende negli ambiti più disparati (\textit{home automation}, \textit{manufacturing}, \textit{smart agriculture}, etc.).
 \footcite{site:pc-to-things}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{intro/iot}
+    \caption{Rappresentazione figurata del concetto di \textit{"internet of things"}.}
+    \label{fig:iot}
+\end{figure}
 
 Con Internet of Things si intende una rete di dispositivi interconnessi, individuabili in modo univoco e che possono comunicare informazioni.
 I dispositivi presenti in una rete possono comunicare con due tipologie di attori diverse:
@@ -101,23 +108,34 @@ Sintetizzando le previsioni di Forbes con l'andamento dei termini di ricerca leg
 
 L'espressione \textbf{Architettura a microservizi} è sempre più comune tra gli sviluppatori di applicazioni \textit{enterprise} per descrivere un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione "leggeri" (solitamente attraverso \gls{api} HTTP).
 Nella concezione originale in cui l'architettura a microservizi è nata, ogni servizio doveva essere progettato per eseguire in un processo indipendente dagli altri; con la nascita e la diffusione dei \emph{container} questo paradigma sta cambiando, associando sempre più l'esecuzione dei microservizi in altrettanti \emph{container}.
-La \emph{containerization} (containerizzazione) è un metodo di virtualizzazione posto al livello del sistema operativo per la distribuzione ed esecuzione di applicazioni.
+La \emph{containerization} (containerizzazione) è un metodo di virtualizzazione posto al livello del sistema operativo per la distribuzione ed esecuzione di applicazioni all'interno di \emph{container}.
 \footcite{site:containerization}
-Un container è un unità software standardizzata, eseguibile e distribuibile in un unico pacchetto composto da:
+Un \emph{container} è un unità \emph{software} standardizzata, distribuibile in un unico pacchetto composto da:
+\setlist{nolistsep}
 \begin{itemize}
+  \itemsep0em
   \item l'applicazione da eseguire;
   \item l'ambiente d'esecuzione configurato correttamente per l'applicazione da eseguire, che a sua volta specifica:
   \begin{itemize}
     \item le dipendenze dell'applicazione;
     \item i file di configurazione dell'applicazione.
   \end{itemize}
-\end{itemize} % \url{https://www.docker.com/what-docker}{Docker}
-Una delle tecnologie di containerizzazione che si è più diffusa è Docker, sviluppata dall'omonima azienda, che è resa disponibile su molteplici piattaforme, sia locali (\emph{computer} con sistemi operativi Windows, macOs e sistemi Linux-based) sia in cloud (ad es. \emph{Amazon Web Services} e \emph{Microsoft Azure}).
+\end{itemize}
+Una delle tecnologie di containerizzazione che si è più diffusa è \href{https://www.docker.com/what-docker}{Docker}, sviluppata dall'omonima azienda, che è resa disponibile su molteplici piattaforme, sia locali (\emph{computer} con i sistemi operativi \emph{Windows}, \emph{macOs} e i sistemi operativi basati su \emph{Linux}) sia in cloud (con ad es. servizi come \emph{Amazon Web Services} e \emph{Microsoft Azure}).
+Per implementare il concetto di \emph{container}, la piattaforma di Docker installa un insieme di servizi che comunicano con il \gls{kernelg} del sistema operativo su cui è in esecuzione (\emph{host}) e con i quali è possibile interagire a livello utente per creare e gestire \emph{container}.
 \footcite{site:docker-container}
+L'architettura sopra citata è illustrata in figura ~\ref{fig:docker-arch}.
 
-\paragraph{Caratteristiche delle architetture monolitiche}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{intro/container}
+    \caption{Architettura sviluppata da Docker per la sua piattaforma di containerizzazione.\\ \cite{site:docker-container}}
+    \label{fig:docker-arch}
+\end{figure}
 
-Un'applicazione monolitica è progettata e costruita per essere una singola unità in esecuzione. 
+\paragraph{Caratteristiche delle architetture monolitiche}
+
+Un'applicazione monolitica è progettata e costruita per essere una singola unità in esecuzione.
 L'applicazione sviluppata con architettura monolitica è responsabile della visualizzazione delle informazioni in un'interfaccia utente (pagine web o \emph{software} nativi), del reperimento delle informazioni da una sorgente di dati (solitamente un \emph{database}) e dell'esecuzione delle logiche di business della stessa.
 \footcite{book:beginning-sw-eng}
 
@@ -128,6 +146,13 @@ Nelle applicazioni monolitiche la modularità del sistema si ottiene sfruttando 
   \item namespace o package.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{intro/monolith-arch}
+    \caption{Caratteristiche di una generica architettura monolitica.\\ \cite{site:fowler-microservices}}
+    \label{fig:monolith-arch}
+\end{figure}
+
 Per aumentare la disponibilità delle applicazioni monolitiche si usa replicare istanze dell'applicazione in molteplici server, bilanciando il traffico verso le applicazioni per mezzo di un \gls{load balancerg}.
 Tra i difetti delle applicazioni monolitiche si possono evidenziare:
 \begin{itemize}
@@ -136,7 +161,7 @@ Tra i difetti delle applicazioni monolitiche si possono evidenziare:
   \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di \emph{throughputg}).
 \end{itemize}
 
-\paragraph{Caratteristiche delle architetture a microservizi}\\
+\paragraph{Caratteristiche delle architetture a microservizi}
 
 Per lo stile architetturale a microservizi non esistono definizioni formali, tuttavia è possibile dedurre le caratteristiche che hanno accomunato i progetti diventati nel tempo esempi di best-practice.
 Non tutte le architetture a microservizi hanno tutte le caratteristiche elencate in seguito, ma ci si aspetta che la maggior parte delle architetture esibisca quante più caratteristiche possibili.
@@ -146,20 +171,28 @@ L'aspetto cruciale delle architetture a microservizi verte sulla definizione di 
 Le architetture a microservizi usano i servizi per realizzare tale definizione di componente. A titolo di confronto con gli approcci di sviluppo tradizionali è possibile introdurre la nozione di libreria.
 Le librerie sono componenti insiti in un'applicazione tanto da risiedere nello stesso spazio di memoria dell'applicazione e che per essere invocate richiedono una chiamata di funzione in memoria.
 I servizi sono componenti che vivono nel sistema come processi separati, sfruttando vari tipi di comunicazione interprocesso: richieste web, chiamate di funzione remote (RPC).
+\footcite{site:fowler-microservices}
 
 Il vantaggio principale dei servizi rispetto alle librerie consiste nel fatto che i servizi sono rilasciabili indipendentemente dal sistema.
 Data la natura dell'architettura a microservizi, modifiche a un singolo servizio comportano il rilascio di una nuova versione solamente per quel servizio e non dell'intera applicazione.
 Una buona architettura a microservizi quindi mira a progettare e implementare servizi che circoscrivano chiaramente il loro scopo.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{intro/microservices-arch}
+    \caption{Caratteristiche di una generica architettura a microservizi.\\ \cite{site:fowler-microservices}}
+    \label{fig:microservices-arch}
+\end{figure}
+
 L'uso di servizi come componenti consente inoltre di rendere esplicita l'interfaccia dei componenti.
 Spesso solamente la documentazione e la disciplina prevengono usi impropri di una componente da parte di uno sviluppatore esterno, rischiando di causare un alto accoppiamento tra componenti.
 I servizi facilitano il rispetto delle interfacce pubblicate attraverso l'uso di meccanismi di chiamate remote esplicite.
-
 Il difetto che si attribuisce all'uso di servizi come componenti risiede nell'utilizzo di chiamate remote per la comunicazione tra servizi:
 esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e quindi è necessario progettare le API di ciascun servizio rivolgendo maggiore attenzione all'aspetto prestazionale delle stesse.
+\footcite{site:fowler-microservices}
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
-Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate, illustrata graficamente in figura ~\ref{fig:business-organization}:
+Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate; questo ambiente lavorativo è illustrato graficamente in figura ~\ref{fig:business-organization}:
 \begin{itemize}\itemsep0pt
   \item team esperto in UI;
   \item team specializzato in DB Management;
@@ -170,17 +203,20 @@ Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\columnwidth]{intro/business-organization}
-  \caption{Illustrazione che mostra la differente organizzazione aziendale in un ambiente di sviluppo monolitico e in un ambiente di sviluppo a microservizi.}
+  \caption{Illustrazione che mostra la differente organizzazione aziendale in un ambiente di sviluppo monolitico e in un ambiente di sviluppo a microservizi.\\ \cite{site:fowler-microservices}}
   \label{fig:business-organization}
 \end{figure}
 
-Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
+Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi.
+La maggiore richiesta di pianificazione e organizzazione tra gruppi di sviluppo diversi causa un peggioramento dell'efficienza del processo di sviluppo.
 
 L'approccio microservices-oriented alla suddivisione dell'applicazione invece pone l'accento sulle capacità di business: ogni team inerente un particolare settore di business si occupa dell'intero prodotto per quel settore (sviluppando interamente UI, DB, ecc.).
 I team in questo approccio sono multidisciplinari e gli scambi con altri settori riflettono le effettive dipendenze tra un settore e un altro all'interno dell'azienda.
+\footcite{site:fowler-microservices}
 
 Un esempio di quest'approccio alla suddivisione lo si ritrova in Amazon, dove vige il motto "you build, you run it" ("tu lo costruisci, tu lo esegui").
 In Amazon ogni team ha completa responsabilità del prodotto anche in ambiente di produzione, mettendo in comunicazione diretta sviluppatori e utenti del prodotto per le attività di supporto e manutenzione.
+\footcite{site:amazon-microservices}
 
 Applicazioni assemblate con microservizi mirano ad essere più disaccoppiate e più coese possibile: ricevendo una richiesta, applicando la propria logica e producendo una risposta.
 Un diagramma esemplificativo di questo concetto lo si trova in figura ~\ref{fig:services-comms}.
@@ -210,7 +246,7 @@ Questo approccio alla gestione della persistenza è chiamato Polyglot Persistenc
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/data-storage}
-    \caption{Illustrazione che mostra la differente gestione dell'architettura di persistenza dei dati tra prodotti software con architettura monolitica e con architettura a microservizi.}
+    \caption{Illustrazione che mostra la differente gestione dell'architettura di persistenza dei dati tra prodotti software con architettura monolitica e con architettura a microservizi.\\ \cite{site:fowler-microservices}}
     \label{fig:data-storage}
 \end{figure}
 
@@ -251,7 +287,7 @@ Lo stage formativo viene previsto dal CdL triennale di Informatica in due modali
 
 
 Sebbene lo stage aziendale sia la modalità preferita per svolgere l'attività, mi sono imbattuto in due ostacoli che mi hanno portato ad avviare uno stage interno.
-Il primo ostacolo è causato dal mio stato di studente lavoratore: l'azienda per cui sono assunto non poteva offrire stage riguardanti il settore IoT. 
+Il primo ostacolo è causato dal mio stato di studente lavoratore: l'azienda per cui sono assunto non poteva offrire stage riguardanti il settore IoT.
 Nel momento in cui ho iniziato a cercare proposte di stage e mi sono quindi informato sulle modalità con cui avrei potuto assentarmi da lavoro,
 l'ufficio per le risorse umane dell'azienda per cui sono assunto mi ha comunicato che avrei avuto opzioni limitate, dipendenti dal motivo dell'assenza.
 Se l'assenza avesse comportato l'inizio di attività lavorative per altre aziende (concorrenti oppure non concorrenti) sarei stato costretto a scegliere tra due opzioni:
@@ -259,16 +295,16 @@ Se l'assenza avesse comportato l'inizio di attività lavorative per altre aziend
   \item il licenziamento dall'azienda per cui sono assunto;
   \item l'avvio della procedura di \gls{aspettativag} del lavoro come prevista dalla legge 53 recante data 8 marzo 2000. \footcite{site:aspettativa}.
 \end{itemize}
-Quindi fin dall'inizio la ricerca di un progetto di stage aziendale è stata fortemente messa in discussione dalle menzionate opzioni. 
-Malgrado il primo ostacolo, ho proseguito la ricerca dello stage aziendale al fine di ponderare se gli aspetti negativi legati al congedo lavorativo potessero essere in qualche modo bilanciati da eventuali esperienze formative. 
+Quindi fin dall'inizio la ricerca di un progetto di stage aziendale è stata fortemente messa in discussione dalle menzionate opzioni.
+Malgrado il primo ostacolo, ho proseguito la ricerca dello stage aziendale al fine di ponderare se gli aspetti negativi legati al congedo lavorativo potessero essere in qualche modo bilanciati da eventuali esperienze formative.
 
 Dato il periodo di inizio dello stage (ottobre/novembre 2017), molti degli stage aziendali riguardanti il settore IoT proposti erano già stati svolti da altri studenti del corso.
 Le poche proposte di stage aziendale legate al settore IoT rimanenti erano interessate alla integrazione con prodotti già esistenti:
 malgrado l'opportunità offerta da queste aziende fosse interessante, ho riflettuto a lungo sul fatto che l'attività formativa non fosse adeguatamente supportata.
 Nei progetti proposti infatti le aziende proponenti hanno enfatizzato l'utilizzo degli strumenti interni da loro sviluppati, da una parte per motivarmi ad essere assunto al termine dello stage,
 dall'altra per effettivamente semplificarmi il lavoro nel processo di sviluppo.
-L'aspetto formativo è stato l'ambito più discusso per effettuare la scelta: malgrado la presenza di esperti nel settore mi interessasse, 
-per l'opportunità di approfondire l'ambito d'uso reale dei dispositivi \emph{smart}, la scelta di legarmi a un singolo prodotto, non particolarmente diffuso e utilizzato, 
+L'aspetto formativo è stato l'ambito più discusso per effettuare la scelta: malgrado la presenza di esperti nel settore mi interessasse,
+per l'opportunità di approfondire l'ambito d'uso reale dei dispositivi \emph{smart}, la scelta di legarmi a un singolo prodotto, non particolarmente diffuso e utilizzato,
 mi ha spinto ad iniziare a valutare il percorso di stage interno.
 
 
@@ -330,8 +366,8 @@ L'architettura a microservizi permette di sviluppare un'applicazione complessa p
 in questo modo i cambiamenti effettuati sono facilmente verificabili.
 La frammentazione dell'architettura del prodotto rende tuttavia più complesse le attività di test funzionali, perchè per eseguire un tipico caso d'uso di una funzionalità completa sono richiesti molteplici servizi, correttamente configurati per comunicare tra loro ed eseguire simultaneamente.
 Lo sviluppo di servizi indipendenti rende inoltre difficoltosa l'attività di integrazione delle modifiche: nel momento in cui molti team di sviluppo lavorano ciascuno nel proprio servizio non è possibile integrare queste modifiche senza una attenta pianificazione, che coinvolga la comunicazione dei cambiamenti effettuati.
-Anche in questo caso, la relativa novità dell'argomento porta a una generale mancanza di documentazione pratica, lasciando lo spazio ad esempi semplici, che non riflettono applicazioni d'uso reale, oppure documentazione teorica, che non si spinge ad analizzare problematiche reali. 
-La tabella ~\ref{tab:rischi-arch-microservizi} riassume e sintetizza i rischi analizzati in precedenza. 
+Anche in questo caso, la relativa novità dell'argomento porta a una generale mancanza di documentazione pratica, lasciando lo spazio ad esempi semplici, che non riflettono applicazioni d'uso reale, oppure documentazione teorica, che non si spinge ad analizzare problematiche reali.
+La tabella ~\ref{tab:rischi-arch-microservizi} riassume e sintetizza i rischi analizzati in precedenza.
 
 
 \begin{table}
@@ -367,5 +403,3 @@ Il presente documento prosegue nei seguenti 3 capitoli
     %
     % \item[{\hyperref[cap:conclusioni]{Nel settimo capitolo}}] descrive ...
 \end{description}
-
-
