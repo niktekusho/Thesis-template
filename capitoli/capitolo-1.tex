@@ -33,7 +33,7 @@ L'obiettivo di una tale dashboard non è quindi \textit{intrappolare} l'utente i
 bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti.
 
 Un dispositivo \emph{smart} è un dispositivo elettronico, generalmente connesso ad altri dispositivi, che può svolgere le proprie funzioni in maniera autonoma.
-Un esempio lampante di dispositivi \emph{smart} sono gli smartphone, prodotti che hanno arricchito di funzionalità cosìdette "intelligenti" i predecessori telefoni (\emph{phone}).
+Un esempio lampante di dispositivi \emph{smart} sono gli smartphone, prodotti che hanno arricchito di funzionalità avanzate, interagendo con l'utente in modi precedentemente non possibili, i predecessori telefoni (\emph{phone}).
 \footcite{site:smart-device}
 
 L'idea di una rete di dispositivi \emph{smart} fu presa in considerazione fin dal 1982, quando un distributore automatico di bibite dell'Università di Carnegie Mellon venne opportunamente modificato per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
@@ -50,8 +50,7 @@ se queste informazioni fossero invece inserite da macchine senza l'aiuto di un u
   \item maggiore capacità di tracciamento delle risorse;
   \item minor spreco di risorse;
   \item minor costo per la gestione delle risorse.
-\end{itemize} % mantenere almeno 2 righe sotto
-
+\end{itemize}
 
 Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti alla crescita dei mercati del consumo di massa, allo sviluppo di un numero sempre maggiore di tecnologie volte a migliorare l'efficienza e l'affidabilità dei circuiti integrati e alla sempre maggior diffusione di tecnologie per la trasmissione di informazioni senza fili, dai primi anni 2000 il concetto alla base dell'IoT è stato sviluppato da un numero sempre maggiore di aziende negli ambiti più disparati (\textit{home automation}, \textit{manufacturing}, \textit{smart agriculture}, etc.).
 \footcite{site:pc-to-things}
@@ -75,21 +74,21 @@ L'interesse verso il tema IoT è cresciuto esponenzialmente sia nel mercato cons
 É interessante osservare anche la popolarità dei termini di ricerca correlati all'IoT: i dati sono stati ottenuti interrogando il servizio \url{https://trends.google.com/trends}, il quale consente di effettuare analisi sulla popolarità delle stringhe di ricerca immesse nel motore di ricerca di Google.
 Ciascun grafico a linea (\textit{line chart} in inglese) presenta nelle ordinate il grado di popolarità della \textit{query} di ricerca, valutato da 0 (popolarità minima) a 100 (popolarità massima), e nelle ascisse l'arco temporale in analisi.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/internet-of-things-query-interest-worldwide}
     \caption{Andamento dell'interesse per la stringa di ricerca \textit{"internet of things"}. \\ \cite{site:iot-long-trend}}
     \label{fig:internet-of-things-query-interest}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/iot-devices-query-interest-worldwide}
     \caption{Andamento dell'interesse per la stringa di ricerca \textit{"iot devices"}. \\ \cite{site:iot-devices-trend}}
     \label{fig:iot-devices-query-interest}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/iot-query-interest-worldwide}
     \caption{Andamento dell'interesse per la stringa di ricerca \textit{"iot"}. \\ \cite{site:iot-short-trend}}
@@ -102,9 +101,21 @@ Sintetizzando le previsioni di Forbes con l'andamento dei termini di ricerca leg
 
 L'espressione \textbf{Architettura a microservizi} è sempre più comune tra gli sviluppatori di applicazioni \textit{enterprise} per descrivere un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione "leggeri" (solitamente attraverso \gls{api} HTTP).
 Nella concezione originale in cui l'architettura a microservizi è nata, ogni servizio doveva essere progettato per eseguire in un processo indipendente dagli altri; con la nascita e la diffusione dei \emph{container} questo paradigma sta cambiando, associando sempre più l'esecuzione dei microservizi in altrettanti \emph{container}.
-La \emph{containerization} è un metodo di virtualizzazione posto al livello del sistema operativo per la distribuzione ed esecuzione di applicazioni. Ogni container è un'istanza di 
+La \emph{containerization} (containerizzazione) è un metodo di virtualizzazione posto al livello del sistema operativo per la distribuzione ed esecuzione di applicazioni.
+\footcite{site:containerization}
+Un container è un unità software standardizzata, eseguibile e distribuibile in un unico pacchetto composto da:
+\begin{itemize}
+  \item l'applicazione da eseguire;
+  \item l'ambiente d'esecuzione configurato correttamente per l'applicazione da eseguire, che a sua volta specifica:
+  \begin{itemize}
+    \item le dipendenze dell'applicazione;
+    \item i file di configurazione dell'applicazione.
+  \end{itemize}
+\end{itemize} % \url{https://www.docker.com/what-docker}{Docker}
+Una delle tecnologie di containerizzazione che si è più diffusa è Docker, sviluppata dall'omonima azienda, che è resa disponibile su molteplici piattaforme, sia locali (\emph{computer} con sistemi operativi Windows, macOs e sistemi Linux-based) sia in cloud (ad es. \emph{Amazon Web Services} e \emph{Microsoft Azure}).
+\footcite{site:docker-container}
 
-\paragraph{Caratteristiche delle architetture monolitiche}
+\paragraph{Caratteristiche delle architetture monolitiche}\\
 
 Un'applicazione monolitica è progettata e costruita per essere una singola unità in esecuzione. 
 L'applicazione sviluppata con architettura monolitica è responsabile della visualizzazione delle informazioni in un'interfaccia utente (pagine web o \emph{software} nativi), del reperimento delle informazioni da una sorgente di dati (solitamente un \emph{database}) e dell'esecuzione delle logiche di business della stessa.
@@ -125,7 +136,7 @@ Tra i difetti delle applicazioni monolitiche si possono evidenziare:
   \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di \emph{throughputg}).
 \end{itemize}
 
-\paragraph{Caratteristiche delle architetture a microservizi}
+\paragraph{Caratteristiche delle architetture a microservizi}\\
 
 Per lo stile architetturale a microservizi non esistono definizioni formali, tuttavia è possibile dedurre le caratteristiche che hanno accomunato i progetti diventati nel tempo esempi di best-practice.
 Non tutte le architetture a microservizi hanno tutte le caratteristiche elencate in seguito, ma ci si aspetta che la maggior parte delle architetture esibisca quante più caratteristiche possibili.
@@ -149,14 +160,12 @@ esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e 
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
 Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate, illustrata graficamente in figura ~\ref{fig:business-organization}:
-\begin{itemize}
+\begin{itemize}\itemsep0pt
   \item team esperto in UI;
   \item team specializzato in DB Management;
   \item uno o più team specializzati a realizzare la logica di business.
 \end{itemize}
 
-
-Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
 
 \begin{figure}[H]
   \centering
@@ -164,6 +173,8 @@ Quando le persone sono così isolate, anche una semplice modifica può richieder
   \caption{Illustrazione che mostra la differente organizzazione aziendale in un ambiente di sviluppo monolitico e in un ambiente di sviluppo a microservizi.}
   \label{fig:business-organization}
 \end{figure}
+
+Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi, causando inefficienze nel processo di sviluppo.
 
 L'approccio microservices-oriented alla suddivisione dell'applicazione invece pone l'accento sulle capacità di business: ogni team inerente un particolare settore di business si occupa dell'intero prodotto per quel settore (sviluppando interamente UI, DB, ecc.).
 I team in questo approccio sono multidisciplinari e gli scambi con altri settori riflettono le effettive dipendenze tra un settore e un altro all'interno dell'azienda.
@@ -174,7 +185,7 @@ In Amazon ogni team ha completa responsabilità del prodotto anche in ambiente d
 Applicazioni assemblate con microservizi mirano ad essere più disaccoppiate e più coese possibile: ricevendo una richiesta, applicando la propria logica e producendo una risposta.
 Un diagramma esemplificativo di questo concetto lo si trova in figura ~\ref{fig:services-comms}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/services-comms}
     \caption{Illustrazione che mostra come un utente (inteso sia come umano, sia come altro servizio) di un servizio interagisca con esso.}
@@ -196,7 +207,7 @@ Questa decentralizzazione dei modelli si riflette anche sulla decentralizzazione
 Ogni servizio gestisce il proprio database: il database potrebbe essere quindi un'istanza di una stessa piattaforma tecnologica oppure una piattaforma specifica e ottimizzata per il caso d'uso del servizio.
 Questo approccio alla gestione della persistenza è chiamato Polyglot Persistence.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{intro/data-storage}
     \caption{Illustrazione che mostra la differente gestione dell'architettura di persistenza dei dati tra prodotti software con architettura monolitica e con architettura a microservizi.}

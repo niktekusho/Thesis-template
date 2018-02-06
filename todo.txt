@@ -31,7 +31,7 @@ La frase "sono stati soddisfatti" riferita agli stage usa un verbo inappropriato
 Quel che intendi è "svolti", ma anche così la frase non funziona perché sembreresti asserire che tutti gli stage presentati all'edizione di STAGE-IT cui hai partecipato siano stati assegnati ad altri studenti (cioè, più studenti che proposte di stage), il che è lontano dal vero.
 Non si capisce poi perché tu usi il termine timeframe. -> test
 Infine, la frase finale di quel periodo ha errori di sintassi e di tipografia.
-Quello che poi discuti non è uno "stage non aziendale", ma uno "stage interno individuale".
+Quello che poi discuti non è uno "stage non aziendale", ma uno "stage interno individuale". -> test
 Cura con più attenzione l'impaginazione, affinché figure e tabelle stiano vicine al testo che le riferisce.
 - §1.4
 Le convenzioni tipografiche, insieme alla breve presentazione della struttura della relazione vanno collocate prima dell'indice, in una pagina apposita, posta fuori indice. -> test
