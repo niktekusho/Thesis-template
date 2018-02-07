@@ -45,7 +45,8 @@ Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata all
 Il termine \textit{"Internet of Things"} fu coniato da Kevin Ashton nel 1999.
 \footcite{site:iot-kashton}
 L'origine dell'espressione, riassumendo le parole dell'autore, deriva dal fatto che la maggior parte delle informazioni presenti su Internet sono state e sono inserite da utenti "umani", soggetti quindi a concentrazione, precisione e tempo limitate;
-se queste informazioni fossero invece inserite da macchine senza l'aiuto di un utente umano, la maggior qualità delle stesse garantirebbe
+se queste informazioni fossero invece inserite da macchine senza l'aiuto di un utente umano, la maggior qualità delle stesse garantirebbe:
+\setlist{nolistsep}
 \begin{itemize}
   \item maggiore capacità di tracciamento delle risorse;
   \item minor spreco di risorse;
@@ -64,6 +65,7 @@ Grazie agli avanzamenti nei processi di produzione dei semiconduttori, dovuti al
 
 Con Internet of Things si intende una rete di dispositivi interconnessi, individuabili in modo univoco e che possono comunicare informazioni.
 I dispositivi presenti in una rete possono comunicare con due tipologie di attori diverse:
+\setlist{nolistsep}
 \begin{itemize}
   \item se la comunicazione avviene con altri dispositivi si parla di comunicazione M2M (\textit{Machine to Machine}, ovvero comunicazione tra macchine);
   \item se la comunicazione avviene interagendo con il mondo reale si parla di comunicazione M2H (\textit{Machine to Human}, ovvero comunicazione tra macchina e utente).
@@ -71,6 +73,7 @@ I dispositivi presenti in una rete possono comunicare con due tipologie di attor
 
 
 Il termine "Things" nel contesto IoT si riferisce a una varietà di dispositivi come ad esempio: videocamere di sorveglianza, automobili a guida autonoma e assistita oppure piccoli e grandi elettrodomestici casalinghi. Questi dispositivi, soprannominati anche \textit{smart object}, raccolgono informazioni utili in base agli attori con cui comunicano:
+\setlist{nolistsep}
 \begin{itemize}
   \item se i dispositivi comunicano in modo M2M, le informazioni vengono impiegate al supporto di tecnologie esistenti, integrandosi nel flusso di informazioni esistente;
   \item se i dispositivi comunicano in modo M2H, le informazioni vengono in aiuto delle persone che interagiscono con essi.
@@ -140,6 +143,7 @@ L'applicazione sviluppata con architettura monolitica è responsabile della visu
 \footcite{book:beginning-sw-eng}
 
 Nelle applicazioni monolitiche la modularità del sistema si ottiene sfruttando i costrutti fondamentali dell'orientamento ad oggetti presente nei linguaggi di programmazione:
+\setlist{nolistsep}
 \begin{itemize}
   \item funzioni;
   \item classi;
@@ -155,6 +159,7 @@ Nelle applicazioni monolitiche la modularità del sistema si ottiene sfruttando 
 
 Per aumentare la disponibilità delle applicazioni monolitiche si usa replicare istanze dell'applicazione in molteplici server, bilanciando il traffico verso le applicazioni per mezzo di un \gls{load balancerg}.
 Tra i difetti delle applicazioni monolitiche si possono evidenziare:
+\setlist{nolistsep}
 \begin{itemize}
   \item modifiche a una piccola parte all'applicazione richiedono la ricompilazione e la ridistribuzione dell'applicazione;
   \item all'accrescere della complessità dell'applicazione aumenta anche la difficoltà nel mantenere le modifiche isolate ai moduli di competenza;
@@ -192,13 +197,24 @@ esse richiedono più risorse rispetto alle chiamate di funzione intraprocesso e 
 \footcite{site:fowler-microservices}
 
 Altre differenze sono riscontrabili dal punto di vista della suddivisione delle persone impegnate nello sviluppo dell'applicazione.
-Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate; questo ambiente lavorativo è illustrato graficamente in figura ~\ref{fig:business-organization}:
-\begin{itemize}\itemsep0pt
+Solitamente applicazioni complesse sviluppate seguendo l'architettura monolitica sono divise in team con competenze isolate:
+
+\setlist{nolistsep}
+\begin{itemize}
   \item team esperto in UI;
   \item team specializzato in DB Management;
   \item uno o più team specializzati a realizzare la logica di business.
 \end{itemize}
 
+Questo ambiente lavorativo è illustrato graficamente in figura ~\ref{fig:business-organization}.
+L'origine di una tale suddivisione risale alla Legge di Conway, enunciata nel 1967 dallo sviluppatore Melvin Conway, la quale afferma:
+\begin{displayquote}
+  "organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
+\end{displayquote}
+
+La legge di Conway ragiona sul fatto che un sistema \emph{software} complesso per funzionare richieda lo sforzo congiunto di più attori, che devono coordinarsi e comunicare frequentemente tra loro.
+Quindi la struttura del sistema \emph{software} sviluppato rifletterà l'ambiente di lavoro in cui è stato prodotto, evidenziando eventuali difficoltà di comunicazione. 
+\footcite{site:conway}
 
 \begin{figure}[H]
   \centering
@@ -228,7 +244,23 @@ Un diagramma esemplificativo di questo concetto lo si trova in figura ~\ref{fig:
     \label{fig:services-comms}
 \end{figure}
 
-Le comunicazioni tra servizi sono orchestrate usando semplici protocolli REST-like. I due protocolli più usati sono:
+Le comunicazioni tra servizi sono orchestrate usando semplici protocolli basati su REST.
+REST, acronimo di REpresentational State Transfer, è un tipo di architettura \emph{software} per lo sviluppo di applicazioni distribuite, introdotto nel 2000 nella tesi di dottorato di Roy Fielding.
+Le architetture basate su REST prevedono che la scalabilità delle applicazioni sia conseguenza di pochi principi di progettazione:
+
+\setlist{nolistsep}
+\begin{itemize}
+  \item separazione tra \emph{client} e \emph{server}: i ruoli delle due componenti sono ben distinti utilizzando un insieme di interfacce comuni per la comunicazione, permettendo quindi uno sviluppo indipendente di queste componenti (se l'interfaccia comune non viene alterata);
+  \item \emph{stateless}: la comunicazione \emph{client-server} è vincolata in modo che nessuna informazione sullo stato del \emph{client} venga memorizzata dal \emph{server}; 
+  \item \emph{cacheable}: ogni \emph{client} deve poter memorizzare le risposte inviate dal \emph{server} per minimizzare le comunicazioni \emph{client-server}. Ogni risposta deve comunicare al \emph{client} implicitamente o esplicitamente se essa è memorizzabile;
+  \item \emph{layered system}: un \emph{client} non deve poter discernere un \emph{server} di basso livello da uno intermedio, dedicato a migliorare le prestazioni o introdurre politiche di sicurezza;
+  \item \emph{uniform interface}: la comunicazione tra \emph{client} e \emph{server} deve avvenire con un'interfaccia omogenea, disaccoppiando le due componenti ma degradando potenzialmente l'efficienza, dal momento che le informazioni vengono trasferite in una forma standardizzata invece di una più affine alla loro struttura. 
+\end{itemize}
+\footcite{site:rest-wiki}
+\footcite{rest-thesis}
+
+I due protocolli più usati nelle architetture a microservizi sono:
+\setlist{nolistsep}
 \begin{itemize}
   \item richieste/risposte HTTP secondo API ben dettagliate;
   \item messaggistica in un canale di comunicazione snello. I servizi producono e consumano i messaggi che circolano nel canale di comunicazione, secondo regole di accesso definite.
@@ -237,11 +269,12 @@ Le comunicazioni tra servizi sono orchestrate usando semplici protocolli REST-li
 
 Quando un'applicazione è suddivisa in molteplici componenti sorgono naturalmente dubbi sulla gestione delle informazioni che ciascuna componente gestisce.
 Solitamente nelle architetture monolitiche i domini dell'applicazione vengono astratti scegliendo una fra le tecniche di modellazione disponibili e applicandola a tutti i domini;
-i modelli prodotti sono poi veicolati su singoli storage di dati (ad es. unico database).
+i modelli prodotti sono poi veicolati su singoli \emph{storage} di dati (ad es. unico \emph{database}).
 L'architettura a microservizi invece propone di concepire i modelli in autonomia per ogni singolo servizio, utilizzando le tecniche ritenute più appropriate.
-Questa decentralizzazione dei modelli si riflette anche sulla decentralizzazione delle decisioni di storage dei dati.
-Ogni servizio gestisce il proprio database: il database potrebbe essere quindi un'istanza di una stessa piattaforma tecnologica oppure una piattaforma specifica e ottimizzata per il caso d'uso del servizio.
-Questo approccio alla gestione della persistenza è chiamato Polyglot Persistence.
+Questa decentralizzazione dell'astrazione dei modelli si riflette anche sulla possibilità di decentralizzare le decisioni relative a quale \emph{storage} dei dati utilizzare per ciascun servizio.
+Nell'architettura a microservizi si preferisce che ogni servizio gestisca il proprio \emph{database} in base ai requisiti che il servizio deve soddisfare: il database di un servizio potrebbe essere un'istanza di una stessa piattaforma tecnologica, una piattaforma specifica e ottimizzata per il caso d'uso del servizio oppure potrebbe non essere utilizzato (servizi puramente funzionali).
+Questo approccio alla gestione della persistenza è chiamato \emph{Polyglot Persistence} ed è utilizzabile anche in architetture monolitiche, malgrado appaia con maggior frequenza in architetture a microservizi.
+\footcite{site:fowler-microservices}
 
 \begin{figure}[H]
     \centering
@@ -250,26 +283,32 @@ Questo approccio alla gestione della persistenza è chiamato Polyglot Persistenc
     \label{fig:data-storage}
 \end{figure}
 
-La decentralizzazione delle decisioni di \emph{storage} implica una maggior attenzione verso gli aggiornamenti dei dati.
+Le decisioni di \emph{storage} decentralizzate implicano una maggior attenzione verso gli aggiornamenti dei dati.
 L'approccio comune agli aggiornamenti in un'architettura monolitica è quello di usare le transazioni per garantire la consistenza dei dati prima e dopo ciascun aggiornamento.
 L'utilizzo di transazioni è un grave limite per l'architettura a microservizi, in quanto le transazioni impongono un ordine temporale che potrebbe non essere rispettato, causando inconsistenze dei dati salvati.
 É per questo che le architetture a microservizi enfatizzano l'utilizzo di comunicazioni non vincolanti (transactionless): eventuali inconsistenze vengono segnalate e risolte grazie a operazioni correttive.
+\footcite{site:fowler-microservices}
 
 Una conseguenza nell'utilizzo dei servizi come componenti è che le applicazioni devono prevedere e tollerare malfunzionamenti nei servizi. L'utilizzatore dei servizi deve quindi rispondere ai malfunzionamenti nel modo più elegante possibile. Dato l'aumento di complessità, questo è da attribuire tra i difetti delle architetture a microservizi. Dal momento che i servizi possono malfungere in ogni momento, è fondamentale riuscire a:
 
-monitorare il servizio,
-segnalare il malfunzionamento e
-ripristinare automaticamente il servizio
+\setlist{nolistsep}
+\begin{itemize}
+  \item monitorare il servizio,
+  \item segnalare il malfunzionamento e
+  \item ripristinare automaticamente il servizio
+\end{itemize}
 nel più breve tempo possibile. Conseguentemente, ogni servizio deve essere progettato focalizzando l'attenzione sulle attività di monitoring, individuando le metriche rilevanti (ad es. throughput, latenza, ecc.).
 
 Utilizzando i servizi come componenti ci si chiede spesso quante responsabilità debba avere ciascun servizio: la caratteristica fondamentale da osservare è la nozione di sostituzione e aggiornamento indipendenti.
 Un buon segnale lo si ritrova quando ad ogni modifica di un servizio, questa modifica non richiede adattamenti in altri servizi (a meno di modifiche di funzionalità offerte).
-Se 2 o più servizi vengono aggiornati spesso insieme probabilmente essi dovrebbero essere uniti.
+Se due o più servizi vengono aggiornati spesso insieme probabilmente essi dovrebbero essere uniti.
+\footcite{site:fowler-microservices}
 
 %**************************************************************
 \section{Rischi}
 
 I rischi collegati allo svolgimento di questo stage possono essere suddivisi in tre categorie:
+\setlist{nolistsep}
 \begin{itemize}
   \item rischi collegati alla scelta dello stage nella sua forma interna;
   \item rischi collegati alla scelta del tema IoT;
@@ -280,6 +319,7 @@ I rischi collegati allo svolgimento di questo stage possono essere suddivisi in 
 \subsection{Rischi: Stage interno}
 
 Lo stage formativo viene previsto dal CdL triennale di Informatica in due modalità:
+\setlist{nolistsep}
 \begin{itemize}
   \item stage aziendali, riferiti anche come stage esterni, per i quali il proponente del progetto di stage è un'azienda;
   \item stage non aziendali, riferiti anche come stage interni individuali, per i quali il proponente del progetto di stage è un docente dell'Ateneo di Padova.
@@ -291,6 +331,7 @@ Il primo ostacolo è causato dal mio stato di studente lavoratore: l'azienda per
 Nel momento in cui ho iniziato a cercare proposte di stage e mi sono quindi informato sulle modalità con cui avrei potuto assentarmi da lavoro,
 l'ufficio per le risorse umane dell'azienda per cui sono assunto mi ha comunicato che avrei avuto opzioni limitate, dipendenti dal motivo dell'assenza.
 Se l'assenza avesse comportato l'inizio di attività lavorative per altre aziende (concorrenti oppure non concorrenti) sarei stato costretto a scegliere tra due opzioni:
+\setlist{nolistsep}
 \begin{itemize}
   \item il licenziamento dall'azienda per cui sono assunto;
   \item l'avvio della procedura di \gls{aspettativag} del lavoro come prevista dalla legge 53 recante data 8 marzo 2000. \footcite{site:aspettativa}.
@@ -330,6 +371,7 @@ Il lavoro svolto individualmente, senza possibilità di essere guidato da espert
 Nuove tecnologie contengono sempre una determinata quantità di rischi: mentre la maggior parte degli sviluppatori trovano utilizzi per i dispositivi IoT,
 altri cercano modi per usarli per scopi meno nobili.
 I dispositivi IoT stanno sempre più diffondendosi in molti aspetti su cui basiamo la società moderna:
+\setlist{nolistsep}
 \begin{itemize}
   \item trasporti;
   \item comunicazione;

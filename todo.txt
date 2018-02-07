@@ -13,15 +13,15 @@ Caratterizzare un [micro]servizio come residente in un processo indipendente non
 Nella caratterizzazione dell'architettura "monolitica" che offri hai fatto, ma non spiegato e giustificato, numerose assunzioni (cliente realizzazione come SPA, interazione a livello HTTP), che valgono per una fascia (ancora) limitata di sistemi reali.
 Molti non sono SPA nel lato cliente e non usano HTTP ma derivati di TCP per l'interazione con il servente.
 Questa descrizione ha bisogno di una immagine esplicativa, che non è Fig. 1.5, che è del tutto inefficace. -> testo
-[Per inciso: per tutte le immagini che trai da terzi, ne indicherai la fonte esplicitamente nella corrispondente didascalia.] -> wip
+[Per inciso: per tutte le immagini che trai da terzi, ne indicherai la fonte esplicitamente nella corrispondente didascalia.] -> test
 Quando a pagina 5 riporti una definizione "comunemente accettata" di architettura a microservizi, devi citarne la fonte. -> test
 Il verbo "annoverare" significa "includere in un elenco/elencare"; di conseguenza, la frase "Il difetto che si annovera all’uso" non è corretta. Il verbo che intendi è "attribuisce". -> test
 L'elenco a fini di pagina 5 ha una spaziatura verticale eccessiva, e declina al femminile il sostantivo "team". -> test
-Quanto affermi nell'intorno di quell'elenco è arbitrario e discutibile, tanto più se non citi la fonte (facendo tua l'affermazione). -> todo
+Quanto affermi nell'intorno di quell'elenco è arbitrario e discutibile, tanto più se non citi la fonte (facendo tua l'affermazione). -> test
 L'avverbio "fortemente" è gratuito e non giustificato dallo stato delle cose. Non è questo il principale punto debole delle architetture tradizionali. -> test
-A pagina 6 menzioni REST, senza averlo prima spiegato. Non puoi assumere che chi ti leggerà in sede d'esame dia per scontato che tu abbia chiara cognizione di cosa sia REST. -> todo
-L'affermazione "Ogni servizio gestisce il proprio database" non è corretta. Stai facendo una ipotesi e neanche tanto conforme con la natura stateless dei servizi. -> todo
-In cima a pagina 8 scrivi "La decentralizzazione delle decisioni di storage", dove il sostantivi decisioni è completamente fuori posto. -> todo
+A pagina 6 menzioni REST, senza averlo prima spiegato. Non puoi assumere che chi ti leggerà in sede d'esame dia per scontato che tu abbia chiara cognizione di cosa sia REST. -> test
+L'affermazione "Ogni servizio gestisce il proprio database" non è corretta. Stai facendo una ipotesi e neanche tanto conforme con la natura stateless dei servizi. -> test
+In cima a pagina 8 scrivi "La decentralizzazione delle decisioni di storage", dove il sostantivi decisioni è completamente fuori posto. -> test
 Nel penultimo paragrafo prima di §1.2 sembri volere fare un elenco, ma non lo realizzi tipograficamente. -> todo
 - §1.2
 L'argomento di questa sezione non porta alcuna correlazione con quanto ha -- lungamente -- riportato in §1.1.
