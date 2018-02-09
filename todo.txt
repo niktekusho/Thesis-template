@@ -2,27 +2,27 @@
 
 Meglio, ma ancora non ci siamo.
 Vi è un numero eccessivo e inspiegabile di pagine vuote all'inizio.
-Non userai verbi in modo passivo, ma sempre e solo in modo attivo e personale (così che l'attore sia chiaro ed esplicito). Per esempio, a pagina V, non "sono state adottate", ma "ho adottato", e poi in molti altri casi.
-L'uso dell'apice |g| per denotare termini di glossario è sufficiente senza il corsivo (che confonde con i termini in lingua straniera).
+Non userai verbi in modo passivo, ma sempre e solo in modo attivo e personale (così che l'attore sia chiaro ed esplicito). Per esempio, a pagina V, non "sono state adottate", ma "ho adottato", e poi in molti altri casi. -> todo
+L'uso dell'apice |g| per denotare termini di glossario è sufficiente senza il corsivo (che confonde con i termini in lingua straniera). -> done
 A relazione completata, rimuoverai il testo in corsivo che specifica il contenuto atteso dei singoli capitoli.
 - §1.1.1
 L'idea [...] è stata quella unificare --> [...] con l'idea di unificare
 L'uso della locuzione "quello di" è terribilmente ridondante. -> done
 - §1.1.2
 macOs --> macOS -> done
-throughputg
-Fai attenzione: ciò che la "legge di Conway" vuole dire è che la specializzazione in gruppi di sviluppo (come nella pila a sinistra di figura 1.8) fa corrispondere le loro interfacce di comunicazione con le interfacce tra le componenti del sistema. Nulla a che fare (se non all'estremo) con la frequenza e la difficoltà di comunicazione.
-microservices-oriented :: non è in corsivo ed esiste un ottimo corrispondente italiano per "oriented".
+throughputg -> done
+Fai attenzione: ciò che la "legge di Conway" vuole dire è che la specializzazione in gruppi di sviluppo (come nella pila a sinistra di figura 1.8) fa corrispondere le loro interfacce di comunicazione con le interfacce tra le componenti del sistema. Nulla a che fare (se non all'estremo) con la frequenza e la difficoltà di comunicazione. -> test
+microservices-oriented :: non è in corsivo ed esiste un ottimo corrispondente italiano per "oriented". -> done
 La figura 1.9 continua a non essere significativa, perché -- agli occhi del lettore -- non rappresenta l'autocontenimento della logica del servizio richiesto, e in ogni caso, questa nozione portata all'estremo causa l'incapsulazione di un monolite all'interno di un microservizio, il che è l'opposto dell'intento.
 architettura [...] introdotto :: mancata concordanza
 A fine di pagina 9 vi sono due indici di nota a pié di pagina fuori posto.
 la nota 18 nasconde l'URL nel titolo, ma questo non funziona per la lettura su carta.
 Attento agli accenti, che talvolta inverti (grave e acuto).
-(transactionless) :: non è in corsivo.
-throughput :: non è in corsivo.
+(transactionless) :: non è in corsivo. -> done
+throughput :: non è in corsivo. -> done
 
 Continua a esservi una cesura tra §1.1 e 1.2. In pratica, in §1.1 parli -- lungamente -- di temi tecnici, molto più ampi dello specifico del tuo stage, ma non descrivi gli obiettivi del tuo stage. A quel punto, non puoi evidentemente in §1.2 discutere di rischi di stage.
-Inoltre il titolo di §1.2 è misterioso (rischi di che?), e il testo tra §1.2 e §1.2.1 viola la regola che già ti ho spiegato.
+Inoltre il titolo di §1.2 è misterioso (rischi di che?), e il testo tra §1.2 e §1.2.1 viola la regola che già ti ho spiegato. -> done
 Ciò che manca, evitando pesanti riorganizzazioni del contenuto, è una premessa all'attuale §1.1 che dica che stage hai svolto (come natura e come obiettivi) e anticipi il fatto che nel resto del capitolo discuterai del contesto tecnico "largo" in cui hai operato e analizzerai i rischi della tua scelta.
 
 I contenuti di §1.3 possono essere (meglio) accorparti con le convenzioni tipografiche.

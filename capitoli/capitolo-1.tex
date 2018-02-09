@@ -161,7 +161,7 @@ Tra i difetti delle applicazioni monolitiche si possono evidenziare:
 \begin{itemize}
   \item modifiche a una piccola parte all'applicazione richiedono la ricompilazione e la ridistribuzione dell'applicazione;
   \item all'accrescere della complessità dell'applicazione aumenta anche la difficoltà nel mantenere le modifiche isolate ai moduli di competenza;
-  \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di \emph{throughputg}).
+  \item scalare l'applicazione richiede l'esecuzione di istanze multiple della stessa applicazione, ignorando di fatto eventuali requisiti di efficienza (solitamente alcune componenti del sistema non richiedono un aumento di \gls{throughputg}).
 \end{itemize}
 
 \paragraph{Caratteristiche delle architetture a microservizi}
@@ -210,8 +210,7 @@ L'origine di una tale suddivisione risale alla Legge di Conway, enunciata nel 19
   "organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
 \end{displayquote}
 
-La legge di Conway ragiona sul fatto che un sistema \emph{software} complesso per funzionare richieda lo sforzo congiunto di più attori, che devono coordinarsi e comunicare frequentemente tra loro.
-Quindi la struttura del sistema \emph{software} sviluppato rifletterà l'ambiente di lavoro in cui è stato prodotto, evidenziando eventuali difficoltà di comunicazione. 
+La legge di Conway ragiona sul fatto che un sistema \emph{software} complesso per funzionare richieda lo sforzo congiunto di più attori; dal momento che questi attori devono comunicare tra loro, la complessità insita nella comunicazione tra gli attori si riflette nelle componenti del sistema. 
 \footcite{site:conway}
 
 \begin{figure}[H]
@@ -224,7 +223,7 @@ Quindi la struttura del sistema \emph{software} sviluppato rifletterà l'ambient
 Quando le persone sono così isolate, anche una semplice modifica può richiedere l'intervento di altre persone in team diversi.
 La maggiore richiesta di pianificazione e organizzazione tra gruppi di sviluppo diversi causa un peggioramento dell'efficienza del processo di sviluppo.
 
-L'approccio microservices-oriented alla suddivisione dell'applicazione invece pone l'accento sulle capacità di business: ogni team inerente un particolare settore di business si occupa dell'intero prodotto per quel settore (sviluppando interamente UI, DB, ecc.).
+L'approccio orientato ai microservizi con la suddivisione dell'applicazione invece pone l'accento sulle capacità di business: ogni team inerente un particolare settore di business si occupa dell'intero prodotto per quel settore (sviluppando interamente UI, DB, ecc.).
 I team in questo approccio sono multidisciplinari e gli scambi con altri settori riflettono le effettive dipendenze tra un settore e un altro all'interno dell'azienda.
 \footcite{site:fowler-microservices}
 
@@ -233,14 +232,6 @@ In Amazon ogni team ha completa responsabilità del prodotto anche in ambiente d
 \footcite{site:amazon-microservices}
 
 Applicazioni assemblate con microservizi mirano ad essere più disaccoppiate e più coese possibile: ricevendo una richiesta, applicando la propria logica e producendo una risposta.
-Un diagramma esemplificativo di questo concetto lo si trova in figura ~\ref{fig:services-comms}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\columnwidth]{intro/services-comms}
-    \caption{Illustrazione che mostra come un utente (inteso sia come umano, sia come altro servizio) di un servizio interagisca con esso.}
-    \label{fig:services-comms}
-\end{figure}
 
 Le comunicazioni tra servizi sono orchestrate usando semplici protocolli basati su REST.
 REST, acronimo di REpresentational State Transfer, è un tipo di architettura \emph{software} per lo sviluppo di applicazioni distribuite, introdotto nel 2000 nella tesi di dottorato di Roy Fielding.
@@ -284,7 +275,7 @@ Questo approccio alla gestione della persistenza è chiamato \emph{Polyglot Pers
 Le decisioni di \emph{storage} decentralizzate implicano una maggior attenzione verso gli aggiornamenti dei dati.
 L'approccio comune agli aggiornamenti in un'architettura monolitica è quello di usare le transazioni per garantire la consistenza dei dati prima e dopo ciascun aggiornamento.
 L'utilizzo di transazioni è un grave limite per l'architettura a microservizi, in quanto le transazioni impongono un ordine temporale che potrebbe non essere rispettato, causando inconsistenze dei dati salvati.
-É per questo che le architetture a microservizi enfatizzano l'utilizzo di comunicazioni non vincolanti (transactionless): eventuali inconsistenze vengono segnalate e risolte grazie a operazioni correttive.
+É per questo che le architetture a microservizi enfatizzano l'utilizzo di comunicazioni non vincolanti (\emph{transactionless}): eventuali inconsistenze vengono segnalate e risolte grazie a operazioni correttive.
 \footcite{site:fowler-microservices}
 
 Una conseguenza nell'utilizzo dei servizi come componenti è che le applicazioni devono prevedere e tollerare malfunzionamenti nei servizi. L'utilizzatore dei servizi deve quindi rispondere ai malfunzionamenti nel modo più elegante possibile. Dato l'aumento di complessità, questo è da attribuire tra i difetti delle architetture a microservizi. Dal momento che i servizi possono malfungere in ogni momento, è fondamentale riuscire a:
@@ -295,7 +286,7 @@ Una conseguenza nell'utilizzo dei servizi come componenti è che le applicazioni
   \item segnalare il malfunzionamento e
   \item ripristinare automaticamente il servizio
 \end{itemize}
-nel più breve tempo possibile. Conseguentemente, ogni servizio deve essere progettato focalizzando l'attenzione sulle attività di monitoring, individuando le metriche rilevanti (ad es. throughput, latenza, ecc.).
+nel più breve tempo possibile. Conseguentemente, ogni servizio deve essere progettato focalizzando l'attenzione sulle attività di monitoring, individuando le metriche rilevanti (ad es. \emph{throughput}, latenza, ecc.).
 
 Utilizzando i servizi come componenti ci si chiede spesso quante responsabilità debba avere ciascun servizio: la caratteristica fondamentale da osservare è la nozione di sostituzione e aggiornamento indipendenti.
 Un buon segnale lo si ritrova quando ad ogni modifica di un servizio, questa modifica non richiede adattamenti in altri servizi (a meno di modifiche di funzionalità offerte).
@@ -303,18 +294,9 @@ Se due o più servizi vengono aggiornati spesso insieme probabilmente essi dovre
 \footcite{site:fowler-microservices}
 
 %**************************************************************
-\section{Rischi}
+\section{Valutazione dei rischi dello svolgimento dello stage}
 
-I rischi collegati allo svolgimento di questo stage possono essere suddivisi in tre categorie:
-\setlist{nolistsep}
-\begin{itemize}
-  \item rischi collegati alla scelta dello stage nella sua forma interna;
-  \item rischi collegati alla scelta del tema IoT;
-  \item rischi collegati alla scelta dell'architettura a microservizi.
-\end{itemize}
-
-
-\subsection{Rischi: Stage interno}
+\subsection{Valutazione dei rischi di uno stage interno}
 
 Lo stage formativo viene previsto dal CdL triennale di Informatica in due modalità:
 \setlist{nolistsep}
@@ -364,7 +346,7 @@ Il lavoro svolto individualmente, senza possibilità di essere guidato da espert
 \end{table}
 
 
-\subsection{Rischi: IoT}
+\subsection{Valutazione dei rischi del tema IoT}
 
 Nuove tecnologie contengono sempre una determinata quantità di rischi: mentre la maggior parte degli sviluppatori trovano utilizzi per i dispositivi IoT,
 altri cercano modi per usarli per scopi meno nobili.
@@ -400,7 +382,7 @@ Dal momento che l'IoT è un ambito emergente nel contesto ITC è possibile osser
 \end{table}
 
 
-\subsection{Rischi: Architettura a microservizi}
+\subsection{Valutazione dei rischi dell'architettura a microservizi}
 
 L'architettura a microservizi permette di sviluppare un'applicazione complessa partendo da piccole e relativamente isolate componenti;
 in questo modo i cambiamenti effettuati sono facilmente verificabili.
