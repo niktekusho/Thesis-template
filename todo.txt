@@ -1,8 +1,8 @@
 07/02/2018
 
 Meglio, ma ancora non ci siamo.
-Vi è un numero eccessivo e inspiegabile di pagine vuote all'inizio. -> l'inizio deve stare sulla pagina destra -> latex mette pagine in più vuote per assecondare questa convenzione
-Non userai verbi in modo passivo, ma sempre e solo in modo attivo e personale (così che l'attore sia chiaro ed esplicito). Per esempio, a pagina V, non "sono state adottate", ma "ho adottato", e poi in molti altri casi. -> todo
+Vi è un numero eccessivo e inspiegabile di pagine vuote all'inizio. -> l'inizio dei capitoli deve stare sulla pagina destra -> latex mette pagine in più vuote per assecondare questa convenzione
+Non userai verbi in modo passivo, ma sempre e solo in modo attivo e personale (così che l'attore sia chiaro ed esplicito). Per esempio, a pagina V, non "sono state adottate", ma "ho adottato", e poi in molti altri casi. -> done
 L'uso dell'apice |g| per denotare termini di glossario è sufficiente senza il corsivo (che confonde con i termini in lingua straniera). -> done
 A relazione completata, rimuoverai il testo in corsivo che specifica il contenuto atteso dei singoli capitoli.
 - §1.1.1
@@ -27,7 +27,7 @@ Ciò che manca, evitando pesanti riorganizzazioni del contenuto, è una premessa
 
 I contenuti di §1.3 possono essere (meglio) accorparti con le convenzioni tipografiche. -> done
 
-Per non rallentarti oltremodo, ti raccomando di mettere a posto §1 in parallelo alla prima stesura di §2.
+Per non rallentarti oltremodo, ti raccomando di mettere a posto §1 in parallelo alla prima stesura di §2. -> test
 
 
 05/02/2018
