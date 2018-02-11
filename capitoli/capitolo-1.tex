@@ -165,6 +165,7 @@ Tra i difetti delle applicazioni monolitiche si possono evidenziare:
 \end{itemize}
 
 \paragraph{Caratteristiche delle architetture a microservizi}
+\label{par:microservizi-intro}
 
 Per lo stile architetturale a microservizi non esistono definizioni formali, tuttavia è possibile dedurre le caratteristiche che hanno accomunato i progetti diventati nel tempo esempi di best-practice.
 Non tutte le architetture a microservizi hanno tutte le caratteristiche elencate in seguito, ma ci si aspetta che la maggior parte delle architetture esibisca quante più caratteristiche possibili.
@@ -210,7 +211,7 @@ L'origine di una tale suddivisione risale alla Legge di Conway, enunciata nel 19
   "organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
 \end{displayquote}
 
-La legge di Conway ragiona sul fatto che un sistema \emph{software} complesso per funzionare richieda lo sforzo congiunto di più attori; dal momento che questi attori devono comunicare tra loro, la complessità insita nella comunicazione tra gli attori si riflette nelle componenti del sistema. 
+La legge di Conway ragiona sul fatto che un sistema \emph{software} complesso per funzionare richieda lo sforzo congiunto di più attori; dal momento che questi attori devono comunicare tra loro, la complessità insita nella comunicazione tra gli attori si riflette nelle componenti del sistema.
 \footcite{site:conway}
 
 \begin{figure}[H]
@@ -240,10 +241,10 @@ Le architetture basate su REST prevedono che la scalabilità delle applicazioni 
 \setlist{nolistsep}
 \begin{itemize}
   \item separazione tra \emph{client} e \emph{server}: i ruoli delle due componenti sono ben distinti utilizzando un insieme di interfacce comuni per la comunicazione, permettendo quindi uno sviluppo indipendente di queste componenti (se l'interfaccia comune non viene alterata);
-  \item \emph{stateless}: la comunicazione \emph{client-server} è vincolata in modo che nessuna informazione sullo stato del \emph{client} venga memorizzata dal \emph{server}; 
+  \item \emph{stateless}: la comunicazione \emph{client-server} è vincolata in modo che nessuna informazione sullo stato del \emph{client} venga memorizzata dal \emph{server};
   \item \emph{cacheable}: ogni \emph{client} deve poter memorizzare le risposte inviate dal \emph{server} per minimizzare le comunicazioni \emph{client-server}. Ogni risposta deve comunicare al \emph{client} implicitamente o esplicitamente se essa è memorizzabile;
   \item \emph{layered system}: un \emph{client} non deve poter discernere un \emph{server} di basso livello da uno intermedio, dedicato a migliorare le prestazioni o introdurre politiche di sicurezza;
-  \item \emph{uniform interface}: la comunicazione tra \emph{client} e \emph{server} deve avvenire con un'interfaccia omogenea, disaccoppiando le due componenti ma degradando potenzialmente l'efficienza, dal momento che le informazioni vengono trasferite in una forma standardizzata invece di una più affine alla loro struttura. 
+  \item \emph{uniform interface}: la comunicazione tra \emph{client} e \emph{server} deve avvenire con un'interfaccia omogenea, disaccoppiando le due componenti ma degradando potenzialmente l'efficienza, dal momento che le informazioni vengono trasferite in una forma standardizzata invece di una più affine alla loro struttura.
 \end{itemize}
 \footcite{site:rest-wiki}
 \footcite{rest-thesis}

@@ -10,45 +10,74 @@
 \intro{Nelle sezioni di questo capitolo parlerò delle aspettative e degli obiettivi posti inizialmente per il progetto di Stage}\\
 
 %**************************************************************
+\section{Obiettivi di prodotto}
+
+Gli obiettivi di prodotto consistono in quelle caratteristiche e funzionalità importanti per gli utenti del sistema. \\
+
+L'obiettivo principale del prodotto sarà quello di fornire un'interfaccia unificata per la gestione dei dispositivi connessi, consentendo all'utente l'accesso all'interfaccia proprietaria di ciascun dispositivo. \\
+Date le limitate risorse (di tempo, di persone e di conoscenza pregressa) non mi aspetterò che il prodotto sia lo stato dell'arte in questo settore, soprattutto per quanto riguarda l'ambito della sicurezza; allo stesso modo non svilupperò un nuovo protocollo di comunicazione tra dispositivi, bensì mi limiterò a studiare le possibili scelte e a motivare la particolare scelta del protocollo che utilizzerò. \\
+
+Come riporta il titolo della presente relazione, per il progetto di stage preferirò concentrarmi su funzionalità per certi aspetti innovative restando nell'ambito di sviluppo di un prototipo; come tale, il prototipo non vorrà essere una soluzione pronta alla distribuzione sul mercato (\emph{production-ready}), quanto un modo per sperimentare con l'automazione domestica introducendo funzionalità non diffuse nei prodotti presenti sul mercato. \\
+
+Un secondo nodo cruciale su cui punterò sin dalle prime attività di sviluppo è la scalabilità della soluzione rispetto all'obiettivo principale citato precedentemente.
+Ho concepito l'obiettivo di scalabilità del prodotto come una possibilità di decentralizzare le funzionalità che il sistema dovrà fornire; l'idea, a mio modo di vedere innovativa, consiste nel realizzare un sistema \emph{software} che potrà essere eseguito su dispositivi diversi e che potrà gestire funzionalità "dinamiche" per i dispositivi con cui l'utente può interagire.
+Un esempio che mi ha aiutato a chiarire questo obiettivo è il seguente: supponiamo di voler realizzare un sistema che gestisca l'automazione domestica per quanto riguarda l'illuminazione e per quanto riguarda la gestione termica dell'abitazione.
+
+I dispositivi per l'illuminazione domestica consistono solamente in varianti di un solo dispositivo, la lampada. \\
+I dispositivi per la gestione termica dell'abitazione sono invece sostanzialmente due:
+\begin{itemize}
+  \item sensori, i quali devono inviare informazioni relative alla temperatura di un determinato ambiente;
+  \item termostati, i quali devono interfacciarsi con i sensori da una parte, per ricevere e sintetizzare la distribuzione termica dell'abitazione, e con l'impianto di riscaldamento dall'altra, per applicare le variazioni di temperatura richieste dall'utente.
+\end{itemize}
+
+Concepirò la scalabilità del prodotto al fine di permettere che le funzionalità di gestione dei dispositivi legati alla temperatura possano essere responsabilità di uno o più dispositivi che eseguano \emph{software} dedicato allo scopo.
+Proseguendo l'esempio iniziato precedentemente, la componente del sistema legata alla temperatura potrà essere eseguita su un termostato dotato di capacità di elaborazione adeguate, oppure potrà essere eseguita su un dispositivo \emph{ad-hoc} oppure ancora su un dispositivo utilizzato in comune con gli apparati di illuminazione senza che le due componenti entrino in conflitto.
+Lo stesso principio sarà applicabile alla gestione dell'illuminazione (lampada \emph{master} con elettronica in grado di eseguire il \emph{software} o dispositivo dedicato).
+
+
+
+%**************************************************************
 \section{Obiettivi curricolari}
 
-Questa sezione risponde alla domanda:
+Gli obiettivi curricolari sono quelle caratteristiche dimostrabili che sono rilevanti sul mercato del lavoro. \\
 
-Quali valori mi \textbf{aspetto} di dedurre dall'esperienza di stage che siano rilevanti sul mercato del lavoro?
+Gli obiettivi curricolari su cui punterò per l'aspetto IoT servono a dimostrare le soluzioni che svilupperò .
+Dal momento che il prodotto sviluppato per il progetto di stage sarà completamente \emph{open source} e rilasciato con la licenza \gls{MIT}, le aziende interessate ad alcuni aspetti del prodotto potranno visualizzare, migliorare ed eventualmente contribuire al codice esistente, tenendo bene in considerazione che il prodotto sarà sviluppato da un solo sviluppatore al primo approccio con il tema. \\
 
-Parlerò della rilevanza del mercato IoT, in continua espansione.
-
-Parlerò inoltre del crescente interesse delle aziende verso il paradigma dell'architettura a microservizi.
-
+Gli obiettivi curricolari relativi al paradigma dell'architettura a microservizi invece dimostrano la mia volontà di sperimentare con approcci non convenzionali allo sviluppo di sistemi \emph{software} che hanno particolari esigenze di scalabilità. \\
+A mio avviso, il mercato del lavoro apprezzerà l'esperienza fatta in questo ambito grazie al fatto che la documentazione del prodotto e il codice sorgente del prodotto stesso saranno visualizzabili liberamente da tutti gli attori interessati, permettendo loro di capire secondo quali princìpi avrò sviluppato le componenti del sistema. \\
+In particolare, le aziende interessate potranno valutare le mie effettive competenze nello sviluppo di architetture distribuite e nell'implementazione di un protocollo di comunicazione esistente.
 
 %**************************************************************
 \section{Obiettivi formativi}
 
-Questa sezione risponde alla domanda:
+Gli obiettivi formativi indicano le conoscenze e le abilità che dovrebbero essere studiate e imparate durante lo svolgimento dello stage.
 
-Quali informazioni mi \textbf{aspetto} di imparare/studiare durante lo svolgimento dello Stage?
+Anche in questo caso, separo gli obiettivi formativi legati all'ambito IoT da quelli relativi al tema architettura a microservizi.
 
-Parlerò dei concetti imparati per supportare al meglio lo sviluppo di applicazioni con architettura a microservizi.
-I concetti principali sono: polyglot persistence, gateway pattern, analisi della corretta dimensione di un servizio per essere definito un microservizio.
-Per quanto riguarda l'IoT parlerei dei protocolli analizzati durante l'attività di formazione, soffermandomi in particolare su MQTT.
+Dal punto di vista del tema IoT, dovrò studiare le caratteristiche essenziali e le funzionalità che i dispositivi IoT esistenti possiedono per permetterne una corretta rappresentazione all'interno del sistema.
+Inoltre lo studio dei protocolli di comunicazione esistenti sarà fondamentale per permettere lo sviluppo di un sistema affidabile e performante. In particolare dovrò analizzare protocolli di comunicazione esistenti, utilizzabili liberamente e le cui specifiche siano accessibili pubblicamente e gratuitamente.
+Anche se il prodotto sviluppato sarà un prototipo in cui la sicurezza non sarà ben implementata, studierò e valuterò l'aspetto relativo alla sicurezza dei protocolli utilizzabili, considerando la diffusione del protocollo, le effettive vulnerabilità note e il rapporto sicurezza del protocollo rispetto alla sua facilità di utilizzo.
+
+A mio modo di vedere, il lato formativo relativo all'architettura a microservizi sarà quello più impegnativo.
+Essendo alla mia prima esperienza con la progettazione di un sistema distribuito e con un paradigma architetturale relativamente nuovo, mi aspetto di dover impiegare un tempo maggiore, rispetto alla parte relativa all'IoT, per imparare i concetti che permettono lo sviluppo delle architetture a microservizi.
+In particolare, uno degli aspetti su cui concentrerò maggior attenzione è l'analisi della corretta dimensione di un servizio tale per cui esso possa essere definito "\emph{micro}".
+Un altro concetto importante su cui dovrò informarmi con attenzione consiste nella scelta delle tecnologie di persistenza dei dati per ciascun servizio, specialmente in relazione alla già citata \emph{Polyglot persistence} (riferimento ~\ref{par:microservizi-intro}).
+Mi aspetto quindi di dover imparare ad analizzare la struttura delle informazioni che ciascun dispositivo deve fornire al fine di sviluppare una componente che riesca a memorizzare ed elaborare tali informazioni in efficienza.
 
 
 %**************************************************************
 \section{Obiettivi tecnici}
 
-Questa sezione risponde alle domande:
+Gli obiettivi tecnici consistono nelle tecniche e nelle tecnologie specifiche che andrò ad utilizzare durante lo svolgimento dello stage.
 
-Quali tecnologie mi \textbf{aspetto} di imparare a padroneggiare durante lo svolgimento dello Stage?
-Quali competenze mi \textbf{aspetto} di apprendere durante lo svolgimento dello Stage?
+Il primo obiettivo tecnico su cui punterò è quello di distribuire l'insieme delle funzionalità del prodotto come \emph{software open source}: esso sarà pubblicato con una licenza permissiva che permetterà a chi è interessato di visualizzare, modificare ed utilizzare il prodotto senza condizioni vincolanti.
 
-Per quanto riguarda l'architettura a microservizi, mi aspetto di padroneggiare l'utilizzo del gateway pattern e di cominciare a costruire esperienza sulla composizione di servizi e sul loro dimensionamento.
-Per quanto riguarda l'IoT mi aspetto di aver appreso MQTT nel suo utilizzo come protocollo molti-a-molti, uno-a-molti e uno-a-uno.
+Dal momento che il prodotto sarà testabile da un pubblico potenzialmente vasto, il secondo obiettivo tecnico generale consiste nella distribuzione delle istruzioni per provare il sistema prodotto in una macchina locale.
 
-%**************************************************************
-\section{Obiettivi di prodotto}
+Da un punto di vista tecnico, per l'ambito IoT mi aspetto di dover padroneggiare un protocollo di comunicazione, scelto tra quelli in esame, per permettere ai dispositivi di comunicare tra loro nelle modalità consentite dal protocollo.
+I dispositivi dovranno comunicare tra loro sia con comunicazioni uno a uno, sia con comunicazioni uno a molti (\gls{broadcast}) e gestire eventuali errori di trasmissione in base all'importanza dell'informazione che essi trasmettono.
 
-Questa sezione risponde alla domanda:
+Per permettere a chiunque di provare il sistema, mi aspetto di dover fornire un modo per simulare la presenza di dispositivi IoT nella propria rete domestica.
 
-Quali caratteristiche (innovative o non) del prodotto sviluppato mi \textbf{aspetto} di poter dimostrare?
-
-L'aspetto innovativo del prodotto che mi aspetto di evidenziare è quello della scalabilità del prodotto e la possibilità di gestire dispositivi che dichiarino azioni.
+Nell'ambito delle architetture a microservizi dovrò padroneggiare alcuni dei \gls{pattern} peculiari di queste architetture \emph{software}, come per esempio il \gls{Gatewaypattern}, e dovrò studiare le tecniche e le tecnologie che si sono diffuse per monitorare lo stato del sistema, per orchestrare i servizi e per gestire la scalabilità degli stessi.

@@ -10,6 +10,8 @@
 \newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
     {uml}{UML}{Unified Modeling Language}
 
+\newacronym{mit-acronym}{MIT}{Massachusetts Institute of Technology}
+
 %**************************************************************
 % Glossario
 %**************************************************************
@@ -18,7 +20,7 @@
 \newglossaryentry{apig}
 {
     name=\glslink{api}{API},
-    text=Application Program Interface,
+    text=\emph{Application Program Interface},
     sort=api,
     description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
 }
@@ -33,32 +35,64 @@
 
 \newglossaryentry{load balancerg}
 {
-  name=Load balancer,
-  text=Load balancer,
+  name=\emph{Load balancer},
+  text=load balancer,
   sort=load balancer,
   description={in informatica, il load balancer è lo strumento hardware o software attraverso cui viene distribuito un carico di lavoro su più risorse di elaborazione (\textit{load balancing})}
 }
 
 \newglossaryentry{throughputg}
 {
-  name=throughput,
+  name=\emph{Throughput},
   text=throughput,
   sort=throughput,
-  description={}
+  description={indica la capacità di un canale di comunicazione di processare o trasmettere dati in uno specifico periodo di tempo. É una misura di produttività.}
 }
 
 \newglossaryentry{aspettativag}
 {
-  name=aspettativa,
+  name=Aspettativa,
   text=aspettativa,
   sort=aspettativa,
-  description={è equivalente ad un periodo di astensione dal lavoro, previsto dalla legge, che il datore di lavoro può concedere ad un proprio lavoratore per motivi familiari o personali, generalmente non retribuito}
+  description={è un periodo di astensione dal lavoro, previsto dalla legge, che il datore di lavoro può concedere ad un proprio lavoratore per motivi familiari o personali, generalmente non retribuito}
 }
 
 \newglossaryentry{kernelg}
 {
-  name=kernel,
-  text=kernel,
+  name=\emph{Kernel},
+  text={Kernel},
   sort=kernel,
   description={è il sottosistema di un sistema operativo che fornisce ai processi in esecuzione sull'elaboratore l'accesso alle risorse fisiche, in modo controllato e sicuro}
+}
+
+\newglossaryentry{MIT}
+{
+  name=\gls{mit-acronym},
+  text=MIT,
+  sort=mit,
+  description={nell'ambito delle licenze \emph{software}, la licenza MIT è una licenza creata dal \emph{Massachusetts Institute of Technology} per il rilascio di codice sorgente secondo condizioni permissive da parte dell'utilizzatore del codice, tutelando il \emph{copyright} dell'autore}
+}
+
+\newglossaryentry{broadcast}
+{
+  name=\emph{Broadcast},
+  text={Broadcast},
+  sort=broadcast,
+  description={nell'ambito delle telecomunicazione, indica una trasmissione delle informazioni da un sistema trasmittente ad un insieme di apparati riceventi non conosciuto a priori (uno a molti)}
+}
+
+\newglossaryentry{pattern}
+{
+  name=\emph{Pattern},
+  text={Pattern},
+  sort=pattern,
+  description={in informatica è una soluzione testata e dimostrata ad un problema ricorrente. La sua accezione principale consiste in quella di \emph{Design Pattern} (soluzioni progettuali)}
+}
+
+\newglossaryentry{Gatewaypattern}
+{
+  name=\emph{Gateway Pattern},
+  text={Gateway Pattern},
+  sort=gateway pattern,
+  description={è un \gls{pattern} che propone una soluzione al problema "Come un \emph{client} può interagire con un sistema a microservizi?". Questo è un peculiare problema delle architetture a microservizi e la soluzione proposta consiste nel sviluppare un servizio la cui funzionalità principale consiste nel gestire le richieste dei \emph{client} in un singolo \emph{entrypoint} pubblico, che si occupa di redirezionare la richiesta al servizio adeguato o assembla una risposta complessa a partire dalle informazioni messe a disposizione da più servizi\footcite{gateway-pattern}}
 }
