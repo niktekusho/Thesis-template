@@ -1,3 +1,16 @@
+12/02/2018
+
+Con i contenuti che gli hai dato, il capitolo 1 non funziona, perché in esso vi è totale scollamento tra §1.1 (che tratta, con titolo ingannevolmente vago, di temi assolutamente generali) e §1.2 (che analizzi i "rischi di impresa" di uno stage interno su quei temi). Per sanare questo grave difetto, senza stravolgere i contenuti correnti, serve una premessa (che diventerà il nuovo §1.1) che introduca entrambi i termini della relazione di stage (cioè che questa è una relazione, e di un particolare stage, con particolari obiettivi e caratteristiche).
+La sovrapposizione con §2 non vi sarà, perché i contenuti di cui sopra dovranno fungere da introduzione generale. -> test
+
+Il capitolo 2 funziona ancora meno.
+Per prima cosa, non funzionano i verbi al tempo futuro. Stai scrivendo una relazione, a valle dello stage, e quindi su una storia già completamente nota. Non stai invece scrivendo un diario, in cui oggi annunci ciò che intendi fare domani, e poi domani vedremo.
+In secondo luogo, non funziona l'assenza (come già per §1) di un collante iniziale, che raccordi il titolo e la funzione del capitolo con i suoi contenuti.
+In terzo luogo non funziona il flusso degli argomenti: non si capisce perché quelli e perché in quell'ordine; tanto meno si capisce perché iniziare da obiettivi di prodotto come se, nel tuo stage, tu avessi per davvero puntato alla realizzazione di un prodotto; non si capisce la distinzione tra obiettivi curricolari e formativi (poiché sviluppi entrambi, e con insufficiente profondità) da un punto di vista esterno al tuo percorso di studi. (Per inciso, le conoscenze si acquisiscono e le abilità si apprendono.)
+In quarto luogo, non funziona lo stile narrativo, che offusca gli obiettivi che hai elencato e rende difficile metterli in relazioni esplicita con il bilancio che tratterai nel capitolo 4.
+Infine, non soddisfa l'attuale scarsezza di contenuto, per ampiezza e per profondità.
+
+
 07/02/2018
 
 Meglio, ma ancora non ci siamo.

@@ -21,14 +21,34 @@
 %**************************************************************
 \section{L'idea}
 
-\subsection{IoT}
+% obiettivi dello stage
+
+% caratteristiche dello stage
+
+In questa relazione descrivo lo svolgimento dello stage effettuato nel contesto del corso di Laurea di Informatica dell'Università di Padova.
+
+Ho intrapreso lo stage nella sua forma interna individuale, in cui con il proponente, \profTitle \myProf, ho redatto un piano di lavoro nel quale lo stage abbia una durata pianificata su 300 ore.
+
+L'obiettivo principale dello stage consiste nello sviluppo e nella realizzazione di una \emph{dashboard} per la gestione di dispositivi interconnessi (IoT).
+Questo centro di controllo attraverso cui l'utente del sistema gestisce i dispositivi \emph{smart} presenti nella propria rete domestica dovrebbe permettere operazioni del tipo:
+\begin{itemize}
+  \item avvio/spegnimento di un dispositivo;
+  \item monitoraggio dei dispositivi collegati;
+  \item richiesta di dati per conoscere lo stato dei dispositivi (ad es. per una lampadina indicare se essa sia accesa o spenta, il suo assorbimento energetico, ecc.);
+  \item collegamento all'eventuale interfaccia proprietaria del dispositivo (es. supporto tecnico).
+\end{itemize}
+
+Ho sviluppato e realizzato il progetto di stage con l'idea di unificare in un unico centro di controllo tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun dispositivo.
+L'obiettivo di una tale \emph{dashboard} non è quindi confinare l'utente in un unico ecosistema domotico,
+bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti. \\
+
+
+%**************************************************************
+\section{IoT}
 \label{intro-iot}
 
 \emph{Internet Of Things} è un paradigma tecnologico diffusosi nell'ultimo decennio. Questa locuzione fa riferimento a un insieme di oggetti,
 di varia natura e utilizzo, che interagiscono tra loro e che permettono all'utente di interagire con essi. \\ \\
-Ho sviluppato e realizzato il progetto di stage con l'idea di unificare in un unico centro di controllo tutti gli eventuali dispositivi connessi alla rete domestica dell'utente, permettendo tuttavia allo stesso di accedere all'interfaccia proprietaria di ciascun dispositivo.
-L'obiettivo di una tale \emph{dashboard} non è quindi confinare l'utente in un unico ecosistema domotico,
-bensì quello di facilitare la consultazione delle informazioni più frequentemente richieste dall'utente provenienti da più ecosistemi distinti. \\
 
 Un dispositivo \emph{smart} è un dispositivo elettronico, generalmente connesso ad altri dispositivi, che può svolgere le proprie funzioni in maniera autonoma.
 Un esempio lampante di dispositivi \emph{smart} sono gli smartphone, prodotti che hanno arricchito di funzionalità avanzate, interagendo con l'utente in modi precedentemente non possibili, i predecessori telefoni (\emph{phone}).
@@ -103,7 +123,7 @@ Ciascun grafico a linea (\textit{line chart} in inglese) presenta nelle ordinate
 
 Sintetizzando le previsioni di Forbes con l'andamento dei termini di ricerca legati all'IoT, visibili alle figure ~\ref{fig:internet-of-things-query-interest}, ~\ref{fig:iot-devices-query-interest} e ~\ref{fig:iot-query-interest}, posso evidenziare che l'interesse verso l'argomento IoT stia generalmente aumentando o nel caso peggiore rimanga stabile con l'interesse degli anni precedenti.
 
-\subsection{Architettura a microservizi}
+\section{Architettura a microservizi}
 
 L'espressione \textbf{Architettura a microservizi} è sempre più comune tra gli sviluppatori di applicazioni \textit{enterprise} per descrivere un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione "leggeri" (solitamente attraverso \gls{api} HTTP).
 Nella concezione originale in cui l'architettura a microservizi è nata, ogni servizio doveva essere progettato per eseguire in un processo indipendente dagli altri; con la nascita e la diffusione dei \emph{container} questo paradigma sta cambiando, associando sempre più l'esecuzione dei microservizi in altrettanti \emph{container}.
