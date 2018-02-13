@@ -4,79 +4,153 @@
 
 %**************************************************************
 \pagebreak
-\chapter{Progetto di Stage}
+\chapter{Progetto di stage}
 \label{cap:processi-metodologie}
 %**************************************************************
 
-\intro{Nelle sezioni di questo capitolo parlerò delle aspettative e degli obiettivi posti inizialmente per il progetto di Stage}\\
+\section{Descrizione generale}
 
-%**************************************************************
-\section{Obiettivi di prodotto}
-
-Gli obiettivi di prodotto consistono in quelle caratteristiche e funzionalità importanti per gli utenti del sistema. \\
-
-L'obiettivo principale del prodotto è quello di fornire un'interfaccia unificata per la gestione dei dispositivi connessi, consentendo all'utente l'accesso all'interfaccia proprietaria di ciascun dispositivo. \\
-Date le limitate risorse (di tempo, di persone e di conoscenza pregressa) non mi aspetto che il prodotto sia lo stato dell'arte in questo settore, soprattutto per quanto riguarda l'ambito della sicurezza; allo stesso modo non è stata mia intenzione sviluppare un nuovo protocollo di comunicazione tra dispositivi, bensì mi sono limitato a studiare le possibili scelte e a motivare la particolare scelta del protocollo che utilizzato. \\
-
-Come riporta il titolo della presente relazione, per il progetto di stage ho preferito concentrarmi su funzionalità per certi aspetti innovative restando nell'ambito di sviluppo di un prototipo; come tale, il prototipo non è una soluzione pronta alla distribuzione sul mercato (\emph{production-ready}), quanto un modo per sperimentare con l'automazione domestica introducendo funzionalità non diffuse nei prodotti presenti sul mercato. \\
-
-Un secondo nodo cruciale su cui ho puntato sin dalle prime attività di sviluppo è la scalabilità della soluzione rispetto all'obiettivo principale citato precedentemente.
-Ho concepito l'obiettivo di scalabilità del prodotto come una possibilità di decentralizzare le funzionalità che il sistema fornisce; l'idea, a mio modo di vedere innovativa, consiste nel realizzare un sistema \emph{software} che possa essere eseguito su dispositivi diversi e che possa gestire funzionalità "dinamiche" per i dispositivi con cui l'utente può interagire.
-Un esempio che mi ha aiutato a chiarire questo obiettivo è il seguente: supponiamo di voler realizzare un sistema che gestisca l'automazione domestica per quanto riguarda l'illuminazione e per quanto riguarda la gestione termica dell'abitazione.
-
-I dispositivi per l'illuminazione domestica consistono solamente in varianti di un solo dispositivo, la lampada. \\
-I dispositivi per la gestione termica dell'abitazione sono invece sostanzialmente due:
+Lo stage interno è una forma di stage individuale in cui uno studente, in concerto con un docente, redige un piano delle attività da svolgere nell'intervallo di tempo specificato.
+Nel presente progetto di stage ho iniziato le attività di stage in data 6/11/2017 e le ho terminate in data 2/1/2018, con un monte ore totale di circa 312 ore. \\
+In questo periodo di svolgimento dello stage ho definito, con l'assistenza del \profTitle \myProf, gli obiettivi dello stage dai seguenti punti di vista:
+\begin{itemize}
+  \item obiettivi di prodotto: questi obiettivi coincidono con le caratteristiche e le funzionalità importanti per gli utenti del prodotto;
+  \item obiettivi formativi: questi obiettivi comprendono le conoscenze che mi aspetto di acquisire e le abilità mi aspetto di apprendere durante lo svolgimento dello stage.
+  \item obiettivi tecnici: questi obiettivi comprendono le tecniche e le tecnologie specifiche che mi aspetto di dover padroneggiare al fine di completare il progetto di stage.
+\end{itemize}
+\bigskip
+L'ambito su cui ho focalizzato l'attenzione dello stage include dispositivi per l'automazione domestica dedicati alla gestione dell'illuminazione e alla gestione termica dell'abitazione. \\
+I dispositivi che ho considerato per l'illuminazione domestica consistono solamente in varianti di un solo dispositivo, la lampada \emph{smart}. \\
+I dispositivi considerati invece per la gestione termica dell'abitazione sono sostanzialmente due:
 \begin{itemize}
   \item sensori, i quali devono inviare informazioni relative alla temperatura di un determinato ambiente;
   \item termostati, i quali devono interfacciarsi con i sensori da una parte, per ricevere e sintetizzare la distribuzione termica dell'abitazione, e con l'impianto di riscaldamento dall'altra, per applicare le variazioni di temperatura richieste dall'utente.
 \end{itemize}
-\\
-Ho concepito la scalabilità del prodotto al fine di permettere che le funzionalità di gestione dei dispositivi legati alla temperatura possano essere responsabilità di uno o più dispositivi che eseguano \emph{software} dedicato allo scopo.
-Proseguendo l'esempio iniziato precedentemente, la componente del sistema legata alla temperatura potrebbe essere eseguita su un termostato dotato di capacità di elaborazione adeguate, oppure potrebbe essere eseguita su un dispositivo \emph{ad-hoc} oppure ancora su un dispositivo utilizzato in comune con gli apparati di illuminazione senza che le due componenti entrino in conflitto.
-Lo stesso principio è applicabile alla gestione dell'illuminazione (lampada \emph{master} con elettronica in grado di eseguire il \emph{software}, dispositivo dedicato o dispositivo comune).
-
 
 %**************************************************************
-\section{Obiettivi curricolari}
+\section{Obiettivi di prodotto}
 
-Gli obiettivi curricolari sono quelle caratteristiche dimostrabili che sono rilevanti sul mercato del lavoro. \\
+L'obiettivo principale del prodotto è quello di fornire un'interfaccia unificata per la gestione dei dispositivi connessi, consentendo all'utente l'accesso all'interfaccia proprietaria di ciascun dispositivo. \\
 
-% Gli obiettivi curricolari su cui ho puntato per l'aspetto IoT servono a dimostrare le soluzioni che svilupperò .
-Dal momento che il prodotto sviluppato per il progetto di stage è completamente \emph{open source} e rilasciato con la licenza \gls{MIT}, le aziende interessate ad alcuni aspetti del prodotto possono visualizzare, migliorare ed eventualmente contribuire al codice esistente, tenendo bene in considerazione che il prodotto è sviluppato da un solo sviluppatore al primo approccio con il tema. \\
+Come riporta il titolo della presente relazione, per il progetto di stage ho preferito concentrarmi su funzionalità per certi aspetti innovative restando nell'ambito di sviluppo di un prototipo; come tale, il prototipo non è una soluzione pronta alla distribuzione sul mercato (\emph{production-ready}), quanto un modo per sperimentare con l'automazione domestica introducendo funzionalità non diffuse nei prodotti presenti sul mercato. \\
 
-Gli obiettivi curricolari relativi al paradigma dell'architettura a microservizi invece dimostrano la mia volontà di sperimentare con approcci non convenzionali allo sviluppo di sistemi \emph{software} che hanno particolari esigenze di scalabilità. \\
-A mio avviso, il mercato del lavoro dovrebbe apprezzare l'esperienza fatta in questo ambito grazie al fatto che la documentazione del prodotto e il codice sorgente del prodotto stesso, essendo visualizzabili liberamente da tutti gli attori interessati, permettono loro di capire secondo quali princìpi ho sviluppato le componenti del sistema. \\
-In particolare, le aziende interessate possono valutare le mie effettive competenze nello sviluppo di architetture distribuite e nell'implementazione di un protocollo di comunicazione esistente.
+Le funzionalità chiave che il prodotto sviluppato vuole offrire all'utente sono riportate in tabella ~\ref{tab:obiettivi-prodotto}, che illustra l'identificativo assegnato all'obiettivo, una descrizione dell'obiettivo e la sua importanza, valutata in una scala di importanza crescente da 1 a 5, in cui 1 indica l'importanza minima e 5 l'importanza massima. 
 
-% TODO: unire meglio i due argomenti
+\begin{table}[H]
+\caption{Tabella delle funzionalità offerte dal prototipo all'utente}
+\label{tab:obiettivi-prodotto}
+\begin{tabularx}{\linewidth}{|c|X|c|}
+\hline
+\textbf{Id obiettivo} & \textbf{Descrizione obiettivo} & \textbf{Importanza funzionalità}\\
+\hline
+\label{OP1} OP1 & Visualizzare lo stato generale del sistema. & 4 \\
+\hline
+\label{OP2} OP2 & Visualizzare quali dispositivi sono collegati al sistema. & 5 \\
+\hline
+\label{OP3} OP3 & Visualizzare le informazioni trasmesse dai dispositivi collegati al sistema. & 5 \\
+\hline
+\label{OP4} OP4 & Implementare sistemi di autenticazione dell'utente. & 2 \\
+\hline
+\label{OP5} OP5 & Visualizzare e gestire le preferenze dell'utente. & 3 \\
+\hline
+\end{tabularx}
+\end{table}
 
-Gli obiettivi formativi indicano le conoscenze e le abilità che dovrebbero essere studiate e imparate durante lo svolgimento dello stage.
+L'obiettivo "OP1" consente all'utente di verificare l'operatività del sistema, mostrando gli eventuali malfunzionamenti che causano un disservizio alla \emph{dashboard}; per questo credo sia una funzionalità relativamente importante per l'utente, che potrebbe voler conoscere se un disservizio della \emph{dashboard} è legato ad un malfunzionamento del sistema sottostante e non ad un errore dell'interfaccia. \\
 
-Anche in questo caso, separo gli obiettivi formativi legati all'ambito IoT da quelli relativi al tema architettura a microservizi.
+Gli obiettivi "OP2" e "OP3" costituiscono funzionalità fondamentali per l'utilizzo della \emph{dashboard} perchè permettono all'utente di conoscere quanti e quali dispositivi sono correttamente riconosciuti dal sistema e per ciascun dispositivo le informazioni messe a disposizione dallo stesso. \\
 
-Dal punto di vista del tema IoT, ho studiato le caratteristiche essenziali e le funzionalità che i dispositivi IoT esistenti possiedono per permetterne una corretta rappresentazione all'interno del sistema.
-Inoltre lo studio dei protocolli di comunicazione esistenti è stato fondamentale per permettere lo sviluppo di un sistema affidabile e performante. In particolare ho analizzato protocolli di comunicazione esistenti, utilizzabili liberamente e le cui specifiche siano accessibili pubblicamente e gratuitamente.
-Anche se il prodotto sviluppato è un prototipo in cui la sicurezza non è ben implementata, ho studiato e valutato l'aspetto relativo alla sicurezza dei protocolli utilizzabili, considerando la diffusione del protocollo, le effettive vulnerabilità note e il rapporto sicurezza del protocollo rispetto alla sua facilità di utilizzo.
+Malgrado l'obiettivo "OP4" sia fondamentale per un prodotto distribuibile al pubblico, ho assegnato una importanza medio-bassa a questo obiettivo: data la natura di prototipo del prodotto e considerato che il tema sicurezza richiede una elevata formazione per la sua corretta implementazione, ho preferito dare priorità agli obiettivi riguardanti alle funzionalità che possono dare un valore di innovazione aggiunto rispetto alle soluzioni presenti sul mercato. \\
 
-A mio modo di vedere, il lato formativo relativo all'architettura a microservizi è stato quello più impegnativo.
-Essendo alla mia prima esperienza con la progettazione di un sistema distribuito e con un paradigma architetturale relativamente nuovo, mi aspetto di dover impiegare un tempo maggiore, rispetto alla parte relativa all'IoT, per imparare i concetti che permettono lo sviluppo delle architetture a microservizi.
-In particolare, uno degli aspetti su cui mi sono concentrato con maggior attenzione è l'analisi della corretta dimensione di un servizio tale per cui esso possa essere definito "\emph{micro}".
+L'obiettivo "OP5" aggiunge una componente di personalizzazione alla \emph{dashbaord} che potrebbe essere utile all'utente: l'esempio a cui ho fatto riferimento riguarda la scelta delle unità di misura predefinite con cui il sistema visualizza le informazioni. \\
+
+%**************************************************************
+\section{Obiettivi formativi}
+
+Per analizzare al meglio gli obiettivi formativi del presente stage, ho deciso di suddividere gli obiettivi formativi legati all'ambito IoT da quelli relativi alle architetture a microservizi. \\
+Dal punto di vista del tema IoT, ho concentrato l'attenzione su due aspetti essenziali:
+\begin{enumerate}
+  \item \label{formazione-iot-1} l'analisi e la definizione delle caratteristiche e delle funzionalità di cui sono dotati i dispositivi IoT esistenti;
+  \item \label{formazione-iot-2} la ricerca e l'implementazione di un protocollo di comunicazione le cui qualità siano adeguate al contesto di utilizzo.
+\end{enumerate}
+\smallskip
+L'aspetto citato in ~\ref{formazione-iot-1} risulta fondamentale per apprendere, in aggiunta alle  abilità di analisi imparate durante il corso di studi, abilità specifiche nella comprensione delle funzionalità e caratteristiche richieste dal mercato presente dei dispositivi IoT. \\
+L'aspetto citato in ~\ref{formazione-iot-2} mi permette di acquisire conoscenze specifiche relative a protocolli di comunicazione non approfonditi durante il corso di Reti e Sicurezza del percorso di studi del CdL di Informatica. Il mio obiettivo in questo frangente è analizzare e studiare i protocolli di comunicazione esistenti, utilizzabili liberamente e le cui specifiche siano accessibili pubblicamente e gratuitamente. \\
+Gli obiettivi precedentemente citati corrispondono agli obiettivi "OF1" e "OF2" definiti nella tabella ~\ref{tab:obiettivi-formativi}. \\
+Dal punto di vista delle architetture a microservizi, data la mia totale inesperienza riguardo le  architetture \emph{software} orientate ai servizi ho posto come obiettivi formativi l'acquisizione dei concetti alla base di queste architetture, analizzandone:
+\begin{enumerate}
+  \item \label{formazione-arch-1} i princìpi generali che definiscono questo insieme di architetture;
+  \item \label{formazione-arch-2} le tecnologie che consentono di sviluppare sistemi \emph{software} con le caratteristiche richieste da queste architetture;
+  \item \label{formazione-arch-3} pregi e difetti delle architetture orientate ai servizi, dando particolare risalto ai pregi e difetti delle architetture a microservizi.
+\end{enumerate}
+\smallskip
+Mentre le voci ~\ref{formazione-arch-1} e ~\ref{formazione-arch-3} corrispondono all'obiettivo "OF3" riportato in tabella ~\ref{tab:obiettivi-formativi}, la voce ~\ref{formazione-arch-2} è una generalizzazione dell'obiettivo "OF4" (riportato nella stessa tabella citata precedentemente).
+Tra i princìpi delle architetture orientate ai servizi e ai microservizi, uno degli aspetti su cui mi sono concentrato con maggior attenzione è l'analisi della corretta dimensione di un servizio tale per cui esso possa essere definito "\emph{micro}".
 Un altro concetto importante su cui ho dovuto informarmi con attenzione consiste nella scelta delle tecnologie di persistenza dei dati per ciascun servizio, specialmente in relazione alla già citata \emph{Polyglot persistence} (riferimento ~\ref{par:microservizi-intro}).
-Mi aspetto quindi di dover imparare ad analizzare la struttura delle informazioni che ciascun dispositivo deve fornire al fine di sviluppare una componente che riesca a memorizzare ed elaborare tali informazioni in efficienza.
 
+\begin{table}[H]
+\caption{Tabella degli obiettivi formativi del progetto}
+\label{tab:obiettivi-formativi}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Id obiettivo} & \textbf{Descrizione obiettivo} \\
+\hline
+\label{OF1} OF1 & Apprendere abilità elementari per la comprensione delle funzionalità richieste dal mercato IoT, specialmente nel campo della automazione domestica. \\
+\hline
+\label{OF2} OF2 & Acquisire conoscenze adeguate alla scelta e implementazione di un protocollo di comunicazione adeguato al campo di utilizzo del progetto. \\
+\hline
+\label{OF3} OF3 & Comprendere il concetto di architettura a microservizi, con i pregi e i difetti caratteristici di una tale architettura. \\
+\hline
+\label{OF4} OF4 & Acquisire le nozioni legate alla containerizzazione di un sistema \emph{software} in un contesto architetturale basato su microservizi. \\
+\hline
+\end{tabularx}
+\end{table}
 
 %**************************************************************
 \section{Obiettivi tecnici}
 
-Gli obiettivi tecnici consistono nelle tecniche e nelle tecnologie specifiche che andrò ad utilizzare durante lo svolgimento dello stage.
+Sin dall'inizio delle attività di stage è stata mia intenzione distribuire i prodotti di queste attività in modo che chiunque potesse consultarli liberamente e pubblicamente: per offrire questa possibilità il primo obiettivo tecnico del progetto consiste nell'adozione di una licenza di distribuzione permissiva, che permetta:
+\begin{itemize}
+  \item la visualizzazione,
+  \item l'utilizzazione e
+  \item la modifica
+\end{itemize}
+del codice sorgente e della documentazione associata senza vincoli legali. Questo obiettivo corrisponde all'obiettivo "OT1" indicato in tabella ~\ref{tab:obiettivi-tecnici}. \\
+Collegato all'obiettivo precedente, il secondo obiettivo tecnico consiste nella pubblicazione delle istruzioni per facilitare l'esecuzione del prototipo in una macchina di sviluppo locale.
+Dal momento che il prototipo è testabile da un pubblico potenzialmente vasto, questo secondo obiettivo tecnico assicura che il sistema sviluppato possa essere eseguito in maniera ripetibile, semplificando la ricerca e la segnalazione di malfunzionamenti e permettendo a chiunque di valutare le idee sviluppate nel prototipo. Questo obiettivo corrisponde all'obiettivo "OT2" indicato in tabella ~\ref{tab:obiettivi-tecnici}. \\
+L'obiettivo "OT3" indicato in tabella ~\ref{tab:obiettivi-tecnici} si riferisce alla possibilità di far funzionare il prototipo in un ambiente realistico: in questo ambiente realistico vi sono dispositivi, con cui l'utente può interagire, che trasmettono le informazioni raccolte a dispositivi in grado di elaborare queste informazioni e metterle a disposizione degli altri dispositivi in maniera strutturata. Dal momento che nella rete questi dispositivi devono poter identificarsi, con l'obiettivo "OT3" evidenzio le caratteristiche di modularità e configurabilità che il prototipo deve possedere. \\
+In maniera complementare a quanto appena detto, il prototipo deve poter essere eseguito in un unico dispositivo che sia in grado di simulare l'esecuzione nell'ambiente realistico precedentemente citato. Questo obiettivo, indicato come "OT4" in tabella ~\ref{tab:obiettivi-tecnici}, è fortemente collegato agli obiettivi "OT1" e "OT2", perchè non è assicurato che gli utenti che desiderano provare il prototipo posseggano un insieme di dispositivi che possa eseguire tutte le componenti che formano la \emph{dashboard}. \\
+Da un punto di vista tecnico, gli obiettivi "OT3" e "OT4" vincolano la scelta del protocollo di comunicazione da implementare, perchè è necessario che tale protocollo sia applicabile sia in ambito di esecuzione in un ambiente reale, sia nell'ambito di simulazione, nel quale non ci sono comunicazioni all'esterno della macchina nella quale esegue il prototipo. \\
+L'obiettivo "OT5" in tabella ~\ref{tab:obiettivi-tecnici} si riferisce alla possibilità di conoscere quali componenti del sistema siano in esecuzione e cambiare lo stato delle componenti al fine di aumentare o diminuire la disponibilità di una componente, fino alla completa disattivazione della stessa. Evidenzio la correlazione tra questo obiettivo ("OT5") con l'obiettivo "OF4": l'acquisizione corretta delle conoscenze delle tecnologie di containerizzazione dovrebbe semplificare il soddisfacimento dell'obiettivo "OT5", dato il contesto attinente con cui si sono sviluppate le tecnologie di containerizzazione. \\
 
-Il primo obiettivo tecnico su cui ho puntato è quello di distribuire l'insieme delle funzionalità del prodotto come \emph{software open source}: esso è pubblicato con una licenza permissiva che permette a chi è interessato di visualizzare, modificare ed utilizzare il prodotto senza condizioni vincolanti.
+Gli obiettivi tecnici "OT6" e "OT7", indicati in tabella ~\ref{tab:obiettivi-tecnici}, impostano dei vincoli tecnologici per l'implementazione del prototipo. \\
+L'obiettivo "OT6" è strettamente correlato con l'obiettivo "OT3", il quale richiede l'utilizzo di tecnologie multipiattaforma per la corretta esecuzione del prototipo. Ho scelto di vincolare lo sviluppo del prototipo adottando \emph{Node.js} come \emph{framework} per l'implementazione della parte \emph{backend} per due motivi:
+\begin{enumerate}
+  \item dal momento che gli argomenti trattati nello stage mi sono completamente nuovi, ho voluto appoggiarmi dal punto di vista tecnico a una tecnologia già utilizzata per l'implementazione del progetto formativo del corso di Ingegneria del Software per abbassare la quantità di argomenti nuovi trattati;
+  \item \emph{Node.js} utilizza \gls{js} come linguaggio di programmazione, rendendo lo sviluppo delle applicazioni più veloce, grazie ad una sintassi semplice da imparare.
+\end{enumerate}
+L'obiettivo "OT7" è il risultato di un altro vincolo tecnologico che ho imposto con lo scopo di semplificare lo sviluppo dell'interfaccia grafica dell'applicazione \emph{web} grazie all'esperienza già acquisita a riguardo con il progetto formativo del corso di Ingegneria del Software.
 
-Dal momento che il prodotto è testabile da un pubblico potenzialmente vasto, il secondo obiettivo tecnico generale consiste nella distribuzione delle istruzioni per provare il sistema prodotto in una macchina locale.
-
-Da un punto di vista tecnico, per l'ambito IoT mi aspetto di dover padroneggiare un protocollo di comunicazione, scelto tra quelli in esame, per permettere ai dispositivi di comunicare tra loro nelle modalità consentite dal protocollo.
-I dispositivi dovranno comunicare tra loro sia con comunicazioni uno a uno, sia con comunicazioni uno a molti (\gls{broadcast}) e gestire eventuali errori di trasmissione in base all'importanza dell'informazione che essi trasmettono.
-
-Per permettere a chiunque di provare il sistema, mi aspetto di dover fornire un modo per simulare la presenza di dispositivi IoT nella propria rete domestica.
-
-Nell'ambito delle architetture a microservizi ho dovuto padroneggiare alcuni dei \gls{pattern} peculiari di queste architetture \emph{software}, come per esempio il \gls{Gatewaypattern}, e ho dovuto studiare le tecniche e le tecnologie che si sono diffuse per monitorare lo stato del sistema, per orchestrare i servizi e per gestire la scalabilità degli stessi.
+\begin{table}[H]
+\caption{Tabella degli obiettivi tecnici del progetto}
+\label{tab:obiettivi-tecnici}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Id obiettivo} & \textbf{Descrizione obiettivo} \\
+\hline
+\label{OT1} OT1 & Rilascio del codice sorgente del prototipo e della documentazione associata nei termini di una licenza \emph{open source}. \\
+\hline
+\label{OT2} OT2 & La documentazione associata al progetto deve includere le istruzioni necessarie all'esecuzione del prototipo. \\
+\hline
+\label{OT3} OT3 & Il prototipo deve essere eseguibile su dispositivi presenti in una rete, previa corretta configurazione. \\
+\hline
+\label{OT4} OT4 & Il prototipo deve essere eseguibile su un dispositivo di test, che simuli l'esecuzione in un ambiente reale. \\
+\hline
+\label{OT5} OT5 & Il prototipo deve prevedere strumenti per gestire la scalabilità del sistema e per monitorarne lo stato. \\
+\hline
+\label{OT6} OT6 & Il prototipo deve essere implementato in \href{https://nodejs.org/en/about/}{Node.js} (\url{https://nodejs.org/en/about/}) per il lato server. \\
+\hline
+\label{OT7} OT7 & L'interfaccia utente del prototipo deve essere implementata in \href{https://reactjs.org/}{React} (\url{https://reactjs.org/}). \\
+\hline
+\end{tabularx}
+\end{table}
