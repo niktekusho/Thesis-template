@@ -15,12 +15,195 @@ validazione dei requisiti.}\\
 %**************************************************************
 \section{Organizzazione dello Stage}
 
-Qui posso parlare del tempo impegnato nello svolgimento dello stage e delle milestone raggiunte.
+La pianificazione, in termini di quantità di ore di lavoro, sarà così distribuita:
+\begin{center}	
+\begin{tabular}{|>{\centering} m{1.5cm}|>{\centering} m{1.5cm}|m{10cm}|}
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Durata in ore}} & \textbf{Descrizione dell'attività} \\
+	\hline
+	\multicolumn{2}{|c|}{40} & Formazione
+	 \begin{itemize}
+		\item Architettura microservizi
+		\item Node.JS orientato ai microservizi
+		\item React
+	\end{itemize} 
+	\\
+	\hline
+	
+	\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di comunicazione con i dispositivi IoT\\
+	\cline{2-2}
+	& 40 & \begin{itemize}
+		\item Analisi dei protocolli open source esistenti per i diversi dispositivi IoT
+		\item Stima implementazione eventuali nuovi protocolli
+	\end{itemize} \\
+	\cline{2-2}
+	& 80 & \begin{itemize}
+		\item Progettazione del servizio di comunicazione con i dispositivi
+		\item Progettazione dei test del servizio di comunicazione
+		\item Realizzazione dei test e del servizio di comunicazione in Node.JS
+	\end{itemize} \\
+	\hline
+	
+	\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di presentazione delle informazioni agli utenti\\
+	\cline{2-2}
+	& 40 & \begin{itemize}
+		\item Analisi interazione utente con la \textit{dashboard}
+	\end{itemize} \\
+	\cline{2-2}
+	& 80 & \begin{itemize}
+		\item Progettazione del servizio di presentazione informazioni
+		\item Progettazione dei test del servizio di presentazione
+		\item Realizzazione dei test e del servizio di presentazione in React, HTML5 e CSS3.
+	\end{itemize} \\
+	\hline
+	
+	\multicolumn{2}{|c|}{20} & {\textit{Review} dei servizi, \textit{deploy} dei servizi su Heroku.}\\
+	\hline
+	
+	\multicolumn{2}{|c|}{\textbf{Totale ore}} & {\textbf{300}} \\
+	\hline
+	
+\end{tabular}
+
+\end{center}
+
+\clearpage
+\section*{Milestone}
+In questa sezione vengono presentate le milestone previste per il progetto su base settimanale, associando a ciascuna milestone i prodotti che devono essere sviluppati entro la corrispondente scadenza.
+\begin{itemize}
+	\item Prima settimana: Completamento delle attività di autoformazione con produzione di una breve relazione riguardante la stessa;
+	\item Seconda e terza settimana: Analisi dei protocolli di comunicazione esistenti, primo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi \textit{virtualizzati};
+	\item Quarta e quinta settimana: Revisione analisi sui protocolli, secondo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi fisici (Raspberry Pi);
+	\item Sesta e settima settimana: Analisi dell'interazione utente con la dashboard, progettazione e implementazione del servizio di presentazione;
+	\item Ottava settimana: Revisione dei servizi, stesura del Manuale d'Uso e deploy (opzionale) di un ambiente di simulazione della dashboard su Heroku.
+\end{itemize}
 
 %**************************************************************
 \section{Ambiente di sviluppo}
 
 Sistemi operativi, dispositivi e tecnologie utilizzate.
+
+## Tecnologie utilizzate
+
+In questa sezione sono descritte le tecnologie che verranno utilizzate per lo sviluppo del progetto, includendo la motivazione che ha portato lo studente a sceglierle.
+Gli strumenti di sviluppo che verranno impiegati sono inclusi in questa sezione.
+
+| Tecnologia         | Sommario                                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Node.js            | Node.js è un'ambiente d'esecuzione utilizzato per l'implementazione di applicazioni server in JavaScript.                                   |
+| React              | React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce utente.                                               |
+| EcmaScript 2017    | EcmaScript è un linguaggio di programmazione la cui implementazione standard più conosciuta è JavaScript.                                   |
+| Jest               | Jest è un framework per l'implementazione di test per codice JavaScript.                                                                    |
+| ESLint             | ESLint è uno strumento open-source per l'analisi statica del codice JavaScript prodotto.                                                    |
+| HTML5              | HTML5 è un linguaggio di markup per la formattazione e impaginazione delle pagine Web pubblicato come W3C Recommendation dall'ottobre 2014. |
+| CSS3               | CSS3 è un linguaggio di formattazione delle pagine Web.                                                                                     |
+| Atom               | Atom è un editor di testo sviluppato da GitHub con tecnologie moderne e personalizzabile.                                                   |
+| Visual Studio Code | Visual Studio Code è un editor di testo sviluppato da Microsoft specificatamente per i linguaggi del Web.                                   |
+
+
+### Node.js
+
+Node.js è un'ambiente d'esecuzione per JavaScript multipiattaforma e open-source utilizzato per l'implementazione di applicazioni server in JavaScript.
+
+Per consentire l'esecuzione di JavaScript lato server, Node utilizza il motore di esecuzione JavaScript **V8** sviluppato da Google per il browser Chrome.
+
+-   Aspetti positivi:
+    -   Node utilizza il modello _event-driven_ per la gestione delle operazioni di _input_ e _output_ (I/O) e in questo modo semplifica la gestione asincrona delle richieste concorrenti.
+    -   Node utilizza JavaScript, un linguaggio di programmazione dalla sintassi semplice da imparare.
+    -   Node utilizza npm per la gestione delle librerie dell'applicazione, il quale è il più grande registro di componenti di codice riusabile.
+-   Aspetti negativi:
+    -   Node non sfrutta i molti core presenti nelle CPU moderne e quindi operazioni fortemente CPU-bound congelano l'intero ciclo di eventi fino al termine dell'esecuzione dell'operazione.
+    -   Node favorisce l'utilizzo del Design Pattern "_callback_", tuttavia in funzioni complesse si potrebbe incorrere in una eccessiva complessità nella lettura del codice.
+
+
+### React
+
+React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce utente.
+
+-   Aspetti positivi:
+    -   React utilizza un DOM virtuale per disegnare le interfacce, raggiungendo performance ed efficienza elevate. Grazie alla sua struttura a componenti, un aggiornamento ad uno di essi non richiede l'aggiornamento degli altri.
+    -   I componenti sviluppati possono essere riutilizzati, garantendo un aumento di produttività degli sviluppatori.
+    -   I dati in React seguono un flusso unidirezionale, in cui i componenti figli non possono modificare dati dei loro genitori, semplificando la manutenzione dei componenti.
+-   Aspetti negativi:
+    -   Data la natura molto dinamica di React, gli sviluppatori devono mantenersi aggiornati per tutte le nuove funzionalità inserite.
+
+
+### EcmaScript 2017
+
+ECMAScript 2017 è un linguaggio di programmazione standardizzato la cui ratifica è avvenuta nel giugno del 2017. L'implementazione dello standard più conosciuta è JavaScript.
+
+L'edizione 2017 dello standard porta in dote le seguenti funzionalità:
+
+1.  Nuova sintassi per le **funzioni asincrone**. La keyword `async` indica che una funzione o un metodo ritornano una Promise, ossia una classe di oggetti che evidenziano l'asincronia dell'operazione da eseguire. La keyword `await` aspetta che la funzione asincrona termini la sua esecuzione, ritornando il risultato della Promise.
+2.  Supporto iniziale per l'elaborazione multithread, attraverso tipi di oggetti immutabili e condivisibili tra thread.
+3.  Nuovi metodi per gli oggetti esistenti nel linguaggio (enumerazione dei membri di un oggetto e ulteriori funzionalità di manipolazione di stringhe).
+
+
+-   Aspetti positivi:
+    -   La nuova sintassi per la scrittura di funzioni asincrone è molto facilmente leggibile in quanto ricorda una programmazione sequenziale.
+    -   Il supporto per l'elaborazione multithread consente a chi ha necessità e competenza di poter sfruttare le architetture a molti core delle moderne CPU, favorendo l'utilizzo di JavaScript anche per la programmazione di codice parallelo per le GPU.
+    -   Poche nuove funzionalità rispetto alle edizioni precedenti permettono di imparare le nuove con maggior semplicità.
+-   Aspetti negativi:
+    -   Con la nuova sintassi per le funzioni asincrone è molto facile dimenticarsi della natura asincrona del codice scritto, omettendo quindi la keyword `await`.
+    -   Il supporto alla nuova edizione dello standard è presente in maniera completa solamente nelle ultime versioni dei browser e di Node.js.<sub>[fonti](#fonte)</sub>
+
+
+### Jest
+
+Jest è un framework per l'implementazione di test per codice JavaScript scritto da Facebook.
+
+-   Aspetti positivi:
+    -   Jest non richiede una configurazione, utilizzando impostazioni predefinite ottimali.
+    -   Jest è una piattaforma di test completa che include strumenti di validazione dei risultati e  strumenti per il mocking.
+    -   Jest comprende funzionalità per i test di regressione dei componenti scritti in React.
+    -   Jest per default esegue i test parallelamente, velocizzando i processi di test.
+-   Aspetti negativi:
+    -   Jest è meno flessibile nel suo utilizzo rispetto ad altre librerie di test, quali ad esempio Mocha.
+
+### ESLint
+
+ESLint è uno strumento che esegue analisi del codice sorgente scritto in JavaScript alla ricerca di bug noti, di inconsistenze di stile nella scrittura del codice e mira a mantenere il codice facilmente leggibile e manutenibile.
+
+-   Aspetti positivi:
+    -   ESLint è altamente configurabile, permettendo la definizione di regole condivise più appropriate per il proprio progetto.
+    -   Supporta numerose tecnologie per mezzo di plugin ed è supportato da molti strumenti di sviluppo.
+    -   Le regole di analisi sono ben documentate, con esempi sul loro utilizzo, e gli errori emessi sono ben leggibili.
+-   Aspetti negativi:
+    -   ESLint richiede una configurazione iniziale per iniziare a utilizzarlo.
+
+
+### HTML5 & CSS3
+
+HTML5 e CSS3 sono le ultime revisioni stabili rispettivamente del linguaggio HTML e del linguaggio CSS rilasciate dalla W3C.
+
+-   Aspetti positivi:
+    -   HTML5 ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard e permette l’integrazione con diversi formati multimediali senza utilizzare plugin esterni.
+    -   HTML5 e CSS3 sono ben diffusi e tutti i browser più recenti li supportano anche in caso di versioni non aggiornate.
+    -   HTML5 e CSS3 sono ben documentati e sono disponibili nella rete numerose risorse per il loro utilizzo ottimale.
+-   Aspetti negativi: Nessuno.
+
+
+### Atom
+
+Atom è un editor di testo sviluppato da GitHub che può essere utilizzaato come un IDE (Integrated Development Environment).
+
+-   Aspetti positivi:
+    -   Atom è estremamente espandibile e personalizzabile, permettendo di creare un ambiente di sviluppo su misura.
+    -   Atom riconosce la sintassi di moltissimi linguaggi attraverso moduli installabili.
+-   Aspetti negativi:
+    -   Atom richiede un utilizzo della CPU elevato che ne mina la stabilità generale.
+    -   Atom non si interfaccia nativamente con strumenti di debug del codice.
+
+
+### Visual Studio Code
+
+Visual Studio Code è un editor di testo sviluppato da Microsoft per la scrittura di applicazioni Web.
+
+-   Aspetti positivi:
+    -   É molto efficiente nell'utilizzo di risorse, risultando uno strumento affidabile.
+    -   É dotato di supporto nativo per strumenti di debug
+-   Aspetti negativi:
+    -   Non è molto personalizzabile e l'interfaccia predefinita è molto scarna.
 
 \subsection{Strumenti di sviluppo}
 
@@ -38,10 +221,726 @@ Sistemi operativi, dispositivi e tecnologie utilizzate.
 
 Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
 
+MQTT è un protocollo di messaggistica leggero basata sul design pattern Publish/Subscribe.
+É un protocollo nato per l'utilizzo con sensori a basso consumo energetico, tuttavia è utilizzabile anche in altri scenari.
+
+MQTT è stato progettato tra la fine degli anni '90 e l'inizio degli anni 2000 per ambienti in cui l'affidabilità della rete non era garantita.
+
+
+## Principi di design
+1.  MQTT mira ad assere una soluzione semplice da implementare, per permettere la maggior copertura di dispositivi possibile.
+2.  MQTT usa messaggistica pub/sub per permettere ai dispositivi di pubblicare nella rete informazioni non predefinite.
+3.  MQTT non richiede amministrazione in quanto cerca di rispondere ad eventi inaspettati in maniera semplice e con maggior buon senso possibile.
+4.  MQTT minimizza il traffico sulla rete introducendo un overhead<sub>[1](#1)</sub> sui dati minimo.
+5.  MQTT si aspetta di lavorare in reti con frequenti interruzioni, utilizzando il meccanismo dell'ultimo testamento.
+6.  MQTT si accorge repentinamente di cambiamenti dello stato della sessione.
+7.  MQTT si aspetta che i client abbiano risorse d'elaborazione limitate.
+8.  MQTT mette a disposizione livelli di affidabilità per la trasmissione di informazioni critiche.
+9.  MQTT non fa assunzioni sulla struttura né il contenuto dei dati.
+
+
+## Publish/Subscribe
+Il protocollo MQTT si basa sul principio che ogni client pubblica messaggi, i quali hanno uno o più argomenti/tipi.
+Ogni client può registrarsi a determinati argomenti, per ricevere tutti i messaggi che altri client **pubblicano** per quell'argomento. Molti client si connettono a un  _broker_<sub>[2](#2)</sub> che funziona da tramite, ricevendo i messaggi pubblicati e inoltrandoli a tutti i client sottoscritti ai rispettivi argomenti.
+
+Gli argomenti in MQTT sono trattati gerarchicamente. Questo permette la creazione di argomenti e sottoargomenti, simili alla struttura ad albero di un filesystem.
+
+## Qualità del Servizio (QoS)
+
+MQTT definisce 3 livelli di qualità in base a quanto_broker_e client si impegneranno a ricevere un messaggio.
+I client decidono il livello massimo di QoS che riceveranno.
+
+La scala della QoS definisce i livelli 0, 1 e 2 con affidabilità crescente ma minori performance:
+
+-   0: broken/client invieranno il messaggio al massimo una volta senza richiesta di conferma. A questo livello i messaggi vengono persi se una delle parti si disconnette;
+-   1: broker/client invieranno il messaggio almeno una volta con la richiesta di conferma;
+-   2: broker/client invieranno il messaggio una sola volta effettuando una trasmissione in 4 step.
+
+Per esempio, se un messaggio è pubblicato con QoS 2 e il client è sottoscritto all'argomento con QoS 0, il client riceverà quel messaggio con QoS 0 (niente richieste di conferma, ecc).
+Se un altro client è sottoscritto allo stesso argomento con QoS 2 allora riceverà il messaggio con QoS 2 (handshake in 4 step).
+
+## Connessioni
+
+Alla connessione il client imposta un flag di "sessione pulita" in base a come il client ritiene affidabile la connessione (`false` => connessione affidabile). Se il client si disconnette, in tutte le sottoscrizioni con QoS 1 o QoS 2 i messaggi verranno salvati e inviati alla prossima riconnessione del client.
+
+Lo scopo di questo documento è quello di definire i requisiti emersi dall’analisi del progetto di stage.
+Il presente, tra le altre cose, tratta di:
+
+-   descrizione dei requisiti;
+-   descrizione dei casi d’uso;
+-   descrizione degli attori coinvolti.
+
+Entrambe le categorie di dispositivi comunicano con il sistema utilizzando il protocollo **MQTT**<sub>[1](#1)</sub>, ritenuto dallo studente il protocollo più adatto per il sistema in quanto esso:
+
+1.  è un protocollo _data agnostic_, ossia che non pone vincoli sulla struttura dei dati scambiati nella rete;
+2.  è un protocollo efficiente in quanto trasmette informazioni con un overhead minimo;
+3.  è un protocollo che permette l'aggiunta e la rimozione di dispositivi dinamicamente,  richiedendo intervento manuale minimo all'utente.
+
+Tutti i dispositivi contengono al loro interno informazioni relative a modello, revisione, produttore e anno di produzione del dispositivo.
+
+#### Funzioni del prodotto: sensori
+
+La funzionalità principale offerta dai sensori è l'invio di informazioni periodicamente legati a ciò che il sensore misura.
+
+L'invio di informazioni periodiche avviene in automatico, secondo i parametri impostati dal produttore del sensore.
+
+Altre 2 funzionalità legate alle _capabilities hardware_ del sensore sono:
+
+1.  **memorizzazione locale**: il produttore dota il sensore di una piccola memoria riscrivibile, interrogabile direttamente producendo dati in un formato stabilito dal produttore. Nei casi d'uso presi in considerazione questa funzionalità è utile in caso di perdita di connessione o malfunzionamento del centro di controllo. Nel caso in cui questa funzionalità sia presente, il sensore provvede a trasmettere i dati raccolti alla prossima riconnessione con il centro di controllo.
+2.  **disconnessione forzata**: il centro di controllo può richiedere ai sensori di disconnettersi dalla rete per un periodo di tempo per motivi di diagnostica o di sovraccarico della rete. Questa funzionalità richiede che il sensore abbia hardware in grado di ricevere segnali e non solo trasmetterli.
+
+| Funzionalità dei sensori | Frequenza    | Attivazione | Obbligatorietà |
+| ------------------------ | ------------ | ----------- |:--------------:|
+| Invio informazioni       | Periodica    | Automatica  |    &#10004;    |
+| Memoria locale           | N.D.         | Automatica  |    &#10005;    |
+| Disconnessione forzata   | Su richiesta | Manuale     |    &#10005;    |
+
+
+#### Funzioni del prodotto: dispositivi attivi
+
+I dispositivi attivi presentano le seguenti funzionalità:
+
+1.  lista degli eventi gestiti dal dispositivo;
+2.  risposta agli eventi esterni;
+3.  invio di informazioni sullo stato energetico del dispositivo;
+4.  spegnimento del dispositivo.
+
+La lista degli eventi gestiti deve essere richiesta al dispositivo per conoscere le sue funzionalità e inviare gli eventi corretti.
+La risposta agli eventi gestiti è automatica e avviene a ogni evento occorso.
+Le funzionalità legate alla gestione degli eventi sono direttamente implementate dai produttori dei dispositivi.
+
+L'invio delle informazioni sullo stato energetico del dispositivo richiede che il produttore abbia dotato il dispositivo di unità di _power management_ e perciò potrebbe non essere disponibile per tutti i dispositivi collegati.
+
+| Funzionalità dei dispositivi attivi | Frequenza               | Attivazione | Obbligatorietà |
+| ----------------------------------- | ----------------------- | ----------- |:--------------:|
+| Lista eventi gestiti                | Su richiesta            | Manuale     |    &#10004;    |
+| Risposta eventi gestiti             | Ad ogni evento ricevuto | Automatica  |    &#10004;    |
+| Informazioni stato energetico       | Su richiesta            | Manuale     |    &#10005;    |
+| Spegnimento                         | Su richiesta            | Manuale     |    &#10004;    |
+
+#### Funzioni del prodotto: centro di controllo
+
+Il centro di controllo è il sistema, composto da un insieme di servizi, che:
+
+1.  gestisce i dispositivi collegati al sistema;
+2.  riceve, elabora e memorizza le informazioni utili provenienti dai dispositivi (anche per fini diagnostici);
+3.  mette a disposizione le informazioni raccolte per i client che interrogano il centro di controllo.
+
+Il dati ricevuti dal centro di controllo possono in una forma grezza e perciò è necessario che il centro di controllo li elabori, a seconda della provenienza dei dati, al fine di renderli comprensibili anche da umani.
+Le informazioni raccolte sono messe a disposizione ai client in tempo reale.
+
+### Caratteristiche degli utenti del sistema
+
+Lo studente prevede che gli utenti del sistema non abbiano alcuna competenza particolare.
+
+### Piattaforma di esecuzione
+
+La piattaforma di esecuzione del prodotto è Docker, attraverso la composizione di container.
+L'utente accede alle funzionalità del prodotto attraverso una interfaccia Web, opportunamente progettata per essere reattiva (ottimizzata per mobile).
+
+## Casi d'uso
+
+I casi d’uso sono catalogati come:
+
+<p align="center">UC[numero][caso]</p>
+
+dove:
+-   `UC` specifica che si sta parlando di un caso d’uso;
+-   `numero` è assoluto e rappresenta un riferimento univoco al caso d’uso in questione;
+-   `caso` individua eventuali diramazioni all’interno dello stesso caso d’uso.
+
+
+La breve descrizione di ciascun caso d’uso presenta:
+-   gli attori del caso d’uso;
+-   lo scopo e la descrizione del caso d’uso.
+
+
+Di seguito viene presentata la lista degli attori dei casi d’uso:
+-   **Utente**: rappresenta l'utente che interagisce con la dashboard;
+-   **Dispositivi**: rappresentano l'insieme di apparati collegati al sistema che forniscono i dati per popolare la dashboard.
+
+![Sommario dei casi d'uso](./images/use_cases.png)
+<p align="center"><i>Sommario dei casi d'uso</i></p>
+
+### UC1: Visualizzazione dei dispositivi collegati
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi, forniscono le proprie informazioni alla dashboard.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per conoscere lo stato dei dispositivi collegati.
+
+
+![Approfondimento UC1](./images/UC1.png)
+<p align="center"><i>Approfondimento UC1</i></p>
+
+#### UC1.1: Visualizzazione dei dispositivi collegati secondo dominio applicativo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi che forniscono le proprie informazioni alla dashboard.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la dashboard mostra i dispositivi raggruppati secondo dominio applicativo (gruppo relativo alla termodinamica domestica, gruppo relativo alla illuminazione, ecc.).
+
+
+#### UC1.2: Visualizzazione dei dispositivi collegati secondo gruppi definiti dall'utente
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi che forniscono le proprie informazioni alla dashboard.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la dashboard mostra i dispositivi raggruppati secondo le preferenze dell'utente.
+
+
+#### UC1.3: Visualizzazione del dispositivo selezionato dall'utente
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per conoscere lo stato del dispositivo selezionato. In questa visualizzazione la dashboard mostra le informazioni provenienti dal dispositivo.
+
+![Approfondimento UC1.3](./images/UC1.3.png)
+<p align="center"><i>Approfondimento UC1.3</i></p>
+
+##### UC1.3.1: Visualizzazione delle informazioni provenienti dal dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente le informazioni provenienti dal dispositivo.
+
+![Approfondimento UC1.3.1](./images/UC1.3.1.png)
+<p align="center"><i>Approfondimento UC1.3.1</i></p>
+
+
+###### UC1.3.1.1: Visualizzazione nome del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il nome _user-friendly_ dato dal produttore al dispositivo.
+
+
+###### UC1.3.1.2: Visualizzazione categoria del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il dominio applicativo del dispositivo (illuminazione, ecc.).
+
+###### UC1.3.1.3: Visualizzazione dati provenienti dal dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente ii dati raccolti dal sistema provenienti dal dispositivo selezionato.
+
+
+##### UC1.3.2: Visualizzazione delle specifiche tecniche del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente le specifiche tecniche del dispositivo.
+
+![Approfondimento UC1.3.2](./images/UC1.3.2.png)
+<p align="center"><i>Approfondimento UC1.3.2</i></p>
+
+
+###### UC1.3.2.1: Visualizzazione produttore del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il nome del produttore del dispositivo.
+
+
+###### UC1.3.2.2: Visualizzazione modello del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il nome commerciale scelto dal produttore per il  dispositivo.
+
+###### UC1.3.2.3: Visualizzazione revisione del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente un identificativo di versione del dispositivo (anno o  numero di versione).
+
+##### UC1.3.3: Visualizzazione delle operazioni disponibili per il dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente le funzionalità offerte dal dispositivo.
+
+
+##### UC1.3.4: Collegamento all'interfaccia proprietaria del dispositivo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema. L'interfaccia proprietaria progettata e realizzata dal produttore del dispositivo.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il collegamento all'interfaccia proprietaria del dispositivo.
+
+### UC2: Gestione dei dispositivi collegati
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. La dashboard permette l'accesso alle funzionalità messe a disposizione dai dispositivi.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per accedere alle funzionalità offerte dai dispositivi.
+
+![Approfondimento UC2](./images/UC2.png)
+<p align="center"><i>Approfondimento UC2</i></p>
+
+#### UC2.1: Visualizzazione dei dispositivi collegati
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard presenta all'utente la lista di dispositivi collegati al sistema per permettere all'utente di selezionare quale dispositivo gestire.
+
+
+#### UC2.2: Creazione di un gruppo di dispositivi personalizzato dall'utente
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di creare un gruppo personalizzato di dispositivi, facilitando la visualizzazione dei dispositivi nella pagina principale della dashboard.
+
+![Approfondimento UC2.2](./images/UC2.2.png)
+<p align="center"><i>Approfondimento UC2.2</i></p>
+
+
+###### UC2.2.1: Inserimento nome del gruppo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard.
+-   **Scopo e descrizione**:  
+    L'utente fornisce al sistema il nome del gruppo da creare.
+
+
+###### UC2.2.2: Scelta dei dispositivi da inserire nel gruppo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di scegliere quali dispositivi compongono il gruppo.
+
+
+#### UC2.3: Modifica di un gruppo di dispositivi personalizzato
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di modificare un gruppo personalizzato esistente per rinominare il gruppo e aggiungere o togliere uno o più dispositivi da un gruppo.
+
+![Approfondimento UC2.3](./images/UC2.3.png)
+<p align="center"><i>Approfondimento UC2.3</i></p>
+
+
+###### UC2.3.1: Modifica nome del gruppo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard.
+-   **Scopo e descrizione**:  
+    La dashboard mostra all'utente il nome corrente del gruppo, permettendone la modifica.
+
+
+###### UC2.3.2: Aggiunta di nuovi dispositivi al gruppo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di scegliere quali dispositivi non presenti nel gruppo aggiungere.
+
+###### UC2.3.3: Rimozione di dispositivi esistenti dal gruppo
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di scegliere quali dispositivi presenti nel gruppo da rimuovere.
+
+#### UC2.4: Rimozione di un gruppo di dispositivi personalizzato
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. I dispositivi collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di rimuovere un gruppo personalizzato esistente.
+
+
+#### UC2.5: Visualizzazione delle operazioni disponibili per il dispositivo selezionato dall'utente
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard. Il dispositivo selezionato dall'utente tra tutti quelli collegati al sistema.
+-   **Scopo e descrizione**:  
+    La dashboard permette all'utente di conoscere la lista delle operazioni disponibili per il dispositivo selezionato (ad esempio: accensione e spegnimento per una sorgente di illuminazione).
+
+### UC3: Visualizzazione delle statistiche di sistema
+
+-   **Attori**:  
+    L'utente che interagisce con la dashboard.
+-   **Scopo e descrizione**:  
+    L'utente interroga la dashboard per visualizzare le statistiche di sistema per conoscerne lo stato di salute e diagnosticare eventuali malfunzionamenti.
+
+
+## Requisiti
+
+Vengono ora presentati i requisiti emersi durante l’analisi dei casi d’uso. Lo studente ha deciso di inserire i requisiti in una tabella dei requisiti per permetterne una consultazione agevole.
+La tabella dei requisiti li presenta specificandone:
+-   **Identificativo** (secondo le regole indicate successivamente);
+-   **Categoria** di appartenenza fra:
+    -   **Obbligatorio**, per i requisiti irrinunciabili;
+    -   **Desiderabile**, per i requisiti non strettamente necessari ma che offrono un
+    valore aggiunto riconoscibile;
+    -   **Opzionale**, per i requisiti relativamente utili o contrattabili in seguito.
+-   **Descrizione** esaustiva del requisito;
+
+### Catalogazione requisiti
+I requisiti sono identificati come segue:
+
+<p align="center">R[Categoria][Tipo][numero]</p>
+
+Dove:
+-   `R` specifica che si tratta di un requisito;
+-   `Categoria` indica se si tratta di un requisito:
+    -   Obbligatorio: `M` (_mandatory_);
+    -   Desiderabile: `A` (_advisable_);
+    -   Opzionale: `O` (_optional_);
+-   `Tipo` indica la tipologia del requisito, che può essere:
+    -   Di vincolo: `O` (_obligation_);
+    -   Funzionale: `F` (_functional_);
+    -   Di qualità: `Q` (_quality_);
+-   `Numero` è assoluto e rappresenta un riferimento univoco al requisito in questione.
+
+
+### Tabella dei requisiti
+
+#### Tabella dei requisiti di vincolo
+
+| Identificativo | Categoria    | Descrizione                                                                                                     |
+|----------------|--------------|-----------------------------------------------------------------------------------------------------------------|
+| RMO1           | Obbligatorio | Il sistema deve essere progettato secondo lo stile di progettazione a microservizi.                             |
+| RAO2           | Desiderabile | Il sistema può essere implementato utilizzando il linguaggio JavaScript secondo lo standard EcmaScript 2016.    |
+| RAO3           | Desiderabile | Il sistema può essere implementato utilizzando il framework Node.JS per il _backend_ e React per il _frontend_. |
+| RMO4           | Obbligatorio | Il sistema deve utilizzare il protocollo MQTT.                                                                  |
+
+#### Tabella dei requisiti funzionali
+
+| Identificativo | Categoria    | Descrizione                                                                                      |
+|----------------|--------------|--------------------------------------------------------------------------------------------------|
+| RMF1           | Obbligatorio | L'utente deve poter visualizzare tutti i dispositivi collegati al sistema.                       |
+| RMF2           | Obbligatorio | L'utente deve poter visualizzare i dispositivi collegati secondo dominio applicativo.            |
+| RAF3           | Desiderabile | L'utente può visualizzare i dispositivi collegati secondo gruppi personalizzati.                 |
+| RMF4           | Obbligatorio | L'utente deve poter selezionare uno dei dispositivi collegati per visualizzarne le informazioni. |
+| RAF5           | Desiderabile | L'utente può creare un gruppo di dispositivi. personalizzato                                     |
+| RAF6           | Desiderabile | L'utente può modificare uno dei gruppi personalizzati esistenti.                                 |
+| RAF7           | Desiderabile | L'utente può rimuovere uno dei gruppi di dispositivi personalizzati esistenti.                   |
+| RMF8           | Obbligatorio | L'utente deve poter visualizzare le operazioni messe a disposizione dal dispositivo selezionato. |
+| RMF9           | Obbligatorio | L'utente deve poter selezionare una delle operazioni disponibili.                                |
+| RMF10          | Obbligatorio | L'utente deve poter visualizzare le statistiche di utilizzo del sistema sistema.                 |
+
+#### Tabella dei requisiti di qualità
+
+| Identificativo | Categoria | Descrizione                                                                                                 |
+| -------------- | --------- | ----------------------------------------------------------------------------------------------------------- |
+| ROQ1           | Opzionale | Il sistema deve essere testato, raggiungendo i seguenti obiettivi: <ul><li>_statement coverage_ > 80 %</li><li>_branch coverage_ > 90 %</li> |
+
+
+#### Riepilogo dei requisiti
+
+| Tipo        | Obbligatorio | Opzionale | Desiderabile |
+| ----------- | ------------ | --------- | ------------ |
+| Funzionale  | 6            | 0         | 4            |
+| Qualitativo | 0            | 1         | 0            |
+| Di vincolo  | 2            | 0         | 2            |
+| Totale      | 8            | 1         | 6            |
+
+
+### Implementazione dei requisiti
+
+| Identificativo requisito | Categoria    | Implementazione |
+| ------------------------ | ------------ | --------------- |
+| RMF1                     | Obbligatorio | Fatto           |
+| RMF2                     | Obbligatorio | Fatto           |
+| RAF3                     | Desiderabile | Rigettato       |
+| RMF4                     | Obbligatorio | Fatto           |
+| RAF5                     | Desiderabile | Rigettato       |
+| RAF6                     | Desiderabile | Rigettato       |
+| RAF7                     | Desiderabile | Rigettato       |
+| RAF8                     | Desiderabile | Fatto           |
+| RAF9                     | Desiderabile | Fatto           |
+| RMF10                    | Obbligatorio | Rigettato       |
+| ROQ1                     | Opzionale    | Fatto           |
+| RMO1                     | Obbligatorio | Fatto           |
+| RAO2                     | Desiderabile | Fatto           |
+| RAO3                     | Desiderabile | Fatto           |
+| RMO4                     | Obbligatorio | Fatto           |
+
 %**************************************************************
 \section{Progettazione}
 
-Approfondire la Specifica Tecnica prodotta.
+### Scopo del documento
+
+Lo scopo di questo documento è quello di definire la progettazione dell'architettura ad alto livello del progetto di stage.
+Il presente, tra le altre cose, tratta di:
+
+-   tecnologie utilizzate;
+-   architettura del sistema e dei relativi componenti software;
+-   Design Pattern<sub>[1](#1)</sub> impiegati per la progettazione.
+
+### Scopo del progetto
+
+Lo stage prevede lo sviluppo e la realizzazione di una dashboard per la gestione di dispositivi interconnessi (IoT). L'idea alla base del sistema è quella di un centro di controllo attraverso cui l'utente del sistema gestisca i dispositivi smart presenti nella propria rete domestica.
+
+## Architettura
+
+
+L'architettura scelta per il sistema segue lo stile architetturale a microservizi con l'obiettivi di approfondire questo stile architetturale e implementarlo in uno scenario plausibile.
+Lo stile architetturale a microservizi descrive un metodo di progettazione delle applicazioni come **insiemi di servizi eseguibili indipendentemente**, **che comunicano tra loro grazie a meccanismi di comunicazione leggeri**.
+
+![Panoramica sull'architettura software](./images/arch-overview.png)
+
+### Servizio: MQTT Broker
+
+Il broker MQTT è il servizio resonsabile alla ricezione di tutti i messaggi, alla loro catalogazione e all'invio delle notifiche verso i client sottoscritti a ciascuna categoria.
+Il broker memorizza lo stato di tutti i client a lui connessi, inclusi i messaggi non ancora inviati o il cui invio è fallito.
+
+### Servizio: termometro _virtualizzato_
+
+Questo servizio simula la presenza di un sensore che invii dati sulla temperatura dell'ambiente in cui si trova.
+
+Esso pubblica periodicamente la temperatura rilevata secondo l'argomento `temperature` e secondo l'argomento `hw_info` i propri dati identificativi, quali produttore, modello, ecc.
+
+Data la relativa importanza i dati vengono inviati con un QoS di livello 0 nella categoria `temperature`, mentre con QoS di livello 1 nella categoria `hw_info`.
+
+Anche se nel diagramma è disegnato individualmente, è possibile che ve ne siano molteplici.
+
+#### Servizio: termometro _virtualizzato_ - Panoramica delle classi
+
+![Panoramica delle classi del servizio di simulazione di un  termometro](./images/virtual_temp_sensor_classes.png)
+
+Classe                        | Funzionalità
+------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`DeviceInfo`                  | Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel topic `hw_info`.
+`ServiceManager`              | Classe responsabile dell'integrazione tra generazione dei dati di temperatura, gestione delle informazioni del dispositivo e invio delle informazioni tramite protocollo MQTT.
+`MQTTClient`                  | Classe utile all'inizializzazione del client MQTT.
+`TemperatureCurveFactory`     | Classe Factory astratta che espone la funzionalità di creazione della curva di temperatura, rappresentata dalla classe `TemperatureCurve`.
+`SineTemperatureCurveFactory` | Implementazione della factory `TemperatureCurveFactory` per la creazione di oggetti `SineTemperatureCurve`.
+`TemperatureCurve`            | Classe astratta che espone le funzionalità di inizializzazione della funzione, di aggiunta di rumore pseudocasuale nella funzione creata e di simulazione della temperatura data l'ora corrente.
+`SineTemperatureCurve`        | Classe che implementa `TemperatureCurve` definendo una funzione di simulazione sinusoidale, in cui i parametri modificabili sono ampiezza, frequenza e fase.
+
+### Servizio: temperatura
+
+Questo servizio si occupa di raccogliere tutti i dati provenienti dai sensori di temperatura, memorizzandoli e mettendoli a disposizione in un formato strutturato per gli altri servizi del sistema.
+
+Il servizio si sottoscrive alla categoria `temperature` e comunica con un QoS di livello 0, inoltre può pubblicare messaggi con la sottocategoria `temperature/active` per usufruire delle funzionalità aggiuntive presenti in dispositivi attivi legati alla temperatura.
+
+#### Servizio: temperatura - Panoramica delle classi
+
+![Panoramica delle classi del servizio legato al controllo temperatura](./images/temperature_service_classes.png)
+
+Classe            | Funzionalità
+------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`  | Classe responsabile dell'integrazione tra ricezione dei dati di temperatura, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
+`MQTTClient`      | Classe utile all'inizializzazione del client MQTT.
+`DBClient`        | Classe utile all'inizializzazione del client per il database del servizio.
+`API`             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio.
+`TemperatureData` | Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT.
+
+### Servizio: lampada _virtualizzata_
+
+Questo servizio simula la presenza di un dispositivo _attivo_: una lampada in grado di comunicare il proprio assorbimento energetico e la sua durata stimata.
+La lista delle operazioni disponibili è la seguente:
+
+1.  accensione della lampada (QoS di livello 1);
+2.  spegnimento della lampada (QoS di livello 1);
+3.  richiesta assorbimento energetico (QoS di livello 0);
+4.  richiesta tempo di vita stimato della lampada (QoS di livello 0).
+
+L'argomento a cui la lampada si sottoscrive è `light/active`, in quanto capace di rispondere a richieste più complesse. Al primo collegamento il dispositivo invia i propri dati identificativi, pubblicandoli nella categoria `hw_info`.
+
+#### Servizio: lampada _virtualizzata_ - Panoramica delle classi
+
+![Panoramica delle classi del servizio di simulazione di una  lampada](./images/virtual_lamp_classes.png)
+
+Classe           | Funzionalità
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`DeviceInfo`     | Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel topic `hw_info`.
+`ServiceManager` | Classe responsabile dell'integrazione tra stato della lampada e invio delle informazioni tramite protocollo MQTT.
+`MQTTClient`     | Classe utile all'inizializzazione del client MQTT.
+`Lamp`           | Classe che utilizza il Design Pattern Singleton per fornire lo stato della lampada (on/off).
+
+### Servizio: illuminazione
+
+Questo servizio si occupa di raccogliere e memorizzare tutti i dati pubblicati dai dispositivi nella categoria `light` e permette il controllo dei dispositivi sottoscritti alla categoria `light/active`.
+
+Questo servizio utilizza sia QoS di livello 0 che di livello 1.
+
+#### Servizio: illuminazione - Panoramica delle classi
+
+![Panoramica delle classi del servizio legato all'illuminazione](./images/light_service_classes.png)
+
+Classe                  | Funzionalità
+------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`        | Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi di illuminazione, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
+`MQTTClient`            | Classe utile all'inizializzazione del client MQTT.
+`DBClient`              | Classe utile all'inizializzazione del client per il database del servizio.
+`API`                   | Classe che rappresenta le funzionalità esposte all'esterno dal servizio. Include anche l'interfaccia di controllo dei dispositivi di illuminazione "_attivi_".
+`LightData`             | Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT.
+`RGBLightDataDecorator` | Classe che aggiunge informazioni relative alla temperatura colore della luce emessa dal dispositivo.
+`LightController`       | Classe che permette di controllare i dispositivi collegati, preparando i pacchetti che la classe `API` può inviare ai dispositivi secondo l'interfaccia definita dal produttore.
+
+### Servizio: informazioni dispositivo
+
+Questo servizio si occupa di raccogliere e memorizzare tutti i dati pubblicati secondo l'argomento `hw_info`.
+
+Il servizio utilizza esclusivamente un livello di QoS pari a 1 per aumentare l'affidabilità del sistema a fronte delle attività di identificazione dei dispositivi collegati.
+
+#### Servizio: informazioni dispositivo - Panoramica delle classi
+
+![Panoramica delle classi del servizio legato alle informazioni dei dispositivi](./images/devicesinfo_service_classes.png)
+
+Classe                            | Funzionalità
+----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`                  | Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
+`MQTTClient`                      | Classe utile all'inizializzazione del client MQTT.
+`DBClient`                        | Classe utile all'inizializzazione del client per il database del servizio.
+`API`                             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio, permettendo di richiedere i dati dei dispositivi e fornire la specifica dei dati inviati dai dispositivi.
+`DeviceInfo`                      | Classe che rappresenta le informazioni di base ricevute dai dispositivi attraverso il protocollo MQTT.
+`ActiveDeviceOperations`          | Classe che contiene la lista delle operazioni messe a disposizione dai dispositivi "_attivi_".
+`ActiveDeviceOperationDescriptor` | Classe che contiene le specifiche della funzionalità messa a disposizione dal dispositivo.
+
+### Servizio: preferenze utente
+
+Questo servizio si occupa di salvare le preferenze utente, quali ad esempio gruppi personalizzati, unità di misura preferite, ecc.
+
+Il servizio non utilizza il protocollo MQTT, bensì viene utilizzato solamente dal servizio **API**.
+
+#### Servizio: preferenze utente - Panoramica delle classi
+
+![Panoramica delle classi del servizio di trattamento delle preferenze utente](./images/userpreference_service_classes.png)
+
+Classe                            | Funzionalità
+----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`                  | Classe responsabile della gestione della persistenza delle preferenze utente e dell'esposizione di una interfaccia per gli altri servizi.
+`DBClient`                        | Classe utile all'inizializzazione del client per il database del servizio.
+`API`                             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio, permettendo di richiedere e modificare le preferenze dell'utente.
+`UserData`                      | Classe che rappresenta le informazioni di base dell'utente (nome, cognome, ecc.).
+`SystemUnitDefinition`          | Classe che contiene la lista delle unità di misura scelte dall'utente per ogni metrica.
+`UnitsConverter` | Classe che espone la funzionalità di conversione unità di misura.
+
+### Servizio: API
+
+Questo servizio svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione web e il broker MQTT.
+
+Esso interroga i servizi **illuminazione**, **temperatura** e **informazioni dispositivo**  definiti dal sistema per fornire una interfaccia unificata ai dati, sia in maniera sincrona sia in maniera asincrona.
+
+L'interfaccia sincrona consiste in un'interfaccia che risponde ai metodi HTTP, mentre l'interfaccia asincrona richiede l'istituzione di una connessione che utilizzi i WebSocket.
+
+#### Servizio: API - Panoramica delle classi
+
+![Panoramica delle classi del servizio di gateway delle API](./images/api_service_classes.png)
+
+Classe             | Funzionalità
+-------------------|-----------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`   | Classe responsabile dell'integrazione tra istanza del server e interfaccia ai dati esposta.
+`Server`           | Classe responsabile del ciclo di vita del server Node.js.
+`Route`            | Interfaccia che mette espone i metodi e le proprietà necessarie alla creazione degli endpoint dati.
+`UserRoute`        | Implementazione di `Route` che rappresenta gli endpoint per la gestione dell'utente.
+`DevicesRoute`     | Implementazione di `Route` che rappresenta gli endpoint messi a disposizione per la ricerca e identificazione dei dispositivi collegati.
+`TemperatureRoute` | Implementazione di `Route` che espone le funzionalità di gestione della temperatura.
+`LightRoute`       | Implementazione di `Route` che espone le funzionalità di gestione dell'illuminazione.
+
+### Servizio: web app
+
+Questo servizio comprende l'applicazione web per la consultazione del sistema per mezzo dei browser.
+
+Richiede i dati direttamente al servizio **API**, in particolare presentando i dati ottenuti in tempo reale con l'interfaccia asincrona del servizio **API**.
+
+#### Servizio: web app - Panoramica delle classi
+
+![Panoramica delle classi del servizio web app](./images/web_service_classes.png)
+
+Classe               | Funzionalità
+---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`ServiceManager`     | Classe responsabile dell'integrazione tra istanza del server, pagine esposte e interfaccia di richeista dati.
+`DataFetcher`  | Modulo che si occupa di effettuare le richieste al servizio **API** secondo le definizioni specificate in ingresso.
+`Server`             | Classe responsabile del ciclo di vita del server Node.js. Effettua le richieste definite dalle `UIRoute` per ricevere i dati, utilizzando `DataFetcher`.
+`UIRoute`            | Interfaccia utilizzata per definire le richieste da effettuare per ricevere le informazioni che popolano le pagine della rotta.
+`UserUIRoute`        | Implementazione di `UIRoute` che definisce le richieste per ottenere o modificare le preferenze dell'utente e le pagine di visualizzazione e modifica delle preferenze utente.
+`DevicesUIRoute`     | Implementazione di `UIRoute` che definisce le richieste per ottenere informazioni sui dispositivi collegati e le pagine di visualizzazione di questi.
+`TemperatureUIRoute` | Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati alla temperatura, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione.
+`LightUIRoute`       | Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati all'illuminazione, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione.
+`UIPage`             | Implementazione di un componente React (`React.Component`) che rappresenta una pagina. La pagina visualizzata può contenere più figli anch'essi componenti React.
+`React.Component`    | Classe che rappresenta un componente grafico nel framework React.
+
+
+## Design Pattern
+
+I Design Pattern descrivono la metodologia con cui affrontare problemi ricorrenti, fornendo soluzioni standard condivise.
+La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.
+I principali Design Pattern vengono suddivisi in quattro categorie:
+-   Architetturali: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l’architettura;
+-   Creazionali: affrontano il problema di astrarre il sistema rendendolo indipendente dall’implementazione concreta delle sue componenti;
+-   Strutturali: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l’ereditarietà e l’aggregazione;
+-   Comportamentali: affrontano il problema dell’interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
+
+### Design Pattern Comportamentali
+
+#### Mediator
+
+Il design pattern **Mediator** ha l'intento di disaccoppiare entità del sistema che devono comunicare fra loro. Il pattern infatti fa in modo che queste entità non si referenzino reciprocamente, agendo da "mediatore" fra le parti.
+
+##### Utilizzo
+
+Questo pattern è utilizzato in tutti i servizi sottoforma della classe `ServiceManager` per aumentare il disaccoppiamento tra classi che trattano la persistenza, l'esecuzione dei servizi, la comunicazione, ecc.
+
+### Design Pattern Creazionali
+
+#### Abstract Factory
+
+L'**Abstract Factory** fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare quale classe istanziare, permettendo che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
+
+##### Utilizzo
+
+Questo pattern è utilizzato nel servizio [Servizio: termometro _virtualizzato_](#user-content-servizio-termometro-virtualizzato) per permettere la creazione di funzioni di generazione della temperatura.
+
+![Utilizzo del pattern Abstract Factory](./images/abstract_factory.png)
+
+#### Singleton
+
+Il **Singleton** ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, fornendo un unico punto di accesso globale a tale istanza.
+
+##### Utilizzo
+
+Questo pattern è utilizzato nel servizio [Servizio: lampada _virtualizzata_](#user-content-servizio-lampada-virtualizzata) per obbligare il servizio a simulare una singola lampada, favorendo così l'esecuzione di numerosi container del servizio per simulare un intero sistema d'illuminazione.
+
+![Utilizzo del pattern Singleton](./images/singleton.png)
+
+### Design Pattern Strutturali
+
+#### Decorator
+
+Il design pattern **Decorator** consente di aggiungere nuove funzionalità ad oggetti già esistenti, senza utilizzare l'ereditarietà tra classi.
+
+##### Utilizzo
+
+Questo pattern è utilizzato nel servizio [Servizio: illuminazione](#user-content-servizio-illuminazione) per permettere al servizio di aggiungere dinamicamente le funzionalità di cambiamento colore ad una sorgente luminosa normale.
+
+![Utilizzo del pattern Decorator](./images/decorator.png)
+
+#### Composite
+
+Il design pattern **Composite** organizza gli oggetti in una struttura ad albero, nella quale i nodi sono delle entità composte e le foglie sono oggetti semplici.
+
+##### Utilizzo
+
+Questo pattern è utilizzato nel servizio [Servizio: web app](#user-content-servizio-web-app) per permettere la composizione di più componenti React per costruire interfacce complesse.
+
+![Utilizzo del pattern Composite](./images/composite.png)
+
+#### Module
+
+Il pattern **Module** è uno dei pattern specifici del linguaggio JavaScript: il suo scopo è quello di rendere disponibile all’interno degli oggetti l’encapsulation, mantenendo privati e non accessibili dall’esterno campi dati e funzioni utilizzate internamente.
 
 
 %**************************************************************
