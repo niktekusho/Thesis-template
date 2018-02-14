@@ -16,59 +16,62 @@ validazione dei requisiti.}\\
 \section{Organizzazione dello Stage}
 
 La pianificazione, in termini di quantità di ore di lavoro, è stata distribuita secondo la tabella ~\ref{tab:organizzazione-stage}:
+Dal momento che ho già avuto modo di trattare il lato tecnologico del progetto nel corso del percorso di studi, le ore di formazione sono 40 e le ho allocate per la formazione negli argomenti meno conosciuti, ossia la parte teorica dell'architettura a microservizi, una parte pratica di applicazione dei princìpi teorici in Node.js e il ripasso della caratteristiche tecniche del \emph{framework} React.
+Il secondo macroblocco di attività riguarda l'analisi, la progettazione e l'implementazione dei servizi di comunicazione con i dispositivi. A queste attività ho allocato 120 ore, in quanto è stato necessario assegnare tempo per l'attività di ricerca del protocollo di comunicazione da implementare e analizzare i requisiti che caratterizzano il prototipo. Ho incluso nelle attività di progettazione di questo blocco anche la progettazione e realizzazione dei dispositivi "virtualizzati", la presenza dei quali mi ha permesso di effettuare i primi test dei servizi di comunicazione.
+Il terzo macroblocco di attività riguarda l'analisi dell'interazione che un \emph{client} può avere con i servizi di comunicazione, permettendomi di arrivare alla progettazione e realizzazione del servizio che compone le funzionalità da offrire alla \emph{dashboard} e la \emph{dashboard} stessa.
+L'ultimo blocco di attività riguarda la revisione del prototipo implementato e la sua possibile pubblicazione sulla piattaforma di Heroku\footcite{heroku}.
 
-\begin{tabular}{|>{\centering} m{1.5cm}|>{\centering} m{1.5cm}|m{10cm}|}
-	\hline
-	\multicolumn{2}{|c|}{\textbf{Durata in ore}} & \textbf{Descrizione dell'attività} \\
-	\hline
-	\multicolumn{2}{|c|}{40} & Formazione
-	 \begin{itemize}
-		\item Architettura microservizi
-		\item Node.JS orientato ai microservizi
-		\item React
-	\end{itemize} 
-	\\
-	\hline
-	
-	\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di comunicazione con i dispositivi IoT\\
-	\cline{2-2}
-	& 40 & \begin{itemize}
-		\item Analisi dei protocolli open source esistenti per i diversi dispositivi IoT
-		\item Stima implementazione eventuali nuovi protocolli
-	\end{itemize} \\
-	\cline{2-2}
-	& 80 & \begin{itemize}
-		\item Progettazione del servizio di comunicazione con i dispositivi
-		\item Progettazione dei test del servizio di comunicazione
-		\item Realizzazione dei test e del servizio di comunicazione in Node.js
-	\end{itemize} \\
-	\hline
-	
-	\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di presentazione delle informazioni agli utenti\\
-	\cline{2-2}
-	& 40 & \begin{itemize}
+\begin{table}[H]
+	\caption{Tabella che illustra la pianificazione delle attività dello stage}
+	\label{tab:organizzazione-stage}
+	\begin{tabular}{|>{\centering} m{1.5cm}|>{\centering} m{1.5cm}|m{10cm}|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Durata in ore}} & \textbf{Descrizione dell'attività} \\
+		\hline
+		\multicolumn{2}{|c|}{40} & Formazione
+	 	\begin{itemize}
+			\item Architettura microservizi
+			\item Node.JS orientato ai microservizi
+			\item React
+		\end{itemize}
+		\\
+		\hline
+		\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizi di comunicazione con i dispositivi IoT\\
+		\cline{2-2}
+		& 40 & \begin{itemize}
+			\item Analisi dei protocolli \emph{open source} esistenti per i diversi dispositivi IoT
+			\item Stima implementazione eventuali nuovi protocolli
+			\end{itemize} \\
+			\cline{2-2}
+			& 80 & \begin{itemize}
+			\item Progettazione dei servizi di comunicazione con i dispositivi
+			\item Progettazione dei test dei servizi di comunicazione
+			\item Realizzazione dei test e dei servizi di comunicazione in Node.js
+		\end{itemize} \\
+		\hline
+		\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di presentazione delle informazioni agli utenti\\
+		\cline{2-2}
+		& 40 & \begin{itemize}
 		\item Analisi interazione utente con la \textit{dashboard}
-	\end{itemize} \\
-	\cline{2-2}
-	& 80 & \begin{itemize}
-		\item Progettazione del servizio di presentazione informazioni
-		\item Progettazione dei test del servizio di presentazione
-		\item Realizzazione dei test e del servizio di presentazione in React, HTML5 e CSS3.
-	\end{itemize} \\
-	\hline
-	
-	\multicolumn{2}{|c|}{20} & {\textit{Review} dei servizi, \textit{deploy} dei servizi su Heroku.}\\
-	\hline
-	
-	\multicolumn{2}{|c|}{\textbf{Totale ore}} & {\textbf{300}} \\
-	\hline
-	
+		\end{itemize} \\
+		\cline{2-2}
+		& 80 & \begin{itemize}
+			\item Progettazione del servizio di presentazione informazioni
+			\item Progettazione dei test del servizio di presentazione
+			\item Realizzazione dei test e del servizio di presentazione in React, HTML5 e CSS3.
+		\end{itemize} \\
+		\hline
+		\multicolumn{2}{|c|}{20} & {\textit{Review} dei servizi, \textit{deploy} dei servizi su Heroku.}\\
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Totale ore}} & {\textbf{300}} \\
+		\hline
 \end{tabular}
-% Le settimane sono composte da 40 ore totali di impegno sul progetto, 
+\end{table}
+% Le settimane sono composte da 40 ore totali di impegno sul progetto,
 
 \clearpage
-\section*{Milestone}
-In questa sezione vengono presentate le milestone previste per il progetto su base settimanale, associando a ciascuna milestone i prodotti che devono essere sviluppati entro la corrispondente scadenza.
+\section*{\emph{Milestone}}
+In questa sezione presento le \emph{milestone} previste per il progetto su base settimanale, associando a ciascuna \emph{milestone} i prodotti che devono essere sviluppati entro la corrispondente scadenza.
 \begin{itemize}
 	\item Prima settimana: Completamento delle attività di autoformazione con produzione di una breve relazione riguardante la stessa;
 	\item Seconda e terza settimana: Analisi dei protocolli di comunicazione esistenti, primo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi \textit{virtualizzati};
@@ -80,10 +83,8 @@ In questa sezione vengono presentate le milestone previste per il progetto su ba
 %**************************************************************
 \section{Ambiente di sviluppo}
 
-Sistemi operativi, dispositivi e tecnologie utilizzate.
-
 In questa sezione sono descritte le tecnologie e gli strumenti di sviluppo che ho utilizzato per lo sviluppo del progetto, includendo la motivazione per cui ho fatto la scelta.
-Nella tabella ~\ref{tab:tecnologie} è presente un sommario delle tecnologie di cui approfondisco nelle sotto-sezioni seguenti. Allo stesso modo, la tabella ~\ref{tab:strumenti} include il sommario degli strumenti che ho utilizzato per lo sviluppo del prototipo. 
+Nella tabella ~\ref{tab:tecnologie} è presente un sommario delle tecnologie di cui approfondisco nelle sotto-sezioni seguenti. Allo stesso modo, la tabella ~\ref{tab:strumenti} include il sommario degli strumenti che ho utilizzato per lo sviluppo del prototipo.
 
 \begin{table}[H]
 \caption{Tabella con il sommario delle tecnologie utilizzate}
@@ -102,11 +103,11 @@ Jest & Jest è un \emph{framework} per l'implementazione di test per codice Java
 \hline
 ESLint & ESLint è uno strumento \emph{open source} per l'analisi statica del codice JavaScript prodotto. \\
 \hline
-HTML5 & HTML5 è un linguaggio di markup per la formattazione e impaginazione delle pagine Web pubblicato come W3C Recommendation dall'ottobre 2014. \\
+HTML5 & HTML5 è un linguaggio di \emph{markup} per la formattazione e impaginazione delle pagine Web pubblicato come W3C Recommendation dall'ottobre 2014. \\
 \hline
 CSS3 & CSS3 è un linguaggio di formattazione delle pagine Web. \\
 \hline
-Docker & Docker è una .... \\
+Docker & Docker è una tecnologia \emph{open source} sviluppata per semplificare il rilascio di applicazioni eseguibili nel contesto dei \emph{container}. \\
 \hline
 \end{tabularx}
 \end{table}
@@ -122,26 +123,24 @@ Atom & Atom è un editor di testo sviluppato da GitHub con tecnologie moderne e 
 \hline
 Visual Studio Code & Visual Studio Code è un editor di testo sviluppato da Microsoft specificatamente per i linguaggi del Web. \\
 \hline
-Jest (CLI) & Jest (CLI) è l'interfaccia a linea di comando per l'esecuzione dei test sviluppati con il framework Jest. \\
+Jest (CLI) & Jest (CLI) è l'interfaccia a linea di comando per l'esecuzione dei test sviluppati con il \emph{framework} Jest. \\
 \hline
-Docker (engine) & L'engine Docker è una .... \\
+Docker (engine) & Il Docker Engine è la combinazione dell'implementazione della tecnologia di containerizzazione con gli strumenti di gestione del ciclo di vita dei \emph{container}. \\
 \hline
-Docker (compose) & Docker compose è ... \\
+Docker (compose) & Docker Compose è lo strumento attraverso cui è possibile coordinare applicazioni eseguite su \emph{container} multipli. \\
 \hline
 \end{tabularx}
 \end{table}
 
 \subsection{Node.js}
 
-Node.js è un'ambiente d'esecuzione multipiattaforma open source per JavaScript e utilizzato per l'implementazione di applicazioni server in JavaScript.
-
-Per consentire l'esecuzione di JavaScript lato server, Node.js utilizza il motore di esecuzione JavaScript **V8** sviluppato da Google per il browser Chrome.
-
-Ho riassunto gli aspetti positivi della piattaforma Node.js nei seguenti punti: 
+Node.js è un'ambiente d'esecuzione multipiattaforma \emph{open source} per JavaScript e utilizzato per l'implementazione di applicazioni server in JavaScript.
+Per consentire l'esecuzione di JavaScript lato server, Node.js utilizza il motore di esecuzione JavaScript V8 sviluppato da Google per il \emph{browser} Chrome.
+Ho riassunto gli aspetti positivi della piattaforma Node.js nei seguenti punti:
 \begin{itemize}
   \item Node.js utilizza il modello \emph{event-driven} per la gestione delle operazioni di \emph{input} e \emph{output} (I/O) e in questo modo semplifica la gestione asincrona delle richieste concorrenti.
   \item Node.js utilizza JavaScript, un linguaggio di programmazione dalla sintassi semplice da imparare.
-  \item Node.js utilizza npm per la gestione delle librerie dell'applicazione. Npm è il più grande registro di componenti di codice riusabile \footcite{}.
+  \item Node.js utilizza npm per la gestione delle librerie dell'applicazione. Npm è il più grande registro di componenti di codice riusabile \footnote{Secondo le dichiarazioni degli sviluppatori di npm \url{https://www.npmjs.com/}}.
 \end{itemize}
 
 Come tutte le tecnologie, anche Node.js ha i suoi aspetti negativi, che presento di seguito:
@@ -153,7 +152,6 @@ Come tutte le tecnologie, anche Node.js ha i suoi aspetti negativi, che presento
 \subsection{React}
 
 React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce utente.
-
 Ho riassunto gli aspetti positivi della libreria React nei seguenti punti:
 \begin{itemize}
 	\item React utilizza un DOM virtuale per disegnare le interfacce, raggiungendo performance ed efficienza elevate. Grazie alla sua struttura a componenti, un aggiornamento ad uno di essi non richiede l'aggiornamento degli altri.
@@ -166,34 +164,34 @@ Il difetto principale che attribuisco a React consiste nella sua elevata dinamic
 \subsection{ECMAScript 2017}
 
 ECMAScript 2017 è un linguaggio di programmazione standardizzato la cui ratifica è avvenuta nel giugno del 2017. L'implementazione dello standard più conosciuta è JavaScript.
-
 L'edizione 2017 dello standard porta in dote le seguenti funzionalità:
 \begin{itemize}
-	\item Nuova sintassi per le **funzioni asincrone**. La keyword `async` indica che una funzione o un metodo ritornano una Promise, ossia una classe di oggetti che evidenziano l'asincronia dell'operazione da eseguire. La keyword `await` aspetta che la funzione asincrona termini la sua esecuzione, ritornando il risultato della Promise.
-	\item Supporto iniziale per l'elaborazione multithread, attraverso tipi di oggetti immutabili e condivisibili tra thread.
+	\item Nuova sintassi per le funzioni asincrone. La keyword \emph{async} indica che una funzione o un metodo ritornano una Promise, ossia una classe di oggetti che evidenziano l'asincronia dell'operazione da eseguire. La keyword \emph{await} aspetta che la funzione asincrona termini la sua esecuzione, ritornando il risultato della \emph{Promise}.
+	\item Supporto iniziale per l'elaborazione \emph{multithread}, attraverso tipi di oggetti immutabili e condivisibili tra \emph{thread}.
 	\item Nuovi metodi per gli oggetti esistenti nel linguaggio (enumerazione dei membri di un oggetto e ulteriori funzionalità di manipolazione di stringhe).
 \end{itemize}
 
 Nella mia analisi ho riscontrato che gli aspetti positivi consistono nei seguenti punti:
 \begin{itemize}
-	\item La nuova sintassi per la scrittura di funzioni asincrone è molto facilmente leggibile in quanto ricorda una programmazione sequenziale.
-	\item Il supporto per l'elaborazione multithread consente a chi ha necessità e competenza di poter sfruttare le architetture a molti core delle moderne CPU, favorendo l'utilizzo di JavaScript anche per la programmazione di codice parallelo per le GPU.
+	\item La nuova sintassi per la scrittura di funzioni asincrone rende facilmente leggibile il codice sorgente in quanto ricorda l'utilizzo di normali funzioni della programmazione sequenziale.
+	\item Il supporto per l'elaborazione \emph{multithread} consente a chi ha necessità e competenza di poter sfruttare le architetture a molti \emph{core} delle moderne CPU, favorendo l'utilizzo di JavaScript anche per la programmazione di codice parallelo per le GPU.
 	\item Poche nuove funzionalità rispetto alle edizioni precedenti permettono di imparare le nuove con maggior semplicità.
 \end{itemize}
-
 mentre gli aspetti negativi:
 \begin{itemize}
-	\item Con la nuova sintassi per le funzioni asincrone è molto facile dimenticarsi della natura asincrona del codice scritto, omettendo quindi la keyword `await`.
-	\item Il supporto alla nuova edizione dello standard è presente in maniera completa solamente nelle ultime versioni dei browser e di Node.js.\footnote{\begin{itemize}
-		\item Tabella di compatiblità dei browser: \href{http://kangax.github.io/compat-table/es2016plus/}{http://kangax.github.io/compat-table/es2016plus/} 
-		\item Tabella di compatiblità di Node.js: \href{http://node.green/#ES2017}{http://node.green/#ES2017}
-	\end{itemize}}
+	\item Con la nuova sintassi per le funzioni asincrone ho spesso dimenticato la natura asincrona del codice scritto, causando l'omissione della keyword \emph{await}.
+	\item Il supporto alla nuova edizione dello standard è presente in maniera completa solamente nelle ultime versioni dei \emph{browser} e di Node.js.\footnotemark
 \end{itemize}
+
+\footnotetext{
+\begin{itemize}
+	\item Tabella di compatiblità dei \emph{browser}: \url{http://kangax.github.io/compat-table/es2016plus/}
+	\item Tabella di compatiblità di Node.js: \url{http://node.green/\#ES2017}
+\end{itemize}}
 
 \subsection{Jest}
 
-Jest è un framework per l'implementazione di test per codice scritto in JavaScript sviluppato da Facebook.
-
+Jest è un \emph{framework} per l'implementazione di test per codice scritto in JavaScript sviluppato da Facebook.
 Tra gli aspetti positivi, ho riscontrato che:
 \begin{itemize}
 	\item Jest non richiede una configurazione, utilizzando impostazioni predefinite ottimali.
@@ -201,75 +199,62 @@ Tra gli aspetti positivi, ho riscontrato che:
 	\item Jest comprende funzionalità per i test di regressione dei componenti scritti in React.
 	\item Jest per default esegue i test parallelamente, velocizzando i processi di test.
 \end{itemize}
-
 Il difetto più grave che attribuisco a Jest consiste nella sua minor flessibilità rispetto ad altre librerie di test, quali ad esempio Mocha.
 
 \subsection{ESLint}
 
 ESLint è uno strumento che esegue analisi del codice sorgente scritto in JavaScript alla ricerca di bug noti, di inconsistenze di stile nella scrittura del codice e mira a mantenere il codice facilmente leggibile e manutenibile.
-
 Gli aspetti positivi di ESLint che ho riscontrato sono:
 \begin{itemize}
 	\item ESLint è altamente configurabile, permettendo la definizione di regole condivise più appropriate per il proprio progetto.
 	\item É supportato da molti strumenti di sviluppo.
 	\item Le regole di analisi sono ben documentate, con esempi sul loro utilizzo, e gli errori emessi sono facilmente comprensibili.
 \end{itemize}
+L'aspetto negativo principale che ho trovato in ESLint risiede nella sua ripida curva di apprendimento per l'installazione e l'utilizzo: ESLint infatti richiede una configurazione iniziale non banale per il suo utilizzo.
 
-L'aspetto negativo principale riscontrato ad ESLint risiede nella sua curva di apprendimento per l'installazione e l'utilizzo: ESLint infatti richiede una configurazione iniziale non banale per il suo utilizzo.
-
-\subsection{HTML5 & CSS3}
+\subsection{HTML5 e CSS3}
 
 HTML5 e CSS3 sono le ultime revisioni stabili rispettivamente del linguaggio HTML e del linguaggio CSS rilasciate dalla W3C.
-
 Gli aspetti positivi di queste tecnologie che ho riscontrato sono:
 \begin{itemize}
 	\item HTML5 ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard e permette l’integrazione con diversi formati multimediali senza utilizzare plugin esterni.
-	\item HTML5 e CSS3 sono ben diffusi e tutti i browser più recenti li supportano anche in caso di versioni non aggiornate.
+	\item HTML5 e CSS3 sono ben diffusi e tutti i \emph{browser} più recenti li supportano anche in caso di versioni non aggiornate.
 	\item HTML5 e CSS3 sono ben documentati e sono disponibili nella rete numerose risorse per il loro utilizzo ottimale.
 \end{itemize}
-
-Dato l'ambito di utilizzo delle tecnologie HTML5 e CSS3 in questo progetto, nel quale non ho vincolato ad una versione minima i browser utilizzabili dagli utenti per la visualizzazione della \emph{dashboard}, non ho riscontrato difetti che potessero essere menzionati.
+Dato l'ambito di utilizzo delle tecnologie HTML5 e CSS3 in questo progetto, nel quale non ho vincolato ad una versione minima i \emph{browser} utilizzabili dagli utenti per la visualizzazione della \emph{dashboard}, non ho riscontrato difetti che potessero essere menzionati.
 
 \subsection{Atom}
 \label{subsec:atom}
 
-Atom è un editor di testo sviluppato da GitHub che può essere utilizzaato come un IDE (Integrated Development Environment).
-
+Atom è un editor di testo sviluppato da GitHub che può essere utilizzaato come un IDE (\emph{Integrated Development Environment}).
 Atom durante il progetto è stato utilizzato per la stesura della documentazione associata al progetto: documenti di Analisi dei Requisiti e Specifica Tecnica, documenti di presentazione delle componenti del progetto (README visualizzabili durante l'esplorazione del progetto su GitHub) e specifica delle interfacce di comunicazione tra i servizi.
-
 Gli aspetti positivi che ho riscontrato nel suo utilizzo sono:
 \begin{itemize}
 	\item Atom è estremamente espandibile e personalizzabile, permettendo di creare un ambiente di sviluppo su misura.
 	\item Atom riconosce la sintassi di moltissimi linguaggi attraverso moduli installabili.
 \end{itemize}
-
 Gli aspetti negativi che ho riscontrato sono:
 \begin{itemize}
 	\item Atom richiede un utilizzo della CPU elevato che ne mina la stabilità generale.
 	\item Atom non si interfaccia nativamente con strumenti di debug del codice.
 \end{itemize}
-
 Il secondo difetto riscontrato è stato il motivo per cui ho introdotto un altro strumento per la scrittura del codice sorgente del progetto.
 
 \subsection{Visual Studio Code}
 
-Visual Studio Code è un editor di testo sviluppato da Microsoft per la scrittura di applicazioni Web.
-
-Visual Studio Code è stato utilizzato durante il progetto per scrivere il codice sorgente del prototipo, per ispezionare il codice scritto in esecuzione (\emph{debug}) e per eseguire i test statici e dinamici sul codice.
-
+Visual Studio Code è un editor di testo sviluppato da Microsoft per la scrittura di applicazioni \emph{web}.
+Ho utilizzato Visual Studio Code per scrivere il codice sorgente del prototipo, per ispezionare il codice scritto in esecuzione (\emph{debug}) e per eseguire i test statici e dinamici sul codice.
 Gli aspetti positivi che ho evidenziato durante il suo utilizzo consistono in:
 \begin{itemize}
 	\item elevata efficienza nell'utilizzo delle risorse, risultando uno strumento affidabile;
 	\item supporto nativo per gli strumenti di debug;
 \end{itemize}
-
-Non ho riscontrato evidenti aspetti negativi per questo strumento tuttavia, paragonandolo al precedente strumento per la scrittura testuale (~\ref{subsec:atom}), mi è risultato evidente la minor quantità di sintassi supportate e la minor personalizzazione generale dell'editor.
+Non ho riscontrato evidenti aspetti negativi per questo strumento, tuttavia, paragonandolo al precedente strumento per la scrittura testuale (~\ref{subsec:atom}), mi è risultato evidente la minor quantità di sintassi supportate e la minor personalizzazione generale dell'editor.
 
 %**************************************************************
 \section{Analisi dei Requisiti}
 
-Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
-
+% Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
 \subsection{MQTT}
 MQTT è un protocollo di messaggistica leggero basata sul design pattern Publish/Subscribe.
 É un protocollo nato per l'utilizzo con sensori a basso consumo energetico, tuttavia è utilizzabile anche in altri scenari.
@@ -279,7 +264,7 @@ MQTT è stato progettato tra la fine degli anni '90 e l'inizio degli anni 2000 p
 MQTT mira ad assere una soluzione semplice da implementare, per permettere la maggior copertura di dispositivi possibile.
 MQTT usa messaggistica pub/sub per permettere ai dispositivi di pubblicare nella rete informazioni non predefinite.
 MQTT non richiede amministrazione in quanto cerca di rispondere ad eventi inaspettati in maniera semplice e con maggior buon senso possibile.
-MQTT minimizza il traffico sulla rete introducendo un overhead<sub>[1](#1)</sub> sui dati minimo.
+MQTT minimizza il traffico sulla rete introducendo un \emph{overhead} sui dati minimo.
 MQTT si aspetta di lavorare in reti con frequenti interruzioni, utilizzando il meccanismo dell'ultimo testamento.
 MQTT si accorge repentinamente di cambiamenti dello stato della sessione.
 MQTT si aspetta che i client abbiano risorse d'elaborazione limitate.
@@ -288,17 +273,15 @@ MQTT non fa assunzioni sulla struttura né il contenuto dei dati.
 
 Il protocollo MQTT si basa sul principio che ogni client pubblica messaggi, i quali hanno uno o più argomenti.
 Ogni client può registrarsi a determinati argomenti, per ricevere tutti i messaggi che altri client pubblicano per quell'argomento. Molti client si connettono a un  \gls{broker} che funziona da intermediario, ricevendo i messaggi pubblicati e inoltrandoli a tutti i client sottoscritti ai rispettivi argomenti.
-
 Gli argomenti in MQTT sono trattati gerarchicamente. Questo permette la creazione di argomenti e sottoargomenti, simili alla struttura ad albero di un \emph{filesystem}.
-
 MQTT definisce 3 livelli di qualità in base a quanto \emph{broker} e client si impegneranno a ricevere un messaggio.
 I client decidono il livello massimo di QoS che riceveranno.
 
 La scala della QoS definisce i livelli 0, 1 e 2 con affidabilità crescente ma minori performance:
 \begin{itemize}
-	\item [0]: broker e/o client invieranno il messaggio al massimo una volta senza richiesta di conferma. A questo livello i messaggi vengono persi se una delle parti si disconnette;
-	\item [1]: broker e/o client invieranno il messaggio almeno una volta con la richiesta di conferma;
-	\item [2]: broker e/o client invieranno il messaggio una sola volta effettuando una trasmissione in 4 step.
+	\item [0]: \emph{broker} e/o client invieranno il messaggio al massimo una volta senza richiesta di conferma. A questo livello i messaggi vengono persi se una delle parti si disconnette;
+	\item [1]: \emph{broker} e/o client invieranno il messaggio almeno una volta con la richiesta di conferma;
+	\item [2]: \emph{broker} e/o client invieranno il messaggio una sola volta effettuando una trasmissione in 4 step.
 \end{itemize}
 
 Per esempio, se un messaggio è pubblicato con QoS 2 e il client è sottoscritto all'argomento con QoS 0, il client riceverà quel messaggio con QoS 0 (niente richieste di conferma, ecc).
@@ -314,7 +297,7 @@ In questa sezione descrivo i requisiti, i casi d'uso collegati e gli attori coin
 I dispositivi che ho considerato comunicano con il sistema utilizzando il protocollo MQTT (link alla sezione), perchè ho ritenuto questo protocollo il più adatto per il sistema.
 I motivi che mi hanno spinto a scegliere MQTT sono:
 \begin{itemize}
-	\item è un protocollo molto diffuso, caratteristica che mi ha facilitato molto nella ricerca di documentazione che dimostri il suo utilizzo; 
+	\item è un protocollo molto diffuso, caratteristica che mi ha facilitato molto nella ricerca di documentazione che dimostri il suo utilizzo;
 	\item è un protocollo \emph{data agnostic}, ossia che non pone vincoli sulla struttura dei dati scambiati nella rete;
 	\item è un protocollo efficiente in quanto trasmette informazioni con un overhead minimo;
 	\item è un protocollo che permette l'aggiunta e la rimozione di dispositivi dinamicamente,  richiedendo intervento manuale minimo all'utente.
@@ -335,7 +318,7 @@ Altre 2 funzionalità legate alle risorse \emph{hardware} del sensore sono:
 	\item disconnessione forzata: il centro di controllo può richiedere ai sensori di disconnettersi dalla rete per un periodo di tempo per motivi di diagnostica o di sovraccarico della rete. Questa funzionalità richiede che il sensore abbia hardware in grado di ricevere segnali e non solo trasmetterli.
 \end{itemize}
 
-Nella tabella ~\ref{tab:funz-sensori} riassumo le funzionalità considerate per i sensori, descrivendone la frequenza di utilizzo, la modalità di attivazione e se la funzionalità è presente obbligatoriamente. 
+Nella tabella ~\ref{tab:funz-sensori} riassumo le funzionalità considerate per i sensori, descrivendone la frequenza di utilizzo, la modalità di attivazione e se la funzionalità è presente obbligatoriamente.
 
 \begin{table}[H]
 \caption{Tabella con funzionalità considerate dai sensori}
@@ -344,11 +327,11 @@ Nella tabella ~\ref{tab:funz-sensori} riassumo le funzionalità considerate per 
 \hline
 \textbf{Funzionalità dei sensori} & \textbf{Frequenza} & \textbf{Attivazione} & \textbf{Obbligatorietà} \\
 \hline
-Invio informazioni & Periodica & Automatica & \checkmark \\
+Invio informazioni & Periodica & Automatica & Sì \\
 \hline
-Memoria locale & N.D. & Automatica & \xmark \\
+Memoria locale & N.D. & Automatica & No \\
 \hline
-Disconnessione forzata & Su richiesta & Manuale & \xmark \\
+Disconnessione forzata & Su richiesta & Manuale & No \\
 \hline
 \end{tabularx}
 \end{table}
@@ -374,13 +357,14 @@ Nella tabella ~\ref{tab:funz-disp-attivi} riassumo le funzionalità considerate 
 \hline
 \textbf{Funzionalità dei dispositivi attivi} & \textbf{Frequenza} & \textbf{Attivazione} & \textbf{Obbligatorietà} \\
 \hline
-Invio informazioni & Ad ogni evento ricevuto & Automatica & \checkmark \\
+Invio informazioni & Ad ogni evento ricevuto & Automatica & Sì \\
 \hline
-Risposta eventi gestiti & Su richiesta & Automatica & \checkmark \\
+Risposta eventi gestiti & Su richiesta & Automatica & Sì \\
 \hline
-Informazioni stato energetico & Su richiesta & Manuale & \xmark \\
+Informazioni stato energetico & Su richiesta & Manuale & No \\
 \hline
-Spegnimento & Su richiesta & Manuale & \checkmark \\
+Spegnimento & Su richiesta & Manuale & Sì \\
+\hline
 \end{tabularx}
 \end{table}
 
@@ -400,7 +384,7 @@ Prevedo che gli utenti del prototipo non abbiano alcuna competenza particolare.
 
 % ### Piattaforma di esecuzione
 
-La piattaforma di esecuzione del prodotto è Docker, attraverso la composizione di container.
+La piattaforma di esecuzione del prodotto è Docker, attraverso la composizione di \emph{container}.
 L'utente accede alle funzionalità del prodotto attraverso una interfaccia Web, opportunamente progettata per essere reattiva (ottimizzata per mobile).
 
 % ## Casi d'uso
@@ -436,7 +420,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 % uc testuale
 \begin{usecase}{0}{Scenario principale}
 \usecaseactors{Utente, Dispositivi}
-\usecasepre{L'utente ha correttamente installato il prototipo e ha aperto la \emph{dashboard} in un browser}
+\usecasepre{L'utente ha correttamente installato il prototipo e ha aperto la \emph{dashboard} in un \emph{browser}}
 \usecasedesc{La \emph{dashboard} mostra lo stato del sistema ed evidenzia i dispositivi collegati}
 \usecasepost{La \emph{dashboard} consente un'altra interazione con il sistema}
 \label{uc:scenario-principale}
@@ -605,6 +589,12 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \usecasepost{L'utente può accedere alle funzionalità di gestione offerte dalla \emph{dashboard}}
 \label{uc:uc2}
 \end{usecase}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{usecase/UC2}
+    \caption{Use Case - UC2: Gestione dei dispositivi collegati}
+\end{figure}
 % fine uc
 
 % uc testuale
@@ -733,29 +723,56 @@ Nella tabella ~\ref{tab:requisiti}, presento i requisiti indicando:
 	\item Descrizione esaustiva del requisito;
 \end{itemize}
 
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+
 % ### Catalogazione requisiti
 I requisiti sono identificati come segue:
 
 \begin{figure}
   \centering
   \[ R[Categoria][Tipo][numero] \]
-  \begin{tabular}{@{}>{$}l<{$}l@{}}
-    R & specifica che si tratta di un requisito;\\
-    Categoria & indica se si tratta di un requisito:
-		\begin{itemize}
-			\item Obbligatorio: `M` (\emph{mandatory});
-			\item Desiderabile: `A` (\emph{advisable});
-			\item Opzionale: `O` (\emph{optional});
-		\end{itemize}
-    Tipo & indica la tipologia del requisito, che può essere:
-		\begin{itemize}
-			\item Di vincolo: `O` (\emph{obligation});
-			\item Funzionale: `F` (\emph{functional});
-			\item Di qualità: `Q` (\emph{quality});
-		\end{itemize}
-		Numero & è assoluto e rappresenta un riferimento univoco al requisito in questione.\\
-  \end{tabular}
+	dove
+	\begin{conditions}
+    R & specifica che si tratta di un requisito\\
+    Categoria & indica se si tratta di un requisito tra quelli definiti in tabella ~\ref{tab:categoria-requisiti}\\
+    Tipo & indica la tipologia del requisito tra quelli definiti in tabella ~\ref{tab:tipi-requisiti}\\
+		Numero & è assoluto e rappresenta un riferimento univoco al requisito in questione\\
+	\end{conditions}
 \end{figure}
+
+\begin{table}[H]
+\caption{Tabella recante le categorie di requisiti}
+\label{tab:categoria-requisiti}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Identificativo} & \textbf{Descrizione e origine} \\
+\hline
+M & Obbligatorio (\emph{mandatory}) \\
+\hline
+A & Desiderabile ((\emph{advisable}) \\
+\hline
+O & Opzionale (\emph{optional}) \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\caption{Tabella recante i tipi di requisiti}
+\label{tab:tipi-requisiti}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Identificativo} & \textbf{Descrizione e origine} \\
+\hline
+O & Di vincolo (\emph{obligation}) \\
+\hline
+F & Funzionale (\emph{functional}) \\
+\hline
+Q & Di qualità (\emph{quality}) \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ### Tabella dei requisiti
 
@@ -772,7 +789,7 @@ RMO1 & Obbligatorio & Il sistema deve essere progettato secondo lo stile di prog
 \hline
 RAO2 & Desiderabile & Il sistema può essere implementato utilizzando il linguaggio JavaScript secondo lo standard EcmaScript 2017. \\
 \hline
-RAO3 & Desiderabile & Il sistema può essere implementato utilizzando il framework Node.js per il \emph{backend} e React per il \emph{frontend}. \\
+RAO3 & Desiderabile & Il sistema può essere implementato utilizzando il \emph{framework} Node.js per il \emph{backend} e React per il \emph{frontend}. \\
 \hline
 RMO4 & Obbligatorio & Il sistema deve utilizzare il protocollo MQTT. \\
 \hline
@@ -816,7 +833,7 @@ RMF10 & Obbligatorio & L'utente deve poter visualizzare le statistiche di utiliz
 \begin{table}[H]
 \caption{Tabella dei requisiti di qualità}
 \label{tab:requisiti-qualita}
-\begin{tabularx}{\linewidth}{|c|c|X|}
+\begin{tabularx}{\linewidth}{|c|c|>{\setlength\hsize{\hsize}}X|}
 \hline
 \textbf{Identificativo} & \textbf{Categoria} & \textbf{Descrizione} \\
 \hline
@@ -824,7 +841,7 @@ ROQ1 & Opzionale & Il sistema deve essere testato, raggiungendo i seguenti obiet
 \begin{itemize}
 	\item \emph{statement coverage} > 80 \%
 	\item \emph{branch coverage} > 90 \%
-\end{itemize}
+\end{itemize}\\
 \hline
 \end{tabularx}
 \end{table}
@@ -832,7 +849,7 @@ ROQ1 & Opzionale & Il sistema deve essere testato, raggiungendo i seguenti obiet
 \begin{table}[H]
 \caption{Tabella di riepilogo dei requisiti}
 \label{tab:requisiti-riepilogo}
-\begin{tabularx}{\linewidth}{|c|c|X|}
+\begin{tabularx}{\linewidth}{|X|c|c|c|}
 \hline
 \textbf{Tipo} & \textbf{Obbligatorio} & \textbf{Opzionale} & \textbf{Desiderabile} \\
 \hline
@@ -847,273 +864,321 @@ Totale & 8 & 1 & 6 \\
 \end{tabularx}
 \end{table}
 
+\pagebreak
+
 %**************************************************************
 \section{Progettazione}
 
-### Scopo del documento
+% ### Scopo del documento
 
-Lo scopo di questo documento è quello di definire la progettazione dell'architettura ad alto livello del progetto di stage.
-Il presente, tra le altre cose, tratta di:
+In questa sezione del documento definisco la progettazione dell'architettura ad alto livello del progetto di stage.
+La sezione include la descrizione dell'architettura del sistema e delle relative componenti software e i Design Pattern utilizzati per la progettazione.
 
--   tecnologie utilizzate;
--   architettura del sistema e dei relativi componenti software;
--   Design Pattern<sub>[1](#1)</sub> impiegati per la progettazione.
-
-### Scopo del progetto
-
-Lo stage prevede lo sviluppo e la realizzazione di una dashboard per la gestione di dispositivi interconnessi (IoT). L'idea alla base del sistema è quella di un centro di controllo attraverso cui l'utente del sistema gestisca i dispositivi smart presenti nella propria rete domestica.
-
-## Architettura
-
+% ## Architettura
 
 L'architettura scelta per il sistema segue lo stile architetturale a microservizi con l'obiettivi di approfondire questo stile architetturale e implementarlo in uno scenario plausibile.
-Lo stile architetturale a microservizi descrive un metodo di progettazione delle applicazioni come **insiemi di servizi eseguibili indipendentemente**, **che comunicano tra loro grazie a meccanismi di comunicazione leggeri**.
+Lo stile architetturale a microservizi descrive un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione leggeri.
 
-![Panoramica sull'architettura software](./images/arch-overview.png)
+Nell'immagine ~\ref{img:overview-arch} illustro la panoramica delle componenti di cui è composta l'architettura.
 
-### Servizio: MQTT Broker
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{progettazione/arch-overview}
+    \caption{Panoramica dell'architettura ad alto livello progettata per il prototipo}
+    \label{img:overview-arch}
+\end{figure}
 
-Il broker MQTT è il servizio resonsabile alla ricezione di tutti i messaggi, alla loro catalogazione e all'invio delle notifiche verso i client sottoscritti a ciascuna categoria.
-Il broker memorizza lo stato di tutti i client a lui connessi, inclusi i messaggi non ancora inviati o il cui invio è fallito.
+% ### Servizio: MQTT \emph{broker}
 
-### Servizio: termometro _virtualizzato_
+Il \emph{broker} MQTT è il servizio responsabile alla ricezione di tutti i messaggi, alla loro catalogazione e all'invio delle notifiche verso i client sottoscritti a ciascuna categoria.
+Il \emph{broker} memorizza lo stato di tutti i client a lui connessi, inclusi i messaggi non ancora inviati o il cui invio è fallito.
 
-Questo servizio simula la presenza di un sensore che invii dati sulla temperatura dell'ambiente in cui si trova.
+% ### Servizio: termometro _virtualizzato_
 
-Esso pubblica periodicamente la temperatura rilevata secondo l'argomento `temperature` e secondo l'argomento `hw_info` i propri dati identificativi, quali produttore, modello, ecc.
-
-Data la relativa importanza i dati vengono inviati con un QoS di livello 0 nella categoria `temperature`, mentre con QoS di livello 1 nella categoria `hw_info`.
-
+Il termometro "virtualizzato" è il servizio responsabile alla simulazione sensore che invii dati sulla temperatura dell'ambiente in cui si trova.
+Esso pubblica periodicamente la temperatura rilevata secondo l'argomento \emph{temperature} e secondo l'argomento \emph{hw\_info} i propri dati identificativi, quali produttore, modello, ecc..
+Data la relativa importanza i dati vengono inviati con un QoS di livello 0 nella categoria \emph{temperature}, mentre con QoS di livello 1 nella categoria \emph{hw\_info}.
+In questo modo al collegamento del dispositvo "virtualizzato" viene effettuato almeno un tentativo di trasmissione delle informazioni relative alle specifiche del dispositivo.
 Anche se nel diagramma è disegnato individualmente, è possibile che ve ne siano molteplici.
+% #### Servizio: termometro _virtualizzato_ - Panoramica delle classi
 
-#### Servizio: termometro _virtualizzato_ - Panoramica delle classi
+Nella tabella ~\ref{tab:classi-termometro} sono elencate le classi sviluppate per soddisfare i requisiti di funzionamento del dispositivo.
 
-![Panoramica delle classi del servizio di simulazione di un  termometro](./images/virtual_temp_sensor_classes.png)
+\begin{table}[H]
+\caption{Panoramica delle classi del servizio di simulazione del termometro "virtualizzato"}
+\label{tab:classi-termometro}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+DeviceInfo & Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel \emph{topic} \emph{hw\_info}. \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra generazione dei dati di temperatura, gestione delle informazioni del dispositivo e invio delle informazioni tramite protocollo MQTT. \\
+\hline
+MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+\hline
+TemperatureCurveFactory & Classe Factory astratta che espone la funzionalità di creazione della curva di temperatura, rappresentata dalla classe `TemperatureCurve`. \\
+\hline
+SineTemperatureCurveFactory & Implementazione della factory `TemperatureCurveFactory` per la creazione di oggetti `SineTemperatureCurve`. \\
+\hline
+TemperatureCurve & Classe astratta che espone le funzionalità di inizializzazione della funzione, di aggiunta di rumore pseudocasuale nella funzione creata e di simulazione della temperatura data l'ora corrente. \\
+\hline
+SineTemperatureCurve & Classe che implementa `TemperatureCurve` definendo una funzione di simulazione sinusoidale, in cui i parametri modificabili sono ampiezza, frequenza e fase. \\
+\hline
+\end{tabularx}
+\end{table}
 
-Classe                        | Funzionalità
-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`DeviceInfo`                  | Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel topic `hw_info`.
-`ServiceManager`              | Classe responsabile dell'integrazione tra generazione dei dati di temperatura, gestione delle informazioni del dispositivo e invio delle informazioni tramite protocollo MQTT.
-`MQTTClient`                  | Classe utile all'inizializzazione del client MQTT.
-`TemperatureCurveFactory`     | Classe Factory astratta che espone la funzionalità di creazione della curva di temperatura, rappresentata dalla classe `TemperatureCurve`.
-`SineTemperatureCurveFactory` | Implementazione della factory `TemperatureCurveFactory` per la creazione di oggetti `SineTemperatureCurve`.
-`TemperatureCurve`            | Classe astratta che espone le funzionalità di inizializzazione della funzione, di aggiunta di rumore pseudocasuale nella funzione creata e di simulazione della temperatura data l'ora corrente.
-`SineTemperatureCurve`        | Classe che implementa `TemperatureCurve` definendo una funzione di simulazione sinusoidale, in cui i parametri modificabili sono ampiezza, frequenza e fase.
+% ### Servizio: temperatura
 
-### Servizio: temperatura
+Il servizio relativo alla temperatura si occupa di raccogliere tutti i dati provenienti dai sensori di temperatura, memorizzandoli e mettendoli a disposizione in un formato strutturato per gli altri servizi del sistema.
+Il servizio si sottoscrive alla categoria \emph{temperature} e comunica con un QoS di livello 0, inoltre può pubblicare messaggi con la sottocategoria \emph{temperature/active} per usufruire delle funzionalità aggiuntive presenti in dispositivi attivi legati alla temperatura, con un QoS di livello 1.
+Nella tabella ~\ref{tab:classi-temperatura} sono elencate le classi sviluppate per soddisfare i requisiti di funzionamento del servizio di gestione dei dati collegati alla temperatura.
 
-Questo servizio si occupa di raccogliere tutti i dati provenienti dai sensori di temperatura, memorizzandoli e mettendoli a disposizione in un formato strutturato per gli altri servizi del sistema.
+% #### Servizio: temperatura - Panoramica delle classi
 
-Il servizio si sottoscrive alla categoria `temperature` e comunica con un QoS di livello 0, inoltre può pubblicare messaggi con la sottocategoria `temperature/active` per usufruire delle funzionalità aggiuntive presenti in dispositivi attivi legati alla temperatura.
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio relativo alla temperatura}
+\label{tab:classi-temperatura}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati di temperatura, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
+\hline
+MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+\hline
+DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+\hline
+API & Classe che raccoglie le funzionalità esposte dal servizio. Le funzionalità esposte sono rappresentate in una lista di oggetti che rappresentano l'accesso alle risorse e le funzioni di reperimento ed elaborazione delle informazioni. \\
+\hline
+TemperatureData & Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT. Al suo interno sono definiti l'unità di misura utilizzata dal sensore e la temperatura ottenuta della misurazione del sensore. \\
+\hline
+\end{tabularx}
+\end{table}
 
-#### Servizio: temperatura - Panoramica delle classi
+% ### Servizio: lampada _virtualizzata_
 
-![Panoramica delle classi del servizio legato al controllo temperatura](./images/temperature_service_classes.png)
-
-Classe            | Funzionalità
-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`  | Classe responsabile dell'integrazione tra ricezione dei dati di temperatura, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
-`MQTTClient`      | Classe utile all'inizializzazione del client MQTT.
-`DBClient`        | Classe utile all'inizializzazione del client per il database del servizio.
-`API`             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio.
-`TemperatureData` | Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT.
-
-### Servizio: lampada _virtualizzata_
-
-Questo servizio simula la presenza di un dispositivo _attivo_: una lampada in grado di comunicare il proprio assorbimento energetico e la sua durata stimata.
+La lampada "virtualizzata" simula la presenza nella rete di un dispositivo "attivo": una lampada in grado di comunicare il proprio assorbimento energetico e la sua durata stimata.
 La lista delle operazioni disponibili è la seguente:
+\begin{itemize}
+	\item accensione della lampada (QoS di livello 2);
+	\item spegnimento della lampada (QoS di livello 2);
+	\item richiesta assorbimento energetico (QoS di livello 0);
+	\item richiesta tempo di vita stimato della lampada (QoS di livello 0).
+\end{itemize}
 
-1.  accensione della lampada (QoS di livello 1);
-2.  spegnimento della lampada (QoS di livello 1);
-3.  richiesta assorbimento energetico (QoS di livello 0);
-4.  richiesta tempo di vita stimato della lampada (QoS di livello 0).
+Le operazioni di accensione e spegnimento della lampada necessitano di una affidabilità più elevata delle altre operazioni per evitare l'invio di richieste di accensione e spegnimento multiple.
+L'argomento a cui la lampada si sottoscrive è \emph{light/active}, in quanto capace di rispondere a richieste più complesse. Al primo collegamento il dispositivo invia i propri dati identificativi, pubblicandoli nella categoria \emph{hw\_info}.
+Nella tabella ~\ref{tab:classi-lampada} sono elencate le classi sviluppate per soddisfare i requisiti di funzionamento di una lampada "virtualizzata".
 
-L'argomento a cui la lampada si sottoscrive è `light/active`, in quanto capace di rispondere a richieste più complesse. Al primo collegamento il dispositivo invia i propri dati identificativi, pubblicandoli nella categoria `hw_info`.
+% #### Servizio: lampada _virtualizzata_ - Panoramica delle classi
 
-#### Servizio: lampada _virtualizzata_ - Panoramica delle classi
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio di simulazione della lampada "virtualizzata"}
+\label{tab:classi-lampada}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+DeviceInfo & Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel \emph{topic} \emph{hw\_info}. \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra stato della lampada e invio delle informazioni tramite protocollo MQTT. \\
+\hline
+MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+\hline
+Lamp & Classe che utilizza il Design Pattern \emph{Singleton} per fornire lo stato della lampada (on/off). \\
+\hline
+\end{tabularx}
+\end{table}
 
-![Panoramica delle classi del servizio di simulazione di una  lampada](./images/virtual_lamp_classes.png)
+% ### Servizio: illuminazione
 
-Classe           | Funzionalità
------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`DeviceInfo`     | Classe i cui oggetti rappresentano le informazioni del dispositivo, quali produttore, modello, revisione, ecc. Questi dati vengono pubblicati nel topic `hw_info`.
-`ServiceManager` | Classe responsabile dell'integrazione tra stato della lampada e invio delle informazioni tramite protocollo MQTT.
-`MQTTClient`     | Classe utile all'inizializzazione del client MQTT.
-`Lamp`           | Classe che utilizza il Design Pattern Singleton per fornire lo stato della lampada (on/off).
+Il servizio relativo all'illuminazione si occupa di raccogliere e memorizzare tutti i dati pubblicati dai dispositivi nella categoria \emph{light} e permette il controllo dei dispositivi sottoscritti alla categoria \emph{light/active}.
+Questo servizio utilizza trasmissioni con tutti i livelli di QoS definiti nel protocollo MQTT: la comunicazione delle operazioni che l'utente esegue vengono trasmessi con il livello di affidabilità maggiore (Qos livello 2) per avere la garanzia che i dati trasmessi siano arrivati ai dispositivi atomicamente, la trasmissione delle specifiche tecniche del dispositivo vengono inviate con un livello di affidabilità intermedio (QoS livello 1) mentre le misurazioni vengono inviate nel modo più efficiente possibile (QoS livello 0).
+Nella tabella ~\ref{tab:classi-illuminazione} sono elencate le classi sviluppate per soddisfare i requisiti di funzionamento del servizio di gestione dei dispositivi di illuminazione.
 
-### Servizio: illuminazione
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio relativo all'illuminazione}
+\label{tab:classi-illuminazione}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi di illuminazione, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
+\hline
+MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+\hline
+DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+\hline
+API & Classe che rappresenta le funzionalità esposte dal servizio. Include i metodi di interfaccia per il controllo dei dispositivi di illuminazione "attivi". \\
+\hline
+LightData & Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT. Tra questi ci sono lo stato (on/off), il consumo alla rilevazione, l'intensità della luce emesse dalla lampada e la sua temperatura colore. \\
+\hline
+RGBLightDataDecorator & Classe che aggiunge informazioni relative alla temperatura colore della luce emessa dal dispositivo. \\
+\hline
+LightController & Classe che permette di controllare i dispositivi collegati, preparando i pacchetti che la classe `API` può inviare ai dispositivi secondo l'interfaccia definita dal produttore. \\
+\hline
+\end{tabularx}
+\end{table}
 
-Questo servizio si occupa di raccogliere e memorizzare tutti i dati pubblicati dai dispositivi nella categoria `light` e permette il controllo dei dispositivi sottoscritti alla categoria `light/active`.
-
-Questo servizio utilizza sia QoS di livello 0 che di livello 1.
-
-#### Servizio: illuminazione - Panoramica delle classi
-
-![Panoramica delle classi del servizio legato all'illuminazione](./images/light_service_classes.png)
-
-Classe                  | Funzionalità
-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`        | Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi di illuminazione, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
-`MQTTClient`            | Classe utile all'inizializzazione del client MQTT.
-`DBClient`              | Classe utile all'inizializzazione del client per il database del servizio.
-`API`                   | Classe che rappresenta le funzionalità esposte all'esterno dal servizio. Include anche l'interfaccia di controllo dei dispositivi di illuminazione "_attivi_".
-`LightData`             | Classe che rappresenta i dati ricevuti dai dispositivi attraverso il protocollo MQTT.
-`RGBLightDataDecorator` | Classe che aggiunge informazioni relative alla temperatura colore della luce emessa dal dispositivo.
-`LightController`       | Classe che permette di controllare i dispositivi collegati, preparando i pacchetti che la classe `API` può inviare ai dispositivi secondo l'interfaccia definita dal produttore.
-
-### Servizio: informazioni dispositivo
-
-Questo servizio si occupa di raccogliere e memorizzare tutti i dati pubblicati secondo l'argomento `hw_info`.
-
+% ### Servizio: informazioni dispositivo
+Il servizio relativo alle informazioni dei dispositivi si occupa di raccogliere e memorizzare tutti i dati pubblicati secondo l'argomento \emph{hw\_info}.
 Il servizio utilizza esclusivamente un livello di QoS pari a 1 per aumentare l'affidabilità del sistema a fronte delle attività di identificazione dei dispositivi collegati.
+La tabella ~\ref{tab:classi-info} elenca le classi sviluppate per soddisfare i requisiti del servizio di identificazione dei dispositivi.
 
-#### Servizio: informazioni dispositivo - Panoramica delle classi
+\begin{table}[H]
+\caption{Panoramica delle classi del servizio relativo alle specifiche tecniche dei dispositivi connessi}
+\label{tab:classi-info}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
+\hline
+MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+\hline
+DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+\hline
+API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere i dati dei dispositivi e fornire la specifica dei dati inviati dai dispositivi. \\
+\hline
+DeviceInfo & Classe che rappresenta le informazioni di base ricevute dai dispositivi attraverso il protocollo MQTT. Include il nome del produttore, il modello, la revisione e le informazioni tecniche di un dispositivo, quali intervallo di funzionamento, frequenza di misurazione, ecc. \\
+\hline
+ActiveDeviceOperations & Classe che contiene la lista delle operazioni messe a disposizione dai dispositivi "attivi". Ciascuna operazione contenuta nella lista è un'istanza della classe ActiveDeviceOperationDescriptor. \\
+\hline
+ActiveDeviceOperationDescriptor & Classe che contiene il nome della funzionalità emessa dal dispositivo e i possibili parametri che la funzionalità potrebbe richiedere. \\
+\hline
+\end{tabularx}
+\end{table}
 
-![Panoramica delle classi del servizio legato alle informazioni dei dispositivi](./images/devicesinfo_service_classes.png)
+% ### Servizio: preferenze utente
 
-Classe                            | Funzionalità
-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`                  | Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi.
-`MQTTClient`                      | Classe utile all'inizializzazione del client MQTT.
-`DBClient`                        | Classe utile all'inizializzazione del client per il database del servizio.
-`API`                             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio, permettendo di richiedere i dati dei dispositivi e fornire la specifica dei dati inviati dai dispositivi.
-`DeviceInfo`                      | Classe che rappresenta le informazioni di base ricevute dai dispositivi attraverso il protocollo MQTT.
-`ActiveDeviceOperations`          | Classe che contiene la lista delle operazioni messe a disposizione dai dispositivi "_attivi_".
-`ActiveDeviceOperationDescriptor` | Classe che contiene le specifiche della funzionalità messa a disposizione dal dispositivo.
+Il servizio di gestione delle preferenze utente si occupa di salvare informazioni quali ad esempio gruppi personalizzati, unità di misura preferite, ecc.
+Il servizio non utilizza il protocollo MQTT in quanto non richiede la comunicazione con i dispositivi connessi alla rete, quindi viene utilizzato solamente dal servizio API.
+La tabella ~\ref{tab:classi-user} elenca le classi sviluppate per soddisfare i requisiti della gestione delle preferenze utente.
 
-### Servizio: preferenze utente
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio di gestione delle preferenze utente}
+\label{tab:classi-user}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile della gestione della persistenza delle preferenze utente e dell'esposizione di una interfaccia per gli altri servizi. \\
+\hline
+DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+\hline
+API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere e modificare le preferenze dell'utente. Espone inoltre la funzionalità di conversione dell'unità di misura verso quella predefinita dall'utente. \\
+\hline
+UserData & Classe che rappresenta le informazioni di base dell'utente (nome, cognome, ecc.). \\
+\hline
+SystemUnitDefinition & Classe che contiene l'elenco delle unità di misura scelte dall'utente per ogni metrica. \\
+\hline
+UnitsConverter & Classe che espone la funzionalità di conversione tra unità di misura compatibili. \\
+\hline
+\end{tabularx}
+\end{table}
 
-Questo servizio si occupa di salvare le preferenze utente, quali ad esempio gruppi personalizzati, unità di misura preferite, ecc.
+% ### Servizio: API
 
-Il servizio non utilizza il protocollo MQTT, bensì viene utilizzato solamente dal servizio **API**.
-
-#### Servizio: preferenze utente - Panoramica delle classi
-
-![Panoramica delle classi del servizio di trattamento delle preferenze utente](./images/userpreference_service_classes.png)
-
-Classe                            | Funzionalità
-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`                  | Classe responsabile della gestione della persistenza delle preferenze utente e dell'esposizione di una interfaccia per gli altri servizi.
-`DBClient`                        | Classe utile all'inizializzazione del client per il database del servizio.
-`API`                             | Classe che rappresenta le funzionalità esposte all'esterno dal servizio, permettendo di richiedere e modificare le preferenze dell'utente.
-`UserData`                      | Classe che rappresenta le informazioni di base dell'utente (nome, cognome, ecc.).
-`SystemUnitDefinition`          | Classe che contiene la lista delle unità di misura scelte dall'utente per ogni metrica.
-`UnitsConverter` | Classe che espone la funzionalità di conversione unità di misura.
-
-### Servizio: API
-
-Questo servizio svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione web e il broker MQTT.
-
-Esso interroga i servizi **illuminazione**, **temperatura** e **informazioni dispositivo**  definiti dal sistema per fornire una interfaccia unificata ai dati, sia in maniera sincrona sia in maniera asincrona.
-
+Il servizio API svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione web e il \emph{broker} MQTT.
+Esso interroga i servizi "illuminazione", "temperatura" e "informazioni dispositivo"  definiti dal sistema per fornire una interfaccia unificata ai dati, sia in maniera sincrona sia in maniera asincrona.
 L'interfaccia sincrona consiste in un'interfaccia che risponde ai metodi HTTP, mentre l'interfaccia asincrona richiede l'istituzione di una connessione che utilizzi i WebSocket.
+Il servizio API nella sua funzione è l'implementazione di uno dei Design Pattern specifici per le architetture a microservizi, ossia il \emph{Gateway Pattern}.
+Ho progettato il servizio API in modo \emph{stateless} grazie alla composizione delle API esposte dagli altri servizi: le chiamate effettuate al servizio API vengono dirottate ai rispettivi servizi e opportunamente decorate con informazioni aggiuntive, utili durante le attività di \emph{debug} del prototipo.
+La tabella ~\ref{tab:classi-api} elenca le classi sviluppate per fornire le funzionalità richieste dai \emph{client} della \emph{dashboard}.
 
-#### Servizio: API - Panoramica delle classi
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio API}
+\label{tab:classi-api}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra istanza del server e interfaccia ai dati esposta. \\
+\hline
+Server & Classe responsabile del ciclo di vita del server Node.js. Nella classe Server attribuisco la lista delle risorse accessibili dai client definiti nelle varie istanze di Route. \\
+\hline
+API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere e modificare le preferenze dell'utente. Espone inoltre la funzionalità di conversione dell'unità di misura verso quella predefinita dall'utente. \\
+\hline
+Route & Interfaccia che espone i metodi e le proprietà necessarie alla creazione delle risorse di accesso ai dati definite secondo lo stile architetturale REST. \\
+\hline
+UserRoute & Implementazione di `Route` che espone le risorse per la gestione delle preferenze utente. \\
+\hline
+DevicesRoute & Implementazione di `Route` che espone le risorse per la ricerca e identificazione dei dispositivi collegati. \\
+\hline
+TemperatureRoute & Implementazione di `Route` che espone le funzionalità di gestione della temperatura. \\
+\hline
+LightRoute & Implementazione di `Route` che espone le funzionalità di gestione dell'illuminazione. \\
+\hline
+\end{tabularx}
+\end{table}
 
-![Panoramica delle classi del servizio di gateway delle API](./images/api_service_classes.png)
+% ### Servizio: web app
 
-Classe             | Funzionalità
--------------------|-----------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`   | Classe responsabile dell'integrazione tra istanza del server e interfaccia ai dati esposta.
-`Server`           | Classe responsabile del ciclo di vita del server Node.js.
-`Route`            | Interfaccia che mette espone i metodi e le proprietà necessarie alla creazione degli endpoint dati.
-`UserRoute`        | Implementazione di `Route` che rappresenta gli endpoint per la gestione dell'utente.
-`DevicesRoute`     | Implementazione di `Route` che rappresenta gli endpoint messi a disposizione per la ricerca e identificazione dei dispositivi collegati.
-`TemperatureRoute` | Implementazione di `Route` che espone le funzionalità di gestione della temperatura.
-`LightRoute`       | Implementazione di `Route` che espone le funzionalità di gestione dell'illuminazione.
+Il servizio "web app" comprende l'applicazione web per la consultazione della \emph{dashboard} attraverso la navigazione tramite \emph{browser}.
+Richiede i dati direttamente al servizio API utilizzando le interfacce REST esposte.
+Questo servizio include i componenti sviluppati in React per la costruzione dell'interfaccia grafica della \emph{dashboard} e le classi necessarie alla sua pubblicazione sul \emph{web}.
+La tabella ~\ref{tab:classi-web} elenca le classi sviluppate per implementare la \emph{dashboard}.
 
-### Servizio: web app
+\begin{table}[!h]
+\caption{Panoramica delle classi del servizio API}
+\label{tab:classi-web}
+\begin{tabularx}{\linewidth}{|c|X|}
+\hline
+\textbf{Classe} & \textbf{Funzionalità} \\
+\hline
+ServiceManager & Classe responsabile dell'integrazione tra istanza del server, pagine esposte e interfaccia di richeista dati. \\
+\hline
+DataFetcher & Modulo che si occupa di effettuare le richieste al servizio **API** secondo le definizioni fornite dal servizio. \\
+\hline
+Server & Classe responsabile del ciclo di vita del server Node.js. Effettua le richieste definite dalle istanze di `UIRoute` per ricevere i dati, utilizzando un'istanza di `DataFetcher`. \\
+\hline
+UIRoute & Interfaccia utilizzata per definire le richieste da effettuare per ricevere le informazioni che popolano le pagine della rotta. \\
+\hline
+UserUIRoute & Implementazione di `UIRoute` che definisce le richieste per ottenere o modificare le preferenze dell'utente ed espone le pagine di visualizzazione e modifica delle preferenze utente. \\
+\hline
+DevicesUIRoute & Implementazione di `UIRoute` che definisce le richieste per ottenere informazioni sui dispositivi collegati ed espone le pagine di visualizzazione di questi. \\
+\hline
+TemperatureUIRoute & Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati alla temperatura, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione. \\
+\hline
+LightUIRoute & Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati all'illuminazione, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione. \\
+\hline
+UIPage & Implementazione di un componente React (`React.Component`) che rappresenta una pagina. La pagina visualizzata può contenere più figli anch'essi componenti React. \\
+\hline
+React.Component & Classe che rappresenta un componente grafico nel \emph{framework} React. \\
+\hline
+\end{tabularx}
+\end{table}
 
-Questo servizio comprende l'applicazione web per la consultazione del sistema per mezzo dei browser.
+\pagebreak
 
-Richiede i dati direttamente al servizio **API**, in particolare presentando i dati ottenuti in tempo reale con l'interfaccia asincrona del servizio **API**.
-
-#### Servizio: web app - Panoramica delle classi
-
-![Panoramica delle classi del servizio web app](./images/web_service_classes.png)
-
-Classe               | Funzionalità
----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`ServiceManager`     | Classe responsabile dell'integrazione tra istanza del server, pagine esposte e interfaccia di richeista dati.
-`DataFetcher`  | Modulo che si occupa di effettuare le richieste al servizio **API** secondo le definizioni specificate in ingresso.
-`Server`             | Classe responsabile del ciclo di vita del server Node.js. Effettua le richieste definite dalle `UIRoute` per ricevere i dati, utilizzando `DataFetcher`.
-`UIRoute`            | Interfaccia utilizzata per definire le richieste da effettuare per ricevere le informazioni che popolano le pagine della rotta.
-`UserUIRoute`        | Implementazione di `UIRoute` che definisce le richieste per ottenere o modificare le preferenze dell'utente e le pagine di visualizzazione e modifica delle preferenze utente.
-`DevicesUIRoute`     | Implementazione di `UIRoute` che definisce le richieste per ottenere informazioni sui dispositivi collegati e le pagine di visualizzazione di questi.
-`TemperatureUIRoute` | Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati alla temperatura, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione.
-`LightUIRoute`       | Implementazione di `UIRoute` che definisce le richieste per ottenere dati legati all'illuminazione, visualizzare ed eseguire operazioni con dispositivi attivi e ne permette la visualizzazione.
-`UIPage`             | Implementazione di un componente React (`React.Component`) che rappresenta una pagina. La pagina visualizzata può contenere più figli anch'essi componenti React.
-`React.Component`    | Classe che rappresenta un componente grafico nel framework React.
-
-
-## Design Pattern
-
+% ## Design Pattern
 I Design Pattern descrivono la metodologia con cui affrontare problemi ricorrenti, fornendo soluzioni standard condivise.
 La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.
 I principali Design Pattern vengono suddivisi in quattro categorie:
--   Architetturali: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l’architettura;
--   Creazionali: affrontano il problema di astrarre il sistema rendendolo indipendente dall’implementazione concreta delle sue componenti;
--   Strutturali: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l’ereditarietà e l’aggregazione;
--   Comportamentali: affrontano il problema dell’interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
+\begin{itemize}
+	\item Architetturali: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l’architettura;
+	\item Creazionali: affrontano il problema di astrarre il sistema rendendolo indipendente dall’implementazione concreta delle sue componenti;
+	\item Strutturali: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l’ereditarietà e l’aggregazione;
+	\item Comportamentali: affrontano il problema dell’interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
+\end{itemize}
 
-### Design Pattern Comportamentali
+Tra i Design Pattern comportamentali, il Design Pattern Mediator ha l'intento di disaccoppiare entità del sistema che devono comunicare fra loro. Il pattern infatti fa in modo che queste entità non si referenzino reciprocamente, agendo da "mediatore" fra le parti.
+Ho impiegato il Design Pattern Mediator in tutti i servizi sottoforma della classe `ServiceManager` per aumentare il disaccoppiamento tra classi che trattano la persistenza, l'esecuzione dei servizi, la comunicazione, ecc.
 
-#### Mediator
+Tra i Design Pattern creazionali, ho utilizzato i pattern Abstract Factory e Singleton.
+Il Design Pattern Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare quale classe istanziare. Questo pattern permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
+Ho utilizzato il Design Pattern Abstract Factory nel servizio di simulazione di un termometro (riferimento ~\ref{tab:classi-termometro}) per permettere la creazione di funzioni per la generazione della temperatura.
+Il Design Pattern Singleton ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, fornendo un unico punto di accesso globale a tale istanza.
+Ho utilizzato il Design Pattern Singleton nel servizio di simulazione della lampada (riferimento ~\ref{tab:classi-lampada}) per obbligare il servizio a simulare una singola lampada, favorendo così l'esecuzione di numerosi \emph{container} del servizio per simulare un intero sistema d'illuminazione.
 
-Il design pattern **Mediator** ha l'intento di disaccoppiare entità del sistema che devono comunicare fra loro. Il pattern infatti fa in modo che queste entità non si referenzino reciprocamente, agendo da "mediatore" fra le parti.
+Tra i Design Pattern strutturali, ho utilizzato i pattern Decorator e Composite.
+Il Design Pattern Decorator consente di aggiungere nuove funzionalità ad oggetti già esistenti, senza utilizzare l'ereditarietà tra classi.
+Ho utilizzato il Design Pattern Decorator nel servizio relativo all'illuminazione (riferimento ~\ref{tab:classi-illuminazione}) per permettere al servizio di aggiungere dinamicamente le funzionalità di indicazione della temperatura colore di una sorgente luminosa.
+Il Design Pattern Composite organizza gli oggetti in una struttura ad albero, nella quale i nodi sono delle entità composte e le foglie sono oggetti semplici.
+Ho utilizzato il Design Pattern Composite nel servizio responsabile alla visualizzazione dell'interfaccia grafica (riferimento ~\ref{tab:classi-web}) per permettere la composizione di più componenti React per costruire interfacce complesse.
 
-##### Utilizzo
-
-Questo pattern è utilizzato in tutti i servizi sottoforma della classe `ServiceManager` per aumentare il disaccoppiamento tra classi che trattano la persistenza, l'esecuzione dei servizi, la comunicazione, ecc.
-
-### Design Pattern Creazionali
-
-#### Abstract Factory
-
-L'**Abstract Factory** fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare quale classe istanziare, permettendo che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
-
-##### Utilizzo
-
-Questo pattern è utilizzato nel servizio [Servizio: termometro _virtualizzato_](#user-content-servizio-termometro-virtualizzato) per permettere la creazione di funzioni di generazione della temperatura.
-
-![Utilizzo del pattern Abstract Factory](./images/abstract_factory.png)
-
-#### Singleton
-
-Il **Singleton** ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, fornendo un unico punto di accesso globale a tale istanza.
-
-##### Utilizzo
-
-Questo pattern è utilizzato nel servizio [Servizio: lampada _virtualizzata_](#user-content-servizio-lampada-virtualizzata) per obbligare il servizio a simulare una singola lampada, favorendo così l'esecuzione di numerosi container del servizio per simulare un intero sistema d'illuminazione.
-
-![Utilizzo del pattern Singleton](./images/singleton.png)
-
-### Design Pattern Strutturali
-
-#### Decorator
-
-Il design pattern **Decorator** consente di aggiungere nuove funzionalità ad oggetti già esistenti, senza utilizzare l'ereditarietà tra classi.
-
-##### Utilizzo
-
-Questo pattern è utilizzato nel servizio [Servizio: illuminazione](#user-content-servizio-illuminazione) per permettere al servizio di aggiungere dinamicamente le funzionalità di cambiamento colore ad una sorgente luminosa normale.
-
-![Utilizzo del pattern Decorator](./images/decorator.png)
-
-#### Composite
-
-Il design pattern **Composite** organizza gli oggetti in una struttura ad albero, nella quale i nodi sono delle entità composte e le foglie sono oggetti semplici.
-
-##### Utilizzo
-
-Questo pattern è utilizzato nel servizio [Servizio: web app](#user-content-servizio-web-app) per permettere la composizione di più componenti React per costruire interfacce complesse.
-
-![Utilizzo del pattern Composite](./images/composite.png)
-
-#### Module
-
-Il pattern **Module** è uno dei pattern specifici del linguaggio JavaScript: il suo scopo è quello di rendere disponibile all’interno degli oggetti l’encapsulation, mantenendo privati e non accessibili dall’esterno campi dati e funzioni utilizzate internamente.
-
+Il Design Pattern Module è uno dei pattern specifici del linguaggio JavaScript che ho utilizzato in tutti i servizi: il suo scopo è quello di rendere disponibile all’interno degli oggetti JavaScript l’incapsulazione, mantenendo privati e non accessibili dall’esterno campi dati e funzioni utilizzate internamente.
 
 %**************************************************************
 \section{Documentazione}
