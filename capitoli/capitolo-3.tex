@@ -251,8 +251,20 @@ Gli aspetti positivi che ho evidenziato durante il suo utilizzo consistono in:
 \end{itemize}
 Non ho riscontrato evidenti aspetti negativi per questo strumento, tuttavia, paragonandolo al precedente strumento per la scrittura testuale (~\ref{subsec:atom}), mi è risultato evidente la minor quantità di sintassi supportate e la minor personalizzazione generale dell'editor.
 
+\subsection{Docker (Engine e Compose)}
+
+Docker è una piattaforma tecnologica che permette di semplificare la gestione del ciclo di vita dei \emph{container}, a partire da:
+\begin{itemize}
+	\item istanziazione: a partire da un file (\emph{Dockerfile}) che rappresenta le risorse necessarie alla compilazione (se necessaria) e all'esecuzione di un'applicazione containerizzata, chiamato nel gergo tecnico \emph{image}, Docker Engine permette di creare più \emph{container} della stessa applicazione, ciascuno dei quali è isolato di default dagli altri \emph{container} istanziati a partire dalla stessa \emph{image};
+	\item avvio: nel momento in cui l'utente istanzia un \emph{container}, esso viene creato e avviato dal Docker Engine. Mentre il \emph{container} è in esecuzione, è possibile accedere alle funzionalità che tale \emph{container} offre, sia esso un \emph{container} con un base di dati oppure contenga un'applicazione \emph{server} o \emph{web};
+	\item arresto: quando l'utente decide che le funzionalità offerte dal \emph{container} non sono più richieste, può arrestare il \emph{container} attraverso il Docker Engine: la piattaforma di Docker si occupa di salvare lo stato interno del \emph{container} (simile alla funzionalità di \emph{snapshot} delle tecnologie di virtualizzazione standard) per permettere che il container riparta nello stesso stato al successivo avvio;
+	\item distruzione: quando l'utente decide di voler rimuovere il \emph{container} e tutte le risorse associate dal proprio elaboratore, istruisce il Docker Engine al fine di arrestare e rilasciare le risorse allocate per il \emph{container} considerato. 
+\end{itemize} 
+Gli strumenti offerti da Docker Compose espandono le funzionalità offerte dal Docker Engine e permettono di gestire l'esecuzione di un insieme di \emph{container} che compongono un'applicazione. Le funzionalità offerte da Docker Compose ricalcano quelle del Docker Engine, applicandole a insiemi di \emph{container}.
+
 %**************************************************************
 \section{Analisi dei Requisiti}
+\label{ar}
 
 % Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
 \subsection{MQTT}
@@ -294,7 +306,7 @@ Alla connessione il client imposta un flag di "sessione pulita" in base a come i
 Lo scopo di questa sezione è di definire i requisiti emersi dall’analisi del progetto di stage.
 In questa sezione descrivo i requisiti, i casi d'uso collegati e gli attori coinvolti.
 
-I dispositivi che ho considerato comunicano con il sistema utilizzando il protocollo MQTT (link alla sezione), perchè ho ritenuto questo protocollo il più adatto per il sistema.
+I dispositivi che ho considerato comunicano con il sistema utilizzando il protocollo MQTT (link alla sezione), perché ho ritenuto questo protocollo il più adatto per il sistema.
 I motivi che mi hanno spinto a scegliere MQTT sono:
 \begin{itemize}
 	\item è un protocollo molto diffuso, caratteristica che mi ha facilitato molto nella ricerca di documentazione che dimostri il suo utilizzo;
@@ -391,7 +403,7 @@ L'utente accede alle funzionalità del prodotto attraverso una interfaccia Web, 
 
 I casi d’uso sono catalogati come:
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \[ UC[numero][caso] \]
   \begin{tabular}{@{}>{$}l<{$}l@{}}
@@ -411,6 +423,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{itemize}
 	\item Utente: rappresenta l'utente che interagisce con la dashboard;
 	\item Dispositivi: rappresentano l'insieme di apparati collegati al sistema che forniscono i dati per popolare la dashboard;
+	\item Dispositivo: rappresenta uno dei dispositivi collegati al sistema;
 	\item Interfaccia proprietaria del dispositivo: rappresenta l'interfaccia proprietaria progettata dal produttore di un generico dispositivo.
 \end{itemize}
 
@@ -876,7 +889,7 @@ La sezione include la descrizione dell'architettura del sistema e delle relative
 
 % ## Architettura
 
-L'architettura scelta per il sistema segue lo stile architetturale a microservizi con l'obiettivi di approfondire questo stile architetturale e implementarlo in uno scenario plausibile.
+L'architettura scelta per il sistema segue lo stile architetturale a microservizi con l'obiettivo di approfondire questo stile architetturale e implementarlo in uno scenario plausibile.
 Lo stile architetturale a microservizi descrive un metodo di progettazione delle applicazioni come insiemi di servizi eseguibili indipendentemente, che comunicano tra loro grazie a meccanismi di comunicazione leggeri.
 
 Nell'immagine ~\ref{img:overview-arch} illustro la panoramica delle componenti di cui è composta l'architettura.
@@ -1183,15 +1196,124 @@ Il Design Pattern Module è uno dei pattern specifici del linguaggio JavaScript 
 %**************************************************************
 \section{Documentazione}
 
-Come è stata prodotta la documentazione? A chi è rivolta? Come è documentato il codice?
+I documenti prodotti durante lo svolgimento dello stage sono in ordine:
+\begin{enumerate}
+	\item documento in cui descrivo il Piano di Lavoro del progetto di stage;
+	\item documenti riguardanti la formazione:
+		\begin{enumerate}
+			\item documento in cui elenco i princìpi delle archietture a microservizi;
+			\item documento in cui elenco le caratteristiche principali di Node.js;
+			\item documento in cui elenco le caratteristiche principali di React;
+			\item documento in cui riprendo un esercizio esistente per l'implementazione di una semplice architettura a microservizi;
+		\end{enumerate}
+		\item documenti di analisi dei protocolli considerati:
+		\begin{enumerate}
+			\item documento in cui analizzo le caratteristiche principale di MQTT;
+			\item documento in cui analizzo le caratteristiche principali di Aeron (\url{https://github.com/real-logic/aeron});
+		\end{enumerate}
+		\item documento di Analisi dei Requisiti del prototipo;
+		\item documento di Specifica Tecnica del prototipo;
+		\item documenti in cui indico le risorse esposte dai servizi;
+		\item documenti in cui elenco le istruzioni per eseguire il progetto in una macchina locale.
+\end{enumerate}
+Come menzionato nella sotto-sezione ~\ref{subsec:atom}, ho redatto tutti i documenti menzionati utilizzando l'editor Atom.
+I documenti relativi alla formazione sono rivolti essenzialmente al docente che mi ha seguito durante lo svolgimento dello stage e ad eventuali utenti che volessero approfondire i contenuti teorici su cui ho basato il prototipo.
+Per i documenti di analisi, di progettazione e relativi alle risorse esposta dai servizi ho deciso di destinarli agli utenti che volessero approfondire il funzionamento del prototipo da un punto di vista ad alto livello.
+I documenti in cui indico le risorse esposte dai servizi sono rivolti agli utenti più esperti che vogliono approfondire le funzionalità offerte dai servizi. Nelle mie previsioni questi utenti grazie ai documenti di specifica dovrebbero essere in grado di implementare le altre componenti del sistema, sostituendo le componenti da me implementate.
+Per i documenti in cui indico le istruzioni per eseguire il progetto ho deciso di scrivere tali istruzioni sia in lingua italiana, sia in lingua inglese dal momento che il progetto è disponibile pubblicamente su GitHub. Le istruzioni contengono inoltre i riferimenti per installare i \emph{software} richiesti e ho fatto in modo che i procedimenti da seguire fossero i più brevi possibili (procedimenti con al massimo 5 istruzioni da seguire).
+Ho scritto la documentazione del codice sorgente contestualmente al codice sorgente; la documentazione del codice sorgente consiste in commenti nei sorgenti JavaScript in cui spiego:
+\begin{itemize}
+	\item lo scopo delle proprietà degli oggetti;
+	\item il tipo delle proprietà degli oggetti: in questo caso ho preferito annotare il tipo delle proprietà degli oggetti nella documentazione in quanto JavaScript non è staticamente tipizzato e quindi la dichiarazione di variabili non consente di specificare un tipo con cui il compilatore e l'interprete validi il codice sorgente;
+	\item gli algoritmi utilizzati per l'implementazione delle funzionalità.
+\end{itemize}
+I commenti nel codice sorgente, come da \emph{best practice} per i progetti distribuiti pubblicamente, sono scritti in lingua inglese.
+
+\pagebreak
 
 %**************************************************************
 \section{Test}
 
-Come sono stati svolti i test? Coverage?
+Ho progettato i test per raggiungere la copertura del codice fissata durante l'attività di Analisi dei Requisiti (riferimento ~\ref{tab:requisiti-qualita}).
+Durante la progettazione dei test ho scelto di approfondire la progettazione dei test d'unità di tutte le componenti progettate come primo \emph{step} mentre ho tralasciato la progettazione dei test d'integrazione dei servizi: ho perseguito questa scelta perché ho ritenuto più importante aumentare l'affidabilità intrinseca di ciascun servizio indipendentemente dagli altri.
+Uno dei fattori che mi ha consentito di effetuare questa scelta consiste nell'individualità dell'implementazione del progetto: se al progetto avessero collaborato uno o più sviluppatori, avrebbe assunto maggiore importanza la corretta interazione tra i servizi. Inoltre, dal momento che i servizi che ho progettato hanno un flusso dei dati ben definito, mi ha permesso di tenere allineate le modifiche attraverso i servizi in efficienza.
+Nei test ho usato ampiamente \emph{mock} e \emph{stub} per isolare le eventuali dipendenze tra un modulo e un altro all'interno dello stesso servizio. Come avevo previsto durante lo studio degli argomenti, la componente in cui ho avuto alcune difficoltà nell'implementazione dei test consiste nei moduli che dialogano con un \emph{database}: per arginare il problema ho utilizzato librerie accessorie presenti su npm per simulare le risposte che i \emph{database} inviano nel caso in cui si verifichino errori. In questo modo ho potuto testare con successo anche eventuali malfunzionamenti relativi al collegamento con i \emph{database}.
+Ho elencato i risultati della copertura del codice raggiunta al termine dello stage nella tabella ~\ref{tab:coverage}.
 
+\begin{table}[H]
+\caption{Tabella che specifica la copertura del codice raggiunta per ciascun servizio}
+\label{tab:coverage}
+\begin{tabularx}{\linewidth}{|X|c|c|}
+\hline
+\textbf{Servizio} & \textbf{\emph{Statement coverage}} & \textbf{\emph{Branch coverage}} \\
+\hline
+MQTT Broker & 93 \% & 90 \% \\
+\hline
+Sensore di temperatura "virtualizzato" & 97 \% & 85 \% \\
+\hline
+Temperatura & 92 \% & 81 \% \\
+\hline
+Lampada \emph{smart} "virtualizzata" & 83 \% & 67 \% \\
+\hline
+Illuminazione & 91 \% & 65 \% \\
+\hline
+Informazioni dispositivi & 90 \% & 77 \% \\
+\hline
+Preferenze utente & 90 \% & 79 \% \\
+\hline
+API & 70 \% & 70 \% \\
+\hline
+Applicazione \emph{web} & 50 \% & 63 \% \\
+\hline
+\textbf{Totale} & 85,44 \% & 75,22 \% \\
+\hline
+\end{tabularx}
+\end{table}
 
 %**************************************************************
 \section{Validazione dei Requisiti}
 
-Quali requisiti sono stati rispettati e quali invece sono stati abbandonati.
+Nella tabella ~\ref{tab:validazione-requisiti}) ho elencato lo stato dell'implementazione dei requisiti citati in Analisi (riferimento ~\ref{ar})).
+
+\begin{table}[H]
+\caption{Tabella dei requisiti funzionali}
+\label{tab:validazione-requisiti}
+\begin{tabularx}{\linewidth}{|c|c|X|}
+\hline
+\textbf{Identificativo} & \textbf{Categoria} & \textbf{Implementazione} \\
+\hline
+RMF1 & Obbligatorio & Fatto \\
+\hline
+RMF2 & Obbligatorio & Fatto \\
+\hline
+RAF3 & Desiderabile & Rigettato \\
+\hline
+RMF4 & Obbligatorio & Fatto \\
+\hline
+RAF5 & Desiderabile & Rigettato. \\
+\hline
+RAF6 & Desiderabile & Rigettato. \\
+\hline
+RAF7 & Desiderabile & Rigettato \\
+\hline
+RMF8 & Obbligatorio & Fatto \\
+\hline
+RMF9 & Obbligatorio & Fatto \\
+\hline
+RMF10 & Obbligatorio & Parziale \\
+\hline
+ROQ1 & Opzionale & Fatto \\
+\hline
+RMO1 & Obbligatorio & Fatto \\
+\hline
+RAO2 & Desiderabile & Fatto \\
+\hline
+RAO3 & Desiderabile & Fatto \\
+\hline
+RMO4 & Obbligatorio & Fatto \\
+\hline
+\end{tabularx}
+\end{table}
+
+Durante lo svolgimento dello stage ho deciso di non implementare i requisiti relativi alla personalizzazione dei gruppi di dispositivi perché ho incontrato alcune difficoltà relative alla composizione dei servizi che hanno rallentato l'implementazione delle funzionalità dei servizi. Ho scelto di non implementare queste funzionalità perchè, sebbene le avessi catalogate come desiderabili, la quantità di risorse non sarebbe stata sufficiente alla loro corretta implementazione, quindi ho preferito allocare tempo per migliorare la qualità del \emph{software} sviluppato aumentando la copertura del codice sorgente, implementando un numero maggiore di test di unità.
+Per il requisito RMF10, relativo alla visualizzazione delle statistiche di sistema, ho deciso di implementare solamente la componente di controllo della salute dei servizi che compongono il sistema \emph{healthcheck}, tralasciando le componenti di integrazione dei dati raccolti dai servizi e le componenti di visualizzazione dei dati citati.
