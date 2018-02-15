@@ -71,13 +71,13 @@ L'ultimo blocco di attività riguarda la revisione del prototipo implementato e 
 
 \clearpage
 \section*{\emph{Milestone}}
-In questa sezione presento le \emph{milestone} previste per il progetto su base settimanale, associando a ciascuna \emph{milestone} i prodotti che devono essere sviluppati entro la corrispondente scadenza.
+In questa sezione presento le \gls{milestone} previste per il progetto su base settimanale, associando a ciascuna \emph{milestone} i prodotti che devono essere sviluppati entro la corrispondente scadenza.
 \begin{itemize}
 	\item Prima settimana: Completamento delle attività di autoformazione con produzione di una breve relazione riguardante la stessa;
 	\item Seconda e terza settimana: Analisi dei protocolli di comunicazione esistenti, primo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi \textit{virtualizzati};
 	\item Quarta e quinta settimana: Revisione analisi sui protocolli, secondo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi fisici (Raspberry Pi);
-	\item Sesta e settima settimana: Analisi dell'interazione utente con la dashboard, progettazione e implementazione del servizio di presentazione;
-	\item Ottava settimana: Revisione dei servizi, stesura del Manuale d'Uso e deploy (opzionale) di un ambiente di simulazione della dashboard su Heroku.
+	\item Sesta e settima settimana: Analisi dell'interazione utente con la \emph{dashboard}, progettazione e implementazione del servizio di presentazione;
+	\item Ottava settimana: Revisione dei servizi, stesura del Manuale d'Uso e deploy (opzionale) di un ambiente di simulazione della \emph{dashboard} su Heroku.
 \end{itemize}
 
 %**************************************************************
@@ -95,17 +95,17 @@ Nella tabella ~\ref{tab:tecnologie} è presente un sommario delle tecnologie di 
 \hline
 Node.js & Node.js è un'ambiente d'esecuzione utilizzato per l'implementazione di applicazioni server in JavaScript. \\
 \hline
-React & React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce utente. \\
+React & React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce grafiche. \\
 \hline
-EcmaScript 2017 & EcmaScript è un linguaggio di programmazione la cui implementazione standard più conosciuta è JavaScript. \\
+ECMAS 2017 & ECMAScript è un linguaggio di programmazione la cui implementazione standard più conosciuta è JavaScript. \\
 \hline
 Jest & Jest è un \emph{framework} per l'implementazione di test per codice JavaScript. \\
 \hline
 ESLint & ESLint è uno strumento \emph{open source} per l'analisi statica del codice JavaScript prodotto. \\
 \hline
-HTML5 & HTML5 è un linguaggio di \emph{markup} per la formattazione e impaginazione delle pagine Web pubblicato come W3C Recommendation dall'ottobre 2014. \\
+HTML5 & HTML5 è un linguaggio di \emph{markup} per la formattazione e impaginazione delle pagine \emph{web} pubblicato come W3C Recommendation dall'ottobre 2014. \\
 \hline
-CSS3 & CSS3 è un linguaggio di formattazione delle pagine Web. \\
+CSS3 & CSS3 è un linguaggio di formattazione delle pagine \emph{web}. \\
 \hline
 Docker & Docker è una tecnologia \emph{open source} sviluppata per semplificare il rilascio di applicazioni eseguibili nel contesto dei \emph{container}. \\
 \hline
@@ -119,11 +119,11 @@ Docker & Docker è una tecnologia \emph{open source} sviluppata per semplificare
 \hline
 \textbf{Strumento} & \textbf{Descrizione}\\
 \hline
-Atom & Atom è un editor di testo sviluppato da GitHub con tecnologie moderne e personalizzabile. \\
+Atom & Atom è un \emph{editor} di testo sviluppato da \gls{GitHub} altamente personalizzabile. \\
 \hline
-Visual Studio Code & Visual Studio Code è un editor di testo sviluppato da Microsoft specificatamente per i linguaggi del Web. \\
+Visual Studio Code & Visual Studio Code è un \emph{editor} di testo sviluppato da \gls{Microsoft} specificatamente per i linguaggi utilizzati nel \emph{web}. \\
 \hline
-Jest (CLI) & Jest (CLI) è l'interfaccia a linea di comando per l'esecuzione dei test sviluppati con il \emph{framework} Jest. \\
+Jest (\gls{CLI}) & Jest (CLI) è l'interfaccia a linea di comando per l'esecuzione dei test sviluppati con il \emph{framework} Jest. \\
 \hline
 Docker (engine) & Il Docker Engine è la combinazione dell'implementazione della tecnologia di containerizzazione con gli strumenti di gestione del ciclo di vita dei \emph{container}. \\
 \hline
@@ -135,17 +135,17 @@ Docker (compose) & Docker Compose è lo strumento attraverso cui è possibile co
 \subsection{Node.js}
 
 Node.js è un'ambiente d'esecuzione multipiattaforma \emph{open source} per JavaScript e utilizzato per l'implementazione di applicazioni server in JavaScript.
-Per consentire l'esecuzione di JavaScript lato server, Node.js utilizza il motore di esecuzione JavaScript V8 sviluppato da Google per il \emph{browser} Chrome.
+Per consentire l'esecuzione di JavaScript lato server, Node.js utilizza il motore di esecuzione JavaScript \emph{V8} sviluppato da \gls{Google} per il \emph{browser} Chrome.
 Ho riassunto gli aspetti positivi della piattaforma Node.js nei seguenti punti:
 \begin{itemize}
   \item Node.js utilizza il modello \emph{event-driven} per la gestione delle operazioni di \emph{input} e \emph{output} (I/O) e in questo modo semplifica la gestione asincrona delle richieste concorrenti.
   \item Node.js utilizza JavaScript, un linguaggio di programmazione dalla sintassi semplice da imparare.
-  \item Node.js utilizza npm per la gestione delle librerie dell'applicazione. Npm è il più grande registro di componenti di codice riusabile \footnote{Secondo le dichiarazioni degli sviluppatori di npm \url{https://www.npmjs.com/}}.
+  \item Node.js utilizza npm per la gestione delle librerie dell'applicazione. Npm è il più grande registro di componenti di codice riusabile\footnote{Secondo le dichiarazioni degli sviluppatori di npm \url{https://www.npmjs.com/}}.
 \end{itemize}
 
 Come tutte le tecnologie, anche Node.js ha i suoi aspetti negativi, che presento di seguito:
 \begin{itemize}
-  \item Node.js non sfrutta i molti core presenti nelle CPU moderne e quindi operazioni fortemente CPU-bound congelano l'intero ciclo di eventi fino al termine dell'esecuzione dell'operazione.
+  \item Node.js non sfrutta i molti \emph{core} presenti nelle CPU moderne e quindi operazioni fortemente \gls{CPU-bound} congelano l'intero ciclo di eventi fino al termine dell'esecuzione dell'operazione.
   \item Node.js favorisce l'utilizzo del Design Pattern \emph{callback}, tuttavia in funzioni complesse si potrebbe incorrere in una eccessiva complessità nella lettura del codice.
 \end{itemize}
 
@@ -154,7 +154,7 @@ Come tutte le tecnologie, anche Node.js ha i suoi aspetti negativi, che presento
 React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce utente.
 Ho riassunto gli aspetti positivi della libreria React nei seguenti punti:
 \begin{itemize}
-	\item React utilizza un DOM virtuale per disegnare le interfacce, raggiungendo performance ed efficienza elevate. Grazie alla sua struttura a componenti, un aggiornamento ad uno di essi non richiede l'aggiornamento degli altri.
+	\item React utilizza un \gls{DOM} virtuale per disegnare le interfacce, raggiungendo performance ed efficienza elevate. Grazie alla sua struttura a componenti, un aggiornamento ad uno di essi non richiede l'aggiornamento degli altri.
 	\item I componenti sviluppati possono essere riutilizzati, garantendo un aumento di produttività degli sviluppatori.
 	\item I dati in React seguono un flusso unidirezionale, in cui i componenti figli non possono modificare dati dei loro genitori, semplificando la manutenzione dei componenti.
 \end{itemize}
@@ -166,7 +166,7 @@ Il difetto principale che attribuisco a React consiste nella sua elevata dinamic
 ECMAScript 2017 è un linguaggio di programmazione standardizzato la cui ratifica è avvenuta nel giugno del 2017. L'implementazione dello standard più conosciuta è JavaScript.
 L'edizione 2017 dello standard porta in dote le seguenti funzionalità:
 \begin{itemize}
-	\item Nuova sintassi per le funzioni asincrone. La keyword \emph{async} indica che una funzione o un metodo ritornano una Promise, ossia una classe di oggetti che evidenziano l'asincronia dell'operazione da eseguire. La keyword \emph{await} aspetta che la funzione asincrona termini la sua esecuzione, ritornando il risultato della \emph{Promise}.
+	\item Nuova sintassi per le funzioni asincrone. La \emph{keyword} \emph{async} indica che una funzione o un metodo ritornano una Promise, ossia una classe di oggetti che evidenziano l'asincronia dell'operazione da eseguire. La \emph{keyword} \emph{await} aspetta che la funzione asincrona termini la sua esecuzione, ritornando il risultato della \emph{Promise}.
 	\item Supporto iniziale per l'elaborazione \emph{multithread}, attraverso tipi di oggetti immutabili e condivisibili tra \emph{thread}.
 	\item Nuovi metodi per gli oggetti esistenti nel linguaggio (enumerazione dei membri di un oggetto e ulteriori funzionalità di manipolazione di stringhe).
 \end{itemize}
@@ -174,12 +174,12 @@ L'edizione 2017 dello standard porta in dote le seguenti funzionalità:
 Nella mia analisi ho riscontrato che gli aspetti positivi consistono nei seguenti punti:
 \begin{itemize}
 	\item La nuova sintassi per la scrittura di funzioni asincrone rende facilmente leggibile il codice sorgente in quanto ricorda l'utilizzo di normali funzioni della programmazione sequenziale.
-	\item Il supporto per l'elaborazione \emph{multithread} consente a chi ha necessità e competenza di poter sfruttare le architetture a molti \emph{core} delle moderne CPU, favorendo l'utilizzo di JavaScript anche per la programmazione di codice parallelo per le GPU.
+	\item Il supporto per l'elaborazione \emph{multithread} consente a chi ha necessità e competenza di poter sfruttare le architetture a molti \emph{core} delle moderne \gls{CPU}, favorendo l'utilizzo di JavaScript anche per la programmazione di codice parallelo per le \gls{GPU}.
 	\item Poche nuove funzionalità rispetto alle edizioni precedenti permettono di imparare le nuove con maggior semplicità.
 \end{itemize}
 mentre gli aspetti negativi:
 \begin{itemize}
-	\item Con la nuova sintassi per le funzioni asincrone ho spesso dimenticato la natura asincrona del codice scritto, causando l'omissione della keyword \emph{await}.
+	\item Con la nuova sintassi per le funzioni asincrone ho spesso dimenticato la natura asincrona del codice scritto, causando l'omissione della \emph{keyword} \emph{await}.
 	\item Il supporto alla nuova edizione dello standard è presente in maniera completa solamente nelle ultime versioni dei \emph{browser} e di Node.js.\footnotemark
 \end{itemize}
 
@@ -195,15 +195,15 @@ Jest è un \emph{framework} per l'implementazione di test per codice scritto in 
 Tra gli aspetti positivi, ho riscontrato che:
 \begin{itemize}
 	\item Jest non richiede una configurazione, utilizzando impostazioni predefinite ottimali.
-	\item Jest è una piattaforma di test completa che include strumenti di validazione dei risultati e  strumenti per il mocking.
+	\item Jest è una piattaforma di test completa che include strumenti di validazione dei risultati e strumenti per il \gls{mocking}.
 	\item Jest comprende funzionalità per i test di regressione dei componenti scritti in React.
 	\item Jest per default esegue i test parallelamente, velocizzando i processi di test.
 \end{itemize}
-Il difetto più grave che attribuisco a Jest consiste nella sua minor flessibilità rispetto ad altre librerie di test, quali ad esempio Mocha.
+Il difetto più grave che attribuisco a Jest consiste nella sua minor flessibilità rispetto ad altre librerie di test che permettono di sostituire le librerie utilizzate per il controllo delle asserzioni e per l'implementazione dei \emph{mock}.
 
 \subsection{ESLint}
 
-ESLint è uno strumento che esegue analisi del codice sorgente scritto in JavaScript alla ricerca di bug noti, di inconsistenze di stile nella scrittura del codice e mira a mantenere il codice facilmente leggibile e manutenibile.
+ESLint è uno strumento che esegue analisi del codice sorgente scritto in JavaScript alla ricerca di \emph{bug} noti, di inconsistenze di stile nella scrittura del codice e mira a mantenere il codice facilmente leggibile e manutenibile.
 Gli aspetti positivi di ESLint che ho riscontrato sono:
 \begin{itemize}
 	\item ESLint è altamente configurabile, permettendo la definizione di regole condivise più appropriate per il proprio progetto.
@@ -217,7 +217,7 @@ L'aspetto negativo principale che ho trovato in ESLint risiede nella sua ripida 
 HTML5 e CSS3 sono le ultime revisioni stabili rispettivamente del linguaggio HTML e del linguaggio CSS rilasciate dalla W3C.
 Gli aspetti positivi di queste tecnologie che ho riscontrato sono:
 \begin{itemize}
-	\item HTML5 ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard e permette l’integrazione con diversi formati multimediali senza utilizzare plugin esterni.
+	\item HTML5 ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard e permette l’integrazione con diversi formati multimediali senza utilizzare \emph{plugin} esterni.
 	\item HTML5 e CSS3 sono ben diffusi e tutti i \emph{browser} più recenti li supportano anche in caso di versioni non aggiornate.
 	\item HTML5 e CSS3 sono ben documentati e sono disponibili nella rete numerose risorse per il loro utilizzo ottimale.
 \end{itemize}
@@ -226,8 +226,8 @@ Dato l'ambito di utilizzo delle tecnologie HTML5 e CSS3 in questo progetto, nel 
 \subsection{Atom}
 \label{subsec:atom}
 
-Atom è un editor di testo sviluppato da GitHub che può essere utilizzaato come un IDE (\emph{Integrated Development Environment}).
-Atom durante il progetto è stato utilizzato per la stesura della documentazione associata al progetto: documenti di Analisi dei Requisiti e Specifica Tecnica, documenti di presentazione delle componenti del progetto (README visualizzabili durante l'esplorazione del progetto su GitHub) e specifica delle interfacce di comunicazione tra i servizi.
+Atom è un \emph{editor} di testo sviluppato da GitHub che può essere utilizzaato come un \gls{IDE}.
+Atom durante il progetto è stato utilizzato per la stesura della documentazione associata al progetto: documenti di Analisi dei Requisiti e Specifica Tecnica, documenti di presentazione delle componenti del progetto (\emph{README} visualizzabili durante l'esplorazione del progetto su GitHub) e specifica delle interfacce di comunicazione tra i servizi.
 Gli aspetti positivi che ho riscontrato nel suo utilizzo sono:
 \begin{itemize}
 	\item Atom è estremamente espandibile e personalizzabile, permettendo di creare un ambiente di sviluppo su misura.
@@ -236,20 +236,20 @@ Gli aspetti positivi che ho riscontrato nel suo utilizzo sono:
 Gli aspetti negativi che ho riscontrato sono:
 \begin{itemize}
 	\item Atom richiede un utilizzo della CPU elevato che ne mina la stabilità generale.
-	\item Atom non si interfaccia nativamente con strumenti di debug del codice.
+	\item Atom non si interfaccia nativamente con strumenti di \emph{debug} del codice.
 \end{itemize}
 Il secondo difetto riscontrato è stato il motivo per cui ho introdotto un altro strumento per la scrittura del codice sorgente del progetto.
 
 \subsection{Visual Studio Code}
 
-Visual Studio Code è un editor di testo sviluppato da Microsoft per la scrittura di applicazioni \emph{web}.
+Visual Studio Code è un \emph{editor} di testo sviluppato da Microsoft per la scrittura di applicazioni \emph{web}.
 Ho utilizzato Visual Studio Code per scrivere il codice sorgente del prototipo, per ispezionare il codice scritto in esecuzione (\emph{debug}) e per eseguire i test statici e dinamici sul codice.
 Gli aspetti positivi che ho evidenziato durante il suo utilizzo consistono in:
 \begin{itemize}
 	\item elevata efficienza nell'utilizzo delle risorse, risultando uno strumento affidabile;
-	\item supporto nativo per gli strumenti di debug;
+	\item supporto nativo per gli strumenti di \emph{debug};
 \end{itemize}
-Non ho riscontrato evidenti aspetti negativi per questo strumento, tuttavia, paragonandolo al precedente strumento per la scrittura testuale (~\ref{subsec:atom}), mi è risultato evidente la minor quantità di sintassi supportate e la minor personalizzazione generale dell'editor.
+Non ho riscontrato evidenti aspetti negativi per questo strumento, tuttavia, paragonandolo al precedente strumento per la scrittura testuale (~\ref{subsec:atom}), mi è risultato evidente la minor quantità di sintassi supportate e la minor personalizzazione generale dell'\emph{editor}.
 
 \subsection{Docker (Engine e Compose)}
 
@@ -258,8 +258,8 @@ Docker è una piattaforma tecnologica che permette di semplificare la gestione d
 	\item istanziazione: a partire da un file (\emph{Dockerfile}) che rappresenta le risorse necessarie alla compilazione (se necessaria) e all'esecuzione di un'applicazione containerizzata, chiamato nel gergo tecnico \emph{image}, Docker Engine permette di creare più \emph{container} della stessa applicazione, ciascuno dei quali è isolato di default dagli altri \emph{container} istanziati a partire dalla stessa \emph{image};
 	\item avvio: nel momento in cui l'utente istanzia un \emph{container}, esso viene creato e avviato dal Docker Engine. Mentre il \emph{container} è in esecuzione, è possibile accedere alle funzionalità che tale \emph{container} offre, sia esso un \emph{container} con un base di dati oppure contenga un'applicazione \emph{server} o \emph{web};
 	\item arresto: quando l'utente decide che le funzionalità offerte dal \emph{container} non sono più richieste, può arrestare il \emph{container} attraverso il Docker Engine: la piattaforma di Docker si occupa di salvare lo stato interno del \emph{container} (simile alla funzionalità di \emph{snapshot} delle tecnologie di virtualizzazione standard) per permettere che il container riparta nello stesso stato al successivo avvio;
-	\item distruzione: quando l'utente decide di voler rimuovere il \emph{container} e tutte le risorse associate dal proprio elaboratore, istruisce il Docker Engine al fine di arrestare e rilasciare le risorse allocate per il \emph{container} considerato. 
-\end{itemize} 
+	\item distruzione: quando l'utente decide di voler rimuovere il \emph{container} e tutte le risorse associate dal proprio elaboratore, istruisce il Docker Engine al fine di arrestare e rilasciare le risorse allocate per il \emph{container} considerato.
+\end{itemize}
 Gli strumenti offerti da Docker Compose espandono le funzionalità offerte dal Docker Engine e permettono di gestire l'esecuzione di un insieme di \emph{container} che compongono un'applicazione. Le funzionalità offerte da Docker Compose ricalcano quelle del Docker Engine, applicandole a insiemi di \emph{container}.
 
 %**************************************************************
@@ -268,51 +268,51 @@ Gli strumenti offerti da Docker Compose espandono le funzionalità offerte dal D
 
 % Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
 \subsection{MQTT}
-MQTT è un protocollo di messaggistica leggero basata sul design pattern Publish/Subscribe.
+\label{subsec:mqtt}
+MQTT è un protocollo di messaggistica leggero basato sul \emph{Design Pattern} \emph{Publish/Subscribe}.
 É un protocollo nato per l'utilizzo con sensori a basso consumo energetico, tuttavia è utilizzabile anche in altri scenari.
 % TODO: mancano le fonti
-MQTT è stato progettato tra la fine degli anni '90 e l'inizio degli anni 2000 per ambienti in cui l'affidabilità della rete non era garantita.
+MQTT è stato progettato tra la fine degli anni '90 e l'inizio degli anni 2000 per ambienti in cui l'affidabilità della rete non era garantita.\footcite{mqtt}
 
 MQTT mira ad assere una soluzione semplice da implementare, per permettere la maggior copertura di dispositivi possibile.
 MQTT usa messaggistica pub/sub per permettere ai dispositivi di pubblicare nella rete informazioni non predefinite.
 MQTT non richiede amministrazione in quanto cerca di rispondere ad eventi inaspettati in maniera semplice e con maggior buon senso possibile.
-MQTT minimizza il traffico sulla rete introducendo un \emph{overhead} sui dati minimo.
+MQTT minimizza il traffico sulla rete introducendo un \gls{overhead} sui dati minimo.
 MQTT si aspetta di lavorare in reti con frequenti interruzioni, utilizzando il meccanismo dell'ultimo testamento.
 MQTT si accorge repentinamente di cambiamenti dello stato della sessione.
-MQTT si aspetta che i client abbiano risorse d'elaborazione limitate.
+MQTT si aspetta che i \emph{client} abbiano risorse d'elaborazione limitate.
 MQTT mette a disposizione livelli di affidabilità per la trasmissione di informazioni critiche.
 MQTT non fa assunzioni sulla struttura né il contenuto dei dati.
 
-Il protocollo MQTT si basa sul principio che ogni client pubblica messaggi, i quali hanno uno o più argomenti.
-Ogni client può registrarsi a determinati argomenti, per ricevere tutti i messaggi che altri client pubblicano per quell'argomento. Molti client si connettono a un  \gls{broker} che funziona da intermediario, ricevendo i messaggi pubblicati e inoltrandoli a tutti i client sottoscritti ai rispettivi argomenti.
+Il protocollo MQTT si basa sul principio che ogni \emph{client} pubblica messaggi, i quali hanno uno o più argomenti.
+Ogni \emph{client} può registrarsi a determinati argomenti, nel gergo tecnico \emph{topic}, per ricevere tutti i messaggi che altri \emph{client} pubblicano per quell'argomento. Molti \emph{client} si connettono a un \gls{broker} che funziona da intermediario, ricevendo i messaggi pubblicati e inoltrandoli a tutti i \emph{client} sottoscritti ai rispettivi argomenti.
 Gli argomenti in MQTT sono trattati gerarchicamente. Questo permette la creazione di argomenti e sottoargomenti, simili alla struttura ad albero di un \emph{filesystem}.
-MQTT definisce 3 livelli di qualità in base a quanto \emph{broker} e client si impegneranno a ricevere un messaggio.
-I client decidono il livello massimo di QoS che riceveranno.
+MQTT definisce 3 livelli di qualità in base a quanto \emph{broker} e \emph{client} si impegneranno a ricevere un messaggio.
+I \emph{client} decidono il livello massimo di \gls{QoS} che riceveranno.
 
 La scala della QoS definisce i livelli 0, 1 e 2 con affidabilità crescente ma minori performance:
 \begin{itemize}
-	\item [0]: \emph{broker} e/o client invieranno il messaggio al massimo una volta senza richiesta di conferma. A questo livello i messaggi vengono persi se una delle parti si disconnette;
-	\item [1]: \emph{broker} e/o client invieranno il messaggio almeno una volta con la richiesta di conferma;
-	\item [2]: \emph{broker} e/o client invieranno il messaggio una sola volta effettuando una trasmissione in 4 step.
+	\item [0]: \emph{broker} e/o \emph{client} invieranno il messaggio al massimo una volta senza richiesta di conferma. A questo livello i messaggi vengono persi se una delle parti si disconnette;
+	\item [1]: \emph{broker} e/o \emph{client} invieranno il messaggio almeno una volta con la richiesta di conferma;
+	\item [2]: \emph{broker} e/o \emph{client} invieranno il messaggio una sola volta effettuando una trasmissione in 4 step.
 \end{itemize}
 
-Per esempio, se un messaggio è pubblicato con QoS 2 e il client è sottoscritto all'argomento con QoS 0, il client riceverà quel messaggio con QoS 0 (niente richieste di conferma, ecc).
-Se un altro client è sottoscritto allo stesso argomento con QoS 2 allora riceverà il messaggio con QoS 2 (handshake in 4 step).
-
-Alla connessione il client imposta un flag di "sessione pulita" in base a come il client ritiene affidabile la connessione (`false` => connessione affidabile). Se il client si disconnette, in tutte le sottoscrizioni con QoS 1 o QoS 2 i messaggi verranno salvati e inviati alla prossima riconnessione del client.
+Per esempio, se un messaggio è pubblicato con QoS 2 e il \emph{client} è sottoscritto all'argomento con QoS 0, il \emph{client} riceverà quel messaggio con QoS 0 (niente richieste di conferma, ecc).
+Se un altro \emph{client} è sottoscritto allo stesso argomento con QoS 2 allora riceverà il messaggio con QoS 2 (\gls{handshake} in 4 step).
+Alla connessione il \emph{client} imposta un parametro logico che rappresenta una "sessione pulita" in base a come il \emph{client} ritiene affidabile la connessione (`false` indica una connessione affidabile). Se il \emph{client} si disconnette, in tutte le sottoscrizioni con QoS 1 o QoS 2 i messaggi verranno salvati e inviati alla prossima riconnessione del \emph{client}.
 
 \subsection{Requisiti}
 
 Lo scopo di questa sezione è di definire i requisiti emersi dall’analisi del progetto di stage.
 In questa sezione descrivo i requisiti, i casi d'uso collegati e gli attori coinvolti.
 
-I dispositivi che ho considerato comunicano con il sistema utilizzando il protocollo MQTT (link alla sezione), perché ho ritenuto questo protocollo il più adatto per il sistema.
+I dispositivi che ho considerato comunicano con il sistema utilizzando il protocollo MQTT (~\ref{subsec:mqtt}), perché ho ritenuto questo protocollo il più adatto per il sistema.
 I motivi che mi hanno spinto a scegliere MQTT sono:
 \begin{itemize}
 	\item è un protocollo molto diffuso, caratteristica che mi ha facilitato molto nella ricerca di documentazione che dimostri il suo utilizzo;
 	\item è un protocollo \emph{data agnostic}, ossia che non pone vincoli sulla struttura dei dati scambiati nella rete;
-	\item è un protocollo efficiente in quanto trasmette informazioni con un overhead minimo;
-	\item è un protocollo che permette l'aggiunta e la rimozione di dispositivi dinamicamente,  richiedendo intervento manuale minimo all'utente.
+	\item è un protocollo efficiente in quanto trasmette informazioni con un \emph{overhead} minimo;
+	\item è un protocollo che permette l'aggiunta e la rimozione di dispositivi dinamicamente, richiedendo intervento manuale minimo all'utente.
 \end{itemize}
 
 Tutti i dispositivi che compongono il sistema contengono al loro interno informazioni relative a modello, revisione, produttore e anno di produzione del dispositivo.
@@ -324,7 +324,7 @@ Ho inoltre suddiviso i dispositivi in due tipi principali in base alle funzional
 \end{itemize}
 La funzionalità principale offerta dai sensori è l'invio periodico di informazioni legate a ciò che il sensore misura.
 L'invio di informazioni periodiche avviene in automatico, secondo i parametri impostati dal produttore del sensore.
-Altre 2 funzionalità legate alle risorse \emph{hardware} del sensore sono:
+Altre due funzionalità legate alle risorse \emph{hardware} del sensore sono:
 \begin{itemize}
 	\item memorizzazione locale: il produttore dota il sensore di una piccola memoria riscrivibile, interrogabile direttamente producendo dati in un formato stabilito dal produttore. Nei casi d'uso presi in considerazione questa funzionalità è utile in caso di perdita di connessione o malfunzionamento del centro di controllo. Nel caso in cui questa funzionalità sia presente, il sensore provvede a trasmettere i dati raccolti alla prossima riconnessione con il centro di controllo.
 	\item disconnessione forzata: il centro di controllo può richiedere ai sensori di disconnettersi dalla rete per un periodo di tempo per motivi di diagnostica o di sovraccarico della rete. Questa funzionalità richiede che il sensore abbia hardware in grado di ricevere segnali e non solo trasmetterli.
@@ -350,14 +350,14 @@ Disconnessione forzata & Su richiesta & Manuale & No \\
 
 I dispositivi attivi presentano le seguenti funzionalità:
 \begin{itemize}
-	\item lista degli eventi gestiti dal dispositivo;
-	\item risposta agli eventi esterni;
+	\item pubblicazione di una lista degli eventi gestiti dal dispositivo;
+	\item generazione di risposte agli eventi esterni;
 	\item invio di informazioni sullo stato energetico del dispositivo;
 	\item spegnimento del dispositivo.
 \end{itemize}
 
-La lista degli eventi gestiti deve essere richiesta al dispositivo per conoscere le sue funzionalità e inviare gli eventi corretti.
-La risposta agli eventi gestiti è automatica e avviene a ogni evento occorso.
+La lista degli eventi gestiti è pubblicata dal dispositivo e permette di conoscere le funzionalità \emph{smart} del dispositvo.
+La funzionalità di risposta agli eventi gestiti è automatica e avviene a ogni evento occorso.
 Le funzionalità legate alla gestione degli eventi sono direttamente implementate dai produttori dei dispositivi.
 L'invio delle informazioni sullo stato energetico del dispositivo richiede che il produttore abbia dotato il dispositivo di unità di \emph{power management} e perciò potrebbe non essere disponibile per tutti i dispositivi collegati.
 Nella tabella ~\ref{tab:funz-disp-attivi} riassumo le funzionalità considerate per i dispositivi attivi.
@@ -382,13 +382,13 @@ Spegnimento & Su richiesta & Manuale & Sì \\
 
 I dispositivi facenti parte del "centro di controllo" presentano le seguenti funzionalità:
 \begin{itemize}
-	\item gestisce i dispositivi collegati al sistema;
-	\item riceve, elabora e memorizza le informazioni utili provenienti dai dispositivi (anche per fini diagnostici);
-	\item mette a disposizione le informazioni raccolte per i client che interrogano il centro di controllo.
+	\item gestione dei dispositivi collegati al sistema;
+	\item ricezione, elaborazione e memorizzazione delle informazioni utili provenienti dai dispositivi (anche per fini diagnostici);
+	\item pubblicazione delle informazioni raccolte per i \emph{client} che interrogano il centro di controllo.
 \end{itemize}
 
-Il dati ricevuti dal centro di controllo possono in una forma grezza e perciò è necessario che il centro di controllo li elabori, a seconda della provenienza dei dati, al fine di renderli comprensibili anche da umani.
-Le informazioni raccolte sono messe a disposizione ai client in tempo reale.
+I dati ricevuti dal centro di controllo possono essere raccolti dai dispositivi in una forma grezza e perciò è necessario che il centro di controllo li elabori, a seconda della provenienza dei dati, al fine di renderli comprensibili anche agli umani.
+Le informazioni raccolte sono messe a disposizione ai \emph{client} in tempo reale.
 
 % ### Caratteristiche degli utenti del sistema
 
@@ -397,7 +397,7 @@ Prevedo che gli utenti del prototipo non abbiano alcuna competenza particolare.
 % ### Piattaforma di esecuzione
 
 La piattaforma di esecuzione del prodotto è Docker, attraverso la composizione di \emph{container}.
-L'utente accede alle funzionalità del prodotto attraverso una interfaccia Web, opportunamente progettata per essere reattiva (ottimizzata per mobile).
+L'utente accede alle funzionalità del prodotto attraverso una interfaccia \emph{web}, opportunamente progettata per essere reattiva (ottimizzata per \emph{mobile}).
 
 % ## Casi d'uso
 
@@ -421,8 +421,8 @@ La breve descrizione di ciascun caso d’uso presenta:
 
 Gli attori che ho considerato in sede di analisi consistono in:
 \begin{itemize}
-	\item Utente: rappresenta l'utente che interagisce con la dashboard;
-	\item Dispositivi: rappresentano l'insieme di apparati collegati al sistema che forniscono i dati per popolare la dashboard;
+	\item Utente: rappresenta l'utente che interagisce con la \emph{dashboard};
+	\item Dispositivi: rappresentano l'insieme di apparati collegati al sistema che forniscono i dati per popolare la \emph{dashboard};
 	\item Dispositivo: rappresenta uno dei dispositivi collegati al sistema;
 	\item Interfaccia proprietaria del dispositivo: rappresenta l'interfaccia proprietaria progettata dal produttore di un generico dispositivo.
 \end{itemize}
@@ -468,7 +468,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.1}{Visualizzazione dei dispositivi collegati secondo dominio applicativo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare tutti i dispositivi collegati}
-\usecasedesc{L'utente interroga la dashboard per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la dashboard mostra i dispositivi raggruppati secondo dominio applicativo (gruppo relativo alla termodinamica domestica, gruppo relativo alla illuminazione, ecc.)}
+\usecasedesc{L'utente interroga la \emph{dashboard} per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la \emph{dashboard} mostra i dispositivi raggruppati secondo dominio applicativo (gruppo relativo alla termodinamica domestica, gruppo relativo alla illuminazione, ecc.)}
 \usecasepost{L'utente conosce lo stato di tutti i dispositivi collegati al sistema secondo il dominio scelto}
 \label{uc:uc1.1}
 \end{usecase}
@@ -478,7 +478,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.2}{Visualizzazione dei dispositivi collegati secondo gruppi definiti dall'utente}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare tutti i dispositivi collegati}
-\usecasedesc{L'utente interroga la dashboard per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la dashboard mostra i dispositivi raggruppati secondo le preferenze dell'utente}
+\usecasedesc{L'utente interroga la \emph{dashboard} per conoscere lo stato dei dispositivi collegati. In questa visualizzazione la \emph{dashboard} mostra i dispositivi raggruppati secondo le preferenze dell'utente}
 \usecasepost{L'utente conosce lo stato di tutti i dispositivi collegati al sistema presenti nel gruppo definito}
 \label{uc:uc1.2}
 \end{usecase}
@@ -488,7 +488,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3}{Visualizzazione del dispositivo selezionato dall'utente}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{L'utente interroga la dashboard per conoscere lo stato del dispositivo selezionato. In questa visualizzazione la dashboard mostra le informazioni provenienti dal dispositivo}
+\usecasedesc{L'utente interroga la \emph{dashboard} per conoscere lo stato del dispositivo selezionato. In questa visualizzazione la \emph{dashboard} mostra le informazioni provenienti dal dispositivo}
 \usecasepost{L'utente può visualizzare le informazioni specifiche del dispositivo}
 \label{uc:uc1.3}
 \end{usecase}
@@ -498,7 +498,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.1}{Visualizzazione delle informazioni provenienti dal dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente le informazioni provenienti dal dispositivo}
+\usecasedesc{La \emph{dashboard} mostra all'utente le informazioni provenienti dal dispositivo}
 \usecasepost{L'utente può visualizzare le informazioni specifiche del dispositivo}
 \label{uc:uc1.3.1}
 \end{usecase}
@@ -508,7 +508,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.1.1}{Visualizzazione nome del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente il nome \emph{user-friendly} dato dal produttore al dispositivo}
+\usecasedesc{La \emph{dashboard} mostra all'utente il nome \emph{user-friendly} dato dal produttore al dispositivo}
 \usecasepost{L'utente conosce il nome dato dal produttore al dispositivo}
 \label{uc:uc1.3.1.1}
 \end{usecase}
@@ -518,7 +518,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.1.2}{Visualizzazione categoria del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente il dominio applicativo del dispositivo (illuminazione, ecc.)}
+\usecasedesc{La \emph{dashboard} mostra all'utente il dominio applicativo del dispositivo (illuminazione, ecc.)}
 \usecasepost{L'utente conosce il dominio applicativo del dispositivo selezionato}
 \label{uc:uc1.3.1.2}
 \end{usecase}
@@ -528,7 +528,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.1.3}{Visualizzazione dati provenienti dal dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente i dati raccolti dal sistema inviati dal dispositivo selezionato}
+\usecasedesc{La \emph{dashboard} mostra all'utente i dati raccolti dal sistema inviati dal dispositivo selezionato}
 \usecasepost{L'utente conosce le misurazioni raccolte dal sistema per il dispositivo selezionato}
 \label{uc:uc1.3.1.3}
 \end{usecase}
@@ -538,7 +538,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.2}{Visualizzazione delle specifiche tecniche del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente le specifiche tecniche del dispositivo, quali produttore, modello, ecc.}
+\usecasedesc{La \emph{dashboard} mostra all'utente le specifiche tecniche del dispositivo, quali produttore, modello, ecc.}
 \usecasepost{L'utente conosce le specifiche tecniche del dispositivo selezionato}
 \label{uc:uc1.3.2}
 \end{usecase}
@@ -548,7 +548,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.2.1}{Visualizzazione produttore del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le specifiche tecniche di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente il nome del produttore del dispositvo}
+\usecasedesc{La \emph{dashboard} mostra all'utente il nome del produttore del dispositvo}
 \usecasepost{L'utente conosce il nome del produttore del dispositivo selezionato}
 \label{uc:uc1.3.2.1}
 \end{usecase}
@@ -558,7 +558,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.2.2}{Visualizzazione modello del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le specifiche tecniche di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente il nome commerciale scelto dal produttore per il dispositivo}
+\usecasedesc{La \emph{dashboard} mostra all'utente il nome commerciale scelto dal produttore per il dispositivo}
 \usecasepost{L'utente conosce il nome commerciale del dispositivo selezionato}
 \label{uc:uc1.3.2.2}
 \end{usecase}
@@ -568,7 +568,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.2.3}{Visualizzazione revisione del dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare le specifiche tecniche di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente un identificativo di versione del dispositivo (anno o  numero di versione)}
+\usecasedesc{La \emph{dashboard} mostra all'utente un identificativo di versione del dispositivo (anno o  numero di versione)}
 \usecasepost{L'utente conosce la revisione del dispositivo selezionato}
 \label{uc:uc1.3.2.3}
 \end{usecase}
@@ -578,7 +578,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.3}{Visualizzazione delle operazioni disponibili per il dispositivo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di visualizzare informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente le funzionalità offerte dal dispositivo}
+\usecasedesc{La \emph{dashboard} mostra all'utente le funzionalità offerte dal dispositivo}
 \usecasepost{L'utente conosce la lista delle funzionalità offerte dal dispositivo selezionato}
 \label{uc:uc1.3.3}
 \end{usecase}
@@ -588,7 +588,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{1.3.4}{Collegamento all'interfaccia proprietaria del dispositivo}
 \usecaseactors{Utente, Dispositivi, Interfaccia proprietaria}
 \usecasepre{L'utente ha scelto di visualizzare le informazioni di uno dei dispositivi collegati}
-\usecasedesc{La dashboard mostra all'utente il collegamento all'interfaccia proprietaria del dispositivo}
+\usecasedesc{La \emph{dashboard} mostra all'utente il collegamento all'interfaccia proprietaria del dispositivo}
 \usecasepost{L'utentepuò seguire il collegamento per visualizzare l'interfaccia proprietaria del dispositivo selezionato}
 \label{uc:uc1.3.4}
 \end{usecase}
@@ -614,7 +614,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.1}{Visualizzazione dei dispositivi collegati}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di gestire i dispositivi collegati al sistema}
-\usecasedesc{La dashboard presenta all'utente la lista di dispositivi collegati al sistema per permettere all'utente di selezionare quale dispositivo gestire}
+\usecasedesc{La \emph{dashboard} presenta all'utente la lista di dispositivi collegati al sistema per permettere all'utente di selezionare quale dispositivo gestire}
 \usecasepost{L'utente può accedere alle funzionalità di gestione offerte dalla \emph{dashboard} per i dispositivi visualizzati}
 \label{uc:uc2.1}
 \end{usecase}
@@ -624,7 +624,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.2}{Creazione di un gruppo di dispositivi personalizzato dall'utente}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di gestire i dispositivi collegati al sistema}
-\usecasedesc{La dashboard permette all'utente di creare un gruppo personalizzato di dispositivi, facilitando la visualizzazione dei dispositivi nella pagina principale della \emph{dashboard}}
+\usecasedesc{La \emph{dashboard} permette all'utente di creare un gruppo personalizzato di dispositivi, facilitando la visualizzazione dei dispositivi nella pagina principale della \emph{dashboard}}
 \usecasepost{L'utente ha creato un gruppo personalizzato con le proprietà richieste (nome e dispositivi)}
 \label{uc:uc2.2}
 \end{usecase}
@@ -654,7 +654,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.3}{Modifica di un gruppo di dispositivi personalizzato}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di gestire i dispositivi collegati al sistema}
-\usecasedesc{La dashboard permette all'utente di modificare un gruppo personalizzato esistente per rinominare il gruppo e aggiungere o togliere uno o più dispositivi da un gruppo}
+\usecasedesc{La \emph{dashboard} permette all'utente di modificare un gruppo personalizzato esistente per rinominare il gruppo e aggiungere o togliere uno o più dispositivi da un gruppo}
 \usecasepost{L'utente ha modificato il gruppo personalizzato esistente}
 \label{uc:uc2.3}
 \end{usecase}
@@ -664,7 +664,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.3.1}{Modifica nome del gruppo}
 \usecaseactors{Utente}
 \usecasepre{L'utente ha scelto di modificare un gruppo personalizzato esistente}
-\usecasedesc{La dashboard mostra all'utente il nome corrente del gruppo, permettendone la modifica}
+\usecasedesc{La \emph{dashboard} mostra all'utente il nome corrente del gruppo, permettendone la modifica}
 \usecasepost{L'utente ha modificato il nome del gruppo personalizzato esistente}
 \label{uc:uc2.3.1}
 \end{usecase}
@@ -674,7 +674,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.3.2}{Aggiunta di nuovi dispositivi al gruppo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di modificare un gruppo personalizzato esistente}
-\usecasedesc{La dashboard permette all'utente di scegliere quali dispositivi non presenti nel gruppo aggiungere}
+\usecasedesc{La \emph{dashboard} permette all'utente di scegliere quali dispositivi non presenti nel gruppo aggiungere}
 \usecasepost{L'utente ha aggiunto i dispositivi selezionati al gruppo personalizzato esistente}
 \label{uc:uc2.3.2}
 \end{usecase}
@@ -684,7 +684,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.3.3}{Rimozione di dispositivi esistenti dal gruppo}
 \usecaseactors{Utente, Dispositivi}
 \usecasepre{L'utente ha scelto di modificare un gruppo personalizzato esistente}
-\usecasedesc{La dashboard permette all'utente di scegliere quali dispositivi presenti nel gruppo da rimuovere}
+\usecasedesc{La \emph{dashboard} permette all'utente di scegliere quali dispositivi presenti nel gruppo da rimuovere}
 \usecasepost{L'utente ha rimosso i dispositivi selezionati al gruppo personalizzato esistente}
 \label{uc:uc2.3.3}
 \end{usecase}
@@ -694,7 +694,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.4}{Rimozione di un gruppo di dispositivi personalizzato}
 \usecaseactors{Utente}
 \usecasepre{L'utente ha scelto di modificare un gruppo personalizzato esistente}
-\usecasedesc{La dashboard permette all'utente di rimuovere un gruppo personalizzato esistente}
+\usecasedesc{La \emph{dashboard} permette all'utente di rimuovere un gruppo personalizzato esistente}
 \usecasepost{L'utente ha rimosso il gruppo personalizzato esistente selezionato}
 \label{uc:uc2.4}
 \end{usecase}
@@ -704,7 +704,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{2.5}{Visualizzazione delle operazioni disponibili per il dispositivo selezionato dall'utente}
 \usecaseactors{Utente, Dispositivo}
 \usecasepre{L'utente ha scelto di modificare un gruppo personalizzato esistente}
-\usecasedesc{La dashboard permette all'utente di conoscere la lista delle operazioni disponibili per il dispositivo selezionato (ad esempio: accensione e spegnimento per una sorgente di illuminazione)}
+\usecasedesc{La \emph{dashboard} permette all'utente di conoscere la lista delle operazioni disponibili per il dispositivo selezionato (ad esempio: accensione e spegnimento per una sorgente di illuminazione)}
 \usecasepost{L'utente conosce la lista delle operazioni disponibili per il dispositivo selezionato}
 \label{uc:uc2.5}
 \end{usecase}
@@ -714,7 +714,7 @@ Gli attori che ho considerato in sede di analisi consistono in:
 \begin{usecase}{3}{Visualizzazione delle statistiche di sistema}
 \usecaseactors{Utente}
 \usecasepre{L'utente ha scelto di visualizzare lo stato del sistema}
-\usecasedesc{L'utente interroga la dashboard per visualizzare le statistiche di sistema per conoscerne lo stato di salute e diagnosticare eventuali malfunzionamenti}
+\usecasedesc{L'utente interroga la \emph{dashboard} per visualizzare le statistiche di sistema per conoscerne lo stato di salute e diagnosticare eventuali malfunzionamenti}
 \usecasepost{L'utente conosce lo stato del sistema}
 \label{uc:uc3}
 \end{usecase}
@@ -800,7 +800,7 @@ Q & Di qualità (\emph{quality}) \\
 \hline
 RMO1 & Obbligatorio & Il sistema deve essere progettato secondo lo stile di progettazione a microservizi. \\
 \hline
-RAO2 & Desiderabile & Il sistema può essere implementato utilizzando il linguaggio JavaScript secondo lo standard EcmaScript 2017. \\
+RAO2 & Desiderabile & Il sistema può essere implementato utilizzando il linguaggio JavaScript secondo lo standard ECMAScript 2017. \\
 \hline
 RAO3 & Desiderabile & Il sistema può essere implementato utilizzando il \emph{framework} Node.js per il \emph{backend} e React per il \emph{frontend}. \\
 \hline
@@ -903,8 +903,8 @@ Nell'immagine ~\ref{img:overview-arch} illustro la panoramica delle componenti d
 
 % ### Servizio: MQTT \emph{broker}
 
-Il \emph{broker} MQTT è il servizio responsabile alla ricezione di tutti i messaggi, alla loro catalogazione e all'invio delle notifiche verso i client sottoscritti a ciascuna categoria.
-Il \emph{broker} memorizza lo stato di tutti i client a lui connessi, inclusi i messaggi non ancora inviati o il cui invio è fallito.
+Il \emph{broker} MQTT è il servizio responsabile alla ricezione di tutti i messaggi, alla loro catalogazione e all'invio delle notifiche verso i \emph{client} sottoscritti a ciascuna categoria.
+Il \emph{broker} memorizza lo stato di tutti i \emph{client} a lui connessi, inclusi i messaggi non ancora inviati o il cui invio è fallito.
 
 % ### Servizio: termometro _virtualizzato_
 
@@ -928,7 +928,7 @@ DeviceInfo & Classe i cui oggetti rappresentano le informazioni del dispositivo,
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra generazione dei dati di temperatura, gestione delle informazioni del dispositivo e invio delle informazioni tramite protocollo MQTT. \\
 \hline
-MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
 TemperatureCurveFactory & Classe Factory astratta che espone la funzionalità di creazione della curva di temperatura, rappresentata dalla classe `TemperatureCurve`. \\
 \hline
@@ -958,9 +958,9 @@ Nella tabella ~\ref{tab:classi-temperatura} sono elencate le classi sviluppate p
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati di temperatura, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
 \hline
-MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
 \hline
 API & Classe che raccoglie le funzionalità esposte dal servizio. Le funzionalità esposte sono rappresentate in una lista di oggetti che rappresentano l'accesso alle risorse e le funzioni di reperimento ed elaborazione delle informazioni. \\
 \hline
@@ -997,7 +997,7 @@ DeviceInfo & Classe i cui oggetti rappresentano le informazioni del dispositivo,
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra stato della lampada e invio delle informazioni tramite protocollo MQTT. \\
 \hline
-MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
 Lamp & Classe che utilizza il Design Pattern \emph{Singleton} per fornire lo stato della lampada (on/off). \\
 \hline
@@ -1019,9 +1019,9 @@ Nella tabella ~\ref{tab:classi-illuminazione} sono elencate le classi sviluppate
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi di illuminazione, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
 \hline
-MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio. Include i metodi di interfaccia per il controllo dei dispositivi di illuminazione "attivi". \\
 \hline
@@ -1048,9 +1048,9 @@ La tabella ~\ref{tab:classi-info} elenca le classi sviluppate per soddisfare i r
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati dei dispositivi, gestione della persistenza dei dati ed esposizione di una interfaccia per gli altri servizi. \\
 \hline
-MQTTClient & Classe utile all'inizializzazione del client MQTT. \\
+MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere i dati dei dispositivi e fornire la specifica dei dati inviati dai dispositivi. \\
 \hline
@@ -1078,7 +1078,7 @@ La tabella ~\ref{tab:classi-user} elenca le classi sviluppate per soddisfare i r
 \hline
 ServiceManager & Classe responsabile della gestione della persistenza delle preferenze utente e dell'esposizione di una interfaccia per gli altri servizi. \\
 \hline
-DBClient & Classe utile all'inizializzazione del client per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere e modificare le preferenze dell'utente. Espone inoltre la funzionalità di conversione dell'unità di misura verso quella predefinita dall'utente. \\
 \hline
@@ -1093,7 +1093,7 @@ UnitsConverter & Classe che espone la funzionalità di conversione tra unità di
 
 % ### Servizio: API
 
-Il servizio API svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione web e il \emph{broker} MQTT.
+Il servizio API svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione \emph{web} e il \emph{broker} MQTT.
 Esso interroga i servizi "illuminazione", "temperatura" e "informazioni dispositivo"  definiti dal sistema per fornire una interfaccia unificata ai dati, sia in maniera sincrona sia in maniera asincrona.
 L'interfaccia sincrona consiste in un'interfaccia che risponde ai metodi HTTP, mentre l'interfaccia asincrona richiede l'istituzione di una connessione che utilizzi i WebSocket.
 Il servizio API nella sua funzione è l'implementazione di uno dei Design Pattern specifici per le architetture a microservizi, ossia il \emph{Gateway Pattern}.
@@ -1109,7 +1109,7 @@ La tabella ~\ref{tab:classi-api} elenca le classi sviluppate per fornire le funz
 \hline
 ServiceManager & Classe responsabile dell'integrazione tra istanza del server e interfaccia ai dati esposta. \\
 \hline
-Server & Classe responsabile del ciclo di vita del server Node.js. Nella classe Server attribuisco la lista delle risorse accessibili dai client definiti nelle varie istanze di Route. \\
+Server & Classe responsabile del ciclo di vita del server Node.js. Nella classe Server attribuisco la lista delle risorse accessibili dai \emph{client} definiti nelle varie istanze di Route. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere e modificare le preferenze dell'utente. Espone inoltre la funzionalità di conversione dell'unità di misura verso quella predefinita dall'utente. \\
 \hline
@@ -1128,7 +1128,7 @@ LightRoute & Implementazione di `Route` che espone le funzionalità di gestione 
 
 % ### Servizio: web app
 
-Il servizio "web app" comprende l'applicazione web per la consultazione della \emph{dashboard} attraverso la navigazione tramite \emph{browser}.
+Il servizio "\emph{web app}" comprende l'applicazione \emph{web} per la consultazione della \emph{dashboard} attraverso la navigazione tramite \emph{browser}.
 Richiede i dati direttamente al servizio API utilizzando le interfacce REST esposte.
 Questo servizio include i componenti sviluppati in React per la costruzione dell'interfaccia grafica della \emph{dashboard} e le classi necessarie alla sua pubblicazione sul \emph{web}.
 La tabella ~\ref{tab:classi-web} elenca le classi sviluppate per implementare la \emph{dashboard}.
@@ -1180,7 +1180,7 @@ Tra i Design Pattern comportamentali, il Design Pattern Mediator ha l'intento di
 Ho impiegato il Design Pattern Mediator in tutti i servizi sottoforma della classe `ServiceManager` per aumentare il disaccoppiamento tra classi che trattano la persistenza, l'esecuzione dei servizi, la comunicazione, ecc.
 
 Tra i Design Pattern creazionali, ho utilizzato i pattern Abstract Factory e Singleton.
-Il Design Pattern Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare quale classe istanziare. Questo pattern permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
+Il Design Pattern Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei \emph{client} di specificare quale classe istanziare. Questo pattern permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il \emph{client}, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
 Ho utilizzato il Design Pattern Abstract Factory nel servizio di simulazione di un termometro (riferimento ~\ref{tab:classi-termometro}) per permettere la creazione di funzioni per la generazione della temperatura.
 Il Design Pattern Singleton ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, fornendo un unico punto di accesso globale a tale istanza.
 Ho utilizzato il Design Pattern Singleton nel servizio di simulazione della lampada (riferimento ~\ref{tab:classi-lampada}) per obbligare il servizio a simulare una singola lampada, favorendo così l'esecuzione di numerosi \emph{container} del servizio per simulare un intero sistema d'illuminazione.
@@ -1216,7 +1216,7 @@ I documenti prodotti durante lo svolgimento dello stage sono in ordine:
 		\item documenti in cui indico le risorse esposte dai servizi;
 		\item documenti in cui elenco le istruzioni per eseguire il progetto in una macchina locale.
 \end{enumerate}
-Come menzionato nella sotto-sezione ~\ref{subsec:atom}, ho redatto tutti i documenti menzionati utilizzando l'editor Atom.
+Come menzionato nella sotto-sezione ~\ref{subsec:atom}, ho redatto tutti i documenti menzionati utilizzando l'\emph{editor} Atom.
 I documenti relativi alla formazione sono rivolti essenzialmente al docente che mi ha seguito durante lo svolgimento dello stage e ad eventuali utenti che volessero approfondire i contenuti teorici su cui ho basato il prototipo.
 Per i documenti di analisi, di progettazione e relativi alle risorse esposta dai servizi ho deciso di destinarli agli utenti che volessero approfondire il funzionamento del prototipo da un punto di vista ad alto livello.
 I documenti in cui indico le risorse esposte dai servizi sono rivolti agli utenti più esperti che vogliono approfondire le funzionalità offerte dai servizi. Nelle mie previsioni questi utenti grazie ai documenti di specifica dovrebbero essere in grado di implementare le altre componenti del sistema, sostituendo le componenti da me implementate.
