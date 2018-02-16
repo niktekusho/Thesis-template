@@ -269,7 +269,7 @@ Gli strumenti offerti da Docker Compose espandono le funzionalità offerte dal D
 % Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
 \subsection{MQTT}
 \label{subsec:mqtt}
-MQTT è un protocollo di messaggistica leggero basato sul \emph{Design Pattern} \emph{Publish/Subscribe}.
+\gls{MQTT} è un protocollo di messaggistica leggero basato sul \emph{Design Pattern} \emph{Publish/Subscribe}.
 É un protocollo nato per l'utilizzo con sensori a basso consumo energetico, tuttavia è utilizzabile anche in altri scenari.
 % TODO: mancano le fonti
 MQTT è stato progettato tra la fine degli anni '90 e l'inizio degli anni 2000 per ambienti in cui l'affidabilità della rete non era garantita.\footcite{mqtt}
@@ -284,8 +284,8 @@ MQTT si aspetta che i \emph{client} abbiano risorse d'elaborazione limitate.
 MQTT mette a disposizione livelli di affidabilità per la trasmissione di informazioni critiche.
 MQTT non fa assunzioni sulla struttura né il contenuto dei dati.
 
-Il protocollo MQTT si basa sul principio che ogni \emph{client} pubblica messaggi, i quali hanno uno o più argomenti.
-Ogni \emph{client} può registrarsi a determinati argomenti, nel gergo tecnico \emph{topic}, per ricevere tutti i messaggi che altri \emph{client} pubblicano per quell'argomento. Molti \emph{client} si connettono a un \gls{broker} che funziona da intermediario, ricevendo i messaggi pubblicati e inoltrandoli a tutti i \emph{client} sottoscritti ai rispettivi argomenti.
+Il protocollo MQTT si basa sul principio che ogni \emph{client} pubblica messaggi, i quali hanno uno o più argomenti, nel gergo tecnico \emph{topic}.
+Ogni \emph{client} può registrarsi a determinati argomenti per ricevere tutti i messaggi che altri \emph{client} pubblicano per quell'argomento. Molti \emph{client} si connettono a un \gls{broker} che funziona da intermediario, ricevendo i messaggi pubblicati e inoltrandoli a tutti i \emph{client} sottoscritti ai rispettivi argomenti.
 Gli argomenti in MQTT sono trattati gerarchicamente. Questo permette la creazione di argomenti e sottoargomenti, simili alla struttura ad albero di un \emph{filesystem}.
 MQTT definisce 3 livelli di qualità in base a quanto \emph{broker} e \emph{client} si impegneranno a ricevere un messaggio.
 I \emph{client} decidono il livello massimo di \gls{QoS} che riceveranno.
@@ -885,7 +885,7 @@ Totale & 8 & 1 & 6 \\
 % ### Scopo del documento
 
 In questa sezione del documento definisco la progettazione dell'architettura ad alto livello del progetto di stage.
-La sezione include la descrizione dell'architettura del sistema e delle relative componenti software e i Design Pattern utilizzati per la progettazione.
+La sezione include la descrizione dell'architettura del sistema e delle relative componenti \emph{software} e i Design Pattern utilizzati per la progettazione.
 
 % ## Architettura
 
@@ -908,8 +908,8 @@ Il \emph{broker} memorizza lo stato di tutti i \emph{client} a lui connessi, inc
 
 % ### Servizio: termometro _virtualizzato_
 
-Il termometro "virtualizzato" è il servizio responsabile alla simulazione sensore che invii dati sulla temperatura dell'ambiente in cui si trova.
-Esso pubblica periodicamente la temperatura rilevata secondo l'argomento \emph{temperature} e secondo l'argomento \emph{hw\_info} i propri dati identificativi, quali produttore, modello, ecc..
+Il termometro "virtualizzato" è il servizio responsabile alla simulazione di un sensore che invii dati sulla temperatura dell'ambiente in cui si trova.
+Esso pubblica periodicamente la temperatura rilevata secondo l'argomento \emph{temperature}, mentre invia secondo l'argomento \emph{hw\_info} i propri dati identificativi, quali produttore, modello, ecc..
 Data la relativa importanza i dati vengono inviati con un QoS di livello 0 nella categoria \emph{temperature}, mentre con QoS di livello 1 nella categoria \emph{hw\_info}.
 In questo modo al collegamento del dispositvo "virtualizzato" viene effettuato almeno un tentativo di trasmissione delle informazioni relative alle specifiche del dispositivo.
 Anche se nel diagramma è disegnato individualmente, è possibile che ve ne siano molteplici.
@@ -960,7 +960,7 @@ ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati di
 \hline
 MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il \emph{database} del servizio. \\
 \hline
 API & Classe che raccoglie le funzionalità esposte dal servizio. Le funzionalità esposte sono rappresentate in una lista di oggetti che rappresentano l'accesso alle risorse e le funzioni di reperimento ed elaborazione delle informazioni. \\
 \hline
@@ -1021,7 +1021,7 @@ ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati de
 \hline
 MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il \emph{database} del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio. Include i metodi di interfaccia per il controllo dei dispositivi di illuminazione "attivi". \\
 \hline
@@ -1050,7 +1050,7 @@ ServiceManager & Classe responsabile dell'integrazione tra ricezione dei dati de
 \hline
 MQTTClient & Classe utile all'inizializzazione del \emph{client} MQTT. \\
 \hline
-DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il \emph{database} del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere i dati dei dispositivi e fornire la specifica dei dati inviati dai dispositivi. \\
 \hline
@@ -1078,7 +1078,7 @@ La tabella ~\ref{tab:classi-user} elenca le classi sviluppate per soddisfare i r
 \hline
 ServiceManager & Classe responsabile della gestione della persistenza delle preferenze utente e dell'esposizione di una interfaccia per gli altri servizi. \\
 \hline
-DBClient & Classe utile all'inizializzazione del \emph{client} per il database del servizio. \\
+DBClient & Classe utile all'inizializzazione del \emph{client} per il \emph{database} del servizio. \\
 \hline
 API & Classe che rappresenta le funzionalità esposte dal servizio, permettendo di richiedere e modificare le preferenze dell'utente. Espone inoltre la funzionalità di conversione dell'unità di misura verso quella predefinita dall'utente. \\
 \hline
@@ -1170,7 +1170,7 @@ I Design Pattern descrivono la metodologia con cui affrontare problemi ricorrent
 La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.
 I principali Design Pattern vengono suddivisi in quattro categorie:
 \begin{itemize}
-	\item Architetturali: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l’architettura;
+	\item Architetturali: affrontano il problema di progettazione di un sistema \emph{software} fornendo uno schema di partenza su cui basare l’architettura;
 	\item Creazionali: affrontano il problema di astrarre il sistema rendendolo indipendente dall’implementazione concreta delle sue componenti;
 	\item Strutturali: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l’ereditarietà e l’aggregazione;
 	\item Comportamentali: affrontano il problema dell’interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
