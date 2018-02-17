@@ -1,3 +1,47 @@
+16/02/2018
+Visto.
+In §3 ti sei allargato oltremodo, incorporando contenuti di eccessivo
+dettaglio e altri non particolarmente significativi.
+Invece di fare quel che proponi, ossia espandere ulteriormente, farai
+una consistente operazione di riduzione.
+Nello specifico:
+- Userai verbi in modo attivo e personale, perché stai scrivendo la tua
+relazione finale e non redigendo un comunicato a nome di una indistinta
+collettività.
+- La pianificazione in §3.1 è poco interessante in questo contesto. Puoi
+spostarla in coda a §1, relazionando alle tue scelte organizzative per
+mitigare i rischi che hai discusso. -> test
+- L'elenco delle tecnologie in §3.2 non funziona: è troppo lungo e poi
+contiene giudizi che possono aver senso nelle conclusioni, ma non nelle
+premesse. Se vuoi tenere un elenco in §3, sarà una tabella, con una
+colonna che indichi la versione che hai usato (in relazione eventuale
+con la versione corrente) e una che ne indichi il tuo grado di
+conoscenza pregresso. -> test
+- Non si capisce cosa c'entri §3.3.1 nell'analisi dei requisiti. -> chiedere dove spostarla
+- L'analisi che presenti in §3.3.2 sta bene in un documento tecnico
+Analisi dei Requisiti, ma non trova posto nella relazione finale, che
+deve limitarsi a presentare gli aspetti salienti (meritevoli di
+attenzione) del lavoro che hai svolto. Nel caso dei requisiti, come ti
+avevo indicato a voce, dovrai limitarti a mostrare come gli hai
+classificati, quanti ne hai raccolti (per quantità e categorie), quale
+familiarità hai con le tecniche professionali di analisi,
+particolarmente i casi d'uso di UML, tramite 1-2 esempi. -> test
+- Analogo problema hai con §3.4. -> test
+- §3.5 è invece deludente, e, per questi contenuti non si merita una
+sezione a se; piuttosto, aggiungerai un titolo "documenti prodotti" per
+ogni macro-attività di sviluppo che tratti in §3. -> test
+- I test sono una parte della verifica. Titolando così §3.6 dichiari di
+non aver fatto alcuna verifica statica, ma solo test sul codice. -> test
+- In Tabella 3.21, la colonna 3 andrà intitolata "esito" (oppure, più
+verbosamente, "stato di implementazione", e il contenuto delle righe
+"soddisfatto", "parzialmente soddisfatto", "omesso". Nel discutere i
+requisiti che hai scelto di abbandonare in corso d'opera, dovrai
+correlarti con quanto hai discusso intorno ai rischi di progetto,
+perché, con tutta evidenza, avevi sottovalutato l'impegno,
+sopravvalutato le tue forze e capacità, e la rilevanza reale di alcuni
+obiettivi.
+
+
 12/02/2018
 
 Con i contenuti che gli hai dato, il capitolo 1 non funziona, perché in esso vi è totale scollamento tra §1.1 (che tratta, con titolo ingannevolmente vago, di temi assolutamente generali) e §1.2 (che analizzi i "rischi di impresa" di uno stage interno su quei temi). Per sanare questo grave difetto, senza stravolgere i contenuti correnti, serve una premessa (che diventerà il nuovo §1.1) che introduca entrambi i termini della relazione di stage (cioè che questa è una relazione, e di un particolare stage, con particolari obiettivi e caratteristiche).

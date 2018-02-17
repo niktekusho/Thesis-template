@@ -422,3 +422,74 @@ Difficoltà nel reperimento delle informazioni, data la relativa novità dell'ar
 \hline
 \end{tabularx}
 \end{table}
+
+\section{Organizzazione dello Stage}
+
+Ho pianificato le attività, in termini di quantità di ore di lavoro, secondo la tabella ~\ref{tab:organizzazione-stage}.
+Dal momento che ho già avuto modo di trattare il lato tecnologico del progetto nel corso del percorso di studi, ho allocato 40 ore di formazione negli argomenti meno conosciuti e li ho suddivisi in due parti:
+\begin{itemize}
+  \item una prima parte in cui ho studiato le caratteristiche comuni delle architetture a microservizi e i Design Pattern nati per facilitare l'implementazione di un sistema con questo tipo di architettura;
+  \item una seconda parte pratica di applicazione dei princìpi teorici in Node.js e il ripasso della caratteristiche tecniche del \emph{framework} React.
+\end{itemize}
+Durante quest'insieme di attività di formazione, per mitigare i rischi elencati in tabella ~\ref{tab:rischi-stage-interno}, ho focalizzato la mia attività di studio alla ricerca di esempi sviluppati da aziende con esperienza in materia per risolvere i problemi che hanno dovuto affrontare.
+Il secondo macroblocco di attività riguarda l'analisi, la progettazione e l'implementazione dei servizi di comunicazione con i dispositivi. A queste attività ho allocato 120 ore, in quanto per mitigare le probabilità di incorrere nei rischi elencati in tabella ~\ref{tab:rischi-iot} ho assegnato risorse per l'attività di ricerca del protocollo di comunicazione da implementare. Durante le attività di analisi inoltre mi sono preparato per contrastare i rischi più probabili che ho menzionato in tabella ~\ref{tab:rischi-arch-microservizi}, analizzando i requisiti funzionali del sistema e mettendoli in relazione con le attività di ricerca effettuate durante le attività di formazione. Ho incluso nelle attività di progettazione di questo blocco anche la progettazione e realizzazione dei dispositivi "virtualizzati", l'implementazione dei quali mi ha permesso di effettuare i primi test dei servizi di comunicazione.
+Il terzo macroblocco di attività riguarda l'analisi dell'interazione che un \emph{client} può avere con i servizi di comunicazione, permettendomi di arrivare alla progettazione e realizzazione del servizio che compone le funzionalità da offrire alla \emph{dashboard} e la \emph{dashboard} stessa.
+L'ultimo blocco di attività riguarda la revisione del prototipo implementato e la sua possibile pubblicazione sulla piattaforma di Heroku\footcite{heroku}.
+
+\begin{table}
+	\caption{Tabella che illustra la pianificazione delle attività dello stage}
+	\label{tab:organizzazione-stage}
+	\begin{tabular}{|>{\centering} m{1.5cm}|>{\centering} m{1.5cm}|m{10cm}|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Durata in ore}} & \textbf{Descrizione dell'attività} \\
+		\hline
+		\multicolumn{2}{|c|}{40} & Formazione
+	 	\begin{itemize}
+			\item Architettura microservizi
+			\item Node.JS orientato ai microservizi
+			\item React
+		\end{itemize}
+		\\
+		\hline
+		\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizi di comunicazione con i dispositivi IoT\\
+		\cline{2-2}
+		& 40 & \begin{itemize}
+			\item Analisi dei protocolli \emph{open source} esistenti per i diversi dispositivi IoT
+			\item Stima implementazione eventuali nuovi protocolli
+			\end{itemize} \\
+			\cline{2-2}
+			& 80 & \begin{itemize}
+			\item Progettazione dei servizi di comunicazione con i dispositivi
+			\item Progettazione dei test dei servizi di comunicazione
+			\item Realizzazione dei test e dei servizi di comunicazione in Node.js
+		\end{itemize} \\
+		\hline
+		\multirow{4}{*}{120} & & Analisi, sviluppo e implementazione servizio di presentazione delle informazioni agli utenti\\
+		\cline{2-2}
+		& 40 & \begin{itemize}
+		\item Analisi interazione utente con la \textit{dashboard}
+		\end{itemize} \\
+		\cline{2-2}
+		& 80 & \begin{itemize}
+			\item Progettazione del servizio di presentazione informazioni
+			\item Progettazione dei test del servizio di presentazione
+			\item Realizzazione dei test e del servizio di presentazione in React, HTML5 e CSS3.
+		\end{itemize} \\
+		\hline
+		\multicolumn{2}{|c|}{20} & {\textit{Review} dei servizi, \textit{deploy} dei servizi su Heroku.}\\
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Totale ore}} & {\textbf{300}} \\
+		\hline
+\end{tabular}
+\end{table}
+% Le settimane sono composte da 40 ore totali di impegno sul progetto,
+
+\section*{\emph{Milestone}}
+In questa sezione presento le \gls{milestone} previste per il progetto su base settimanale, associando a ciascuna \emph{milestone} i prodotti che devono essere sviluppati entro la corrispondente scadenza.
+\begin{itemize}
+	\item Prima settimana: Completamento delle attività di autoformazione con produzione di una breve relazione riguardante la stessa;
+	\item Seconda e terza settimana: Analisi dei protocolli di comunicazione esistenti, primo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi \textit{virtualizzati};
+	\item Quarta e quinta settimana: Revisione analisi sui protocolli, secondo ciclo di progettazione e implementazione del servizio di comunicazione, mirato all'implementazione dei dispositivi fisici (Raspberry Pi);
+	\item Sesta e settima settimana: Analisi dell'interazione utente con la \emph{dashboard}, progettazione e implementazione del servizio di presentazione;
+	\item Ottava settimana: Revisione dei servizi, stesura del Manuale d'Uso e deploy (opzionale) di un ambiente di simulazione della \emph{dashboard} su Heroku.
+\end{itemize}
