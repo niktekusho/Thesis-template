@@ -236,13 +236,11 @@
     \renewcommand{\theusecasecounter}{\usecasename #1}  % this is where the display of
                                                         % the counter is overwritten/modified
     \refstepcounter{usecasecounter}             % increment counter
-    \vspace{10pt}
+    \vspace{4pt}
     \par \noindent                              % start new paragraph
-    {\large \textbf{\usecasename #1: #2}}       % display the title before the
-                                                % content of the environment is displayed
-    \medskip
+    {\textbf{\usecasename #1: #2}}       % display the title before the content of the environment is displayed
 }{
-    \medskip
+    \smallskip
 }
 
 \newcommand{\usecasename}{UC}
