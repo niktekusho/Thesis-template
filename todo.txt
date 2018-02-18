@@ -1,3 +1,25 @@
+18/02/2018
+VIA LIBERA STESURA ULTIMO CAPITOLO
+
+18/02/2018
+Userai espedienti tipografici per assicurare che le tabelle siano interamente
+contenute in una sola pagina: se spezzate, diventano poco comprensibili.
+Non si capisce perché MQTT abbia una intera sezione a se dedicata.
+Posso capire che il suo uso implichi requisiti architetturali;
+in tal caso, il posto che discuterne è all'interno dell'attuale §3.3,
+e poi -- meglio -- in §3.4.
+La riduzione che hai applicato a §3.3 è troppo timida:
+anche al netto di opportuna riduzione degli spazi verticali,
+i contenuti sono eccessivi.
+Continuo a preferire (e a raccomandarti) di disgregare il monolite
+§3.5 ricollocandone i contenuti all'interno delle corrispondenti attività di sviluppo.
+E ricorda di evitare l'uso di espressioni come "I documenti prodotti",
+che è doppiamente sbagliata, perché non spiega da chi e perché mette l'oggetto a soggetto
+, invece dell'attore.
+Non vedo nulla  a riguardo dell'implementazione (codifica).
+Non è necessario dedicarle una sezione, ma non è ragionevole che sia del tutto trascurata.
+
+
 16/02/2018
 Visto.
 In §3 ti sei allargato oltremodo, incorporando contenuti di eccessivo
