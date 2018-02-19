@@ -1,3 +1,36 @@
+19/02/2018
+Dovrai ripristinare uniformità nell'uso delle maiuscole nei titoli, che
+al momento è del tutto arbitrario. -> test
+Nel titolo di §4.1 rimuoverai la parola "valutazione", che evidentemente
+ridonda. -> done
+In §4.1, a pagina 41, scrivi che hai "stabilito" obiettivi, ma il verbo
+corretto è "fissato". -> done
+A pagina 42, invece, scrivi: ho sperimentato "con mano", che non è forma
+corretta. Nello specifico, vuoi dire "direttamente" / "personalmente". -> done
+In §4.1 fai riferimento a funzionalità che non hai discusso (e neppure
+reso visibili) in §3. Devi fornire una visione d'insieme di cosa fa e
+come si presenta il tuo prototipo. Puoi includerla come sezione
+conclusiva in §3 (che però è già sovradimensionato), oppure premetterla
+a §4.1 (ma in quel caso numerata §4.1). -> test
+In §4.2, quanto dici a proposito di Node.js è poco fondato e zoppicante
+sul piano grammaticale. In una frase già troppo lunga (che va spezzata),
+scrivi: "è possibile scrivere codice sorgente eccessivamente complesso".
+Che sia possibile è poco importante. Quel che conta è che "attivamente
+induca" (cioè, causi la scrittura di). L'affermazione che la versione di
+linguaggio che tu hai usato (che qui non riferisci, e di cui non spieghi
+le caratteristiche significative al caso discusso) mitighi il problema
+non è credibile senza informazione aggiuntiva. -> test
+§4.3 non è soddisfacente, perché il primo argomento da trattare (e che
+invece hai trascurato), che influenza anche il titolo di sezione, è il
+divario di conoscenze tra quanto hai appreso nel corso di studi e quanto
+ti sarebbe servito sapere per affrontare al meglio il tuo stage.
+Inoltre, quanto dici intorno alla tua esperienza lavorativa non è
+credibile perché non ne fornisci i contorni, così come dire che "Senza
+questa opportunità [...]" è pretestuoso, perché vi sono (in maniera
+crescente) proposte di stage che trattano temi molto vicini a quelli che
+hai affrontato. -> todo
+
+
 18/02/2018
 VIA LIBERA STESURA ULTIMO CAPITOLO
 

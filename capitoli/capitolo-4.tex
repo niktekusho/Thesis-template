@@ -8,10 +8,63 @@
 \label{cap:analisi-requisiti}
 %**************************************************************
 
-\section{Valutazione raggiungimento degli obiettivi}
+\section{Presentazione \emph{dashboard}}
+
+Ho composto l'interfaccia grafica della \emph{dashboard} di due parti:
+\begin{itemize}
+  \item una barra verticale sulla sinistra contenente le voci di navigazione del menù;
+  \item la restante parte della pagina per la visualizzazione dei contenuti.
+\end{itemize}
+Come illustro in figura ~\ref{fig:homepage}, nella pagina principale della \emph{dashboard} presento lo stato dei servizi del sistema: per ogni servizio mostro il nome, un icona di riconoscimento e, per mezzo di un pallino verde o rosso, il suo stato (operativo o malfunzionante).
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{demo/home-page}
+    \caption{Pagina principale della \emph{dashboard}}
+    \label{fig:homepage}
+\end{figure}
+
+Navigando nella pagina dedicata ai dispositivi (voce \emph{Devices}), elenco i dispositivi collegati mostrandone la categoria, il produttore, il modello e la revisione. Ho inserito un'illustrazione di questa pagina in figura ~\ref{fig:devices}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{demo/devices}
+    \caption{Pagina che ricapitola i dispositivi collegati alla \emph{dashboard}}
+    \label{fig:devices}
+\end{figure}
+
+Nella pagina dedicata alle aree tematiche legate all'illuminazione e alla temperatura, riprendo la visualizzazione mostrata per l'elenco dei dispositivi collegati, mostrando solamente i dispositivi di quella categoria. Nel caso della pagina legata alla temperatura, per ogni dispositivo visualizzo l'identificativo del dispositivo, l'ultima temperatura rilevata e la data in cui il sensore ha misurato quella temperatura. Nella pagina legata all'illuminazione espongo per ogni dispositivo l'identificativo e la data dell'ultima comunicazione con la lampada.
+Selezionando uno dei dispositivi elencati, apro una pagina di dettaglio in cui presento le ultime misurazioni disponibili (fino a 50) in un grafico.
+Come è possibile osservare in figura ~\ref{fig:temp}, nella pagina di dettaglio di un sensore di temperatura visualizzo il suo identificativo, il produttore, il modello, la revisione e un grafico con l'andamento della temperatura rilevata dal dispositivo.
+Ho implementato una funzionalità di personalizzazione dell'unità di misura per la temperatura: l'utente, accedendo alla pagina \emph{Settings}, può scegliere l'unità di misura della temperatura tra quelle gestite dal sistema. Quando l'utente cambia l'unità di misura, questa modifica si ripercuote su tutte le misurazioni di temperatura visualizzabili nella \emph{dashboard}, inclusi i grafici della temperatura.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{demo/ti-temperature}
+    \caption{Pagina con il dettaglio di un sensore di temperatura}
+    \label{fig:temp}
+\end{figure}
+
+Nella pagina di dettaglio delle lampade controllabili da remoto, presento le informazioni già citate con l'aggiunta di un interruttore per l'accensione e lo spegnimento della lampada. In questo caso nel grafico con le misurazioni indico sulle ordinate la potenza assorbita dalla lampada, secondo specifica del dispositivo. Ho incluso in figura ~\ref{fig:light} una schermata della pagine di dettaglio con la lampada spenta e in figura ~\ref{fig:light-on} una schermata della stessa pagina con la lampada accesa.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{demo/philips-light}
+    \caption{Pagina di dettaglio della lampada spenta}
+    \label{fig:light}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{demo/philips-light-on}
+    \caption{Pagina di dettaglio della lampada accesa}
+    \label{fig:light-on}
+\end{figure}
+
+\section{Raggiungimento degli obiettivi}
 
 Per valutare correttamente il raggiungimento degli obiettivi è necessario che riprenda gli obiettivi fissati nel capitolo ~\ref{cap:processi-metodologie}.
-In particolare voglio osservare le tabelle in cui ho stabilito gli obiettivi di prodotto (~\ref{tab:obiettivi-prodotto}), gli obiettivi formativi (~\ref{tab:obiettivi-formativi}) e tecnici (~\ref{tab:obiettivi-tecnici}) del progetto.
+In particolare voglio osservare le tabelle in cui ho fissato gli obiettivi di prodotto (~\ref{tab:obiettivi-prodotto}), gli obiettivi formativi (~\ref{tab:obiettivi-formativi}) e tecnici (~\ref{tab:obiettivi-tecnici}) del progetto.
 
 Iniziando dalla valutazione degli obiettivi di prodotto, posso definirmi soddisfatto delle funzionalità implementate nel prototipo.
 Ho soddisfatto gli obiettivi "OP2" e "OP3", a cui avevo assegnato importanza critica, e quindi il prototipo mostra correttamente quello che mi aspettavo di presentare.
@@ -38,8 +91,8 @@ L'omissione dell'obiettivo "OP4" e la parziale implmentazione di "OP5" e "OP1" �
 \begin{itemize}
   \item difficoltà nelle attività di implementazione, citate in ~\ref{val-req};
   \item sottovalutazione dell'impegno richiesto per implementare le funzionalità più importanti.
-\end{itemize} 
-Considero che le difficoltà implementative che ho riscontrato siano state causate dalla mia inesperienza con la realizzazione di architetture \emph{software} distribuite e dalla mancanza di documentazione che illustri le \emph{best practice} applicate in sistemi reali. 
+\end{itemize}
+Considero che le difficoltà implementative che ho riscontrato siano state causate dalla mia inesperienza con la realizzazione di architetture \emph{software} distribuite e dalla mancanza di documentazione che illustri le \emph{best practice} applicate in sistemi reali.
 Nella tabella ~\ref{tab:esito-obiettivi-prodotto} riassumo la valutazione degli obiettivi di prodotto soddisfatti.
 
 \begin{table}[H]
@@ -65,8 +118,8 @@ OP5 & Visualizzare e gestire le preferenze dell'utente. & Parzialmente soddisfat
 Ho inserito nella tabella ~\ref{tab:esito-obiettivi-formativi} la mia valutazione degli obiettivi formativi del progetto.
 Considero l'obiettivo "OF1" soddisfatto in quanto le attività di analisi svolte mi hanno permesso di individuare le funzionalità di dispositivi IoT che corrispondono a prodotti esistenti, confermando di fatto che le funzionalità che ho individuato sono richieste dal mercato.
 Considero l'obiettivo "OF2" soddisfatto in quanto durante le attività di analisi ho individuato quali caratteristiche di prestazioni e affidabilità sono richieste da dispositivi con risorse di elaborazione limitate ed ho associato queste caratteristiche a ciascun protocollo valutato per determinare quale soluzione tecnica adottare. Ho quindi imparato a valutare l'importanza delle tecniche di individuazione e correzione degli errori dal punto di vista \emph{software}, della gestione dell'instaurazione del collegamento tra i dispositivi e della quantità di informazioni aggiuntive necessarie per la comunicazione delle informazioni.
-Considero l'obiettivo "OF3" parzialmente soddisfatto in quanto durante l'esperienza di sviluppo del progetto di stage non sono riuscito ad approfondire gli aspetti meno documentati delle architetture a microservizi; nonostante ciò, ho comunque sviluppato un'architettura a microservizi scalabile, nella quale ho sperimentato con mano i pregi e i difetti di una simile architettura.
-Considero l'obiettivo "OF4" soddisfatto in quanto fin dalle prime attività di progettazione e implementazione ho utlizzato \emph{container} per isolare i microservizi realizzati; inoltre grazie alle difficoltà incontrate durante lo sviluppo riguardanti la comunicazione tra i servizi, ho approdondito le problematiche legate alla visibilità dei servizi nel contesto di reti parzialmente isolate, in cui le comunicazioni sono regolamentate da un entità che non permette una comunicazione indiscriminata tra \emph{container}, ma richiede la definizione di quali \emph{container} nella rete sono visibili, in gergo tecnico "reperibili" (\emph{discoverable}).  
+Considero l'obiettivo "OF3" parzialmente soddisfatto in quanto durante l'esperienza di sviluppo del progetto di stage non sono riuscito ad approfondire gli aspetti meno documentati delle architetture a microservizi; nonostante ciò, ho comunque sviluppato un'architettura a microservizi scalabile, nella quale ho sperimentato personalmente i pregi e i difetti di una simile architettura.
+Considero l'obiettivo "OF4" soddisfatto in quanto fin dalle prime attività di progettazione e implementazione ho utlizzato \emph{container} per isolare i microservizi realizzati; inoltre grazie alle difficoltà incontrate durante lo sviluppo riguardanti la comunicazione tra i servizi, ho approdondito le problematiche legate alla visibilità dei servizi nel contesto di reti parzialmente isolate, in cui le comunicazioni sono regolamentate da un entità che non permette una comunicazione indiscriminata tra \emph{container}, ma richiede la definizione di quali \emph{container} nella rete sono visibili, in gergo tecnico "reperibili" (\emph{discoverable}).
 
 \begin{table}[H]
 \caption{Tabella di valutazione degli obiettivi formativi del progetto}
@@ -125,10 +178,10 @@ Durante lo svolgimento del progetto di stage ho studiato e approfondito alcune t
 
 Valuto di seguito l'esperienza che ho avuto con le tecnologie e gli strumenti di cui avevo conoscenza pregressa:
 \begin{itemize}
-  \item \textbf{Node.js}: dal momento che Node.js utilizza il modello \emph{event-driven} per la gestione delle operazioni di \emph{input} e \emph{output} ho semplificato molto la gestione asincrona delle richieste concorrenti, tuttavia, dal momento che Node.js favorisce l'utilizzo del Design Pattern \gls{callback}, è possibile scrivere codice sorgente eccessivamente complesso. Considero questo difetto poco rilevante dal momento che Node.js, nella versione che ho utilizzato per il progetto, supporta una sintassi che previene la scrittura di codice poco leggibile.
+  \item \textbf{Node.js}: dal momento che Node.js utilizza il modello \emph{event-driven} per la gestione delle operazioni di \emph{input} e \emph{output} ho semplificato molto la gestione asincrona delle richieste concorrenti. Tra gli aspetti negativi ho osservato che Node.js favorisce attivamente l'utilizzo del Design Pattern \gls{callback}, inducendo alla scrittura di codice sorgente eccessivamente complesso. Considero questo difetto poco rilevante dal momento che Node.js, nella versione \texttt{9.3.0} che ho utilizzato per il progetto, supporta la sintassi definita in ECMAScript 2017 per la definizione di funzioni asincrone senza l'utilizzo del \emph{pattern} \emph{callback}. Grazie alle \emph{keyword} \texttt{async} e \texttt{await}, ho implementato funzioni asincrone, leggibili dagli sviluppatori come se fossero istruzioni sequenziali, evitando un'eccessiva complessità del codice.
   \item \textbf{React}: la natura a componenti che React cerca di diffondere mi ha permesso di riutilizzare molte componenti grafiche, aumentando la mia  produttività e garantendo una maggiore affidabilità delle componenti. Dal momento che i dati di una componente figlia non possono modificare direttamente i dati di una componente padre ho riscontrato che le attività di manutenzione delle componenti è stata semplice, permettendomi di identificare in breve tempo eventuali errori nel codice.
-  \item \textbf{Jest}: durante il suo utilizzo ho osservato che è una piattaforma di test completa, che include strumenti di validazione dei risultati e strumenti per il \gls{mocking}, e che non richiede una configurazione da parte dell'utente, utilizzando impostazioni predefinite ottimali. Un altro aspetto che ho osservato durante le attività di codifica è che i test scritti vengono eseguiti in parallelo, velocizzando di molto l'individuazione di errori nel codice. Un aspetto negativo che ho riscontrato in Jest consiste nella sua minore flessibilità rispetto ad altre librerie di test, le quali permettono ad esempio di sostituire le componenti di valutazione delle istruzioni. Nell'ambito del progetto di stage non ho trovato questo difetto rilevante, tuttavia con diverse esigenze una maggiore flessibilità potrebbe essere richiesta.   
-  \item \textbf{ESLint}: ho trovato questo strumento fondamentale durante le attività di codifica in quanto, attraverso la definizione di regole comuni per la scrittura del codice sorgente del progetto, mi ha permesso di scrivere codice sorgente con uno stile uniforme e mi ha segnalato preventivamente possibili errori nel codice scritto. L'integrazione con l'\emph{editor} di testo ha migliorato la mia produttività, permettendomi di non lasciare mai l'ambiente di scrittura per controllare la validità del codice prodotto. Un altro aspetto che ho apprezzato riguarda la semplicità con cui ho individuato le soluzioni agli errori segnalati dallo strumento, grazie alla sua documentazione ben realizzata. L'aspetto negativo principale che ho rilevato consiste nella necessità di creare un \emph{file} di configurazione in cui la definizione delle regole, pur essendo ben documentata, richiede una quantità di tempo non banale. Durante il progetto sono riuscito a mitigare questo difetto utilizzando un \emph{template} comune per la generazione dei servizi. 
+  \item \textbf{Jest}: durante il suo utilizzo ho osservato che è una piattaforma di test completa, che include strumenti di validazione dei risultati e strumenti per il \gls{mocking}, e che non richiede una configurazione da parte dell'utente, utilizzando impostazioni predefinite ottimali. Un altro aspetto che ho osservato durante le attività di codifica è che i test scritti vengono eseguiti in parallelo, velocizzando di molto l'individuazione di errori nel codice. Un aspetto negativo che ho riscontrato in Jest consiste nella sua minore flessibilità rispetto ad altre librerie di test, le quali permettono ad esempio di sostituire le componenti di valutazione delle istruzioni. Nell'ambito del progetto di stage non ho trovato questo difetto rilevante, tuttavia con diverse esigenze una maggiore flessibilità potrebbe essere richiesta.
+  \item \textbf{ESLint}: ho trovato questo strumento fondamentale durante le attività di codifica in quanto, attraverso la definizione di regole comuni per la scrittura del codice sorgente del progetto, mi ha permesso di scrivere codice sorgente con uno stile uniforme e mi ha segnalato preventivamente possibili errori nel codice scritto. L'integrazione con l'\emph{editor} di testo ha migliorato la mia produttività, permettendomi di non lasciare mai l'ambiente di scrittura per controllare la validità del codice prodotto. Un altro aspetto che ho apprezzato riguarda la semplicità con cui ho individuato le soluzioni agli errori segnalati dallo strumento, grazie alla sua documentazione ben realizzata. L'aspetto negativo principale che ho rilevato consiste nella necessità di creare un \emph{file} di configurazione in cui la definizione delle regole, pur essendo ben documentata, richiede una quantità di tempo non banale. Durante il progetto sono riuscito a mitigare questo difetto utilizzando un \emph{template} comune per la generazione dei servizi.
   \item \textbf{HTML5}: del linguaggio HTML5 ho apprezzato subito la sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard; inoltre essendo ormai supportato da tutti i \emph{browser} sul mercato non ho trovato difficoltà a rendere multipiattaforma l'interfaccia \emph{web} della \emph{dashboard}. Un altro aspetto che ha aumentato il mio grado di soddisfazione riguardo a questo linguaggio risiede nella facilità con cui si trovano in rete risorse che spieghino come utilizzare in maniera ottimale le funzionalità del linguaggio.
   \item \textbf{Docker Engine}: ho constatato che la gestione del ciclo di vita di un \emph{container} per mezzo del Docker Engine è molto semplice ed intuitiva, grazie alla buona documentazione per l'utilizzo; ho trovato che la creazione di \emph{container} basati su una stessa formula è molto semplice e ben documentata attraverso la creazione di \emph{file} \emph{Dockerfile}, nei quali ho specificato il sistema operativo del \emph{container}, le dipendenze necessarie all'esecuzione del servizio e quali risorse il servizio espone.
   \item \textbf{Atom}: è l'\emph{editor} che ho utilizzato per scrivere la documentazione del progetto e ho notato fin da subito che è estremamente personalizzabile, sia in termini di interfaccia grafica sia in termini di supporto alla scrittura, tuttavia mi sono imbattuto in numerose piccole interruzioni nel funzionamento dell'applicazione, dovuti alla quantità di risorse che il \emph{software} allocava. L'aspetto principale che mi ha spinto ad utilizzare un altro strumento per la codifica risiede nell'assenza di un'integrazione nativa con gli strumenti di \emph{debug} del codice.
@@ -156,6 +209,13 @@ Valuto di seguito l'esperienza che ho avuto con le tecnologie e gli strumenti ch
 %**************************************************************
 \section{Conclusioni}
 
-L'esperienza di stage mi ha fatto osservare che la condivisione delle conoscenze all'interno di un gruppo di lavoro consente a tutti i membri del gruppo di crescere formativamente; sebbene avessi preventivato il rischio di non avere abbastanza esperienza quando ho valutato l'ipotesi dello svolgimento di uno stage interno individuale, ho comunque realizzato che l'aspetto collaborativo, a cui sono abituato grazie alla mia attività lavorativa in azienda, mi è mancato soprattutto durante le attività di ricerca e analisi. La sopravvalutazione delle mie capacità e la sottovalutazione degli obiettivi che mi ero preposto ha causato quindi un ridimensionamento degli obiettivi necessario a contenere le attività all'interno del margine di tempo dedicato allo stage.
+Le conoscenze che ho acquisito durante lo svolgimento del progetto di stage mi hanno permesso di espandere i contenuti studiati durante il corso di studi soprattutto da tre punti di vista:
+\begin{itemize}
+  \item \textbf{reti}: lo studio del protocollo MQTT, non trattato nel corso di "Reti e Sicurezza", non mi ha richiesto particolari sforzi, dal momento che tale corso fornisce una solida base a cui attingere per la costruzione di nuove conoscenze;
+  \item \textbf{programmazione distribuita}: in questo caso il divario tra le conoscenze acquisite durante il corso di "Programmazione Concorrente e Distribuita" è stato più difficile da colmare. Infatti tale corso alloca la maggior parte delle risorse alla comprensione della concorrenza, trattando l'argomento "Distribuzione" in maniera più superficiale. Un altro aspetto che ha contribuito a distanziare l'esperienza di stage dalle conoscenze acquisite durante il corso risiede nella mia volontà di utilizzare la tecnologia Node.js per l'implementazione del prodotto, dal momento che Node.js non è una tecnologia trattata dal corso.
+  \item \textbf{ingegneria del \emph{software}}: malgrado l'impiego dell'architettura a microservizi mi abbia richiesto lo studio di \emph{Design Pattern} specifici, credo che i concetti teorici e pratici appresi durante il corso di "Ingegneria del \emph{Software}" siano stati fondamentali per il completamento del prototipo, a partire dagli strumenti di analisi e progettazione per giungere alle tecniche di gestione della qualità del \emph{software}.
+\end{itemize}
 
-Sono comunque soddisfatto dell'opportunità che ho avuto, in quanto sono consapevole che nella mia attuale posizione lavorativa non avrei avuto la possibilità di sviluppare un sistema con architettura a microservizi. Senza questa opportunità non avrei avuto la possibilità di analizzare le peculiarità tecniche delle architetture distribuite in generale e a microservizi in particolare.  
+L'esperienza di stage mi ha fatto osservare che la condivisione delle conoscenze all'interno di un gruppo di lavoro consente a tutti i membri del gruppo di crescere formativamente; sebbene avessi preventivato il rischio di non avere abbastanza esperienza quando ho valutato l'ipotesi dello svolgimento di uno stage interno individuale, ho comunque realizzato che l'aspetto collaborativo, a cui sono abituato grazie alla mia attività lavorativa in azienda, mi è mancato soprattutto durante le attività di ricerca e analisi. La sopravvalutazione delle mie capacità e la sottovalutazione degli obiettivi che mi ero preposto ha causato quindi un ridimensionamento degli obiettivi, necessario a contenere le attività all'interno del margine di tempo dedicato allo stage.
+
+Sono comunque soddisfatto dell'opportunità che ho avuto, in quanto ho avuto la possibilità di sperimentare la realizzazione di un sistema con architettura a microservizi nell'ambito della domotica.

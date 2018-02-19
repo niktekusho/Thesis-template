@@ -73,11 +73,10 @@ VS Code & Visual Studio Code è un \emph{editor} di testo sviluppato da \gls{Mic
 \newpage
 
 %**************************************************************
-\section{Analisi dei Requisiti}
+\section{Analisi dei requisiti}
 \label{ar}
 
-% Approfondire l'Analisi dei Requisiti prodotta. + Analisi dei protocolli
-Ho iniziato l'analisi dei requisiti cercando di capire quali funzionalità dovesse offrire il prototipo; per affrontare al meglio la definizione di queste funzionalità, ho esplorato il mercato dei dispositivi IoT esistenti per individuare i limiti del dominio applicativo in cui questi dispositivi si inseriscono.
+Ho iniziato l'Analisi dei requisiti cercando di capire quali funzionalità dovesse offrire il prototipo; per affrontare al meglio la definizione di queste funzionalità, ho esplorato il mercato dei dispositivi IoT esistenti per individuare i limiti del dominio applicativo in cui questi dispositivi si inseriscono.
 Ho osservato che una delle caratteristiche desiderabili che il sistema deve offrire riguarda l'identificazione precisa di quali dispositivi sono collegati al sistema; per questo ho vincolato l'accesso dei dispositivi al sistema: per accedervi i dispositivi devono fornire informazioni relative a modello, revisione, produttore e anno di produzione del dispositivo, oltre a un seriale univoco.
 
 Ho inoltre suddiviso i dispositivi in due tipi principali in base alle funzionalità che essi offrono:
@@ -556,7 +555,7 @@ Nel diagramma ~\ref{fig:classi-web} indico l'architettura ad alto livello proget
 \pagebreak
 
 %**************************************************************
-\section{Implementazione e Verifica}
+\section{Implementazione e verifica}
 
 Durante le attività di implementazione delle specifiche del sistema ho scritto, oltre al codice sorgente dei servizi, anche documenti in cui indico le istruzioni per eseguire le singole componenti del sistema e specifico le risorse esposte dalle stesse.
 I documenti in cui indico le risorse esposte dai servizi sono rivolti agli utenti più esperti che vogliono approfondire le funzionalità offerte dai servizi. Nelle mie previsioni questi utenti grazie ai documenti di specifica dovrebbero essere in grado di implementare le altre componenti del sistema, sostituendo le componenti da me implementate. Ho scritto questi documenti contestualmente all'implmentazione delle funzionalità nel codice sorgente, adeguandoli manualmente ad ogni modifica compiuta nel codice sorgente.\\
@@ -593,7 +592,7 @@ Ho svolto le attività di verifica durante l'implementazione del \emph{software}
   \item ho pianificato il secondo insieme di attività del processo di verifica del prodotto effettuando prove durante l'esecuzione del \emph{software}.
 \end{itemize}
 Ho condotto l'analisi dinamica del prodotto sia con l'ausilio di strumenti di test automatici, sia effettuando prove manuali, simulando l'interazione di un \emph{client}, inteso come attore, con i servizi.
-Ho progettato i test per raggiungere la copertura del codice fissata durante l'attività di Analisi dei Requisiti (riferimento ~\ref{tab:requisiti-qualita}).
+Ho progettato i test per raggiungere la copertura del codice fissata durante l'attività di Analisi dei requisiti (riferimento ~\ref{tab:requisiti-qualita}).
 Durante la progettazione dei test ho scelto di approfondire la progettazione dei test d'unità di tutte le componenti progettate come primo \emph{step} mentre ho tralasciato la progettazione dei test d'integrazione dei servizi: ho perseguito questa scelta perché ho ritenuto più importante aumentare l'affidabilità intrinseca di ciascun servizio indipendentemente dagli altri.
 Uno dei fattori che mi ha consentito di effetuare questa scelta consiste nell'individualità dell'implementazione del progetto: se al progetto avessero collaborato uno o più sviluppatori, avrebbe assunto maggiore importanza la corretta interazione tra i servizi. Inoltre, dal momento che i servizi che ho progettato hanno un flusso dei dati ben definito, mi ha permesso di tenere allineate le modifiche attraverso i servizi in efficienza.
 Nei test ho usato ampiamente \emph{mock} e \emph{stub} per isolare le eventuali dipendenze tra un modulo e un altro all'interno dello stesso servizio. Come avevo previsto durante lo studio degli argomenti, la componente in cui ho avuto alcune difficoltà nell'implementazione dei test consiste nei moduli che dialogano con un \emph{database}: per arginare il problema ho utilizzato librerie accessorie presenti su npm per simulare le risposte che i \emph{database} inviano nel caso in cui si verifichino errori. In questo modo ho potuto testare con successo anche eventuali malfunzionamenti relativi al collegamento con i \emph{database}.
@@ -630,7 +629,7 @@ Applicazione \emph{web} & 50 \% & 63 \% \\
 \end{table}
 
 %**************************************************************
-\section{Validazione dei Requisiti}
+\section{Validazione dei requisiti}
 \label{val-req}
 
 Nella tabella ~\ref{tab:validazione-requisiti}) ho elencato lo stato dell'implementazione dei requisiti citati in Analisi (riferimento ~\ref{ar})).
