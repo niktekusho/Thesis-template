@@ -26,7 +26,7 @@ Nella tabella ~\ref{tab:tecnologie} presento il sommario delle tecnologie e degl
 \hline
 \textbf{Tecnologia} & \textbf{Descrizione} & \textbf{Versioni} & \textbf{Esp.}\\
 \hline
-Node.js & Node.js è un'ambiente d'esecuzione utilizzato per l'implementazione di applicazioni server in JavaScript. & v9.2.0, \newline v9.2.1 & 4 \\
+Node.js & Node.js è un ambiente d'esecuzione utilizzato per l'implementazione di applicazioni server in JavaScript. & v9.2.0, \newline v9.2.1 & 4 \\
 \hline
 React & React è una libreria per il linguaggio JavaScript il cui scopo è costruire interfacce grafiche. & v16.2.0 & 3 \\
 \hline
@@ -119,15 +119,15 @@ I motivi che mi hanno spinto a scegliere MQTT sono elencati di seguito:
 	\item è un protocollo che permette l'aggiunta e la rimozione di dispositivi dinamicamente, richiedendo intervento manuale minimo all'utente.
 \end{itemize}
 
-Nella mia analisi dell'interazione dell'utente con la \emph{dashboard} ho specificato che l'accesso alle funzionalità del prodotto avvenga attraverso una interfaccia \emph{web}, opportunamente progettata per essere reattiva (ottimizzata per \emph{mobile}). Ho considerato anche la realizzazione di applicazioni native per i dispositivi \emph{mobile}, tuttavia per la realizzazione del prototipo ho preferito concentrare le mie attività nell'implementazione di una soluzione multipiattaforma.
+Nella mia analisi dell'interazione dell'utente con la \emph{dashboard} ho specificato che l'accesso alle funzionalità del prodotto avvenga attraverso una interfaccia \emph{web}, opportunamente progettata per essere reattiva (ottimizzata per \emph{mobile}). Ho considerato anche la realizzazione di applicazioni native per i dispositivi \emph{mobile}, tuttavia per la realizzazione del prototipo ho preferito concentrare le mie attività nell'implementazione di una soluzione multi-piattaforma.
 Durante le attività di analisi dei requisiti ho scritto un documento di Analisi dei Requisiti, nel quale ho indicato gli obiettivi e le funzionalità del prototipo e dei dispositivi.
 Per raccogliere e specificare i requisiti del sistema e integrarli nel documento di Analisi dei Requisiti ho utilizzato i seguenti strumenti:
 \begin{itemize}
   \item casi d'uso, che permettono di valutare ogni requisito sulla base degli attori che interagiscono con il sistema, rispettando le aspettative che l'attore tiene dall'avvio dell'interazione al termine della stessa;
   \item diagrammi \gls{uml} dei casi d'uso, che permettono di rappresentare i casi d'uso attraverso una definizione delle relazioni tra sistema, attori e funzionalità che il sistema offre agli attori.
 \end{itemize}
-Nella stesura della'Analisi dei Requisiti ho utilizzato \emph{template} per velocizzare la definizione dei casi d'uso e dei requisiti.
-Nei \emph{template} che ho utilizzato, ho catalogato i casi d’uso nella forma seguente:
+Nella stesura dell'Analisi dei Requisiti ho utilizzato \emph{template} per velocizzare la definizione dei casi d'uso e dei requisiti.
+Nei \emph{template} che ho utilizzato, ho catalogato i casi d'uso nella forma seguente:
 
 \begin{figure}[H]
   \centering
@@ -135,7 +135,7 @@ Nei \emph{template} che ho utilizzato, ho catalogato i casi d’uso nella forma 
   \begin{tabular}{@{}>{$}l<{$}l@{}}
     UC & specifica che si sta parlando di un caso d’uso;\\
     numero & è assoluto e rappresenta un riferimento univoco al caso d’uso in questione;\\
-    caso & individua eventuali diramazioni all’interno dello stesso caso d’uso.\\
+    caso & individua eventuali diramazioni all'interno dello stesso caso d’uso.\\
   \end{tabular}
 \end{figure}
 
@@ -181,7 +181,7 @@ Lo scenario principale che ho immaginato, descritto nel caso d'uso ~\ref{uc:scen
 \end{figure}
 % fine uc
 
-Durante le attività di analisi, ho utilizzato la tecnica del \emph{top down} a partire dallo scenario principale menzionato precedentemente per raggiungere, attraverso iterazioni in cui ho raffinato i problemi in sottoproblemi più specifici, uno stato in cui mi è risultato chiaro quali requisiti dovesse soddisfare il prototipo.
+Durante le attività di analisi, ho utilizzato la tecnica del \emph{top down} a partire dallo scenario principale menzionato precedentemente per raggiungere, attraverso iterazioni in cui ho raffinato i problemi in sotto-problemi più specifici, uno stato in cui mi è risultato chiaro quali requisiti dovesse soddisfare il prototipo.
 Per non allungare eccessivamente questa sezione, riporto l'analisi di uno dei casi d'uso sviluppati: la visualizzazione dei dispositivi collegati al sistema.
 La visualizzazione dei dispositivi collegati, caso d'uso UC1 descritto testualmente in ~\ref{uc:uc1} e illustrato utilizzando il linguaggio UML in figura ~\ref{fig:uc1}, mette in relazione l'utente con i dispositivi collegati al sistema. Lo scopo di questa interazione è far conoscere all'utente alcune informazioni elementari riguardanti i dispositivi collegati. In questo caso d'uso ho incluso un'insieme di funzionalità che non cambiano lo scopo del caso d'uso, bensì specificano eventuali interazioni che l'utente può avviare con il sistema. Una delle particolarità del caso d'uso UC1 riguarda il modo con cui ho gestito l'interazione dell'utente con un singolo dispositivo (UC1.3): se l'utente interagisce con un singolo dispositivo nell'ambito di questo caso d'uso, allora l'utente desidera conoscere le informazioni che riguardano quel dispositivo in maggiore dettaglio. Dal momento che le informazioni presentate all'utente in questo \emph{step} riguardano i dispositivi collegati, allora significa che il dispositivo attore in UC1.3 è incluso nella lista dei dispositivi collegati. Da questo pensiero nasce la relazione di inclusione tra l'attore "Dispositivo" e l'attore più esteso "Dispositivi".
 
@@ -204,7 +204,7 @@ La visualizzazione dei dispositivi collegati, caso d'uso UC1 descritto testualme
 % fine uc
 
 % ## Requisiti
-Presento di seguito i requisiti emersi durante l’analisi dei casi d’uso.
+Presento di seguito i requisiti emersi durante l'analisi dei casi d’uso.
 Per permetterne una consultazione agevole, ho deciso di inserire i requisiti in un insieme di tabelle dei requisiti suddivise in base alla categoria degli stessi.
 In tutte le tabelle cui presenti presento i requisiti indicando:
 \begin{itemize}
@@ -332,7 +332,7 @@ RMF10 & Obbligatorio & L'utente deve poter visualizzare le statistiche di utiliz
 \end{table}
 
 % #### Tabella dei requisiti di qualità
-In tabella ~\ref{tab:requisiti-qualita} indico i requisiti di qualità che ho individuato durante le attività di analisi dei requisiti. Con questi requisiti indico le caratteristiche che un sistema \emph{software} deve soddisfare per essere definito \emph{software} di qualità. Nel corso di Ingerneria del Software\footcite{swe-req-qual} ho studiato che i parametri con cui si può misurare la qualità di un \emph{software} possono essere suddivisi in due categorie:
+In tabella ~\ref{tab:requisiti-qualita} indico i requisiti di qualità che ho individuato durante le attività di analisi dei requisiti. Con questi requisiti indico le caratteristiche che un sistema \emph{software} deve soddisfare per essere definito \emph{software} di qualità. Nel corso di Ingegneria del Software\footcite{swe-req-qual} ho studiato che i parametri con cui si può misurare la qualità di un \emph{software} possono essere suddivisi in due categorie:
 \begin{itemize}
   \item i parametri esterni si riferiscono alla qualità del \emph{software} percepita dagli utenti (correttezza, affidabilità, efficienza, ecc.);
   \item i parametri interni si riferiscono alla qualità del \emph{software} percepita dagli autori del sistema e dai suoi manutentori (manutenibilità, riusabilità, leggibilità, ecc.).
@@ -435,7 +435,7 @@ Esso pubblica periodicamente la temperatura rilevata secondo l'argomento \emph{t
 Data la relativa importanza i dati vengono inviati con un QoS di livello 0 nella categoria \emph{temperature}, mentre con QoS di livello 1 nella categoria \emph{hw\_info}.
 In questo modo al collegamento del dispositivo "virtualizzato" viene effettuato almeno un tentativo di trasmissione delle informazioni relative alle specifiche del dispositivo.
 Anche se nel diagramma è disegnato individualmente, è possibile che ve ne siano molteplici.
-Nel diagramma ~\ref{fig:classi-termometro} ho illustrato il diagramma delle classi UML a cui sono giunto durante le attività di progettazione ad alto livello. Vista la necessità di generare dati riguardanti la temperatura in maniera psuedocasuale, ho utilizzato il Design Pattern \gls{abstract-factory} per permettere la creazione di funzioni per la generazione della temperatura. Queste funzioni per la generazione della temperatura sono incapsulate in una classe \texttt{TemperatureCurve}, il cui scopo è definire la funzione matematica che restituisce la temperatura in base alla data e ora specificata. L'implementazione di \texttt{TemperatureCurve} progettata per il termometro virtualizzato è \texttt{SineTemperatureCurve}, nella quale restituisco la temperatura sulla base di una temperatura di base specificata e applicando a tale temperatura una funzione sinusoidale.
+Nel diagramma ~\ref{fig:classi-termometro} ho illustrato il diagramma delle classi UML a cui sono giunto durante le attività di progettazione ad alto livello. Vista la necessità di generare dati riguardanti la temperatura in maniera pseudocasuale, ho utilizzato il Design Pattern \gls{abstract-factory} per permettere la creazione di funzioni per la generazione della temperatura. Queste funzioni per la generazione della temperatura sono incapsulate in una classe \texttt{TemperatureCurve}, il cui scopo è definire la funzione matematica che restituisce la temperatura in base alla data e ora specificata. L'implementazione di \texttt{TemperatureCurve} progettata per il termometro virtualizzato è \texttt{SineTemperatureCurve}, nella quale restituisco la temperatura sulla base di una temperatura di base specificata e applicando a tale temperatura una funzione sinusoidale.
 Ho applicato il Design Pattern Abstract Factory definendo una classe \texttt{TemperatureCurveFactory}, il cui unico scopo è creare oggetti che implementino \texttt{TemperatureCurve}.
 Nella tabella ~\ref{tab:classi-termometro} ho elencato le classi sviluppate per soddisfare i requisiti di funzionamento del dispositivo.
 
@@ -472,7 +472,7 @@ Nella tabella ~\ref{tab:classi-termometro} ho elencato le classi sviluppate per 
 
 % ### Servizio: temperatura
 Il servizio relativo alla temperatura si occupa di raccogliere tutti i dati provenienti dai sensori di temperatura, memorizzandoli e mettendoli a disposizione in un formato strutturato per gli altri servizi del sistema.
-Il servizio si sottoscrive alla categoria \emph{temperature} e comunica con un QoS di livello 0, inoltre può pubblicare messaggi con la sottocategoria \emph{temperature/active} per usufruire delle funzionalità aggiuntive presenti in dispositivi attivi legati alla temperatura, con un QoS di livello 1.
+Il servizio si sottoscrive alla categoria \emph{temperature} e comunica con un QoS di livello 0, inoltre può pubblicare messaggi con la sotto-categoria \emph{temperature/active} per usufruire delle funzionalità aggiuntive presenti in dispositivi attivi legati alla temperatura, con un QoS di livello 1.
 
 % Lampada virtualizzata
 Con il servizio della lampada "virtualizzata" simulo la presenza nella rete di un dispositivo "attivo": una lampada in grado di comunicare il proprio assorbimento energetico e che è controllabile da remoto.
@@ -487,7 +487,7 @@ L'argomento a cui la lampada si sottoscrive è \emph{light/active} e al primo co
 
 % ### Servizio: illuminazione
 Il servizio relativo all'illuminazione si occupa di raccogliere e memorizzare tutti i dati pubblicati dai dispositivi nella categoria \emph{light} e permette il controllo dei dispositivi sottoscritti alla categoria \emph{light/active}.
-Questo servizio utilizza trasmissioni con tutti i livelli di QoS definiti nel protocollo MQTT: la comunicazione delle operazioni che l'utente esegue vengono trasmessi con il livello di affidabilità maggiore (Qos livello 2) per avere la garanzia che i dati trasmessi siano arrivati ai dispositivi atomicamente, la trasmissione delle specifiche tecniche del dispositivo vengono inviate con un livello di affidabilità intermedio (QoS livello 1) mentre le misurazioni vengono inviate nel modo più efficiente possibile (QoS livello 0).
+Questo servizio utilizza trasmissioni con tutti i livelli di QoS definiti nel protocollo MQTT: la comunicazione delle operazioni che l'utente esegue vengono trasmessi con il livello di affidabilità maggiore (QoS livello 2) per avere la garanzia che i dati trasmessi siano arrivati ai dispositivi atomicamente, la trasmissione delle specifiche tecniche del dispositivo vengono inviate con un livello di affidabilità intermedio (QoS livello 1) mentre le misurazioni vengono inviate nel modo più efficiente possibile (QoS livello 0).
 
 % ### Servizio: informazioni dispositivo
 Il servizio relativo alle informazioni dei dispositivi si occupa di raccogliere e memorizzare tutti i dati pubblicati secondo l'argomento \emph{hw\_info}; utilizza esclusivamente un livello di QoS pari a 1 per aumentare l'affidabilità del sistema a fronte delle attività di identificazione dei dispositivi collegati.
@@ -499,12 +499,12 @@ Il servizio non utilizza il protocollo MQTT in quanto non richiede la comunicazi
 % ### Servizio: API
 Il servizio API svolge un ruolo da intermediario tra il servizio che fornisce l'applicazione \emph{web} e i microservizi che raccolgono i dati dei dispositivi.
 Esso interroga i servizi "illuminazione", "temperatura" e "informazioni dispositivo"  definiti dal sistema per fornire una interfaccia unificata ai dati.
-Per la progettazione del servizio API ho utlizzato uno dei Design Pattern specifici per le architetture a microservizi, ossia il \emph{Gateway Pattern}.
+Per la progettazione del servizio API ho utilizzato uno dei Design Pattern specifici per le architetture a microservizi, ossia il \emph{Gateway Pattern}.
 Ho progettato il servizio API in modo \emph{stateless} grazie alla composizione delle API esposte dagli altri servizi: le chiamate effettuate al servizio API vengono dirottate ai rispettivi servizi e opportunamente decorate con informazioni aggiuntive, utili durante le attività di \emph{debug} del prototipo.
 
 % ### Servizio: web app
 Il servizio "\emph{web app}" comprende l'applicazione \emph{web} per la consultazione della \emph{dashboard} e include le componenti sviluppate in React per la costruzione dell'interfaccia grafica della \emph{dashboard} e le classi necessarie alla sua pubblicazione sul \emph{web}.
-Per conferire un'elevato grado di riutilizzabilità ai componenti creati ho utilizzato il Design Pattern \gls{dp-composite} (rappresentato in figura ~\ref{fig:composite}): nella progettazione dell'interfaccia ho individuato dapprima componenti elementari che estendono la classe \texttt{React.Component} (ad esempio componenti per visualizzare il testo specificato) e gradualmente ho assemblato componenti più complesse, sempre estensioni della classe \texttt{React.Component} (ad esempio unendo la componente di visualizzazione del testo con la componente di visualizzazione di una immagine). Attraverso questo procedimento \emph{bottom up} ho concluso la progettazione delle componenti dell'interfaccia, giungendo alla componente \texttt{UIPage}, la quale è anch'essa una componente React che specifica quali componenti e con quale struttura visualizzare a schermo una determinata pagina. Ciascuna pagina dell'applicazione \emph{web} è quindi un \emph{collage} di componenti più o meno complesse che mi hanno permesso di riutilizzare i componenti elementari in molte pagine dell'applicazione.
+Per conferire un elevato grado di riutilizzabilità ai componenti creati ho utilizzato il Design Pattern \gls{dp-composite} (rappresentato in figura ~\ref{fig:composite}): nella progettazione dell'interfaccia ho individuato dapprima componenti elementari che estendono la classe \texttt{React.Component} (ad esempio componenti per visualizzare il testo specificato) e gradualmente ho assemblato componenti più complesse, sempre estensioni della classe \texttt{React.Component} (ad esempio unendo la componente di visualizzazione del testo con la componente di visualizzazione di una immagine). Attraverso questo procedimento \emph{bottom up} ho concluso la progettazione delle componenti dell'interfaccia, giungendo alla componente \texttt{UIPage}, la quale è anch'essa una componente React che specifica quali componenti e con quale struttura visualizzare a schermo una determinata pagina. Ciascuna pagina dell'applicazione \emph{web} è quindi un \emph{collage} di componenti più o meno complesse che mi hanno permesso di riutilizzare i componenti elementari in molte pagine dell'applicazione.
 
 \begin{figure}[H]
     \centering
@@ -529,7 +529,7 @@ Nel diagramma ~\ref{fig:classi-web} indico l'architettura ad alto livello proget
 \hline
 \textbf{Classe} & \textbf{Funzionalità} \\
 \hline
-\texttt{ServiceManager} & Classe responsabile dell'integrazione tra istanza del server, pagine esposte e interfaccia di richeista dati. \\
+\texttt{ServiceManager} & Classe responsabile dell'integrazione tra istanza del server, pagine esposte e interfaccia di richiesta dati. \\
 \hline
 \texttt{DataFetcher} & Modulo che si occupa di effettuare le richieste al servizio API secondo le definizioni fornite dal servizio. \\
 \hline
@@ -558,7 +558,7 @@ Nel diagramma ~\ref{fig:classi-web} indico l'architettura ad alto livello proget
 \section{Implementazione e verifica}
 
 Durante le attività di implementazione delle specifiche del sistema ho scritto, oltre al codice sorgente dei servizi, anche documenti in cui indico le istruzioni per eseguire le singole componenti del sistema e specifico le risorse esposte dalle stesse.
-I documenti in cui indico le risorse esposte dai servizi sono rivolti agli utenti più esperti che vogliono approfondire le funzionalità offerte dai servizi. Nelle mie previsioni questi utenti grazie ai documenti di specifica dovrebbero essere in grado di implementare le altre componenti del sistema, sostituendo le componenti da me implementate. Ho scritto questi documenti contestualmente all'implmentazione delle funzionalità nel codice sorgente, adeguandoli manualmente ad ogni modifica compiuta nel codice sorgente.\\
+I documenti in cui indico le risorse esposte dai servizi sono rivolti agli utenti più esperti che vogliono approfondire le funzionalità offerte dai servizi. Nelle mie previsioni questi utenti grazie ai documenti di specifica dovrebbero essere in grado di implementare le altre componenti del sistema, sostituendo le componenti da me implementate. Ho scritto questi documenti contestualmente all'implementazione delle funzionalità nel codice sorgente, adeguandoli manualmente ad ogni modifica compiuta nel codice sorgente.\\
 Ho deciso di scrivere i documenti in cui indico le istruzioni per eseguire il progetto sia in lingua italiana, sia in lingua inglese dal momento che il progetto è disponibile pubblicamente su GitHub. Nel farlo ho seguito alcuni consigli che ho tratto dalla lista degli articoli presenti al link \url{https://github.com/matiassingers/awesome-readme\#articles}: in questo \gls{repository} l'autore ha raccolto collegamenti a:
 \begin{itemize}
   \item esempi di pagine informative dei rispettivi progetti caratterizzate da una buona struttura e da contenuti adeguati agli utenti a cui questi progetti sono indirizzati;
@@ -574,7 +574,7 @@ Ho scritto la documentazione del codice sorgente contestualmente al codice sorge
 \end{itemize}
 Ho scritto i commenti nel codice sorgente, come da \emph{best practice} per i progetti distribuiti pubblicamente, in lingua inglese.
 
-Prima di iniziare le attività di codifica ho utilizzato Yeoman (\url{http://yeoman.io/}) per generare un \emph{template} che ho utilizzato per implmentare tutti i servizi. Nel \emph{template} ho specificato le dipendenze comuni a tutti i servizi e ho configurato la struttura dei progetti in modo che fosse ripetibile per tutti i servizi.
+Prima di iniziare le attività di codifica ho utilizzato Yeoman (\url{http://yeoman.io/}) per generare un \emph{template} che ho utilizzato per implementare tutti i servizi. Nel \emph{template} ho specificato le dipendenze comuni a tutti i servizi e ho configurato la struttura dei progetti in modo che fosse ripetibile per tutti i servizi.
 Ogni servizio, grazie alla generazione per mezzo del \emph{template}, ha al suo interno gli strumenti di analisi statica e dinamica del codice, un documento di \emph{README} contenente le informazioni specifiche per il servizio e un \emph{Dockerfile} responsabile della creazione dei \emph{container}.
 Lo strumento principale che ho utilizzato durante la codifica è l'\emph{editor} Visual Studio Code, indicato in tabella ~\ref{tab:strumenti}, grazie al quale ho utilizzato gli strumenti di analisi statica e dinamica del codice durante la sua scrittura.
 
@@ -585,7 +585,7 @@ Durante le attività di progettazione ad alto livello del prototipo ho iterato l
   \item il grado di accoppiamento medio delle classi, calcolato come differenza in valore assoluto tra le relazioni in ingresso e le relazioni in uscita per ogni classe, sia nell'intervallo [0, 2] (ogni classe può utilizzare in media fino a un massimo di due altre classi);
   \item le classi all'interno di ciascun microservizio offrano le funzionalità essenziali per soddisfare i requisiti correlati e non dipendano dagli altri servizi per funzionare.
 \end{itemize}
-Ai due criteri ho associato gradi di importanza non equivalenti: ho preferito concentrarmi sul secondo criterio, che ho potuto applicare a tutti i servizi ad eccezione del servizio API intermediario con i \emph{client}) per acquisire esperienza nell'applicazione del concetto \emph{micro} ai servizi richiesto dalle archietture a microservizi.
+Ai due criteri ho associato gradi di importanza non equivalenti: ho preferito concentrarmi sul secondo criterio, che ho potuto applicare a tutti i servizi ad eccezione del servizio API intermediario con i \emph{client}) per acquisire esperienza nell'applicazione del concetto \emph{micro} ai servizi richiesto dalle architetture a microservizi.
 Ho svolto le attività di verifica durante l'implementazione del \emph{software} da due lati:
 \begin{itemize}
   \item ho pianificato il primo insieme di attività del processo di verifica del prodotto utilizzando gli strumenti di analisi statica per prevenire errori comuni e facilmente risolvibili automaticamente;
@@ -594,7 +594,7 @@ Ho svolto le attività di verifica durante l'implementazione del \emph{software}
 Ho condotto l'analisi dinamica del prodotto sia con l'ausilio di strumenti di test automatici, sia effettuando prove manuali, simulando l'interazione di un \emph{client}, inteso come attore, con i servizi.
 Ho progettato i test per raggiungere la copertura del codice fissata durante l'attività di Analisi dei requisiti (riferimento ~\ref{tab:requisiti-qualita}).
 Durante la progettazione dei test ho scelto di approfondire la progettazione dei test d'unità di tutte le componenti progettate come primo \emph{step} mentre ho tralasciato la progettazione dei test d'integrazione dei servizi: ho perseguito questa scelta perché ho ritenuto più importante aumentare l'affidabilità intrinseca di ciascun servizio indipendentemente dagli altri.
-Uno dei fattori che mi ha consentito di effetuare questa scelta consiste nell'individualità dell'implementazione del progetto: se al progetto avessero collaborato uno o più sviluppatori, avrebbe assunto maggiore importanza la corretta interazione tra i servizi. Inoltre, dal momento che i servizi che ho progettato hanno un flusso dei dati ben definito, mi ha permesso di tenere allineate le modifiche attraverso i servizi in efficienza.
+Uno dei fattori che mi ha consentito di effettuare questa scelta consiste nell'individualità dell'implementazione del progetto: se al progetto avessero collaborato uno o più sviluppatori, avrebbe assunto maggiore importanza la corretta interazione tra i servizi. Inoltre, dal momento che i servizi che ho progettato hanno un flusso dei dati ben definito, mi ha permesso di tenere allineate le modifiche attraverso i servizi in efficienza.
 Nei test ho usato ampiamente \emph{mock} e \emph{stub} per isolare le eventuali dipendenze tra un modulo e un altro all'interno dello stesso servizio. Come avevo previsto durante lo studio degli argomenti, la componente in cui ho avuto alcune difficoltà nell'implementazione dei test consiste nei moduli che dialogano con un \emph{database}: per arginare il problema ho utilizzato librerie accessorie presenti su npm per simulare le risposte che i \emph{database} inviano nel caso in cui si verifichino errori. In questo modo ho potuto testare con successo anche eventuali malfunzionamenti relativi al collegamento con i \emph{database}.
 Ho elencato i risultati della copertura del codice raggiunta al termine dello stage nella tabella ~\ref{tab:coverage}.
 
@@ -681,6 +681,6 @@ In particolare, ho avuto difficoltà in due momenti:
   \item durante lo sviluppo del servizio di integrazione delle API (servizio API citato in ~\ref{progettazione}) fornite dai singoli microservizi.
 \end{itemize}
 Ho riscontrato la prima problematica a causa della documentazione legata allo \emph{sharding} del \emph{database} considerato: dal momento che essa è indirizzata per installazioni dei \emph{database} direttamente sui calcolatori ho avuto difficoltà a trasportare quelle istruzioni nell'ambito della composizione di \emph{container}, richiedendo una quantità superiore a quella che avevo valutato per essere implementata.\\
-Proseguendo con la seconda criticità, questa si è verificata a causa di una mia incomprensione del meccanismo di condivisione della rete nell'ambito dell'orchestrazione dei servizi attraverso Docker Compose: nella pratica i servizi legati alla temperatura, all'illuminazione, alla gestione delle informazioni dei dispositivi e alle preferenze utente potevano essere interrogati individualmente, tuttavia non riuscivano a comunicare con il servizio di integrazione (servizio API) perché Docker Compose internamente isolava i \emph{container} in sottoreti virtuali senza possibilità di comunicare tra loro. Ho risolto il problema definendo manualmente una nuova sottorete virtuale, comune a tutti i servizi, che ha permesso al sistema di funzionare correttamente.\\
+Proseguendo con la seconda criticità, questa si è verificata a causa di una mia incomprensione del meccanismo di condivisione della rete nell'ambito dell'orchestrazione dei servizi attraverso Docker Compose: nella pratica i servizi legati alla temperatura, all'illuminazione, alla gestione delle informazioni dei dispositivi e alle preferenze utente potevano essere interrogati individualmente, tuttavia non riuscivano a comunicare con il servizio di integrazione (servizio API) perché Docker Compose internamente isolava i \emph{container} in sotto-reti virtuali senza possibilità di comunicare tra loro. Ho risolto il problema definendo manualmente una nuova sotto-rete virtuale, comune a tutti i servizi, che ha permesso al sistema di funzionare correttamente.\\
 Per quanto riguarda il requisito RMF10, relativo alla visualizzazione delle statistiche di sistema, ho deciso di implementare solamente la componente di controllo della salute dei servizi che compongono il sistema \emph{healthcheck}, tralasciando le componenti di integrazione dei dati raccolti dai servizi e le componenti di visualizzazione dei dati citati.\\
 A causa dei rallentamenti menzionati ho scelto di non implementare alcune funzionalità perché, sebbene le avessi catalogate come desiderabili, la quantità di risorse rimanenti non sarebbe stata sufficiente alla loro corretta implementazione, quindi ho preferito allocare tempo per migliorare la qualità del \emph{software} sviluppato aumentando la copertura del codice sorgente, implementando un numero maggiore di test di unità. Mi è ora chiaro che alcuni dei requisiti da me classificati avrebbero richiesto ulteriori passaggi di verifica: la fattibilità e la valutazione più attenta del rapporto importanza della funzionalità paragonato alle risorse a disposizione avrebbero evidenziato che alcuni requisiti non erano implementabili nelle ore destinate al progetto di stage.

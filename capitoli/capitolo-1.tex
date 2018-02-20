@@ -54,7 +54,7 @@ Un esempio lampante di dispositivi \emph{smart} sono gli smartphone, prodotti ch
 Studenti e professori del Dipartimento di Informatica dell'Università di Carnegie Mellon presero in considerazione l'idea di una rete di dispositivi \emph{smart} quando modificarono un distributore automatico di bibite del Dipartimento per accedere al suo inventario di bibite. Quel distributore automatico divenne il primo apparecchio collegato ad Internet.
 \footcite{site:mellon-uni}
 
-Nel corso degli anni '90 il mondo accademico e il mondo dell'industra legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo.
+Nel corso degli anni '90 il mondo accademico e il mondo dell'industria legata alla produzione continuarono a sperimentare evolvendo il \textit{concept} iniziale, arrivando alla conclusione che l'\textit{Ubiquitous Computing} non si debba riferire solamente ai \textit{computer}, ma debba espandersi agli oggetti di utilizzo quotidiano. Questa visione dovette scontrarsi con i limiti della microelettronica di allora: la produzione di semiconduttori non era ancora pronta a supportare la potenziale domanda e i costi per sostenere l'ampliamento degli impianti non erano facilmente assorbibili in breve tempo.
 \footcite{site:mit-weiser}
 
 Kevin Ashton coniò il termine \textit{"Internet of Things"} nel 1999.
@@ -93,7 +93,7 @@ Il termine "Things" nel contesto IoT si riferisce a una varietà di dispositivi 
   \item se i dispositivi comunicano in modo M2H, le informazioni aiutano le persone che interagiscono con essi.
 \end{itemize}
 
-L'interesse verso il tema IoT è cresciuto esponenzialmente sia nel mercato consumer che in quello enterprise e secondo Forbes (\footcite{site:forbes-iot}) diventerà nel prossimo quinquennio uno dei settori dell'ITC più redditizi.
+L'interesse verso il tema IoT è cresciuto esponenzialmente sia nel mercato \emph{consumer} che in quello \emph{enterprise} e secondo Forbes (\footcite{site:forbes-iot}) diventerà nel prossimo quinquennio uno dei settori dell'ITC più redditizi.
 É interessante osservare anche la popolarità dei termini di ricerca correlati all'IoT: i dati sono stati ottenuti interrogando il servizio \url{https://trends.google.com/trends}, il quale consente di effettuare analisi sulla popolarità delle stringhe di ricerca immesse nel motore di ricerca di Google.
 Ciascun grafico a linea (\textit{line chart} in inglese) presenta nelle ordinate il grado di popolarità della \textit{query} di ricerca, valutato da 0 (popolarità minima) a 100 (popolarità massima), e nelle ascisse l'arco temporale in analisi.
 
@@ -302,7 +302,7 @@ Dal momento che i servizi possono malfungere in ogni momento, è fondamentale ri
   \item segnalare il malfunzionamento e
   \item ripristinare automaticamente il servizio
 \end{itemize}
-nel più breve tempo possibile. Conseguentemente, ogni servizio deve essere progettato focalizzando l'attenzione sulle attività di monitoring, individuando le metriche rilevanti (ad es. \emph{throughput}, latenza, ecc.).
+nel più breve tempo possibile. Conseguentemente, ogni servizio deve essere progettato focalizzando l'attenzione sulle attività di \emph{monitoring}, individuando le metriche rilevanti (ad es. \emph{throughput}, latenza, ecc.).
 
 Uno dei temi cruciali che ho riscontrato nella trattazione di Fowler consiste nel chiedersi quante responsabilità debba avere ciascun servizio: secondo Fowler la caratteristica fondamentale da osservare è la nozione di sostituzione e aggiornamento indipendenti.
 Un buon segnale lo si ritrova quando ad ogni modifica di un servizio, questa modifica non richiede adattamenti in altri servizi (a meno di modifiche alle funzionalità offerte).
@@ -391,7 +391,7 @@ Lo sviluppo di prodotti legati all'IoT espone l'utente degli stessi a possibili 
 \hline
 La mole di dati raccolta dai dispositivi inseriti in un contesto IoT potrebbe essere tale da richiedere investimenti consistenti per la loro elaborazione e per mantenere elevata la loro confidenzialità. Inoltre la diversità dei dispositivi presenti in una rete aumenta la complessità del trattamento delle informazioni. & Probabile & Media \\
 \hline
-Dal momento che l'IoT è un ambito emergente nel contesto ITC ho osservato la nascita di una multitudine di protocolli per la raccolta e la trasmissione delle informazioni, nessuno dei quali è stato indicato o si è imposto come standard globale. & Molto probabile & Media \\
+Dal momento che l'IoT è un ambito emergente nel contesto ITC ho osservato la nascita di una moltitudine di protocolli per la raccolta e la trasmissione delle informazioni, nessuno dei quali è stato indicato o si è imposto come standard globale. & Molto probabile & Media \\
 \hline
 \end{tabularx}
 \end{table}
@@ -432,8 +432,8 @@ Dal momento che ho già avuto modo di trattare il lato tecnologico del progetto 
   \item una seconda parte pratica di applicazione dei princìpi teorici in Node.js e il ripasso della caratteristiche tecniche del \emph{framework} React.
 \end{itemize}
 Durante quest'insieme di attività di formazione, per mitigare i rischi elencati in tabella ~\ref{tab:rischi-stage-interno}, ho focalizzato la mia attività di studio alla ricerca di esempi sviluppati da aziende con esperienza in materia per risolvere i problemi che hanno dovuto affrontare.
-Il secondo macroblocco di attività riguarda l'analisi, la progettazione e l'implementazione dei servizi di comunicazione con i dispositivi. A queste attività ho allocato 120 ore, in quanto per mitigare le probabilità di incorrere nei rischi elencati in tabella ~\ref{tab:rischi-iot} ho assegnato risorse per l'attività di ricerca del protocollo di comunicazione da implementare. Durante le attività di analisi inoltre mi sono preparato per contrastare i rischi più probabili che ho menzionato in tabella ~\ref{tab:rischi-arch-microservizi}, analizzando i requisiti funzionali del sistema e mettendoli in relazione con le attività di ricerca effettuate durante le attività di formazione. Ho incluso nelle attività di progettazione di questo blocco anche la progettazione e realizzazione dei dispositivi "virtualizzati", l'implementazione dei quali mi ha permesso di effettuare i primi test dei servizi di comunicazione.
-Il terzo macroblocco di attività riguarda l'analisi dell'interazione che un \emph{client} può avere con i servizi di comunicazione, permettendomi di arrivare alla progettazione e realizzazione del servizio che compone le funzionalità da offrire alla \emph{dashboard} e la \emph{dashboard} stessa.
+Il secondo macro-blocco di attività riguarda l'analisi, la progettazione e l'implementazione dei servizi di comunicazione con i dispositivi. A queste attività ho allocato 120 ore, in quanto per mitigare le probabilità di incorrere nei rischi elencati in tabella ~\ref{tab:rischi-iot} ho assegnato risorse per l'attività di ricerca del protocollo di comunicazione da implementare. Durante le attività di analisi inoltre mi sono preparato per contrastare i rischi più probabili che ho menzionato in tabella ~\ref{tab:rischi-arch-microservizi}, analizzando i requisiti funzionali del sistema e mettendoli in relazione con le attività di ricerca effettuate durante le attività di formazione. Ho incluso nelle attività di progettazione di questo blocco anche la progettazione e realizzazione dei dispositivi "virtualizzati", l'implementazione dei quali mi ha permesso di effettuare i primi test dei servizi di comunicazione.
+Il terzo macro-blocco di attività riguarda l'analisi dell'interazione che un \emph{client} può avere con i servizi di comunicazione, permettendomi di arrivare alla progettazione e realizzazione del servizio che compone le funzionalità da offrire alla \emph{dashboard} e la \emph{dashboard} stessa.
 L'ultimo blocco di attività riguarda la revisione del prototipo implementato e la sua possibile pubblicazione sulla piattaforma di Heroku\footcite{heroku}.
 
 \begin{table}[H]
